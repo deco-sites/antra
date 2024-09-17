@@ -26,18 +26,23 @@ export interface Nav {
 export default function Header({
   logo = {
     src:
-      "https://ozksgdmyrqcxcwhnbepg.supabase.co/storage/v1/object/public/assets/1527/67120bcd-936a-4ea5-a760-02ed5c4a3d04",
+      "https://deco-sites-assets.s3.sa-east-1.amazonaws.com/antra/7a170a54-a9aa-4470-b04f-95197d431345/antra-logo.png",
     alt: "Logo",
   },
   navigation = {
     links: [
-      { label: "Home", url: "/" },
-      { label: "About us", url: "/" },
-      { label: "Princing", url: "/" },
-      { label: "Contact", url: "/" },
+      { label: "A ANTRA", url: "/" },
+      { label: "Cartilhas e Manuais", url: "/" },
+      { label: "Pesquisas", url: "/" },
+      { label: "Notícias", url: "/" },
+      { label: "Afiliação", url: "/" },
+      { label: "Projetos", url: "/" },
+      { label: "Eleições", url: "/" },
+      { label: "Apoio", url: "/" },
+      { label: "Contato", url: "/" },
     ],
     buttons: [
-      { id: "change-me-1", href: "/", text: "Change me", outline: false },
+      { id: "change-me-1", href: "/", text: "Search", outline: false },
       { id: "change-me-2", href: "/", text: "Change me", outline: true },
     ],
   },
@@ -49,22 +54,25 @@ export default function Header({
       {/* main content */}
       <div class="drawer-content container lg:px-0 px-4 flex gap-8 items-center justify-between py-4">
         <a href="/">
-          <Image src={logo.src || ""} width={100} height={28} alt={logo.alt} />
+          <Image src={logo.src || ""} width={81} height={58} alt={logo.alt} />
+
         </a>
 
         <div class="hidden items-center justify-between lg:flex w-full">
           <ul class="flex">
             {navigation.links.map((link) => (
-              <li>
-                <a
-                  href={link.url}
-                  aria-label={link.label}
-                  class="link no-underline hover:underline p-4"
-                >
-                  {link.label}
-                </a>
-              </li>
-            ))}
+                  <li>
+                    <a
+                      href={link.url}
+                      aria-label={link.label}
+                      class="link no-underline hover:underline p-4"
+                    >
+                      {link.label}
+                    </a>
+                  </li>
+                )
+              
+            )}
           </ul>
           <ul class="flex gap-3">
             {navigation.buttons?.map((item) => (
