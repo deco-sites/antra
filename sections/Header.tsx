@@ -3,10 +3,10 @@ import Image from "apps/website/components/Image.tsx";
 import Icon from "../components/ui/Icon.tsx";
 
 export interface CTA {
-  id?: string;
+  src?: string;
   href: string;
   text: string;
-  outline?: boolean;
+  alt?: string
 }
 
 export interface Nav {
@@ -19,7 +19,7 @@ export interface Nav {
       label?: string;
       url?: string;
     }[];
-    buttons: CTA[];
+    icon: CTA[];
   };
 }
 
@@ -41,9 +41,25 @@ export default function Header({
       { label: "Apoio", url: "/" },
       { label: "Contato", url: "/" },
     ],
-    buttons: [
-      { id: "change-me-1", href: "/", text: "Search", outline: false },
-      { id: "change-me-2", href: "/", text: "Change me", outline: true },
+    icon: [
+      { 
+        src: "https://deco-sites-assets.s3.sa-east-1.amazonaws.com/antra/99f7eb8e-3532-4b69-9084-d46986b4aa52/contrast.svg", 
+        href: "/", 
+        text: "Contrast", 
+        alt: "Contrast" 
+      },
+      { 
+        src: "https://deco-sites-assets.s3.sa-east-1.amazonaws.com/antra/6a3d6385-02c0-4da9-820c-a4d652a121f5/globe.svg", 
+        href: "/", 
+        text: "Globe", 
+        alt: "Globe" 
+      },
+      { 
+        src: "https://deco-sites-assets.s3.sa-east-1.amazonaws.com/antra/eadb9435-c20f-40d7-8e03-89d647170001/search.svg", 
+        href: "/", 
+        text: "Search", 
+        alt: "Search" 
+      },
     ],
   },
 }: Nav) {
@@ -52,52 +68,43 @@ export default function Header({
       <input id="mobile-drawer-nav" type="checkbox" class="drawer-toggle" />
 
       {/* main content */}
-      <div class="drawer-content container lg:px-0 px-4 flex gap-8 items-center justify-between py-4">
+      <div class="px-16 py-4 flex items-center justify-between">
         <a href="/">
           <Image src={logo.src || ""} width={81} height={58} alt={logo.alt} />
-
         </a>
 
-        <div class="hidden items-center justify-between lg:flex w-full">
-          <ul class="flex">
+        <div class="hidden lg:flex w-full">
+          <ul class="flex justify-center gap-8 w-full">
             {navigation.links.map((link) => (
-                  <li>
-                    <a
-                      href={link.url}
-                      aria-label={link.label}
-                      class="link no-underline hover:underline p-4"
-                    >
-                      {link.label}
-                    </a>
-                  </li>
-                )
-              
-            )}
-          </ul>
-          <ul class="flex gap-3">
-            {navigation.buttons?.map((item) => (
-              <a
-                key={item?.id}
-                id={item?.id}
-                href={item?.href ?? "#"}
-                target={item?.href.includes("http") ? "_blank" : "_self"}
-                class={`font-normal btn btn-primary ${
-                  item.outline && "btn-outline"
-                }`}
-              >
-                {item?.text}
-              </a>
+              <li key={link.label}>
+                <a
+                  href={link.url}
+                  aria-label={link.label}
+                  class="link no-underline hover:underline p-4"
+                >
+                  {link.label}
+                </a>
+              </li>
             ))}
           </ul>
         </div>
 
-        <label
-          htmlFor="mobile-drawer-nav"
-          class="flex lg:hidden btn btn-ghost drawer-button"
-        >
-          <Icon id="Bars3" size={24} strokeWidth={0.1} />
-        </label>
+        <div class="hidden lg:flex items-center">
+          <ul class="flex gap-4 items-center">
+            {navigation.icon?.map((item, index) => (
+              <li key={index}>
+                <Image
+                  src={item.src || ''}
+                  width={18}
+                  height={18}
+                  alt={logo.alt}
+                />
+              </li>
+            ))}
+          </ul>
+        </div>
       </div>
+
 
       {/* sidebar */}
       <aside class="drawer-side z-50">
@@ -129,7 +136,7 @@ export default function Header({
           </ul>
 
           <ul class="p-4 flex items-center gap-3">
-            {navigation.buttons?.map((item) => (
+            {/* {navigation.buttons?.map((item) => (
               <a
                 key={item?.id}
                 id={item?.id}
@@ -141,7 +148,7 @@ export default function Header({
               >
                 {item?.text}
               </a>
-            ))}
+            ))} */}
           </ul>
         </div>
       </aside>
