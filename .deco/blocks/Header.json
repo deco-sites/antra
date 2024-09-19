@@ -1,1 +1,58 @@
-{"__resolveType":"site/sections/Header.tsx","navigation":{"links":[],"buttons":[]}}
+{
+  "__resolveType": "site/sections/Header.tsx",
+  "navigation": {
+    "links": [
+      {
+        "label": "A Antra",
+        "url": "/"
+      },
+      {
+        "label": "Cartilha e Manuais",
+        "url": "/cartilha"
+      },
+      {
+        "label": "Pesquisas",
+        "url": "/pesquisas"
+      },
+      {
+        "label": "Notícias",
+        "url": "/noticias"
+      },
+      {
+        "label": "Afiliação",
+        "url": "/afiliacao"
+      },
+      {
+        "label": "Projetos",
+        "url": "/projetos"
+      },
+      {
+        "label": "Eleições",
+        "url": "/eleicoes"
+      },
+      {
+        "label": "Apoio",
+        "url": "/apoio"
+      },
+      {
+        "label": "Contato",
+        "url": "/contato"
+      }
+    ],
+    "buttons": [
+      {
+        "src": "A Antra",
+        "href": "string",
+        "alt": "button"
+      },
+      {
+        "src": "A Antra",
+        "alt": ""
+      },
+      {
+        "src": "A Antra",
+        "alt": ""
+      }
+    ]
+  }
+}

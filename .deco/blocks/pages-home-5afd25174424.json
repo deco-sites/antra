@@ -1,42 +1,105 @@
 {
-    "name": "Home",
-    "path": "/",
-    "sections": [
-      {
-        "__resolveType": "Header"
-      },
-      {
-        "__resolveType": "site/sections/Hero.tsx",
-        "title": "<p>Click here to tweak this text however you want.</p>",
-        "cta": [],
-        "description": "This text is fully editable and ready for your personal touch. Just click here, head over to the section window, or dive straight into the code to make changes as you see fit. Whether it's about the content, formatting, font, or anything in between, editing is just a click away."
-      },
-      {
-        "__resolveType": "site/sections/Logos.tsx"
-      },
-      {
-        "__resolveType": "site/sections/ImageWithParagraph.tsx"
-      },
-      {
-        "__resolveType": "site/sections/ImageWithParagraph.tsx",
-        "placement": "right"
-      },
-      {
-        "__resolveType": "site/sections/BlogPosts.tsx"
-      },
-      {
-        "__resolveType": "site/sections/Testimonials.tsx",
-        "arrows": true
-      },
-      {
-        "__resolveType": "site/sections/Faq.tsx"
-      },
-      {
-        "__resolveType": "Footer"
+  "name": "Home",
+  "path": "/",
+  "sections": [
+    {
+      "__resolveType": "website/sections/Rendering/Lazy.tsx",
+      "section": {
+        "__resolveType": "site/sections/Header.tsx",
+        "navigation": {
+          "links": [
+            {
+              "label": "A Antra",
+              "url": "/"
+            },
+            {
+              "label": "Cartilha e Manuais",
+              "url": "/cartilha"
+            },
+            {
+              "label": "Pesquisas",
+              "url": "/pesquisas"
+            },
+            {
+              "label": "Notícias",
+              "url": "/noticias"
+            },
+            {
+              "label": "Afiliação",
+              "url": "/afiliacao"
+            },
+            {
+              "label": "Projetos",
+              "url": "/projetos"
+            },
+            {
+              "label": "Eleições",
+              "url": "/eleicoes"
+            },
+            {
+              "label": "Apoio",
+              "url": "/apoio"
+            },
+            {
+              "label": "Contato",
+              "url": "/contato"
+            }
+          ],
+          "buttons": [
+            {
+              "href": "/",
+              "src": "https://deco-sites-assets.s3.sa-east-1.amazonaws.com/antra/eadb9435-c20f-40d7-8e03-89d647170001/search.svg",
+              "alt": "search",
+              "text": "w"
+            },
+            {
+              "src": "https://deco-sites-assets.s3.sa-east-1.amazonaws.com/antra/6a3d6385-02c0-4da9-820c-a4d652a121f5/globe.svg",
+              "href": "/",
+              "text": "globe",
+              "alt": "globe"
+            },
+            {
+              "href": "/",
+              "src": "https://deco-sites-assets.s3.sa-east-1.amazonaws.com/antra/99f7eb8e-3532-4b69-9084-d46986b4aa52/contrast.svg",
+              "text": "contrast",
+              "alt": "contrast"
+            }
+          ]
+        }
       }
-    ],
-    "__resolveType": "website/pages/Page.tsx",
-    "seo": {
-      "__resolveType": "website/sections/Seo/SeoV2.tsx"
+    },
+    {
+      "__resolveType": "site/sections/Hero.tsx",
+      "title": "<p>Click here to tweak this text however you want.</p>",
+      "cta": [],
+      "description": "This text is fully editable and ready for your personal touch. Just click here, head over to the section window, or dive straight into the code to make changes as you see fit. Whether it's about the content, formatting, font, or anything in between, editing is just a click away."
+    },
+    {
+      "__resolveType": "site/sections/Logos.tsx"
+    },
+    {
+      "__resolveType": "site/sections/ImageWithParagraph.tsx"
+    },
+    {
+      "__resolveType": "site/sections/ImageWithParagraph.tsx",
+      "placement": "right"
+    },
+    {
+      "__resolveType": "site/sections/BlogPosts.tsx"
+    },
+    {
+      "__resolveType": "site/sections/Testimonials.tsx",
+      "arrows": true
+    },
+    {
+      "__resolveType": "site/sections/Faq.tsx"
+    },
+    {
+      "__resolveType": "Footer"
     }
+  ],
+  "__resolveType": "website/pages/Page.tsx",
+  "seo": {
+    "__resolveType": "website/sections/Seo/SeoV2.tsx"
   }
+}
