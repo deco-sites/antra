@@ -6,7 +6,7 @@ export interface CTA {
   src?: string;
   href: string;
   text?: string;
-  alt?: string
+  alt?: string;
 }
 
 export interface Nav {
@@ -19,7 +19,7 @@ export interface Nav {
       label?: string;
       url?: string;
     }[];
-    buttons: CTA[]
+    buttons: CTA[];
   };
 }
 
@@ -36,19 +36,27 @@ export default function Header({
       { label: "A ANTRA", url: "/" },
       { label: "A ANTRA", url: "/" },
     ],
-    buttons:[]
+    buttons: [],
   },
 }: Nav) {
   return (
     <nav class="drawer drawer-end">
       <input id="mobile-drawer-nav" type="checkbox" class="drawer-toggle" />
 
-      {/* main content */}
-      <div class="px-12 py-4 flex items-center justify-between">
+      {/* Main content */}
+      <div class="px-4 py-4 flex items-center justify-between">
         <a href="/">
           <Image src={logo.src || ""} width={81} height={58} alt={logo.alt} />
         </a>
 
+        <label
+          htmlFor="mobile-drawer-nav"
+          class="lg:hidden cursor-pointer"
+        >
+          <Icon id="FilterList" size={24} strokeWidth={2} />
+        </label>
+
+        {/* Links and buttons for desktop */}
         <div class="hidden lg:flex">
           <ul class="flex justify-center gap-4">
             {navigation?.links.map((link) => (
@@ -71,21 +79,20 @@ export default function Header({
               <li key={index}>
                 <a href={item?.href}>
                   <Image
-                    src={item.src || ''}
+                    src={item.src || ""}
                     width={18}
                     height={18}
                     alt={logo.alt}
                   />
-                </a>                
+                </a>
               </li>
             ))}
           </ul>
         </div>
       </div>
 
-
-      {/* sidebar */}
-      <aside class="drawer-side z-50">
+      {/* Sidebar for mobile */}
+      <aside class="drawer-side z-50 lg:hidden">
         {/* Close when clicking on overlay */}
         <label
           htmlFor="mobile-drawer-nav"
@@ -103,7 +110,7 @@ export default function Header({
             />
           </a>
 
-          <ul class="menu">
+          <ul class="menu p-4">
             {navigation?.links.map((link) => (
               <li key={link?.label}>
                 <a
@@ -119,18 +126,17 @@ export default function Header({
           <ul class="p-4 flex items-center gap-3">
             {navigation.buttons?.map((item, index) => (
               <li key={index}>
-              <a href={item?.href}>
-                <Image
-                  src={item.src || ''}
-                  width={18}
-                  height={18}
-                  alt={logo.alt}
-                />
-              </a>                
-            </li>
+                <a href={item?.href}>
+                  <Image
+                    src={item.src || ""}
+                    width={18}
+                    height={18}
+                    alt={logo.alt}
+                  />
+                </a>
+              </li>
             ))}
           </ul>
-
         </div>
       </aside>
     </nav>

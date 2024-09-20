@@ -10,7 +10,7 @@ export interface Subscribe {
 }
 
 export interface Social {
-  network: "Facebook" | "Instagram" | "Linkedin" | "X - Twitter";
+  network: "Facebook" | "Instagram" | "Linkedin" | "Twitter";
   href: string;
 }
 
@@ -73,9 +73,9 @@ export default function Footer({
   ]
   const social = [
     { network: "Instagram", href: "/" },
-    { network: "Facebook", href: "/" },
     { network: "Twitter", href: "/" },
     { network: "Linkedin", href: "/" },
+    { network: "Facebook", href: "/" },
   ]
 
   return (
@@ -113,22 +113,25 @@ export default function Footer({
       </div>
 
       <div class="-translate-y-[45%]">
-        <h1 class="text-[42px] font-medium text-left text-white">Resistir para Existir, Existir para Reagir</h1>
-        <nav class="flex space-x-4 mt-6">
+        <h1 class="text-[42px] font-medium text-left text-white leading-[1]">Resistir para Existir, Existir para Reagir</h1>
+
+        <nav class="mt-[2rem] grid grid-cols-2 gap-4 lg:flex lg:space-x-4">
           {links.map((link) => (
-            <a href={link.href} class="underline text-white">{link.label}</a>
+            <a href={link.href} class="underline text-white font-hairline">{link.label}</a>
           ))}
         </nav>
-        <div class="flex items-center space-x-4 mt-4">          
+
+        <div class="flex items-center space-x-4 mt-[3rem]">          
           {social.map((social) => (
             <a href={social.href} class="bg-white rounded-lg w-[36px] h-[36px] flex items-center justify-center">
               <Icon id={`${social.network}`} size={24} strokeWidth={2} class="text-black"/>
             </a>
           ))}
-          <a href="mailto:contato@antrabrasil.org" class="hover:text-gray-200">contato@antrabrasil.org</a>
+          <a href="mailto:contato@antrabrasil.org" class="hover:text-gray-200 text-white pl-4">contato@antrabrasil.org</a>
         </div>
-        <div class="text-sm mt-4 text-white">
-          {copyright} <a href="#" class="hover:underline">Política de Privacidade</a>
+        <div class="flex justify-between text-sm font-hairline mt-4 text-white">
+          <span>{copyright}</span>
+          <a href="#" class="underline">Política de Privacidade</a>
         </div>
       </div>
     </div>
