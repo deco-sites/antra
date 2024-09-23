@@ -4,54 +4,128 @@
     "links": [
       {
         "label": "A Antra",
-        "url": "/"
+        "submenu": [
+          {
+            "label": "Quem somos",
+            "url": "/"
+          },
+          {
+            "label": "O que fazemos",
+            "url": "/"
+          },
+          {
+            "label": "Nossa história",
+            "url": "/"
+          },
+          {
+            "label": "Estatuto social",
+            "url": "/"
+          }
+        ]
       },
       {
         "label": "Cartilha e Manuais",
-        "url": "/cartilha"
+        "submenu": [
+          {
+            "label": "Notas técnicas",
+            "url": "/",
+            "subLabel": "Menu description."
+          },
+          {
+            "label": "Manuais",
+            "subLabel": "Menu description.",
+            "url": "/"
+          },
+          {
+            "label": "Cartilhas",
+            "subLabel": "Menu description.",
+            "url": "/"
+          }
+        ]
       },
       {
         "label": "Pesquisas",
-        "url": "/pesquisas"
+        "url": "/pesquisas",
+        "submenu": []
       },
       {
         "label": "Notícias",
-        "url": "/noticias"
+        "url": "/noticias",
+        "submenu": []
       },
       {
         "label": "Afiliação",
-        "url": "/afiliacao"
+        "submenu": [
+          {
+            "label": "Nossas afiliadas",
+            "url": "/"
+          },
+          {
+            "label": "Como se afiliar",
+            "url": "/"
+          }
+        ]
       },
       {
         "label": "Projetos",
-        "url": "/projetos"
+        "url": "/projetos",
+        "submenu": []
       },
       {
         "label": "Eleições",
-        "url": "/eleicoes"
+        "submenu": [
+          {
+            "label": "Candidaturas 2024",
+            "url": "/"
+          },
+          {
+            "label": "Candidaturas 2022",
+            "url": "/"
+          },
+          {
+            "label": "Candidaturas 2020",
+            "url": "/"
+          },
+          {
+            "label": "Candidaturas 2018",
+            "url": "/"
+          },
+          {
+            "label": "Candidaturas 2016",
+            "url": "/"
+          },
+          {
+            "label": "Candidaturas 2014",
+            "url": "/"
+          }
+        ]
       },
       {
         "label": "Apoio",
-        "url": "/apoio"
+        "url": "/apoio",
+        "submenu": []
       },
       {
         "label": "Contato",
-        "url": "/contato"
+        "url": "/contato",
+        "submenu": []
       }
     ],
     "buttons": [
       {
         "src": "A Antra",
-        "href": "string",
+        "href": "/",
         "alt": "button"
       },
       {
         "src": "A Antra",
-        "alt": ""
+        "alt": "",
+        "href": "/"
       },
       {
         "src": "A Antra",
-        "alt": ""
+        "alt": "",
+        "href": "/"
       }
     ]
   }

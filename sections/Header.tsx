@@ -11,17 +11,25 @@ export interface CTA {
 
 export interface Nav {
   logo?: {
-    src?: ImageWidget;
+    src?: string;
     alt?: string;
   };
   navigation?: {
     links: {
-      label?: string;
+      label: string;
       url?: string;
+      submenu?: {
+        label: string;
+        subLabel?: string;
+        url: string;
+        img?: string;
+        imgLabel?: string;
+      }[];
     }[];
-    buttons: CTA[];
+    buttons?: CTA[];
   };
 }
+
 
 export default function Header({
   logo = {
@@ -29,22 +37,14 @@ export default function Header({
       "https://deco-sites-assets.s3.sa-east-1.amazonaws.com/antra/7a170a54-a9aa-4470-b04f-95197d431345/antra-logo.png",
     alt: "Logo",
   },
-  navigation = {
-    links: [
-      { label: "A ANTRA", url: "/" },
-      { label: "A ANTRA", url: "/" },
-      { label: "A ANTRA", url: "/" },
-      { label: "A ANTRA", url: "/" },
-    ],
-    buttons: [],
-  },
+  navigation
 }: Nav) {
   return (
     <nav class="drawer drawer-end">
       <input id="mobile-drawer-nav" type="checkbox" class="drawer-toggle" />
 
       {/* Main content */}
-      <div class="px-4 py-4 flex items-center justify-between">
+      <div class="px-[50px] py-4 flex items-center justify-between">
         <a href="/">
           <Image src={logo.src || ""} width={81} height={58} alt={logo.alt} />
         </a>
@@ -59,8 +59,8 @@ export default function Header({
         {/* Links and buttons for desktop */}
         <div class="hidden lg:flex">
           <ul class="flex justify-center gap-4">
-            {navigation?.links.map((link) => (
-              <li key={link?.label}>
+            {navigation?.links.map((link, index) => (
+              <li key={index} class="group relative">
                 <a
                   href={link?.url}
                   aria-label={link?.label}
@@ -68,15 +68,32 @@ export default function Header({
                 >
                   {link?.label}
                 </a>
+
+                {/* Submenu */}
+                {Array.isArray(link?.submenu) && link.submenu.length > 0 && (
+                  <ul class="absolute left-0 hidden group-hover:flex flex-col bg-white shadow-lg mt-2 p-2">
+                    {link.submenu.map((subItem, subIndex) => (
+                      <li key={subIndex}>
+                        <a
+                          href={subItem?.url}
+                          class="block px-4 py-2 text-sm text-gray-700 hover:bg-gray-100"
+                        >
+                          {subItem?.label}
+                        </a>
+                      </li>
+                    ))}
+                  </ul>
+                )}
               </li>
             ))}
           </ul>
         </div>
 
+
         <div class="hidden lg:flex items-center">
           <ul class="flex gap-5 items-center">
-            {navigation.buttons.map((item, index) => (
-              <li key={index}>
+            {navigation?.buttons?.map((item, index) => (
+              <li key={`${item.alt}-${index}`}>
                 <a href={item?.href}>
                   <Image
                     src={item.src || ""}
@@ -111,8 +128,8 @@ export default function Header({
           </a>
 
           <ul class="menu p-4">
-            {navigation?.links.map((link) => (
-              <li key={link?.label}>
+            {navigation?.links.map((link, index) => (
+              <li key={`${link.label}-${index}`}>
                 <a
                   href={link?.url}
                   aria-label={link?.label}
@@ -124,8 +141,8 @@ export default function Header({
           </ul>
 
           <ul class="p-4 flex items-center gap-3">
-            {navigation.buttons?.map((item, index) => (
-              <li key={index}>
+            {navigation?.buttons?.map((item, index) => (
+              <li key={`${item.alt}-${index}`}>
                 <a href={item?.href}>
                   <Image
                     src={item.src || ""}
