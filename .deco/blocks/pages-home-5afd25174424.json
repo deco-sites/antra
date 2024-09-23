@@ -10,11 +10,44 @@
           "links": [
             {
               "label": "A Antra",
-              "url": "/"
+              "submenu": [
+                {
+                  "label": "Quem somos",
+                  "url": "/"
+                },
+                {
+                  "label": "O que fazemos",
+                  "url": "/"
+                },
+                {
+                  "label": "Nossa história",
+                  "url": "/"
+                },
+                {
+                  "label": "Estatuto social",
+                  "url": "/"
+                }
+              ]
             },
             {
               "label": "Cartilha e Manuais",
-              "url": "/cartilha"
+              "submenu": [
+                {
+                  "label": "Notas técnicas",
+                  "subLabel": "Menu description.",
+                  "url": "/"
+                },
+                {
+                  "label": "Manuais",
+                  "subLabel": "Menu description.",
+                  "url": "/"
+                },
+                {
+                  "subLabel": "Menu description.",
+                  "label": "Cartilhas",
+                  "url": "/"
+                }
+              ]
             },
             {
               "label": "Pesquisas",
@@ -26,7 +59,16 @@
             },
             {
               "label": "Afiliação",
-              "url": "/afiliacao"
+              "submenu": [
+                {
+                  "label": "Nossas afiliadas",
+                  "url": "/"
+                },
+                {
+                  "label": "Como se afiliar",
+                  "url": "/"
+                }
+              ]
             },
             {
               "label": "Projetos",
@@ -34,7 +76,32 @@
             },
             {
               "label": "Eleições",
-              "url": "/eleicoes"
+              "submenu": [
+                {
+                  "label": "Candidaturas 2024",
+                  "url": "/"
+                },
+                {
+                  "label": "Candidaturas 2022",
+                  "url": "/"
+                },
+                {
+                  "label": "Candidaturas 2020",
+                  "url": "/"
+                },
+                {
+                  "label": "Candidaturas 2018",
+                  "url": "/"
+                },
+                {
+                  "label": "Candidaturas 2016",
+                  "url": "/"
+                },
+                {
+                  "label": "Candidaturas 2014",
+                  "url": "/"
+                }
+              ]
             },
             {
               "label": "Apoio",

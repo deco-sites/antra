@@ -18,12 +18,12 @@ export interface Nav {
     links: {
       label: string;
       url?: string;
+      img?: string;
+      imgLabel?: string;
       submenu?: {
         label: string;
         subLabel?: string;
         url: string;
-        img?: string;
-        imgLabel?: string;
       }[];
     }[];
     buttons?: CTA[];
