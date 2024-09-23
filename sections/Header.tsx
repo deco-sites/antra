@@ -61,6 +61,7 @@ export default function Header({
           <ul class="flex justify-center gap-4">
             {navigation?.links.map((link, index) => (
               <li key={index} class="group relative">
+                {/* Link principal */}
                 <a
                   href={link?.url}
                   aria-label={link?.label}
@@ -69,25 +70,49 @@ export default function Header({
                   {link?.label}
                 </a>
 
-                {/* Submenu */}
-                {Array.isArray(link?.submenu) && link.submenu.length > 0 && (
-                  <ul class="absolute left-0 hidden group-hover:flex flex-col bg-white shadow-lg mt-2 p-2">
-                    {link.submenu.map((subItem, subIndex) => (
-                      <li key={subIndex}>
-                        <a
-                          href={subItem?.url}
-                          class="block px-4 py-2 text-sm text-gray-700 hover:bg-gray-100"
-                        >
-                          {subItem?.label}
-                        </a>
-                      </li>
-                    ))}
-                  </ul>
+                {/* Submenu com imagem */}
+                {link?.submenu && (
+                  <div class="w-full absolute hidden group-hover:flex bg-white shadow-lg p-2 z-50">
+                    {/* Imagem no submenu */}
+                    {link?.img && (
+                      <div class="w-48 h-auto mb-4 flex ">
+                        <img
+                          src={link.img}
+                          alt={link.imgLabel || link.label}
+                          class="object-cover w-full h-full rounded-[16px]"
+                        />
+                        <div class="absolute w-44 h-[80%] flex flex-col justify-between px-5 py-2 mt-5 items-center">
+                          <span class="text-white top-4 left-4 text-lg">
+                            {link.imgLabel || link.label}
+                          </span>
+                          {link.label === 'Cartilha e Manuais' && (
+                            <button class="bg-white w-full rounded-[8px] p-1">Baixar recurso <Icon id="FilterList" size={12} strokeWidth={2} /></button>
+                          )}
+                        </div>                        
+                      </div>
+                    )}
+
+                    {/* Itens do submenu */}
+                    <ul class="flex flex-col">
+                      {link.submenu.map((subItem, subIndex) => (
+                        <li key={subIndex}>
+                          <a
+                            href={subItem?.url}
+                            class="block px-4 py-2 text-sm text-gray-700 hover:bg-gray-100"
+                          >
+                            {subItem?.label}
+                          </a>
+                        </li>
+                      ))}
+                    </ul>
+                  </div>
                 )}
               </li>
             ))}
           </ul>
         </div>
+
+
 
 
         <div class="hidden lg:flex items-center">
