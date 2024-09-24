@@ -1,22 +1,25 @@
 import type { ImageWidget } from "apps/admin/widgets.ts";
 import Image from "apps/website/components/Image.tsx";
 
-export interface News {
-  title: string;
-  image: ImageWidget;
-  tags: string[];
+export interface CTA {
+  src?: string;
+  href: string;
+  text?: string;
+  alt?: string;
 }
 
 export interface Props {
-  title?: string;
-  posts?: News[];
+  title: string;
+  description: string;
+  button: CTA;
+  logos?: ImageWidget[];
 }
 
 const DEFAULT_IMAGE =
   "https://ozksgdmyrqcxcwhnbepg.supabase.co/storage/v1/object/public/assets/4763/682eb374-def2-4e85-a45d-b3a7ff8a31a9";
 
 export default function BlogPosts({
-  title, posts
+  title, description, button, logos
 }: Props) {
   return (
     <div class="lg:container md:max-w-6xl lg:mx-auto mx-4 text-sm py-8 lg:py-28">
@@ -26,32 +29,24 @@ export default function BlogPosts({
             <h2 class="text-4xl font-bold leading-snug">
               {title}
             </h2>
+            <span class="text-lg font-medium leading-snug">
+              {description}
+            </span>
+            <button href={button.href}>{button.text}</button>
           </div>
         </div>
-        <div class="grid grid-cols-1 md:grid-cols-3 gap-8">
-          {posts?.map((post) => (
+        <div class="grid grid-cols-1 md:grid-cols-5 gap-8">
+          {logos?.map((logo) => (
             <div class="rounded-lg overflow-hidden">
               <Image
-                width={410}
+                width={100}
                 class="w-full object-fit z-10"
                 sizes="(max-width: 640px) 100vw, 30vw"
-                src={post.image}
-                alt={post.image}
+                src={logo}
+                alt={logo}
                 decoding="async"
                 loading="lazy"
               />
-              <div class="p-1 py-4 space-y-4">
-                <div class="flex flex-wrap gap-2">
-                  {post.tags?.map((tag) => (
-                    <div class="badge badge-lg text-xs border border-gray-700">
-                      {tag}
-                    </div>
-                  ))}
-                </div> 
-                <div class="space-y-2">
-                  <h3 class="text-2xl font-semibold">{post.title}</h3>
-                </div>                 
-              </div>
             </div>
           ))}
         </div>
