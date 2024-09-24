@@ -49,10 +49,7 @@ export default function Header({
           <Image src={logo.src || ""} width={81} height={58} alt={logo.alt} />
         </a>
 
-        <label
-          htmlFor="mobile-drawer-nav"
-          class="lg:hidden cursor-pointer"
-        >
+        <label htmlFor="mobile-drawer-nav" class="lg:hidden cursor-pointer">
           <Icon id="FilterList" size={24} strokeWidth={2} />
         </label>
 
@@ -72,8 +69,10 @@ export default function Header({
 
                 {/* Submenu com imagem */}
                 {link?.submenu && (
-                  <div class="min-w-60 max-w-lg absolute hidden group-hover:flex gap-4 bg-white shadow-lg 
-                  p-2 z-50 rounded-[8px] shadow-2xl bg-gray-200 border">
+                  <div
+                    class="min-w-60 max-w-lg absolute hidden group-hover:flex gap-4 bg-white shadow-lg 
+                  p-2 z-50 rounded-[8px] shadow-2xl bg-gray-200 border"
+                  >
                     {/* Imagem no submenu */}
                     {link?.img && (
                       <div class="w-[20rem] h-auto flex justify-center">
@@ -86,24 +85,32 @@ export default function Header({
                           <span class="text-white top-4 left-4 text-lg leading-5">
                             {link.imgLabel || link.label}
                           </span>
-                          {link.label === 'Cartilha e Manuais' && (
-                            <button class="flex items-center gap-[10px] bg-white w-full rounded-[8px] p-1">Baixar recurso <Icon id="FilterList" size={12} strokeWidth={2} /></button>
+                          {link.label === "Cartilha e Manuais" && (
+                            <button class="flex items-center gap-[10px] bg-white w-full rounded-[8px] p-1">
+                              Baixar recurso{" "}
+                              <Icon id="FilterList" size={12} strokeWidth={2} />
+                            </button>
                           )}
-                        </div>                        
+                        </div>
                       </div>
                     )}
 
                     {/* Itens do submenu */}
                     <ul class="flex flex-col w-full gap-2">
                       {link.submenu.map((subItem, subIndex) => (
-                        <li key={subIndex} class="flex flex-col block px-4 py-2 cursor-pointer hover:bg-gray-100">
+                        <li
+                          key={subIndex}
+                          class="flex flex-col block px-4 py-2 cursor-pointer hover:bg-gray-100"
+                        >
                           <a
                             href={subItem?.url}
                             class="text-base text-gray-700"
                           >
                             {subItem?.label}
                           </a>
-                          <span class="text-xs text-gray-500">{subItem.subLabel}</span>
+                          <span class="text-xs text-gray-500">
+                            {subItem.subLabel}
+                          </span>
                         </li>
                       ))}
                     </ul>
@@ -113,9 +120,6 @@ export default function Header({
             ))}
           </ul>
         </div>
-
-
-
 
         <div class="hidden lg:flex items-center">
           <ul class="flex gap-5 items-center">
@@ -138,14 +142,9 @@ export default function Header({
       {/* Sidebar for mobile */}
       <aside class="drawer-side z-50 lg:hidden">
         {/* Close when clicking on overlay */}
-        <label
-          htmlFor="mobile-drawer-nav"
-          aria-label="close sidebar"
-          class="drawer-overlay"
-        />
 
         <div class="flex flex-col gap-8 min-h-full w-full bg-base-100 text-base-content">
-          <div class="px-4 py-6 flex justify-between items-center">
+          <div class="flex px-[50px] py-4 items-center justify-between">
             <a href="/">
               <Image
                 src={logo.src || ""}
@@ -154,25 +153,67 @@ export default function Header({
                 alt={logo.alt}
               />
             </a>
-            <a >
-            <Icon id="XMark" size={24} strokeWidth={2} />
-            </a>
+            <label
+              htmlFor="mobile-drawer-nav"
+              aria-label="close sidebar"
+              class="drawer-overlay"
+            >
+              <Icon id="XMark" size={24} strokeWidth={2} />
+            </label>
           </div>
-          
 
-          <ul class="menu p-4">
+          <div class="flex justify-center items-center">
+            <div class="relative">
+              <input
+                type="text"
+                placeholder="Pesquise aqui..."
+                class="w-[327px] h-[40px] px-4 py-2 rounded-full border border-gray-300 pr-10"
+              />
+              <Icon
+                id="XMark"
+                size={24}
+                strokeWidth={2}
+                class="absolute right-3 top-1/2 transform -translate-y-1/2"
+              />
+            </div>
+          </div>
+
+          <ul class="menu px-[30px]">
             {navigation?.links.map((link, index) => (
-              <li key={`${link.label}-${index}`}>
-                <a
-                  href={link?.url}
-                  aria-label={link?.label}
+              <li key={`${link.label}-${index}`} class="relative">
+                <input
+                  type="checkbox"
+                  id={`submenu-toggle-${index}`}
+                  class="hidden"
+                />
+
+                <label
+                  htmlFor={`submenu-toggle-${index}`}
+                  aria-label="tabDropdown submenu"
+                  class="text-base flex cursor-pointer"
                 >
                   {link?.label}
-                </a>
+                  <Icon id="ChevronDown" size={16} strokeWidth={2} />
+                </label>
+
+                <ul id={`submenu-${index}`} class="submenu-class hidden">
+                  {link?.submenu?.map((subItem, subIndex) => (
+                    <li
+                      key={subIndex}
+                      class="flex flex-col block px-4 py-2 cursor-pointer hover:bg-gray-100"
+                    >
+                      <a href={subItem?.url} class="text-base text-gray-700">
+                        {subItem?.label}
+                      </a>
+                      <span class="text-xs text-gray-500">
+                        {subItem.subLabel}
+                      </span>
+                    </li>
+                  ))}
+                </ul>
               </li>
             ))}
           </ul>
-
         </div>
       </aside>
     </nav>
