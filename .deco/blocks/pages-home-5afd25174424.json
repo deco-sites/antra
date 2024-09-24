@@ -222,6 +222,22 @@
       }
     },
     {
+      "__resolveType": "website/sections/Rendering/Lazy.tsx",
+      "section": {
+        "__resolveType": "site/sections/Affiliates.tsx",
+        "title": "Onde atuamos",
+        "description": "Dedicamos a cada militante e movimento de base que se soma a essa luta.",
+        "button": {
+          "href": "/",
+          "text": "Conhecer todas",
+          "alt": "Conhecer todas"
+        },
+        "logos": [
+          "https://deco-sites-assets.s3.sa-east-1.amazonaws.com/antra/bd8d36c6-05e4-4114-9c15-3ab389da6caa/logo10.png"
+        ]
+      }
+    },
+    {
       "__resolveType": "Footer"
     }
   ],

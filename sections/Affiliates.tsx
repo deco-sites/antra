@@ -23,7 +23,7 @@ export default function BlogPosts({
   title, description, button, logos
 }: Props) {
   return (
-    <div class="lg:container md:max-w-6xl lg:mx-auto mx-4 text-sm py-8 lg:py-18">
+    <div class="lg:container md:max-w-6xl lg:mx-auto mx-4 text-sm py-8 lg:py-20">
       <div class="space-y-10">
         <div class="flex w-[350px] flex-col gap-4 justify-center items-start">
           <h2 class="text-4xl font-black leading-snug">
