@@ -1,5 +1,6 @@
 import type { ImageWidget } from "apps/admin/widgets.ts";
 import Image from "apps/website/components/Image.tsx";
+import Icon from "site/components/ui/Icon.tsx";
 
 export interface CTA {
   src?: string;
@@ -22,24 +23,26 @@ export default function BlogPosts({
   title, description, button, logos
 }: Props) {
   return (
-    <div class="lg:container md:max-w-6xl lg:mx-auto mx-4 text-sm py-8 lg:py-28">
+    <div class="lg:container md:max-w-6xl lg:mx-auto mx-4 text-sm py-8 lg:py-18">
       <div class="space-y-10">
-        <div class="flex flex-col lg:flex-row gap-4 justify-between">
-          <h2 class="text-4xl font-bold leading-snug">
+        <div class="flex w-[350px] flex-col gap-4 justify-center items-start">
+          <h2 class="text-4xl font-black leading-snug">
             {title}
           </h2>
           <span class="text-lg font-medium leading-snug">
             {description}
           </span>
-          <button href={button.href}>{button.text}</button>
+          <button class="w-[12rem] p-2 flex gap-2 items-center justify-center text-white rounded-md bg-pink-500 hover:bg-pink-600" href={button.href}>
+            {button.text}
+            <Icon id="ArrowRight" size={14} strokeWidth={1} />
+          </button>
         </div>
-        <div class="grid grid-cols-1 md:grid-cols-5 gap-8">
+        <div class="grid grid-cols-1 md:grid-cols-5 gap-8 items-center justify-center">
           {logos?.map((logo) => (
             <div class="rounded-lg overflow-hidden">
               <Image
-                width={24}
-                class="w-full object-fit z-10"
-                sizes="(max-width: 640px) 100vw, 30vw"
+                width={88}
+                class="object-fit z-10 h-full"
                 src={logo}
                 alt={logo}
                 decoding="async"
