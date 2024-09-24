@@ -25,21 +25,19 @@ export default function BlogPosts({
     <div class="lg:container md:max-w-6xl lg:mx-auto mx-4 text-sm py-8 lg:py-28">
       <div class="space-y-10">
         <div class="flex flex-col lg:flex-row gap-4 justify-between">
-          <div class="space-y-6 lg:w-1/2">
-            <h2 class="text-4xl font-bold leading-snug">
-              {title}
-            </h2>
-            <span class="text-lg font-medium leading-snug">
-              {description}
-            </span>
-            <button href={button.href}>{button.text}</button>
-          </div>
+          <h2 class="text-4xl font-bold leading-snug">
+            {title}
+          </h2>
+          <span class="text-lg font-medium leading-snug">
+            {description}
+          </span>
+          <button href={button.href}>{button.text}</button>
         </div>
         <div class="grid grid-cols-1 md:grid-cols-5 gap-8">
           {logos?.map((logo) => (
             <div class="rounded-lg overflow-hidden">
               <Image
-                width={100}
+                width={24}
                 class="w-full object-fit z-10"
                 sizes="(max-width: 640px) 100vw, 30vw"
                 src={logo}

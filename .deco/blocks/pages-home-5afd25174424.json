@@ -197,6 +197,31 @@
       }
     },
     {
+      "__resolveType": "website/sections/Rendering/Lazy.tsx",
+      "section": {
+        "__resolveType": "site/sections/Affiliates.tsx",
+        "title": "Nossas afiliadas",
+        "description": "Dedicamos a cada militante e movimento de base que se soma a essa luta.",
+        "button": {
+          "href": "/",
+          "text": "Conhecer todas",
+          "alt": "Conhecer todas"
+        },
+        "logos": [
+          "https://deco-sites-assets.s3.sa-east-1.amazonaws.com/antra/d05dfedc-9dd2-41d0-aa92-27b4afa3a5df/logo1.png",
+          "https://deco-sites-assets.s3.sa-east-1.amazonaws.com/antra/66d13c69-5f19-4262-ba58-a85d6f46aa65/logo2.png",
+          "https://deco-sites-assets.s3.sa-east-1.amazonaws.com/antra/6249c15b-f82c-4706-8dd6-f14f12d7e7e3/logo3.png",
+          "https://deco-sites-assets.s3.sa-east-1.amazonaws.com/antra/5b231f27-409f-49c3-a674-fa982bfb75ef/logo4.png",
+          "https://deco-sites-assets.s3.sa-east-1.amazonaws.com/antra/72dfc297-cf41-4589-a585-26e11477e438/logo5.png",
+          "https://deco-sites-assets.s3.sa-east-1.amazonaws.com/antra/d05291c1-3b5c-4fb9-ac90-ecd2d41973e1/logo6.png",
+          "https://deco-sites-assets.s3.sa-east-1.amazonaws.com/antra/ac976326-631d-423c-bc94-e606ab4469f3/logo7.png",
+          "https://deco-sites-assets.s3.sa-east-1.amazonaws.com/antra/3e505b55-2ee0-48f3-afd5-c37541c473b7/logo8.png",
+          "https://deco-sites-assets.s3.sa-east-1.amazonaws.com/antra/6f30152b-62d4-4d38-99a7-e072bfeb7338/logo9.png",
+          "https://deco-sites-assets.s3.sa-east-1.amazonaws.com/antra/bd8d36c6-05e4-4114-9c15-3ab389da6caa/logo10.png"
+        ]
+      }
+    },
+    {
       "__resolveType": "Footer"
     }
   ],
