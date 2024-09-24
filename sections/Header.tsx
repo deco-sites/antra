@@ -65,43 +65,45 @@ export default function Header({
                 <a
                   href={link?.url}
                   aria-label={link?.label}
-                  class="text-base font-normal leading-[22px] text-left link no-underline hover:underline p-2"
+                  class="text-base font-normal leading-[22px] text-left link no-underline px-2"
                 >
                   {link?.label}
                 </a>
 
                 {/* Submenu com imagem */}
                 {link?.submenu && (
-                  <div class="w-full absolute hidden group-hover:flex bg-white shadow-lg p-2 z-50">
+                  <div class="min-w-60 max-w-lg absolute hidden group-hover:flex gap-4 bg-white shadow-lg 
+                  p-2 z-50 rounded-[8px] shadow-2xl bg-gray-200 border">
                     {/* Imagem no submenu */}
                     {link?.img && (
-                      <div class="w-48 h-auto mb-4 flex ">
+                      <div class="w-[20rem] h-auto flex justify-center">
                         <img
                           src={link.img}
                           alt={link.imgLabel || link.label}
                           class="object-cover w-full h-full rounded-[16px]"
                         />
-                        <div class="absolute w-44 h-[80%] flex flex-col justify-between px-5 py-2 mt-5 items-center">
-                          <span class="text-white top-4 left-4 text-lg">
+                        <div class="absolute w-44 h-[80%] flex flex-col justify-between px-5 py-2 mt-2 items-center">
+                          <span class="text-white top-4 left-4 text-lg leading-5">
                             {link.imgLabel || link.label}
                           </span>
                           {link.label === 'Cartilha e Manuais' && (
-                            <button class="bg-white w-full rounded-[8px] p-1">Baixar recurso <Icon id="FilterList" size={12} strokeWidth={2} /></button>
+                            <button class="flex items-center gap-[10px] bg-white w-full rounded-[8px] p-1">Baixar recurso <Icon id="FilterList" size={12} strokeWidth={2} /></button>
                           )}
                         </div>                        
                       </div>
                     )}
 
                     {/* Itens do submenu */}
-                    <ul class="flex flex-col">
+                    <ul class="flex flex-col w-full gap-2">
                       {link.submenu.map((subItem, subIndex) => (
-                        <li key={subIndex}>
+                        <li key={subIndex} class="flex flex-col block px-4 py-2 cursor-pointer hover:bg-gray-100">
                           <a
                             href={subItem?.url}
-                            class="block px-4 py-2 text-sm text-gray-700 hover:bg-gray-100"
+                            class="text-base text-gray-700"
                           >
                             {subItem?.label}
                           </a>
+                          <span class="text-xs text-gray-500">{subItem.subLabel}</span>
                         </li>
                       ))}
                     </ul>
@@ -142,15 +144,21 @@ export default function Header({
           class="drawer-overlay"
         />
 
-        <div class="flex flex-col gap-8 min-h-full w-80 bg-base-100 text-base-content">
-          <a class="p-4" href="/">
-            <Image
-              src={logo.src || ""}
-              width={100}
-              height={28}
-              alt={logo.alt}
-            />
-          </a>
+        <div class="flex flex-col gap-8 min-h-full w-full bg-base-100 text-base-content">
+          <div class="px-4 py-6 flex justify-between items-center">
+            <a href="/">
+              <Image
+                src={logo.src || ""}
+                width={81}
+                height={58}
+                alt={logo.alt}
+              />
+            </a>
+            <a >
+            <Icon id="XMark" size={24} strokeWidth={2} />
+            </a>
+          </div>
+          
 
           <ul class="menu p-4">
             {navigation?.links.map((link, index) => (
@@ -165,20 +173,6 @@ export default function Header({
             ))}
           </ul>
 
-          <ul class="p-4 flex items-center gap-3">
-            {navigation?.buttons?.map((item, index) => (
-              <li key={`${item.alt}-${index}`}>
-                <a href={item?.href}>
-                  <Image
-                    src={item.src || ""}
-                    width={18}
-                    height={18}
-                    alt={logo.alt}
-                  />
-                </a>
-              </li>
-            ))}
-          </ul>
         </div>
       </aside>
     </nav>
