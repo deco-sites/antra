@@ -222,6 +222,30 @@
       }
     },
     {
+      "__resolveType": "website/sections/Rendering/Lazy.tsx",
+      "section": {
+        "__resolveType": "site/sections/Act.tsx",
+        "title": "Onde atuamos",
+        "cards": [
+          {
+            "title": "Advocacy",
+            "description": "Representação e ações de advocacy junto a órgãos estatais de monitoramento e controle, além da incidência política em todos os níveis, incluindo o âmbito internacional.",
+            "icon": "https://deco-sites-assets.s3.sa-east-1.amazonaws.com/antra/e2d5d0b4-71a7-49b1-83e0-cf875dcabd49/icon1.svg"
+          },
+          {
+            "title": "Condução de Pesquisas",
+            "description": "Mapeamos e denunciamos os assassinatos de pessoas Trans no Brasil, cobrando soluções efetivas para esses crimes. Fazemos condução de pesquisas e levantamento de dados de interesse da população trans e travesti.",
+            "icon": "https://deco-sites-assets.s3.sa-east-1.amazonaws.com/antra/a2ea3a84-a850-4d02-9a8b-dcde694832c6/icon2.svg"
+          },
+          {
+            "title": "Projetos",
+            "description": "Desenvolvimento de projetos para editais de interesse institucional que contemplem ações de impacto direto para a população trans",
+            "icon": "https://deco-sites-assets.s3.sa-east-1.amazonaws.com/antra/c4352deb-d5fb-4c41-b1bb-db40833d90bf/icon3.svg"
+          }
+        ]
+      }
+    },
+    {
       "__resolveType": "Footer"
     }
   ],
