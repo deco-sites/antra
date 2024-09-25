@@ -224,6 +224,16 @@
     {
       "__resolveType": "website/sections/Rendering/Lazy.tsx",
       "section": {
+        "__resolveType": "site/sections/Message.tsx",
+        "message": "“A ANTRA é a maior e mais importante instituição de luta pelos direitos trans.  Um coletivo de pessoas trans politicamente mobilizadas para lutar por um futuro melhor.”",
+        "name": "Bruna Benevides",
+        "position": "Presidenta da ANTRA",
+        "image": "https://deco-sites-assets.s3.sa-east-1.amazonaws.com/antra/be260c5c-6a49-4b4b-b333-b1a32da902e9/image.png"
+      }
+    },
+    {
+      "__resolveType": "website/sections/Rendering/Lazy.tsx",
+      "section": {
         "__resolveType": "site/sections/Act.tsx",
         "title": "Onde atuamos",
         "cards": [
