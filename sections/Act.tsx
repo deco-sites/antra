@@ -28,19 +28,20 @@ export default function Act({
           </h2>
         </div>
 
-        <div class="grid grid-cols-1 md:grid-cols-3 gap-8 items-center justify-center border">
+        <div class="grid grid-cols-1 md:grid-cols-3 gap-5 items-center justify-center pb-40">
           {cards?.map((card) => (
-            <div class="rounded-lg flex flex-col overflow-hidden p-2 hover:bg-gray-500">
+            <div class="h-full rounded-3xl flex flex-col gap-5 overflow-hidden p-5 border hover:bg-gray-100">
               <Image
-                width={88}
-                class="object-fit z-10 h-full"
+                width={40}
+                height={40}
+                class="object-fit z-10"
                 src={card.icon}
                 alt={card.icon}
                 decoding="async"
                 loading="lazy"
               />
-              <h2>{card.title}</h2>
-              <span>{card.description}</span>
+              <h2 class="text-xl font-bold">{card.title}</h2>
+              <span class="text-base font-medium">{card.description}</span>
             </div>
           ))}
         </div>
