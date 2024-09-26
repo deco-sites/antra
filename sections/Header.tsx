@@ -40,7 +40,8 @@ export default function Header({
   navigation
 }: Nav) {
   return (
-    <nav class="drawer drawer-end">
+    <nav class="drawer drawer-end border-b border-gray-300">
+      <div class="absolute top-0 left-0 w-full h-2.5 bg-gradient-to-r from-[#3AB4F6] via-[#FCA5B3] to-[#3AB4F6]"></div>
       <input id="mobile-drawer-nav" type="checkbox" class="drawer-toggle" />
 
       {/* Main content */}
