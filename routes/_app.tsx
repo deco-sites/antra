@@ -13,6 +13,7 @@ export default defineApp(async (_req, ctx) => {
 
       {/* Include Icons and manifest */}
       <Head>
+      <script src="https://unpkg.com/htmx.org@1.7.0"></script>
         {/* Enable View Transitions API */}
         <style
           dangerouslySetInnerHTML={{

@@ -142,7 +142,24 @@
     {
       "__resolveType": "website/sections/Rendering/Lazy.tsx",
       "section": {
-        "__resolveType": "site/sections/ImageWithParagraph.tsx"
+        "__resolveType": "site/sections/Main.tsx",
+        "title": "Como acessar o SUS para questões de transição?",
+        "image": "https://deco-sites-assets.s3.sa-east-1.amazonaws.com/antra/3d85921d-54d1-47db-8500-34b8e34c996a/image1.png",
+        "description": "Constante somos procuradas sobre dúvidas em relação para acesso ao processo transexualizador do SUS e sobre quais procedimentos temos garantido o direito, além do funcionamento e fluxo de atendimento.",
+        "link": "/",
+        "items": [
+          {
+            "image": "https://deco-sites-assets.s3.sa-east-1.amazonaws.com/antra/3d85921d-54d1-47db-8500-34b8e34c996a/image1.png",
+            "title": "Como acessar o SUS para questões de transição?",
+            "description": "Constante somos procuradas sobre dúvidas em relação para acesso ao processo transexualizador do SUS e sobre quais procedimentos temos garantido o direito, além do funcionamento e fluxo de atendimento.",
+            "link": "/"
+          },
+          {
+            "title": "Encontre locais de apoio na sua área",
+            "link": "/",
+            "image": "https://deco-sites-assets.s3.sa-east-1.amazonaws.com/antra/2144ad25-3f33-4076-b964-73d0961788e7/image2.png"
+          }
+        ]
       }
     },
     {

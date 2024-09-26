@@ -9,7 +9,7 @@ import * as $$$$$$0 from "./sections/Act.tsx";
 import * as $$$$$$1 from "./sections/Affiliates.tsx";
 import * as $$$$$$2 from "./sections/Footer.tsx";
 import * as $$$$$$3 from "./sections/Header.tsx";
-import * as $$$$$$4 from "./sections/ImageWithParagraph.tsx";
+import * as $$$$$$4 from "./sections/Main.tsx";
 import * as $$$$$$5 from "./sections/Manuals.tsx";
 import * as $$$$$$6 from "./sections/Message.tsx";
 import * as $$$$$$7 from "./sections/News.tsx";
@@ -21,7 +21,7 @@ const manifest = {
     "site/sections/Affiliates.tsx": $$$$$$1,
     "site/sections/Footer.tsx": $$$$$$2,
     "site/sections/Header.tsx": $$$$$$3,
-    "site/sections/ImageWithParagraph.tsx": $$$$$$4,
+    "site/sections/Main.tsx": $$$$$$4,
     "site/sections/Manuals.tsx": $$$$$$5,
     "site/sections/Message.tsx": $$$$$$6,
     "site/sections/News.tsx": $$$$$$7,
