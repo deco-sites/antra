@@ -11,7 +11,7 @@ interface Props {
   items: Item[];
 }
 
-const NewsItem: FunctionalComponent<Item> = ({ image, title, description, link }) => {
+const NewsItem = ({ image, title, description, link }: Item) => {
   return (
     <div class="relative h-64 w-full overflow-hidden">
       <img src={image} alt={title} class="h-full w-full object-cover" />
@@ -28,7 +28,7 @@ const NewsItem: FunctionalComponent<Item> = ({ image, title, description, link }
   );
 };
 
-const NewsFeed: FunctionalComponent<Props> = ({ items }) => {
+const NewsFeed: FunctionalComponent<Props> = ({ items }: Props) => {
   return (
     <div class="lg:container md:max-w-6xl lg:mx-auto mx-4 text-sm py-8 lg:py-20">
       <div class="space-y-10">

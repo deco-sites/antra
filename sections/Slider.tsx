@@ -1,27 +1,28 @@
+import { ImageWidget } from "apps/admin/widgets.ts";
 import { h, FunctionalComponent } from 'preact';
 
 interface SlideProps {
-  image: string;
+  image: ImageWidget;
   title: string;
-  description: string;
+  tag: string[];
 }
 
 interface SliderProps {
   slides: SlideProps[];
 }
 
-const Slide: FunctionalComponent<SlideProps> = ({ image, title, description }) => {
+const Slide: FunctionalComponent<SlideProps> = ({ image, title, tag }: SlideProps) => {
   return (
     <div class="slide">
       <img src={image} alt={title} />
       <h2 class="slide-title">{title}</h2>
-      <p class="slide-description">{description}</p>
+      <p class="slide-description">{tag}</p>
     </div>
   );
 };
 
 
-const Slider: FunctionalComponent<SliderProps> = ({ slides }) => {
+const Slider: FunctionalComponent<SliderProps> = ({ slides }: SliderProps) => {
   return (
     <div class="slider">
       {slides.map((slide, index) => (
