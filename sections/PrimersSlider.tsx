@@ -34,8 +34,13 @@ function Card({ image, title, tag }: SlideProps) {
 function PrimersSlider({ slides }: SliderProps) {
   return (
     <div class="w-screen text-sm pl-[16rem] text-sm py-8 lg:py-20 overflow-hidden">
+      <div class="space-y-6 lg:w-1/2">
+        <h2 class="text-4xl font-bold leading-snug">
+        Cartilhas e manuais
+        </h2>
+      </div>
       <SliderIsland>
-        <div class="flex gap-5">
+        <div class="flex gap-5 pl-8">
           {slides.map((slide, index) => (
             <div class="w-[300px]" key={index}>
               <Card image={slide.image} title={slide.title} tag={slide.tag} />
