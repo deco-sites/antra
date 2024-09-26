@@ -216,21 +216,17 @@
     {
       "__resolveType": "website/sections/Rendering/Lazy.tsx",
       "section": {
-        "__resolveType": "site/sections/Slider.tsx",
+        "__resolveType": "site/sections/PrimersSlider.tsx",
         "slides": [
           {
-            "title": "Alteração nome e gênero",
+            "title": "teste1",
             "image": "https://deco-sites-assets.s3.sa-east-1.amazonaws.com/antra/e655536f-f393-4db1-9ee5-9dc4d9c8afcc/card1.png",
-            "tag": [
-              "Cartilhas"
-            ]
+            "tag": []
           },
           {
-            "tag": [
-              "Cartilhas"
-            ],
+            "tag": [],
             "image": "https://deco-sites-assets.s3.sa-east-1.amazonaws.com/antra/b11e16b9-240d-45ed-abb5-c6e3f73ff8cb/card2.png",
-            "title": "Cartilha homens trans"
+            "title": "teste2"
           }
         ]
       }
