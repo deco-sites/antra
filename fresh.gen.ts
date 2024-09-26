@@ -3,14 +3,20 @@
 // This file is automatically updated during development when running `dev.ts`.
 
 import * as $_app from "./routes/_app.tsx";
-
+import * as $header_mobile_site from "./islands/header-mobile-site.tsx";
+import * as $header_site from "./islands/header-site.tsx";
+import * as $slider_island from "./islands/slider-island.tsx";
 import { type Manifest } from "$fresh/server.ts";
 
 const manifest = {
   routes: {
     "./routes/_app.tsx": $_app,
   },
-  islands: {},
+  islands: {
+    "./islands/header-mobile-site.tsx": $header_mobile_site,
+    "./islands/header-site.tsx": $header_site,
+    "./islands/slider-island.tsx": $slider_island,
+  },
   baseUrl: import.meta.url,
 } satisfies Manifest;
 

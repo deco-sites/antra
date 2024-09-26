@@ -14,7 +14,7 @@ interface Props {
 const NewsItem = ({ image, title, description, link }: Item) => {
   return (
     <div class="relative lg:h-[700px] h-full w-full overflow-hidden rounded-2xl">
-      <img src={image} alt={title} class="h-full w-full object-cover brightness-75"/>
+      <img src={image} alt={title} class="h-full w-full object-cover brightness-75" />
       <div class="absolute top-0 left-0 p-4 w-[65%]">
         <h2 class="text-5xl font-medium text-white">{title}</h2>
       </div>

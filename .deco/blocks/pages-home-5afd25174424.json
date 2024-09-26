@@ -216,24 +216,6 @@
     {
       "__resolveType": "website/sections/Rendering/Lazy.tsx",
       "section": {
-        "__resolveType": "site/sections/PrimersSlider.tsx",
-        "slides": [
-          {
-            "title": "teste1",
-            "image": "https://deco-sites-assets.s3.sa-east-1.amazonaws.com/antra/e655536f-f393-4db1-9ee5-9dc4d9c8afcc/card1.png",
-            "tag": []
-          },
-          {
-            "tag": [],
-            "image": "https://deco-sites-assets.s3.sa-east-1.amazonaws.com/antra/b11e16b9-240d-45ed-abb5-c6e3f73ff8cb/card2.png",
-            "title": "teste2"
-          }
-        ]
-      }
-    },
-    {
-      "__resolveType": "website/sections/Rendering/Lazy.tsx",
-      "section": {
         "__resolveType": "site/sections/Affiliates.tsx",
         "title": "Nossas afiliadas",
         "description": "Dedicamos a cada militante e movimento de base que se soma a essa luta.",
@@ -253,6 +235,48 @@
           "https://deco-sites-assets.s3.sa-east-1.amazonaws.com/antra/3e505b55-2ee0-48f3-afd5-c37541c473b7/logo8.png",
           "https://deco-sites-assets.s3.sa-east-1.amazonaws.com/antra/6f30152b-62d4-4d38-99a7-e072bfeb7338/logo9.png",
           "https://deco-sites-assets.s3.sa-east-1.amazonaws.com/antra/bd8d36c6-05e4-4114-9c15-3ab389da6caa/logo10.png"
+        ]
+      }
+    },
+    {
+      "__resolveType": "website/sections/Rendering/Lazy.tsx",
+      "section": {
+        "__resolveType": "site/sections/PrimersSlider.tsx",
+        "slides": [
+          {
+            "title": "teste1",
+            "image": "https://deco-sites-assets.s3.sa-east-1.amazonaws.com/antra/e655536f-f393-4db1-9ee5-9dc4d9c8afcc/card1.png",
+            "tag": []
+          },
+          {
+            "tag": [],
+            "image": "https://deco-sites-assets.s3.sa-east-1.amazonaws.com/antra/b11e16b9-240d-45ed-abb5-c6e3f73ff8cb/card2.png",
+            "title": "teste2"
+          },
+          {
+            "tag": [
+              "Cartilhas"
+            ],
+            "image": "https://deco-sites-assets.s3.sa-east-1.amazonaws.com/antra/981503e2-9815-4cb0-b825-ccb67384964b/card3.png",
+            "title": "teste3"
+          },
+          {
+            "tag": [],
+            "image": "https://deco-sites-assets.s3.sa-east-1.amazonaws.com/antra/85df59c7-34f4-473d-9701-b5405b33a948/card4.png",
+            "title": "teste4"
+          },
+          {
+            "tag": [],
+            "image": "https://deco-sites-assets.s3.sa-east-1.amazonaws.com/antra/d8857ae8-21f9-44b1-bb2f-556bd1a851c8/card5.png",
+            "title": "teste5"
+          },
+          {
+            "tag": [
+              "Cartilhas"
+            ],
+            "image": "https://deco-sites-assets.s3.sa-east-1.amazonaws.com/antra/c7fa80d2-cf3c-4fc4-a19c-de7fe0879cc1/card6.png",
+            "title": "teste6"
+          }
         ]
       }
     },
