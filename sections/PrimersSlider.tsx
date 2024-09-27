@@ -37,8 +37,8 @@ function Card({ image, title, tag }: SlideProps) {
 
 function PrimersSlider({ slides }: SliderProps) {
   return (
-    <div class="w-full text-sm pl-[12rem] lg:pl-[16rem] py-10 lg:py-24 overflow-visible">
-      <div class="space-y-8 lg:w-1/2 mb-8">
+    <div class="w-full text-sm lg:pl-[16rem] py-10 lg:py-24 overflow-visible">
+      <div class="space-y-8 lg:w-1/2 mb-8 px-5">
         <h2 class="text-4xl font-bold leading-snug text-gray-800">
           Cartilhas e manuais
         </h2>

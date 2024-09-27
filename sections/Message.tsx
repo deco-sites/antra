@@ -23,14 +23,14 @@ export default function Message({
   icon,
 }: Props) {
   return (
-    <div class="lg:max-h-[880px] bg-[#0459C5] flex justify-between items-center relative">
-      <div class="w-full flex justify-center">
+    <div class="lg:max-h-[880px] bg-[#0459C5] flex flex-col md:flex-row justify-between items-center relative">
+      <div class="w-full flex justify-center py-12 md:py-1">
         <div class="flex flex-col gap-8 w-[55%] z-10">
           <div class="flex flex-col gap-8">
-            <h2 class="text-4xl lg:text-4xl font-bold text-white leading-tight">
+            <h2 class="text-xl lg:text-4xl font-bold text-white leading-tight">
               {paragrafo1}
             </h2>
-            <h2 class="text-4xl lg:text-4xl font-bold text-white leading-tight">
+            <h2 class="text-xl lg:text-4xl font-bold text-white leading-tight">
               {paragrafo2}
             </h2>
           </div>
@@ -60,7 +60,7 @@ export default function Message({
         </div>
       </div>
 
-      <div class="lg:w-[55%] rounded-lg overflow-hidden">
+      <div class="w-full h-[400px] md:h-full md:w-[55%] rounded-lg overflow-hidden">
         <Image
           width={750}
           height={850}

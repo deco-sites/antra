@@ -17,7 +17,7 @@ const DEFAULT_IMAGE =
 
 export default function BlogPosts({ title, posts }: Props) {
   return (
-    <div class="lg:container text-sm lg:p-16">
+    <div class="lg:container text-sm px-5 lg:p-16">
       <div class="space-y-10">
         <div class="flex flex-col lg:flex-row gap-4 justify-between">
           <div class="space-y-6 lg:w-1/2">

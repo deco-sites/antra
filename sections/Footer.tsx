@@ -78,14 +78,14 @@ export default function Footer({
   ];
 
   return (
-    <div class="w-full bg-[#0459C5] rounded-t-[16px]">
-      <div class="lg:container px-5 lg:px-16 text-sm py-8 lg:py-20">
+    <div class="w-full bg-[#0459C5] rounded-t-[16px] px-5">
+      <div class="lg:container px-5 lg:px-16 text-sm py-16 lg:py-20">
         <div
-          class="relative bg-cover bg-center rounded-[16px] p-12 -translate-y-[70%] shadow-lg"
+          class="relative bg-cover bg-center rounded-[16px] p-12 -translate-y-[65%] md:-translate-y-[70%] shadow-lg"
           style={`background-image: url(${background.src})`}
         >
           <div class="relative z-10 text-white">
-            <h2 class="text-[40px] lg:text-[48px] font-medium leading-tight text-left max-w-[600px]">
+            <h2 class="text-[22px] lg:text-[48px] font-medium leading-tight text-left max-w-[600px]">
               Cadastre seu e-mail para receber nossas notícias
             </h2>
             <form class="flex flex-col gap-6 mt-6">
@@ -129,29 +129,31 @@ export default function Footer({
             ))}
           </nav>
 
-          <div class="flex items-center space-x-6 mt-8">
-            {social.map((social) => (
-              <a
-                href={social.href}
-                class="bg-white rounded-lg w-[40px] h-[40px] flex items-center justify-center hover:bg-gray-200 transition"
-              >
-                <Icon
-                  id={`${social.network}`}
-                  size={24}
-                  strokeWidth={2}
-                  class="text-black"
-                />
-              </a>
-            ))}
+          <div class="flex flex-col md:flex-row items-start md:items-center space-x-6 mt-8">
+            <div class="flex gap-5 mb-5">
+              {social.map((social) => (
+                <a
+                  href={social.href}
+                  class="bg-white rounded-lg w-[40px] h-[40px] flex items-center justify-center hover:bg-gray-200 transition"
+                >
+                  <Icon
+                    id={`${social.network}`}
+                    size={18}
+                    strokeWidth={2}
+                    class="text-black flex items-center justify-center"
+                  />
+                </a>
+              ))}
+            </div>
             <a
               href="mailto:contato@antrabrasil.org"
-              class="hover:text-gray-200 text-white pl-4"
+              class="text-base hover:text-gray-200 text-white pl-4"
             >
               contato@antrabrasil.org
             </a>
           </div>
 
-          <div class="flex justify-between text-sm font-light mt-6 text-white">
+          <div class="flex flex-col md:flex-row gap-5 justify-between text-sm font-light mt-6 text-white">
             <span>{copyright}</span>
             <a href="#" class="underline hover:text-gray-300 transition">
               Política de Privacidade

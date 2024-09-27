@@ -18,9 +18,9 @@ const DEFAULT_IMAGE =
 
 export default function Act({ title, cards }: Props) {
   return (
-    <div class="lg:container lg:p-16 text-sm py-8 lg:py-20">
+    <div class="lg:container lg:p-16 text-sm py-8 lg:py-20 px-5">
       <div class="space-y-10">
-        <div class="flex w-[350px] flex-col gap-4 justify-center items-start">
+        <div class="flex w-full lg:w-[350px] flex-col gap-4 justify-center items-start">
           <h2 class="text-4xl font-black leading-snug">{title}</h2>
         </div>
 
