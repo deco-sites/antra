@@ -1,5 +1,6 @@
-import { FunctionalComponent } from 'preact';
-import { useRef } from 'preact/hooks';
+import { FunctionalComponent } from "preact";
+import { useRef } from "preact/hooks";
+import Icon from "site/components/ui/Icon.tsx";
 
 interface SliderIslandProps {
   children: preact.ComponentChildren;
@@ -11,18 +12,16 @@ const SliderIsland: FunctionalComponent<SliderIslandProps> = ({ children }) => {
   const handleScroll = (event: WheelEvent) => {
     if (sliderRef.current) {
       event.preventDefault();
-      // Normaliza a quantidade de scroll
-      const scrollAmount = event.deltaY > 0 ? 200 : -200; // Ajuste conforme necessário
+      const scrollAmount = event.deltaY > 0 ? 200 : -200;
       sliderRef.current.scrollLeft += scrollAmount;
     }
   };
 
   const handleNext = () => {
     if (sliderRef.current) {
-      // Move um terço da largura do container por vez
       sliderRef.current.scrollBy({
-        left: sliderRef.current.offsetWidth / 3, // Move um card de cada vez
-        behavior: 'smooth', // Suaviza a transição
+        left: sliderRef.current.offsetWidth / 3,
+        behavior: "smooth",
       });
     }
   };
@@ -30,33 +29,34 @@ const SliderIsland: FunctionalComponent<SliderIslandProps> = ({ children }) => {
   const handlePrev = () => {
     if (sliderRef.current) {
       sliderRef.current.scrollBy({
-        left: -sliderRef.current.offsetWidth / 3, // Move um card de cada vez
-        behavior: 'smooth', // Suaviza a transição
+        left: -sliderRef.current.offsetWidth / 3,
+        behavior: "smooth",
       });
     }
   };
 
   return (
-    <div className="relative w-full">
+    <div className="relative w-full overflow-hidden">
       <div
         ref={sliderRef}
-        className="flex scroll-auto snap-x snap-mandatory overflow-hidden"
+        className="flex scroll-auto snap-x snap-mandatory overflow-x-hidden pb-4"
         onWheel={handleScroll}
       >
         {children}
       </div>
-      <div className="absolute bottom-[-2.5rem] left-0 right-0 flex justify-end gap-4">
+      <div className="absolute mt-2 bottom-0 right-12 flex gap-5">
+        {" "}
         <button
           onClick={handlePrev}
-          className="p-2 bg-gray-300 rounded-full hover:bg-gray-400"
+          className="p-3 rounded-full hover:bg-gray-400 flex items-center justify-center"
         >
-          &#9664;
+          <Icon id="ArrowRight" size={20} strokeWidth={1} />
         </button>
         <button
           onClick={handleNext}
-          className="p-2 bg-gray-300 rounded-full hover:bg-gray-400"
+          className="p-3 rounded-full hover:bg-gray-400 flex items-center justify-center"
         >
-          &#9654;
+          <Icon id="ArrowLeft" size={20} strokeWidth={1} />
         </button>
       </div>
     </div>

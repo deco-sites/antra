@@ -29,19 +29,17 @@ export interface Nav {
   };
 }
 
-
 export default function Header({
   logo = {
-    src:
-      "https://deco-sites-assets.s3.sa-east-1.amazonaws.com/antra/7a170a54-a9aa-4470-b04f-95197d431345/antra-logo.png",
+    src: "https://deco-sites-assets.s3.sa-east-1.amazonaws.com/antra/7a170a54-a9aa-4470-b04f-95197d431345/antra-logo.png",
     alt: "Logo",
   },
-  navigation
+  navigation,
 }: Nav) {
   return (
     <>
       <HeaderSite logo={logo} navigation={navigation} />
-      <HeaderMobileSite logo={logo} navigation={navigation} />    
+      <HeaderMobileSite logo={logo} navigation={navigation} />
     </>
   );
 }

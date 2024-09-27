@@ -14,18 +14,22 @@ interface SliderProps {
 function Card({ image, title, tag }: SlideProps) {
   return (
     <div
-      class="relative w-[300px] h-[400px] bg-cover bg-center rounded-md"
+      class="relative w-[320px] h-[450px] bg-cover bg-center rounded-lg shadow-lg 
+  overflow-visible transition-transform transform scale-100 hover:scale-105 hover:z-10"
       style={{ backgroundImage: `url(${image})` }}
     >
-      <h3 class="absolute top-0 left-0 w-full text-center text-lg font-semibold text-white p-2">
-        {title}
-      </h3>
-      <div class="absolute bottom-0 left-0 p-2">
-        {tag.map((t, index) => (
-          <span key={index} class="text-sm bg-gray-200 rounded-full px-2 py-1 mr-2">
-            {t}
-          </span>
-        ))}
+      <div class="absolute inset-0 bg-black bg-opacity-30 flex flex-col justify-between p-4 rounded-lg">
+        <h3 class="text-lg font-semibold text-white">{title}</h3>
+        <div class="flex flex-wrap gap-2">
+          {tag.map((t, index) => (
+            <span
+              key={index}
+              class="badge badge-lg text-xs border border-white text-white bg-transparent"
+            >
+              {t}
+            </span>
+          ))}
+        </div>
       </div>
     </div>
   );
@@ -33,16 +37,16 @@ function Card({ image, title, tag }: SlideProps) {
 
 function PrimersSlider({ slides }: SliderProps) {
   return (
-    <div class="w-screen text-sm pl-[16rem] text-sm py-8 lg:py-20 overflow-hidden">
-      <div class="space-y-6 lg:w-1/2">
-        <h2 class="text-4xl font-bold leading-snug">
-        Cartilhas e manuais
+    <div class="w-full text-sm pl-[12rem] lg:pl-[16rem] py-10 lg:py-24 overflow-visible">
+      <div class="space-y-8 lg:w-1/2 mb-8">
+        <h2 class="text-4xl font-bold leading-snug text-gray-800">
+          Cartilhas e manuais
         </h2>
       </div>
       <SliderIsland>
-        <div class="flex gap-5 pl-8">
+        <div class="flex gap-6 pl-10 pb-8 pt-12 overflow-visible">
           {slides.map((slide, index) => (
-            <div class="w-[300px]" key={index}>
+            <div class="w-[320px] mx-4 overflow-visible" key={index}>
               <Card image={slide.image} title={slide.title} tag={slide.tag} />
             </div>
           ))}
