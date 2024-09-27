@@ -13,7 +13,8 @@ import * as $$$$$$4 from "./sections/Main.tsx";
 import * as $$$$$$5 from "./sections/Message.tsx";
 import * as $$$$$$6 from "./sections/News.tsx";
 import * as $$$$$$7 from "./sections/PrimersSlider.tsx";
-import * as $$$$$$8 from "./sections/Theme/Theme.tsx";
+import * as $$$$$$8 from "./sections/Resource.tsx";
+import * as $$$$$$9 from "./sections/Theme/Theme.tsx";
 
 const manifest = {
   "sections": {
@@ -25,7 +26,8 @@ const manifest = {
     "site/sections/Message.tsx": $$$$$$5,
     "site/sections/News.tsx": $$$$$$6,
     "site/sections/PrimersSlider.tsx": $$$$$$7,
-    "site/sections/Theme/Theme.tsx": $$$$$$8,
+    "site/sections/Resource.tsx": $$$$$$8,
+    "site/sections/Theme/Theme.tsx": $$$$$$9,
   },
   "apps": {
     "site/apps/deco/blog.ts": $$$$$$$$$$$0,
