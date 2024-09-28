@@ -78,7 +78,7 @@ export default function Footer({
   ];
 
   return (
-    <div class="w-full bg-[#0459C5] rounded-t-[16px] px-5">
+    <div class="w-full bg-[#0459C5] rounded-t-[16px] px-5 mt-16">
       <div class="lg:container px-5 lg:px-16 text-sm py-16 lg:py-20">
         <div
           class="relative bg-cover bg-center rounded-[16px] p-12 -translate-y-[65%] md:-translate-y-[70%] shadow-lg"
