@@ -64,8 +64,8 @@ export const HeaderMobileSite = ({ logo, navigation }: Nav) => {
                 className="w-[327px] h-[40px] px-4 py-2 rounded-full border border-gray-300 pr-10"
               />
               <Icon
-                id="XMark"
-                size={24}
+                id="Search"
+                size={18}
                 strokeWidth={2}
                 className="absolute right-3 top-1/2 transform -translate-y-1/2"
               />

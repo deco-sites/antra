@@ -142,22 +142,32 @@
     {
       "__resolveType": "website/sections/Rendering/Lazy.tsx",
       "section": {
-        "__resolveType": "site/sections/Main.tsx",
-        "title": "Como acessar o SUS para questões de transição?",
-        "image": "https://deco-sites-assets.s3.sa-east-1.amazonaws.com/antra/3d85921d-54d1-47db-8500-34b8e34c996a/image1.png",
-        "description": "Constante somos procuradas sobre dúvidas em relação para acesso ao processo transexualizador do SUS e sobre quais procedimentos temos garantido o direito, além do funcionamento e fluxo de atendimento.",
-        "link": "/",
-        "items": [
+        "__resolveType": "site/sections/FeaturedNews.tsx",
+        "tags": [
+          "Cultura",
+          "Eventos",
+          "Educação",
+          "Direitos e Políticas",
+          "Notas e Ofícios",
+          "Pesquisas",
+          "Saúde",
+          "Violência"
+        ],
+        "mainNews": {
+          "title": "A importância da CEDAW e sua relevância para a pauta trans",
+          "image": "https://deco-sites-assets.s3.sa-east-1.amazonaws.com/antra/51b8421d-5399-4d5c-830d-e4fbd5b0c0ff/main-news.png",
+          "description": "CEDAW: tratado da ONU contra discriminação de mulheres, promovendo igualdade de gênero."
+        },
+        "news": [
           {
-            "image": "https://deco-sites-assets.s3.sa-east-1.amazonaws.com/antra/3d85921d-54d1-47db-8500-34b8e34c996a/image1.png",
-            "title": "Como acessar o SUS para questões de transição?",
-            "description": "Constante somos procuradas sobre dúvidas em relação para acesso ao processo transexualizador do SUS e sobre quais procedimentos temos garantido o direito, além do funcionamento e fluxo de atendimento.",
-            "link": "/"
+            "title": "ANTRA em defesa da identidade travesti",
+            "image": "https://deco-sites-assets.s3.sa-east-1.amazonaws.com/antra/31a01c5c-2409-4cd1-a1c5-af8817edf72d/news1.png",
+            "tag": "Direitos e Políticas"
           },
           {
-            "title": "Encontre locais de apoio na sua área",
-            "link": "/",
-            "image": "https://deco-sites-assets.s3.sa-east-1.amazonaws.com/antra/2144ad25-3f33-4076-b964-73d0961788e7/image2.png"
+            "title": "Pronunciamento do ministério das mulheres pelo dia internacional da mulher",
+            "image": "https://deco-sites-assets.s3.sa-east-1.amazonaws.com/antra/03937534-2e27-449f-8011-ee42233d1d06/news2.png",
+            "tag": "Direitos e Políticas"
           }
         ]
       }
@@ -165,50 +175,87 @@
     {
       "__resolveType": "website/sections/Rendering/Lazy.tsx",
       "section": {
-        "__resolveType": "site/sections/News.tsx",
-        "title": "Últimas notícias",
-        "posts": [
+        "__resolveType": "site/sections/AllNews.tsx",
+        "title": "Todas as notícias",
+        "info": {
+          "title": "Encontre locais de apoio na sua área",
+          "image": "https://deco-sites-assets.s3.sa-east-1.amazonaws.com/antra/2144ad25-3f33-4076-b964-73d0961788e7/image2.png"
+        },
+        "allNews": [
           {
-            "tags": [
-              "Notas e Ofícios"
-            ],
             "title": "ANTRA em defesa da identidade travesti",
-            "image": "https://deco-sites-assets.s3.sa-east-1.amazonaws.com/antra/31a01c5c-2409-4cd1-a1c5-af8817edf72d/news1.png"
+            "image": "https://deco-sites-assets.s3.sa-east-1.amazonaws.com/antra/31a01c5c-2409-4cd1-a1c5-af8817edf72d/news1.png",
+            "tag": "Direitos e Políticas"
           },
           {
-            "tags": [
-              "Direitos e Políticas"
-            ],
-            "title": "Pronunciamento do ministério das mulheres pelo dia internacional da mulher",
-            "image": "https://deco-sites-assets.s3.sa-east-1.amazonaws.com/antra/03937534-2e27-449f-8011-ee42233d1d06/news2.png"
+            "tag": "Direitos e Políticas",
+            "image": "https://deco-sites-assets.s3.sa-east-1.amazonaws.com/antra/03937534-2e27-449f-8011-ee42233d1d06/news2.png",
+            "title": "Pronunciamento do ministério das mulheres pelo dia internacional da mulher"
           },
           {
-            "tags": [
-              "Notas e Ofícios"
-            ],
+            "tag": "Direitos e Políticas",
             "title": "ANTRA lança nota técnica sobre o uso do banheiro por pessoas trans",
             "image": "https://deco-sites-assets.s3.sa-east-1.amazonaws.com/antra/ea10b3bc-05c8-49dd-9f7f-ee4ae4711d34/news3.png"
           },
           {
-            "tags": [
-              "Direitos e Políticas"
-            ],
             "title": "ANTRA lança diagnóstico sobre a retificação de nome e gênero de travestis e demais pessoas trans no brasil.",
+            "tag": "Direitos e Políticas",
             "image": "https://deco-sites-assets.s3.sa-east-1.amazonaws.com/antra/9d4d0444-d172-4591-8b06-f43100187ea7/news4.png"
           },
           {
-            "tags": [
-              "Direitos e Políticas"
-            ],
+            "tag": "Direitos e Políticas",
             "title": "ANTRA entrega carta sobre população trans negra à representante da CIDH",
             "image": "https://deco-sites-assets.s3.sa-east-1.amazonaws.com/antra/9a38e0be-001a-4d9d-a7f6-fde7d6f8d47f/news5.png"
           },
           {
-            "tags": [
-              "Direitos e Políticas"
-            ],
-            "title": "Instituições LGBTI nacionais repudiam omissão do Brasil em assinatura do plano de ação LGBTI+ no Mercosul",
-            "image": "https://deco-sites-assets.s3.sa-east-1.amazonaws.com/antra/fd7b5b1b-482b-4f2b-b60d-32dc1a74335b/news6.png"
+            "tag": "Direitos e Políticas",
+            "image": "https://deco-sites-assets.s3.sa-east-1.amazonaws.com/antra/fd7b5b1b-482b-4f2b-b60d-32dc1a74335b/news6.png",
+            "title": "Instituições LGBTI nacionais repudiam omissão do Brasil em assinatura do plano de ação LGBTI+ no Mercosul"
+          },
+          {
+            "title": "Carta da ANTRA sobre as Eleições 2022",
+            "image": "https://deco-sites-assets.s3.sa-east-1.amazonaws.com/antra/2651537b-4fde-47a6-8302-e020a77f94b4/urna.png",
+            "tag": "Direitos e Políticas"
+          },
+          {
+            "title": "Lorem ipsum",
+            "tag": "Direitos e Políticas",
+            "image": "https://deco-sites-assets.s3.sa-east-1.amazonaws.com/antra/ea10b3bc-05c8-49dd-9f7f-ee4ae4711d34/news3.png"
+          },
+          {
+            "title": "Lorem ipsum",
+            "tag": "Direitos e Políticas",
+            "image": "https://deco-sites-assets.s3.sa-east-1.amazonaws.com/antra/ea10b3bc-05c8-49dd-9f7f-ee4ae4711d34/news3.png"
+          },
+          {
+            "title": "Lorem ipsum",
+            "tag": "Direitos e Políticas",
+            "image": "https://deco-sites-assets.s3.sa-east-1.amazonaws.com/antra/ea10b3bc-05c8-49dd-9f7f-ee4ae4711d34/news3.png"
+          },
+          {
+            "title": "Lorem ipsum",
+            "tag": "Direitos e Políticas",
+            "image": "https://deco-sites-assets.s3.sa-east-1.amazonaws.com/antra/ea10b3bc-05c8-49dd-9f7f-ee4ae4711d34/news3.png"
+          },
+          {
+            "title": "Lorem ipsum",
+            "tag": "Direitos e Políticas",
+            "image": "https://deco-sites-assets.s3.sa-east-1.amazonaws.com/antra/ea10b3bc-05c8-49dd-9f7f-ee4ae4711d34/news3.png"
+          },
+          {
+            "title": "Lorem ipsum",
+            "tag": "Direitos e Políticas",
+            "image": "https://deco-sites-assets.s3.sa-east-1.amazonaws.com/antra/ea10b3bc-05c8-49dd-9f7f-ee4ae4711d34/news3.png"
+          },
+          {
+            "title": "Lorem ipsum",
+            "tag": "Direitos e Políticas",
+            "image": "https://deco-sites-assets.s3.sa-east-1.amazonaws.com/antra/ea10b3bc-05c8-49dd-9f7f-ee4ae4711d34/news3.png"
+          },
+          {
+            "title": "Lorem ipsum",
+            "tag": "Direitos e Políticas",
+            "image": "https://deco-sites-assets.s3.sa-east-1.amazonaws.com/antra/ea10b3bc-05c8-49dd-9f7f-ee4ae4711d34/news3.png"
           }
         ]
       }

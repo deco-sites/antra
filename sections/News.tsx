@@ -12,10 +12,8 @@ export interface Props {
   posts?: News[];
 }
 
-const DEFAULT_IMAGE =
-  "https://ozksgdmyrqcxcwhnbepg.supabase.co/storage/v1/object/public/assets/4763/682eb374-def2-4e85-a45d-b3a7ff8a31a9";
 
-export default function BlogPosts({ title, posts }: Props) {
+export default function News({ title, posts }: Props) {
   return (
     <div class="lg:container text-sm px-5 lg:p-16">
       <div class="space-y-10">
