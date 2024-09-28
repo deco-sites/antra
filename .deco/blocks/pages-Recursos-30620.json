@@ -142,6 +142,16 @@
     {
       "__resolveType": "website/sections/Rendering/Lazy.tsx",
       "section": {
+        "__resolveType": "blog/sections/Template.tsx",
+        "post": {
+          "date": "2024-09-03",
+          "slug": "eee"
+        }
+      }
+    },
+    {
+      "__resolveType": "website/sections/Rendering/Lazy.tsx",
+      "section": {
         "__resolveType": "site/sections/PrimersSlider.tsx",
         "slides": [
           {
