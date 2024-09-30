@@ -59,5 +59,8 @@
 		<path d="M17.5 18.3L13.875 14.675M15.8333 9.96672C15.8333 13.6486 12.8486 16.6334 9.16667 16.6334C5.48477 16.6334 2.5 13.6486 2.5 9.96672C2.5 6.28482 5.48477 3.30005 9.16667 3.30005C12.8486 3.30005 15.8333 6.28482 15.8333 9.96672Z" stroke="#1E1E1E" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
 	</symbol>
 
-
+	<symbol id="ArrowNorthEast" viewBox="0 0 12 11" fill="currentColor" xmlns="http://www.w3.org/2000/svg">
+		<path d="M1.83301 9.76668L10.1663 1.43335M10.1663 1.43335H1.83301M10.1663 1.43335V9.76668" 
+		stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+	</symbol>
 </svg>

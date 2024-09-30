@@ -3,6 +3,7 @@
 // This file is automatically updated during development when running `dev.ts`.
 
 import * as $_app from "./routes/_app.tsx";
+import * as $all_research_pagination from "./islands/all-research-pagination.tsx";
 import * as $header_mobile_site from "./islands/header-mobile-site.tsx";
 import * as $header_site from "./islands/header-site.tsx";
 import * as $slider_island from "./islands/slider-island.tsx";
@@ -13,6 +14,7 @@ const manifest = {
     "./routes/_app.tsx": $_app,
   },
   islands: {
+    "./islands/all-research-pagination.tsx": $all_research_pagination,
     "./islands/header-mobile-site.tsx": $header_mobile_site,
     "./islands/header-site.tsx": $header_site,
     "./islands/slider-island.tsx": $slider_island,

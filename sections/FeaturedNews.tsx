@@ -23,7 +23,7 @@ export interface Props {
 
 export default function FeaturedNews({ tags, mainNews, news }: Props) {
   return (
-    <div class="lg:container text-sm px-5 p-16 mb-12">
+    <div class="lg:container text-sm px-5 p-16">
       <div class="space-y-10">
         <div class="flex gap-5 w-full items-center">
           <div className="relative w-full max-w-[457px]">
@@ -60,7 +60,6 @@ export default function FeaturedNews({ tags, mainNews, news }: Props) {
 
 
         <div class="flex flex-col md:flex-row gap-5">
-          {/* Main news */}
           <div class="relative w-full md:w-2/3 overflow-hidden rounded-2xl">
             <img
               src={mainNews?.image}
@@ -80,7 +79,7 @@ export default function FeaturedNews({ tags, mainNews, news }: Props) {
             <a
               href="/news"
               class="absolute bottom-5 right-2 p-6 text-white w-4 h-4 flex items-center justify-center 
-      text-white rounded-full bg-pink-500 hover:bg-pink-600"
+              text-white rounded-full bg-pink-500 hover:bg-pink-600"
             >
               Icon
             </a>

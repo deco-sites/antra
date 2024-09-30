@@ -77,7 +77,7 @@ const Resource = ({ title, cards, description, type, topic, year }: Props) => {
   return (
     <div class="lg:container text-sm px-5 p-16 mb-40">
       <div class="space-y-10">
-        <div class="flex flex-col justify-center items-center md:items-start md:flex-row gap-24">
+        <div class="px-4 flex flex-col justify-center items-center md:items-start md:flex-row gap-24">
           <div class="flex flex-col px-5 md:w-[60%] max-w-[440px] gap-5">
             <h1 class="text-5xl">{title}</h1>
             <p class="text-lg font-normal text-gray-400">{description}</p>
