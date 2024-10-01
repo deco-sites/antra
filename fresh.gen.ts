@@ -6,6 +6,7 @@ import * as $_app from "./routes/_app.tsx";
 import * as $all_research_pagination from "./islands/all-research-pagination.tsx";
 import * as $header_mobile_site from "./islands/header-mobile-site.tsx";
 import * as $header_site from "./islands/header-site.tsx";
+import * as $projects_pagination from "./islands/projects-pagination.tsx";
 import * as $slider_island from "./islands/slider-island.tsx";
 import { type Manifest } from "$fresh/server.ts";
 
@@ -17,6 +18,7 @@ const manifest = {
     "./islands/all-research-pagination.tsx": $all_research_pagination,
     "./islands/header-mobile-site.tsx": $header_mobile_site,
     "./islands/header-site.tsx": $header_site,
+    "./islands/projects-pagination.tsx": $projects_pagination,
     "./islands/slider-island.tsx": $slider_island,
   },
   baseUrl: import.meta.url,

@@ -1,0 +1,91 @@
+{
+  "__resolveType": "site/sections/Header.tsx",
+  "navigation": {
+    "links": [
+      {
+        "label": "A Antra",
+        "submenu": [
+          {
+            "label": "Quem somos",
+            "url": "/about?section=quem-somos"
+          },
+          {
+            "label": "O que fazemos",
+            "url": "/about?section=oque-fazemos"
+          },
+          {
+            "label": "Nossa história",
+            "url": "/about?section=historia"
+          },
+          {
+            "label": "Estatuto social",
+            "url": "/about?section=estatuto"
+          }
+        ],
+        "url": "/about"
+      },
+      {
+        "label": "Cartilha e Manuais",
+        "submenu": [
+          {
+            "label": "Notas técnicas",
+            "subLabel": "Menu description.",
+            "url": "/"
+          },
+          {
+            "label": "Manuais",
+            "subLabel": "Menu description.",
+            "url": "/"
+          },
+          {
+            "subLabel": "Menu description.",
+            "label": "Cartilhas",
+            "url": "/"
+          }
+        ],
+        "img": "https://deco-sites-assets.s3.sa-east-1.amazonaws.com/antra/00a539b6-ff26-46dc-85c6-fbafd2afb347/cartilhas-img.png",
+        "imgLabel": "Alteração nome e gênero"
+      },
+      {
+        "label": "Notícias",
+        "url": "/noticias",
+        "submenu": []
+      },
+      {
+        "label": "Afiliação",
+        "submenu": [],
+        "url": "/affiliation"
+      },
+      {
+        "label": "Projetos",
+        "url": "/projetos",
+        "submenu": []
+      },
+      {
+        "label": "Contato",
+        "url": "/contato",
+        "submenu": []
+      }
+    ],
+    "buttons": [
+      {
+        "href": "/",
+        "src": "https://deco-sites-assets.s3.sa-east-1.amazonaws.com/antra/eadb9435-c20f-40d7-8e03-89d647170001/search.svg",
+        "alt": "search",
+        "text": "w"
+      },
+      {
+        "src": "https://deco-sites-assets.s3.sa-east-1.amazonaws.com/antra/6a3d6385-02c0-4da9-820c-a4d652a121f5/globe.svg",
+        "href": "/",
+        "text": "globe",
+        "alt": "globe"
+      },
+      {
+        "href": "/",
+        "src": "https://deco-sites-assets.s3.sa-east-1.amazonaws.com/antra/99f7eb8e-3532-4b69-9084-d46986b4aa52/contrast.svg",
+        "text": "contrast",
+        "alt": "contrast"
+      }
+    ]
+  }
+}

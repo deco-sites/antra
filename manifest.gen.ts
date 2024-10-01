@@ -5,41 +5,45 @@
 import * as $$$$$$$$$$$0 from "./apps/deco/blog.ts";
 import * as $$$$$$$$$$$1 from "./apps/deco/htmx.ts";
 import * as $$$$$$$$$$$2 from "./apps/site.ts";
-import * as $$$$$$0 from "./sections/Act.tsx";
-import * as $$$$$$1 from "./sections/Affiliates.tsx";
-import * as $$$$$$2 from "./sections/AllAffiliates.tsx";
-import * as $$$$$$3 from "./sections/AllNews.tsx";
-import * as $$$$$$4 from "./sections/AllResearch.tsx";
-import * as $$$$$$5 from "./sections/FeaturedNews.tsx";
-import * as $$$$$$6 from "./sections/Footer.tsx";
-import * as $$$$$$7 from "./sections/Header.tsx";
-import * as $$$$$$8 from "./sections/HowToJoin.tsx";
-import * as $$$$$$9 from "./sections/Main.tsx";
-import * as $$$$$$10 from "./sections/Message.tsx";
-import * as $$$$$$11 from "./sections/News.tsx";
-import * as $$$$$$12 from "./sections/PrimersSlider.tsx";
-import * as $$$$$$13 from "./sections/ResearchBanner.tsx";
-import * as $$$$$$14 from "./sections/Resource.tsx";
-import * as $$$$$$15 from "./sections/Theme/Theme.tsx";
+import * as $$$$$$0 from "./sections/About.tsx";
+import * as $$$$$$1 from "./sections/Act.tsx";
+import * as $$$$$$2 from "./sections/Affiliates.tsx";
+import * as $$$$$$3 from "./sections/AllAffiliates.tsx";
+import * as $$$$$$4 from "./sections/AllNews.tsx";
+import * as $$$$$$5 from "./sections/AllResearch.tsx";
+import * as $$$$$$6 from "./sections/FeaturedNews.tsx";
+import * as $$$$$$7 from "./sections/Footer.tsx";
+import * as $$$$$$8 from "./sections/Header.tsx";
+import * as $$$$$$9 from "./sections/HowToJoin.tsx";
+import * as $$$$$$10 from "./sections/Main.tsx";
+import * as $$$$$$11 from "./sections/Message.tsx";
+import * as $$$$$$12 from "./sections/News.tsx";
+import * as $$$$$$13 from "./sections/PrimersSlider.tsx";
+import * as $$$$$$14 from "./sections/Projects.tsx";
+import * as $$$$$$15 from "./sections/ResearchBanner.tsx";
+import * as $$$$$$16 from "./sections/Resource.tsx";
+import * as $$$$$$17 from "./sections/Theme/Theme.tsx";
 
 const manifest = {
   "sections": {
-    "site/sections/Act.tsx": $$$$$$0,
-    "site/sections/Affiliates.tsx": $$$$$$1,
-    "site/sections/AllAffiliates.tsx": $$$$$$2,
-    "site/sections/AllNews.tsx": $$$$$$3,
-    "site/sections/AllResearch.tsx": $$$$$$4,
-    "site/sections/FeaturedNews.tsx": $$$$$$5,
-    "site/sections/Footer.tsx": $$$$$$6,
-    "site/sections/Header.tsx": $$$$$$7,
-    "site/sections/HowToJoin.tsx": $$$$$$8,
-    "site/sections/Main.tsx": $$$$$$9,
-    "site/sections/Message.tsx": $$$$$$10,
-    "site/sections/News.tsx": $$$$$$11,
-    "site/sections/PrimersSlider.tsx": $$$$$$12,
-    "site/sections/ResearchBanner.tsx": $$$$$$13,
-    "site/sections/Resource.tsx": $$$$$$14,
-    "site/sections/Theme/Theme.tsx": $$$$$$15,
+    "site/sections/About.tsx": $$$$$$0,
+    "site/sections/Act.tsx": $$$$$$1,
+    "site/sections/Affiliates.tsx": $$$$$$2,
+    "site/sections/AllAffiliates.tsx": $$$$$$3,
+    "site/sections/AllNews.tsx": $$$$$$4,
+    "site/sections/AllResearch.tsx": $$$$$$5,
+    "site/sections/FeaturedNews.tsx": $$$$$$6,
+    "site/sections/Footer.tsx": $$$$$$7,
+    "site/sections/Header.tsx": $$$$$$8,
+    "site/sections/HowToJoin.tsx": $$$$$$9,
+    "site/sections/Main.tsx": $$$$$$10,
+    "site/sections/Message.tsx": $$$$$$11,
+    "site/sections/News.tsx": $$$$$$12,
+    "site/sections/PrimersSlider.tsx": $$$$$$13,
+    "site/sections/Projects.tsx": $$$$$$14,
+    "site/sections/ResearchBanner.tsx": $$$$$$15,
+    "site/sections/Resource.tsx": $$$$$$16,
+    "site/sections/Theme/Theme.tsx": $$$$$$17,
   },
   "apps": {
     "site/apps/deco/blog.ts": $$$$$$$$$$$0,

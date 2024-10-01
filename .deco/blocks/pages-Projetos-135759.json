@@ -7,162 +7,44 @@
     {
       "__resolveType": "website/sections/Rendering/Lazy.tsx",
       "section": {
-        "__resolveType": "site/sections/Header.tsx",
-        "navigation": {
-          "links": [
-            {
-              "label": "A Antra",
-              "submenu": [
-                {
-                  "label": "Quem somos",
-                  "url": "/"
-                },
-                {
-                  "label": "O que fazemos",
-                  "url": "/"
-                },
-                {
-                  "label": "Nossa história",
-                  "url": "/"
-                },
-                {
-                  "label": "Estatuto social",
-                  "url": "/"
-                }
-              ]
-            },
-            {
-              "label": "Cartilha e Manuais",
-              "submenu": [
-                {
-                  "label": "Notas técnicas",
-                  "subLabel": "Menu description.",
-                  "url": "/"
-                },
-                {
-                  "label": "Manuais",
-                  "subLabel": "Menu description.",
-                  "url": "/"
-                },
-                {
-                  "subLabel": "Menu description.",
-                  "label": "Cartilhas",
-                  "url": "/"
-                }
-              ],
-              "img": "https://deco-sites-assets.s3.sa-east-1.amazonaws.com/antra/00a539b6-ff26-46dc-85c6-fbafd2afb347/cartilhas-img.png",
-              "imgLabel": "Alteração nome e gênero"
-            },
-            {
-              "label": "Pesquisas",
-              "url": "/pesquisas"
-            },
-            {
-              "label": "Notícias",
-              "url": "/noticias"
-            },
-            {
-              "label": "Afiliação",
-              "submenu": [
-                {
-                  "label": "Nossas afiliadas",
-                  "url": "/"
-                },
-                {
-                  "label": "Como se afiliar",
-                  "url": "/"
-                }
-              ]
-            },
-            {
-              "label": "Projetos",
-              "url": "/projetos"
-            },
-            {
-              "label": "Eleições",
-              "submenu": [
-                {
-                  "label": "Candidaturas 2024",
-                  "url": "/"
-                },
-                {
-                  "label": "Candidaturas 2022",
-                  "url": "/"
-                },
-                {
-                  "label": "Candidaturas 2020",
-                  "url": "/"
-                },
-                {
-                  "label": "Candidaturas 2018",
-                  "url": "/"
-                },
-                {
-                  "label": "Candidaturas 2016",
-                  "url": "/"
-                },
-                {
-                  "label": "Candidaturas 2014",
-                  "url": "/"
-                }
-              ],
-              "img": "https://deco-sites-assets.s3.sa-east-1.amazonaws.com/antra/0132b4d7-1234-400a-87b1-97e2ea6f57a0/eleicoes-img.png",
-              "imgLabel": "Candidaturas em 2024"
-            },
-            {
-              "label": "Apoio",
-              "url": "/apoio"
-            },
-            {
-              "label": "Contato",
-              "url": "/contato"
-            }
-          ],
-          "buttons": [
-            {
-              "href": "/",
-              "src": "https://deco-sites-assets.s3.sa-east-1.amazonaws.com/antra/eadb9435-c20f-40d7-8e03-89d647170001/search.svg",
-              "alt": "search",
-              "text": "w"
-            },
-            {
-              "src": "https://deco-sites-assets.s3.sa-east-1.amazonaws.com/antra/6a3d6385-02c0-4da9-820c-a4d652a121f5/globe.svg",
-              "href": "/",
-              "text": "globe",
-              "alt": "globe"
-            },
-            {
-              "href": "/",
-              "src": "https://deco-sites-assets.s3.sa-east-1.amazonaws.com/antra/99f7eb8e-3532-4b69-9084-d46986b4aa52/contrast.svg",
-              "text": "contrast",
-              "alt": "contrast"
-            }
-          ]
-        }
+        "__resolveType": "Header-Antra"
       }
     },
     {
       "__resolveType": "website/sections/Rendering/Lazy.tsx",
       "section": {
-        "__resolveType": "site/sections/Affiliates.tsx",
-        "title": "Nossas afiliadas",
-        "description": "Dedicamos a cada militante e movimento de base que se soma a essa luta.",
-        "button": {
-          "href": "/",
-          "text": "Conhecer todas",
-          "alt": "Conhecer todas"
-        },
-        "logos": [
-          "https://deco-sites-assets.s3.sa-east-1.amazonaws.com/antra/d05dfedc-9dd2-41d0-aa92-27b4afa3a5df/logo1.png",
-          "https://deco-sites-assets.s3.sa-east-1.amazonaws.com/antra/66d13c69-5f19-4262-ba58-a85d6f46aa65/logo2.png",
-          "https://deco-sites-assets.s3.sa-east-1.amazonaws.com/antra/6249c15b-f82c-4706-8dd6-f14f12d7e7e3/logo3.png",
-          "https://deco-sites-assets.s3.sa-east-1.amazonaws.com/antra/5b231f27-409f-49c3-a674-fa982bfb75ef/logo4.png",
-          "https://deco-sites-assets.s3.sa-east-1.amazonaws.com/antra/72dfc297-cf41-4589-a585-26e11477e438/logo5.png",
-          "https://deco-sites-assets.s3.sa-east-1.amazonaws.com/antra/d05291c1-3b5c-4fb9-ac90-ecd2d41973e1/logo6.png",
-          "https://deco-sites-assets.s3.sa-east-1.amazonaws.com/antra/ac976326-631d-423c-bc94-e606ab4469f3/logo7.png",
-          "https://deco-sites-assets.s3.sa-east-1.amazonaws.com/antra/3e505b55-2ee0-48f3-afd5-c37541c473b7/logo8.png",
-          "https://deco-sites-assets.s3.sa-east-1.amazonaws.com/antra/6f30152b-62d4-4d38-99a7-e072bfeb7338/logo9.png",
-          "https://deco-sites-assets.s3.sa-east-1.amazonaws.com/antra/bd8d36c6-05e4-4114-9c15-3ab389da6caa/logo10.png"
+        "__resolveType": "site/sections/Projects.tsx",
+        "title": "Próximos projetos",
+        "subtitle": "Dedicamos a cada militante e movimento de base que se soma a essa luta.",
+        "projects": [
+          {
+            "title": "Travestilizando I",
+            "description": "Mais 8h de ações ao vivo e online, com discussões sobre a necessidade de Travestilizar as relações sociais, pessoais, culturais, acadêmicas, políticas, e a forma de construir e desconstruir o futuro de toda a sociedade.",
+            "link": "/projects",
+            "image": "https://deco-sites-assets.s3.sa-east-1.amazonaws.com/antra/caa726d8-100f-49f2-9954-2e9bd15af51b/projeto1.png",
+            "date": "15 de Maio"
+          },
+          {
+            "title": "Travestilizando II",
+            "description": "Serão mais 8h de ações ao vivo e online, com discussões sobre a necessidade de Travestilizar as relações sociais, pessoais, culturais, acadêmicas, políticas, e a forma de construir e desconstruir o futuro de toda a sociedade.",
+            "date": "26 de Junho",
+            "image": "https://deco-sites-assets.s3.sa-east-1.amazonaws.com/antra/abaa4e2a-27a1-4a2d-a02b-69a656957ed4/projeto2.png",
+            "link": "/projects"
+          },
+          {
+            "title": "Transmasculinezando",
+            "date": "05 de Junho",
+            "image": "https://deco-sites-assets.s3.sa-east-1.amazonaws.com/antra/cd613385-8fd8-4fb3-a720-3772962828e1/projeto3.png",
+            "description": "8h de ações ao vivo e online, com discussões sobre a necessidade de TRANSMASCULINIZAR o ativismo, as relações sociais, pessoais, culturais, acadêmicas, políticas, e a forma de (des)construir a sociedade a partir do olhar de Homens Trans e TransMasculines.",
+            "link": "/projects"
+          },
+          {
+            "title": "Transmasculinezando",
+            "date": "05 de Junho",
+            "image": "https://deco-sites-assets.s3.sa-east-1.amazonaws.com/antra/cd613385-8fd8-4fb3-a720-3772962828e1/projeto3.png",
+            "description": "8h de ações ao vivo e online, com discussões sobre a necessidade de TRANSMASCULINIZAR o ativismo, as relações sociais, pessoais, culturais, acadêmicas, políticas, e a forma de (des)construir a sociedade a partir do olhar de Homens Trans e TransMasculines.",
+            "link": "/projects"
+          }
         ]
       }
     },

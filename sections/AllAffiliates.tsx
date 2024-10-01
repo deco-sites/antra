@@ -5,7 +5,7 @@ import Icon from "site/components/ui/Icon.tsx";
 interface Affiliate {
   name: string;
   description: string;
-  image: string;
+  image: ImageWidget;
 }
 
 export interface Props {
@@ -18,7 +18,7 @@ const CardAffiliate = ({ description, image, name }: Affiliate) => {
       <div class="flex justify-start">
       <Image
         width={120}
-        class="max-h-[70px] object-fit z-10"
+        class="max-h-[70px] h-full object-fit z-10"
         src={image}
         alt={image}
         decoding="async"

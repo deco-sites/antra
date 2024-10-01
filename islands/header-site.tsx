@@ -55,7 +55,7 @@ export const HeaderSite = ({ logo, navigation }: Nav) => {
                   {link?.label}
                 </a>
 
-                {link?.submenu && (
+                {link?.submenu && link?.submenu.length > 0 && (
                   <div className="min-w-60 max-w-lg absolute hidden group-hover:flex gap-4 bg-white shadow-lg p-2 z-50 rounded-[8px] shadow-2xl bg-gray-200 border">
                     {link?.img && (
                       <div className="w-[20rem] h-auto flex justify-center">

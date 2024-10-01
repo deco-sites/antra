@@ -81,9 +81,9 @@ export const HeaderMobileSite = ({ logo, navigation }: Nav) => {
                 >
                   {link?.label}
 
-                  {link.submenu && openMenuIndex === index ? (
+                  {link?.submenu && link?.submenu.length > 0 && openMenuIndex === index ? (
                     <Icon id="ChevronUp" size={16} strokeWidth={2} className="ml-2" />
-                  ) : link.submenu ? (
+                  ) : link?.submenu && link?.submenu.length > 0 ? (
                     <Icon id="ChevronDown" size={16} strokeWidth={2} className="ml-2" />
                   ) : null}
                 </label>
