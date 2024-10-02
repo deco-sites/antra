@@ -5,12 +5,12 @@
 import * as $$$$$$$$$$$0 from "./apps/deco/blog.ts";
 import * as $$$$$$$$$$$1 from "./apps/deco/htmx.ts";
 import * as $$$$$$$$$$$2 from "./apps/site.ts";
-import * as $$$$$$0 from "./sections/About.tsx";
-import * as $$$$$$1 from "./sections/Act.tsx";
-import * as $$$$$$2 from "./sections/Affiliates.tsx";
-import * as $$$$$$3 from "./sections/AllAffiliates.tsx";
-import * as $$$$$$4 from "./sections/AllNews.tsx";
-import * as $$$$$$5 from "./sections/AllResearch.tsx";
+import * as $$$$$$0 from "./sections/Act.tsx";
+import * as $$$$$$1 from "./sections/Affiliates.tsx";
+import * as $$$$$$2 from "./sections/AllAffiliates.tsx";
+import * as $$$$$$3 from "./sections/AllNews.tsx";
+import * as $$$$$$4 from "./sections/AllResearch.tsx";
+import * as $$$$$$5 from "./sections/Contact.tsx";
 import * as $$$$$$6 from "./sections/FeaturedNews.tsx";
 import * as $$$$$$7 from "./sections/Footer.tsx";
 import * as $$$$$$8 from "./sections/Header.tsx";
@@ -26,12 +26,12 @@ import * as $$$$$$17 from "./sections/Theme/Theme.tsx";
 
 const manifest = {
   "sections": {
-    "site/sections/About.tsx": $$$$$$0,
-    "site/sections/Act.tsx": $$$$$$1,
-    "site/sections/Affiliates.tsx": $$$$$$2,
-    "site/sections/AllAffiliates.tsx": $$$$$$3,
-    "site/sections/AllNews.tsx": $$$$$$4,
-    "site/sections/AllResearch.tsx": $$$$$$5,
+    "site/sections/Act.tsx": $$$$$$0,
+    "site/sections/Affiliates.tsx": $$$$$$1,
+    "site/sections/AllAffiliates.tsx": $$$$$$2,
+    "site/sections/AllNews.tsx": $$$$$$3,
+    "site/sections/AllResearch.tsx": $$$$$$4,
+    "site/sections/Contact.tsx": $$$$$$5,
     "site/sections/FeaturedNews.tsx": $$$$$$6,
     "site/sections/Footer.tsx": $$$$$$7,
     "site/sections/Header.tsx": $$$$$$8,

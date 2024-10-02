@@ -13,49 +13,40 @@
     {
       "__resolveType": "website/sections/Rendering/Lazy.tsx",
       "section": {
-        "__resolveType": "site/sections/Affiliates.tsx",
-        "title": "Nossas afiliadas",
-        "description": "Dedicamos a cada militante e movimento de base que se soma a essa luta.",
-        "button": {
-          "href": "/",
-          "text": "Conhecer todas",
-          "alt": "Conhecer todas"
-        },
-        "logos": [
-          "https://deco-sites-assets.s3.sa-east-1.amazonaws.com/antra/d05dfedc-9dd2-41d0-aa92-27b4afa3a5df/logo1.png",
-          "https://deco-sites-assets.s3.sa-east-1.amazonaws.com/antra/66d13c69-5f19-4262-ba58-a85d6f46aa65/logo2.png",
-          "https://deco-sites-assets.s3.sa-east-1.amazonaws.com/antra/6249c15b-f82c-4706-8dd6-f14f12d7e7e3/logo3.png",
-          "https://deco-sites-assets.s3.sa-east-1.amazonaws.com/antra/5b231f27-409f-49c3-a674-fa982bfb75ef/logo4.png",
-          "https://deco-sites-assets.s3.sa-east-1.amazonaws.com/antra/72dfc297-cf41-4589-a585-26e11477e438/logo5.png",
-          "https://deco-sites-assets.s3.sa-east-1.amazonaws.com/antra/d05291c1-3b5c-4fb9-ac90-ecd2d41973e1/logo6.png",
-          "https://deco-sites-assets.s3.sa-east-1.amazonaws.com/antra/ac976326-631d-423c-bc94-e606ab4469f3/logo7.png",
-          "https://deco-sites-assets.s3.sa-east-1.amazonaws.com/antra/3e505b55-2ee0-48f3-afd5-c37541c473b7/logo8.png",
-          "https://deco-sites-assets.s3.sa-east-1.amazonaws.com/antra/6f30152b-62d4-4d38-99a7-e072bfeb7338/logo9.png",
-          "https://deco-sites-assets.s3.sa-east-1.amazonaws.com/antra/bd8d36c6-05e4-4114-9c15-3ab389da6caa/logo10.png"
-        ]
-      }
-    },
-    {
-      "__resolveType": "website/sections/Rendering/Lazy.tsx",
-      "section": {
-        "__resolveType": "site/sections/Act.tsx",
-        "title": "Onde atuamos",
-        "cards": [
+        "__resolveType": "site/sections/Contact.tsx",
+        "title": "Fale conosco",
+        "subtitle": "Para entrar em contato envie uma mensagem usando o formulário, ou nos chame pelas nossas redes sociais:",
+        "social": [
           {
-            "title": "Advocacy",
-            "description": "Representação e ações de advocacy junto a órgãos estatais de monitoramento e controle, além da incidência política em todos os níveis, incluindo o âmbito internacional.",
-            "icon": "https://deco-sites-assets.s3.sa-east-1.amazonaws.com/antra/e2d5d0b4-71a7-49b1-83e0-cf875dcabd49/icon1.svg"
+            "name": "E-mail",
+            "endereço": "presidencia.antra@gmail.com",
+            "link": "/contact",
+            "endereco": "presidencia.antra@gmail.com"
           },
           {
-            "title": "Condução de Pesquisas",
-            "description": "Mapeamos e denunciamos os assassinatos de pessoas Trans no Brasil, cobrando soluções efetivas para esses crimes. Fazemos condução de pesquisas e levantamento de dados de interesse da população trans e travesti.",
-            "icon": "https://deco-sites-assets.s3.sa-east-1.amazonaws.com/antra/a2ea3a84-a850-4d02-9a8b-dcde694832c6/icon2.svg"
+            "endereço": "@antra.oficial",
+            "name": "Instagram",
+            "link": "/contact",
+            "endereco": "@antra.oficial"
           },
           {
-            "title": "Projetos",
-            "description": "Desenvolvimento de projetos para editais de interesse institucional que contemplem ações de impacto direto para a população trans",
-            "icon": "https://deco-sites-assets.s3.sa-east-1.amazonaws.com/antra/c4352deb-d5fb-4c41-b1bb-db40833d90bf/icon3.svg"
+            "endereço": "@antrabrasil",
+            "name": "Twitter",
+            "link": "/contact",
+            "endereco": "@antrabrasil"
+          },
+          {
+            "endereço": "/antrabrasil",
+            "name": "Facebook",
+            "link": "/contact",
+            "endereco": "/antrabrasil"
           }
+        ],
+        "background": "https://deco-sites-assets.s3.sa-east-1.amazonaws.com/antra/2f1ccbdc-d8a7-4c80-9ca4-42b2836d11af/background-about.png",
+        "options": [
+          "Doação",
+          "Doação",
+          "Doação"
         ]
       }
     },

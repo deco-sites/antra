@@ -65,4 +65,9 @@
 		<path d="M1.83301 9.76668L10.1663 1.43335M10.1663 1.43335H1.83301M10.1663 1.43335V9.76668" 
 		stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
 	</symbol>
+
+	<symbol id="E-mail" viewBox="0 0 20 17" fill="none" xmlns="http://www.w3.org/2000/svg">
+		<path d="M18.3327 3.60002C18.3327 2.68335 17.5827 1.93335 16.666 1.93335H3.33268C2.41602 1.93335 1.66602 2.68335 1.66602 3.60002M18.3327 3.60002V13.6C18.3327 14.5167 17.5827 15.2667 16.666 15.2667H3.33268C2.41602 15.2667 1.66602 14.5167 1.66602 13.6V3.60002M18.3327 3.60002L9.99935 9.43335L1.66602 3.60002" stroke="#303030" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+	</symbol>
+
 </svg>
