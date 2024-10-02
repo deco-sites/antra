@@ -18,11 +18,14 @@ import * as $$$$$$9 from "./sections/HowToJoin.tsx";
 import * as $$$$$$10 from "./sections/Main.tsx";
 import * as $$$$$$11 from "./sections/Message.tsx";
 import * as $$$$$$12 from "./sections/News.tsx";
-import * as $$$$$$13 from "./sections/PrimersSlider.tsx";
-import * as $$$$$$14 from "./sections/Projects.tsx";
-import * as $$$$$$15 from "./sections/ResearchBanner.tsx";
-import * as $$$$$$16 from "./sections/Resource.tsx";
-import * as $$$$$$17 from "./sections/Theme/Theme.tsx";
+import * as $$$$$$13 from "./sections/OurBoard.tsx";
+import * as $$$$$$14 from "./sections/PrimersSlider.tsx";
+import * as $$$$$$15 from "./sections/Projects.tsx";
+import * as $$$$$$16 from "./sections/ResearchBanner.tsx";
+import * as $$$$$$17 from "./sections/Resource.tsx";
+import * as $$$$$$18 from "./sections/Theme/Theme.tsx";
+import * as $$$$$$19 from "./sections/WhatWeDo.tsx";
+import * as $$$$$$20 from "./sections/WhoAreWe.tsx";
 
 const manifest = {
   "sections": {
@@ -39,11 +42,14 @@ const manifest = {
     "site/sections/Main.tsx": $$$$$$10,
     "site/sections/Message.tsx": $$$$$$11,
     "site/sections/News.tsx": $$$$$$12,
-    "site/sections/PrimersSlider.tsx": $$$$$$13,
-    "site/sections/Projects.tsx": $$$$$$14,
-    "site/sections/ResearchBanner.tsx": $$$$$$15,
-    "site/sections/Resource.tsx": $$$$$$16,
-    "site/sections/Theme/Theme.tsx": $$$$$$17,
+    "site/sections/OurBoard.tsx": $$$$$$13,
+    "site/sections/PrimersSlider.tsx": $$$$$$14,
+    "site/sections/Projects.tsx": $$$$$$15,
+    "site/sections/ResearchBanner.tsx": $$$$$$16,
+    "site/sections/Resource.tsx": $$$$$$17,
+    "site/sections/Theme/Theme.tsx": $$$$$$18,
+    "site/sections/WhatWeDo.tsx": $$$$$$19,
+    "site/sections/WhoAreWe.tsx": $$$$$$20,
   },
   "apps": {
     "site/apps/deco/blog.ts": $$$$$$$$$$$0,

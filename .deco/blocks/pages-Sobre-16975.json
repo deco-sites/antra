@@ -1,0 +1,120 @@
+{
+  "name": "Sobre",
+  "path": "/about",
+  "sections": [
+    {
+      "__resolveType": "website/sections/Rendering/Lazy.tsx",
+      "section": {
+        "__resolveType": "Header-Antra"
+      }
+    },
+    {
+      "__resolveType": "website/sections/Rendering/Lazy.tsx",
+      "section": {
+        "__resolveType": "site/sections/WhoAreWe.tsx",
+        "title": "A ANTRA é uma organização da sociedade civil com atuação nacional e internacional, que há mais de trinta anos defende os Direitos Humanos e políticas afirmativas para travestis e pessoas trans.",
+        "links": [
+          "O que fazemos",
+          "Diretoria",
+          "Afiliadas",
+          "Ex-presidentas",
+          "História"
+        ],
+        "image": "https://deco-sites-assets.s3.sa-east-1.amazonaws.com/antra/cd5ba7dd-5534-409e-9a08-4c9a072e41c4/who-are-we-image.png",
+        "imageDesktop": "https://deco-sites-assets.s3.sa-east-1.amazonaws.com/antra/29d9fd1d-245e-448e-a7d9-047b6ec5c10f/who-are-we-image-desktop.png"
+      }
+    },
+    {
+      "__resolveType": "website/sections/Rendering/Lazy.tsx",
+      "section": {
+        "__resolveType": "site/sections/OurBoard.tsx",
+        "title": "Nossa diretoria",
+        "members": [
+          {
+            "name": "Bruna Benevides",
+            "role": "Presidenta",
+            "description": "Travesti, cearense, sargenta da Marinha Brasileira, Presidenta do Grupo Diversidade Niterói, membro do Observatório de Direitos Humanos do CNJ, Conselheira Nacional LGBTQIA+.",
+            "image": "https://deco-sites-assets.s3.sa-east-1.amazonaws.com/antra/04643fae-225e-43c2-a93a-0a28c73d2af9/diretoria1.png"
+          },
+          {
+            "name": "Chopelly Santos",
+            "role": "Vice-Presidenta",
+            "description": "Pernambucana, coordenadora Geral da Articulação e Movimento para Travestis e Transexuais de Pernambuco (AMOTRANS-PE), membra do Conselho Nacional dos direitos da Mulher.",
+            "image": "https://deco-sites-assets.s3.sa-east-1.amazonaws.com/antra/fc1d9c8e-0ed5-4150-b64c-78629b180f66/diretoria2.png"
+          },
+          {
+            "name": "Pitty Serrano",
+            "role": "Secretária Geral",
+            "description": "Travesti, Presidenta do Conselho Estadual LGBTQIA+ do Rio Grande do Sul, Presidenta da Associação de Trangêneros de Guaíba - Igualdade Guaíba.",
+            "image": "https://deco-sites-assets.s3.sa-east-1.amazonaws.com/antra/1df7908d-0501-45f9-86e3-c8f0a80b1d43/diretoria3.png"
+          },
+          {
+            "name": "Keila Simpson",
+            "role": "Tesoureira",
+            "description": "1ª Travesti a receber o título de Doutora Honoris Causa no Brasil, Ex-Presidenta da ANTRA, membro da ATRAÇÃ/BA. Coordenadora da Pesquisa Traviarcas sobre envelhecimento trans.",
+            "image": "https://deco-sites-assets.s3.sa-east-1.amazonaws.com/antra/8b69d6c5-3675-448a-aa60-9e581076ee34/diretoria4.png"
+          }
+        ]
+      }
+    },
+    {
+      "__resolveType": "website/sections/Rendering/Lazy.tsx",
+      "section": {
+        "__resolveType": "site/sections/WhatWeDo.tsx",
+        "title": "Atuamos em diversas frentes",
+        "cards": [
+          {
+            "title": "Condução de Pesquisas",
+            "description": "Mapeamos e denunciamos os assassinatos de pessoas Trans no Brasil, cobrando soluções efetivas para esses crimes. Fazemos condução de pesquisas e levantamento de dados de interesse da população trans e travesti.",
+            "imageDesk": "https://deco-sites-assets.s3.sa-east-1.amazonaws.com/antra/09914230-3468-4ca2-b168-673e4042d7a6/icon1-desk.png",
+            "image": "https://deco-sites-assets.s3.sa-east-1.amazonaws.com/antra/e563334d-b7e7-4768-9741-5e2c2c83e5cc/icon1.png"
+          },
+          {
+            "title": "Advocacy",
+            "description": "Representação e ações de advocacy junto a órgãos estatais de monitoramento e controle, além da incidência política em todos os níveis, incluindo o âmbito internacional.",
+            "imageDesk": "https://deco-sites-assets.s3.sa-east-1.amazonaws.com/antra/812e730f-5f06-4f5f-ba3f-ecc3545bf73c/icon2-desk.png",
+            "image": "https://deco-sites-assets.s3.sa-east-1.amazonaws.com/antra/0799a3da-6ff8-489d-b44f-66920f45e795/icon2.png"
+          },
+          {
+            "title": "Projetos",
+            "description": "Desenvolvimento de projetos para editais de interesse institucional que contemplem ações de impacto direto para a população trans",
+            "imageDesk": "https://deco-sites-assets.s3.sa-east-1.amazonaws.com/antra/108a8114-231d-434a-9237-cea85f19edc4/icon3-desk.png",
+            "image": "https://deco-sites-assets.s3.sa-east-1.amazonaws.com/antra/17703a3a-3418-497a-a7b8-cc09f0c8be71/icon3.png"
+          }
+        ]
+      }
+    },
+    {
+      "__resolveType": "website/sections/Rendering/Lazy.tsx",
+      "section": {
+        "__resolveType": "site/sections/Affiliates.tsx",
+        "title": "Nossas afiliadas",
+        "description": "Dedicamos a cada militante e movimento de base que se soma a essa luta.",
+        "button": {
+          "href": "/",
+          "text": "Conhecer todas",
+          "alt": "Conhecer todas"
+        },
+        "logos": [
+          "https://deco-sites-assets.s3.sa-east-1.amazonaws.com/antra/d05dfedc-9dd2-41d0-aa92-27b4afa3a5df/logo1.png",
+          "https://deco-sites-assets.s3.sa-east-1.amazonaws.com/antra/66d13c69-5f19-4262-ba58-a85d6f46aa65/logo2.png",
+          "https://deco-sites-assets.s3.sa-east-1.amazonaws.com/antra/6249c15b-f82c-4706-8dd6-f14f12d7e7e3/logo3.png",
+          "https://deco-sites-assets.s3.sa-east-1.amazonaws.com/antra/5b231f27-409f-49c3-a674-fa982bfb75ef/logo4.png",
+          "https://deco-sites-assets.s3.sa-east-1.amazonaws.com/antra/72dfc297-cf41-4589-a585-26e11477e438/logo5.png",
+          "https://deco-sites-assets.s3.sa-east-1.amazonaws.com/antra/d05291c1-3b5c-4fb9-ac90-ecd2d41973e1/logo6.png",
+          "https://deco-sites-assets.s3.sa-east-1.amazonaws.com/antra/ac976326-631d-423c-bc94-e606ab4469f3/logo7.png",
+          "https://deco-sites-assets.s3.sa-east-1.amazonaws.com/antra/3e505b55-2ee0-48f3-afd5-c37541c473b7/logo8.png",
+          "https://deco-sites-assets.s3.sa-east-1.amazonaws.com/antra/6f30152b-62d4-4d38-99a7-e072bfeb7338/logo9.png",
+          "https://deco-sites-assets.s3.sa-east-1.amazonaws.com/antra/bd8d36c6-05e4-4114-9c15-3ab389da6caa/logo10.png"
+        ]
+      }
+    },
+    {
+      "__resolveType": "Footer"
+    }
+  ],
+  "__resolveType": "website/pages/Page.tsx",
+  "seo": {
+    "__resolveType": "website/sections/Seo/SeoV2.tsx"
+  }
+}

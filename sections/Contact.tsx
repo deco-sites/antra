@@ -19,10 +19,10 @@ export default function Contact({ background, title, subtitle, social, options }
     <div class="lg:container text-sm md:px-5 md:p-16 mb-40">
       <div class="space-y-10">
         <div
-          class="relative w-full bg-cover bg-center md:rounded-lg px-4 py-8 md:p-16 mb-60"
+          class="relative w-full bg-cover bg-center md:rounded-lg px-4 py-8 md:p-16 mb-60 md:mb-40"
           style={`background-image: url(${background})`}
         >
-          <div class="p-5 md:p-12 flex flex-col md:flex-row md:justify-between gap-10 md:gap-40 bg-white z-50 rounded-lg">
+          <div class="p-5 md:p-12 flex flex-col md:flex-row md:justify-between gap-10 lg:gap-40 md:gap-20 bg-white z-50 rounded-lg">
             <div class="md:flex md:flex-col md:justify-between">
               <div class="flex flex-col gap-5">
                 <h1 class="text-5xl md:text-5xl font-semibold tracking-tighter w-1/2 md:w-full">{title}</h1>
@@ -46,28 +46,30 @@ export default function Contact({ background, title, subtitle, social, options }
               </div>
             </div>
 
-            <div class="w-full">
+            <div class="w-full h-full">
               <form class="p-6 flex flex-col gap-5 border border-gray-300 rounded-lg">
-                <div class="flex flex-col gap-2">
-                  <label for="nome">Nome</label>
-                  <input
-                    class="px-4 py-3 border border-gray-300 rounded-lg"
-                    type="text"
-                    id="nome"
-                    name="nome"
-                    placeholder="Seu nome"
-                  />
-                </div>
+                <div class="w-full flex flex-col md:flex-row md:gap-2">
+                  <div class="w-full flex flex-col gap-2">
+                    <label for="nome">Nome</label>
+                    <input
+                      class="px-4 py-3 border border-gray-300 rounded-lg"
+                      type="text"
+                      id="nome"
+                      name="nome"
+                      placeholder="Seu nome"
+                    />
+                  </div>
 
-                <div class="flex flex-col gap-2">
-                  <label class="font-medium" for="sobrenome">Sobrenome</label>
-                  <input
-                    class="px-4 py-3 border border-gray-300 rounded-lg"
-                    type="text"
-                    id="sobrenome"
-                    name="sobrenome"
-                    placeholder="Seu sobrenome"
-                  />
+                  <div class="w-full flex flex-col gap-2">
+                    <label class="font-medium" for="sobrenome">Sobrenome</label>
+                    <input
+                      class="px-4 py-3 border border-gray-300 rounded-lg"
+                      type="text"
+                      id="sobrenome"
+                      name="sobrenome"
+                      placeholder="Seu sobrenome"
+                    />
+                  </div>
                 </div>
 
                 <div class="flex flex-col gap-2">

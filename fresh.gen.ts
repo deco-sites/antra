@@ -4,6 +4,7 @@
 
 import * as $_app from "./routes/_app.tsx";
 import * as $all_research_pagination from "./islands/all-research-pagination.tsx";
+import * as $card_what_we_do from "./islands/card-what-we-do.tsx";
 import * as $header_mobile_site from "./islands/header-mobile-site.tsx";
 import * as $header_site from "./islands/header-site.tsx";
 import * as $projects_pagination from "./islands/projects-pagination.tsx";
@@ -16,6 +17,7 @@ const manifest = {
   },
   islands: {
     "./islands/all-research-pagination.tsx": $all_research_pagination,
+    "./islands/card-what-we-do.tsx": $card_what_we_do,
     "./islands/header-mobile-site.tsx": $header_mobile_site,
     "./islands/header-site.tsx": $header_site,
     "./islands/projects-pagination.tsx": $projects_pagination,
