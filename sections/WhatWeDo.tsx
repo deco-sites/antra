@@ -21,7 +21,7 @@ export default function WhatWeDo({ title, cards }: Props) {
         <div class="w-full flex flex-col gap-8">
           <h1 class="text-4xl md:text-5xl font-semibold">{title}</h1>
           <CardWhatWeDo card={cards[0]} primary/>
-          <div class="w-full flex justify-between gap-5">
+          <div class="w-full flex flex-col md:flex-row justify-between gap-5">
             <CardWhatWeDo card={cards[1]}/>
             <CardWhatWeDo card={cards[2]}/>
           </div>          

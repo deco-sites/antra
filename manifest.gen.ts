@@ -14,18 +14,19 @@ import * as $$$$$$5 from "./sections/Contact.tsx";
 import * as $$$$$$6 from "./sections/FeaturedNews.tsx";
 import * as $$$$$$7 from "./sections/Footer.tsx";
 import * as $$$$$$8 from "./sections/Header.tsx";
-import * as $$$$$$9 from "./sections/HowToJoin.tsx";
-import * as $$$$$$10 from "./sections/Main.tsx";
-import * as $$$$$$11 from "./sections/Message.tsx";
-import * as $$$$$$12 from "./sections/News.tsx";
-import * as $$$$$$13 from "./sections/OurBoard.tsx";
-import * as $$$$$$14 from "./sections/PrimersSlider.tsx";
-import * as $$$$$$15 from "./sections/Projects.tsx";
-import * as $$$$$$16 from "./sections/ResearchBanner.tsx";
-import * as $$$$$$17 from "./sections/Resource.tsx";
-import * as $$$$$$18 from "./sections/Theme/Theme.tsx";
-import * as $$$$$$19 from "./sections/WhatWeDo.tsx";
-import * as $$$$$$20 from "./sections/WhoAreWe.tsx";
+import * as $$$$$$9 from "./sections/History.tsx";
+import * as $$$$$$10 from "./sections/HowToJoin.tsx";
+import * as $$$$$$11 from "./sections/Main.tsx";
+import * as $$$$$$12 from "./sections/Message.tsx";
+import * as $$$$$$13 from "./sections/News.tsx";
+import * as $$$$$$14 from "./sections/OurBoard.tsx";
+import * as $$$$$$15 from "./sections/PrimersSlider.tsx";
+import * as $$$$$$16 from "./sections/Projects.tsx";
+import * as $$$$$$17 from "./sections/ResearchBanner.tsx";
+import * as $$$$$$18 from "./sections/Resource.tsx";
+import * as $$$$$$19 from "./sections/Theme/Theme.tsx";
+import * as $$$$$$20 from "./sections/WhatWeDo.tsx";
+import * as $$$$$$21 from "./sections/WhoAreWe.tsx";
 
 const manifest = {
   "sections": {
@@ -38,18 +39,19 @@ const manifest = {
     "site/sections/FeaturedNews.tsx": $$$$$$6,
     "site/sections/Footer.tsx": $$$$$$7,
     "site/sections/Header.tsx": $$$$$$8,
-    "site/sections/HowToJoin.tsx": $$$$$$9,
-    "site/sections/Main.tsx": $$$$$$10,
-    "site/sections/Message.tsx": $$$$$$11,
-    "site/sections/News.tsx": $$$$$$12,
-    "site/sections/OurBoard.tsx": $$$$$$13,
-    "site/sections/PrimersSlider.tsx": $$$$$$14,
-    "site/sections/Projects.tsx": $$$$$$15,
-    "site/sections/ResearchBanner.tsx": $$$$$$16,
-    "site/sections/Resource.tsx": $$$$$$17,
-    "site/sections/Theme/Theme.tsx": $$$$$$18,
-    "site/sections/WhatWeDo.tsx": $$$$$$19,
-    "site/sections/WhoAreWe.tsx": $$$$$$20,
+    "site/sections/History.tsx": $$$$$$9,
+    "site/sections/HowToJoin.tsx": $$$$$$10,
+    "site/sections/Main.tsx": $$$$$$11,
+    "site/sections/Message.tsx": $$$$$$12,
+    "site/sections/News.tsx": $$$$$$13,
+    "site/sections/OurBoard.tsx": $$$$$$14,
+    "site/sections/PrimersSlider.tsx": $$$$$$15,
+    "site/sections/Projects.tsx": $$$$$$16,
+    "site/sections/ResearchBanner.tsx": $$$$$$17,
+    "site/sections/Resource.tsx": $$$$$$18,
+    "site/sections/Theme/Theme.tsx": $$$$$$19,
+    "site/sections/WhatWeDo.tsx": $$$$$$20,
+    "site/sections/WhoAreWe.tsx": $$$$$$21,
   },
   "apps": {
     "site/apps/deco/blog.ts": $$$$$$$$$$$0,
