@@ -1,6 +1,6 @@
 {
   "name": "Cartilha e Manuais",
-  "path": "/cartilha",
+  "path": "/guides",
   "sections": [
     {
       "__resolveType": "website/sections/Rendering/Lazy.tsx",

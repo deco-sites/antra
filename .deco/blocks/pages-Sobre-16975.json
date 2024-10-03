@@ -110,6 +110,12 @@
       }
     },
     {
+      "__resolveType": "website/sections/Rendering/Lazy.tsx",
+      "section": {
+        "__resolveType": "site/sections/History.tsx"
+      }
+    },
+    {
       "__resolveType": "Footer"
     }
   ],
