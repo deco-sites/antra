@@ -51,7 +51,7 @@ export default function AllNews({ title, info, allNews }: Props) {
             ))}
 
             <div class="hidden w-full col-span-1 md:row-start-2 md:row-span-2 md:col-start-3 
-            md:flex flex-col items-start justify-start h-full">
+              md:flex flex-col items-start justify-start h-full">
               <div class="relative md:h-full overflow-hidden rounded-2xl">
                 <img
                   src={info.image}

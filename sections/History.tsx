@@ -2,6 +2,7 @@ import Image from "apps/website/components/Image.tsx";
 import { ImageWidget } from "apps/admin/widgets.ts";
 import { Text1 } from "site/islands/text1-history.tsx";
 import { Text2 } from "site/islands/text2-history.tsx";
+import { Text3 } from "site/islands/text3-history.tsx";
 interface Props {
   image1: ImageWidget;
   image2: ImageWidget;
@@ -10,7 +11,7 @@ export default function History({ image1, image2 }: Props) {
   return (
     <div className="lg:container text-sm mb-40">
       <div className="space-y-10">
-        <div class="flex flex-col items-center gap-8">
+        <div class="px-6 flex flex-col items-center gap-8">
           <div class="w-full max-w-[850px] flex flex-col">
             <h2 class="text-6xl font-bold text-black leading-snug">
               E assim nasceu o
@@ -26,9 +27,9 @@ export default function History({ image1, image2 }: Props) {
           </div>
           <Text1 />
           <Text2 />
-          <div class="flex max-w-[800px]">
+          <div class="flex gap-5 max-w-[800px] w-full">
             <Image
-              className="w-full rounded-2xl"
+              className="w-1/2 object-contain rounded-2xl"
               width={380}
               src={image1}
               alt={image1}
@@ -36,7 +37,7 @@ export default function History({ image1, image2 }: Props) {
               loading="lazy"
             />
             <Image
-              className="w-full rounded-2xl"
+              className="w-1/2 object-contain rounded-2xl"
               width={380}
               src={image2}
               alt={image2}
@@ -44,6 +45,7 @@ export default function History({ image1, image2 }: Props) {
               loading="lazy"
             />
           </div>
+          <Text3 />
         </div>
       </div>
     </div>
