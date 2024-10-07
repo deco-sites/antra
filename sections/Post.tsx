@@ -58,16 +58,18 @@ export default function History({
                     {paragraph}
                   </p>
                 ))}
-                <div class="flex gap-5 w-full">
-                  <Image
-                    className="w-full object-contain rounded-2xl"
-                    width={380}
-                    src={item?.image}
-                    alt={item?.image}
-                    decoding="async"
-                    loading="lazy"
-                  />
+                {item.image && (
+                  <div class="flex gap-5 w-full">
+                    <Image
+                      className="w-full object-contain rounded-2xl"
+                      width={380}
+                      src={item?.image}
+                      alt={item?.image}
+                      decoding="async"
+                      loading="lazy"
+                    />
                   </div>
+                )}
               </>
             ))}
           </div>
