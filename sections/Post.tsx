@@ -1,5 +1,6 @@
 import Image from "apps/website/components/Image.tsx";
 import { ImageWidget } from "apps/admin/widgets.ts";
+import loader from "apps/website/loaders/options/routes.ts";
 
 interface List {
   title: string;
@@ -40,7 +41,8 @@ export default function History({
   tags,
   relatedPosts,
 }: Props) {
-  return (
+  console.log(loader)
+  return (    
     <div className="lg:container text-sm mb-40">
       <div className="space-y-10">
         <div class="px-6 flex flex-col items-center gap-8">
