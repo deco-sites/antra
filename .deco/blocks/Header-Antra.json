@@ -30,22 +30,22 @@
           {
             "label": "Notas técnicas",
             "subLabel": "Menu description.",
-            "url": "/cartilha?filter=notas"
+            "url": "/guides?filter=notas"
           },
           {
             "label": "Manuais",
             "subLabel": "Menu description.",
-            "url": "/cartilha?filter=manuais"
+            "url": "/guides?filter=manuais"
           },
           {
             "subLabel": "Menu description.",
             "label": "Cartilhas",
-            "url": "/cartilha?filter=cartilhas"
+            "url": "/guides?filter=cartilhas"
           }
         ],
         "img": "https://deco-sites-assets.s3.sa-east-1.amazonaws.com/antra/00a539b6-ff26-46dc-85c6-fbafd2afb347/cartilhas-img.png",
         "imgLabel": "Alteração nome e gênero",
-        "url": "/cartilha"
+        "url": "/guides"
       },
       {
         "label": "Notícias",

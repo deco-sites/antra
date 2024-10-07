@@ -13,23 +13,57 @@
     {
       "__resolveType": "website/sections/Rendering/Lazy.tsx",
       "section": {
-        "__resolveType": "site/sections/Act.tsx",
-        "title": "Onde atuamos",
-        "cards": [
+        "__resolveType": "site/sections/Post.tsx",
+        "title": "A importância da CEDAW e sua relevância para a pauta trans",
+        "image": "https://deco-sites-assets.s3.sa-east-1.amazonaws.com/antra/b0770261-32c8-452b-afc2-846bf23ce1b8/image-post.png",
+        "author": "Keila Simpson Sousa",
+        "date": "20 de maio de 2024",
+        "tags": [
+          "Direitos e Políticas",
+          "Notas e Ofícios",
+          "Violência"
+        ],
+        "relatedPosts": [
           {
-            "title": "Advocacy",
-            "description": "Representação e ações de advocacy junto a órgãos estatais de monitoramento e controle, além da incidência política em todos os níveis, incluindo o âmbito internacional.",
-            "icon": "https://deco-sites-assets.s3.sa-east-1.amazonaws.com/antra/e2d5d0b4-71a7-49b1-83e0-cf875dcabd49/icon1.svg"
+            "title": "Carta da ANTRA sobre as Eleições 2022",
+            "tag": "Direitos e Políticas",
+            "image": "https://deco-sites-assets.s3.sa-east-1.amazonaws.com/antra/2651537b-4fde-47a6-8302-e020a77f94b4/urna.png"
           },
           {
-            "title": "Condução de Pesquisas",
-            "description": "Mapeamos e denunciamos os assassinatos de pessoas Trans no Brasil, cobrando soluções efetivas para esses crimes. Fazemos condução de pesquisas e levantamento de dados de interesse da população trans e travesti.",
-            "icon": "https://deco-sites-assets.s3.sa-east-1.amazonaws.com/antra/a2ea3a84-a850-4d02-9a8b-dcde694832c6/icon2.svg"
+            "title": "ANTRA em defesa da identidade travesti",
+            "tag": "Direitos e Políticas",
+            "image": "https://deco-sites-assets.s3.sa-east-1.amazonaws.com/antra/31a01c5c-2409-4cd1-a1c5-af8817edf72d/news1.png"
           },
           {
-            "title": "Projetos",
-            "description": "Desenvolvimento de projetos para editais de interesse institucional que contemplem ações de impacto direto para a população trans",
-            "icon": "https://deco-sites-assets.s3.sa-east-1.amazonaws.com/antra/c4352deb-d5fb-4c41-b1bb-db40833d90bf/icon3.svg"
+            "title": "Pronunciamento do ministério das mulheres pelo dia internacional da mulher",
+            "tag": "Direitos e Políticas",
+            "image": "https://deco-sites-assets.s3.sa-east-1.amazonaws.com/antra/03937534-2e27-449f-8011-ee42233d1d06/news2.png"
+          }
+        ],
+        "social": [
+          "Instagram",
+          "Twitter",
+          "Linkedin",
+          "Facebook"
+        ],
+        "topic": [
+          {
+            "paragraph": [
+              "A CEDAW (Convenção sobre a Eliminação de Todas as Formas de Discriminação contra as Mulheres) é um tratado internacional aprovado pela maioria dos países membros da ONU em 1979 e entrou em vigor em 1981. Seu objetivo é promover a igualdade de gênero, combatendo a discriminação contra mulheres em todas as suas formas. A CEDAW é um marco na proteção dos direitos humanos, garantindo que mulheres, incluindo mulheres trans, possam viver livres da violência de gênero e da discriminação.",
+              "Ela fornece um quadro legal e normativo que os países devem seguir para promover a igualdade de gênero. O Brasil ratificou a Convenção CEDAW em 1984, mas fez reservas aos artigos que estabelecem os direitos das mulheres à liberdade, à autonomia, quanto à escolha do domicílio e residência e à igualdade de direitos com os homens nos assuntos referentes ao casamento e às relações familiares, por que essas definições não coincidiam com o que estava gravado no Código Civil de 1916, ainda em vigor.",
+              "Essas reservas somente foram retiradas em 1994 e, apenas em 2002, depois da aprovação do Novo Código Civil, a Convenção CEDAW seria ratificada na integralidade pelo Estado Brasileiro."
+            ],
+            "list": [],
+            "title": "O que é a CEDAW?"
+          },
+          {
+            "paragraph": [
+              "A CEDAW foi originalmente concebida para tratar da igualdade entre homens e mulheres e proteger mulheres cisgêneras contra discriminação e violência resultantes dessas desigualdades. Contudo, decisões e recomendações posteriores do seu Comitê de Vigilância ampliaram a abrangência da proteção garantida pela convenção contra a discriminação e violência de gênero para incluir situações decorrentes da identidade de gênero, ou seja as violações contra mulheres trans.",
+              "O comentário Geral No. 28 (2010) do Comitê enfatiza que os Estados devem reconhecer, proibir e adotar políticas e programas para eliminar formas intreseccionais de discriminação, incluindo, explicitamente aquelas baseadas na identidade de gênero. Esse alargamento foi fundamental para garantir que todas as mulheres, independentemente de sua identidade de gênero, sejam protegidas contra a discriminação."
+            ],
+            "list": [],
+            "title": "Inclusão da pauta Trans",
+            "image": "https://deco-sites-assets.s3.sa-east-1.amazonaws.com/antra/4d4ec4e9-bb86-48f7-8ba8-034062454c5d/image-topic.png"
           }
         ]
       }

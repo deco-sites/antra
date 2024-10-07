@@ -110,6 +110,14 @@
       }
     },
     {
+      "__resolveType": "website/sections/Rendering/Lazy.tsx",
+      "section": {
+        "__resolveType": "site/sections/History.tsx",
+        "image1": "https://deco-sites-assets.s3.sa-east-1.amazonaws.com/antra/dbcb11c3-6ab6-4555-9db2-f6706f4baa13/history-image1.png",
+        "image2": "https://deco-sites-assets.s3.sa-east-1.amazonaws.com/antra/9683bd8f-116a-4fb2-8e48-127cee3003ae/history-image2.png"
+      }
+    },
+    {
       "__resolveType": "Footer"
     }
   ],
