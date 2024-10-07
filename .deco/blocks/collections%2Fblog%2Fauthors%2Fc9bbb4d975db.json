@@ -1,0 +1,8 @@
+{
+  "name": "collections/blog/authors/c9bbb4d975db",
+  "__resolveType": "blog/loaders/Author.ts",
+  "author": {
+    "name": "Lorem",
+    "email": "loremipsun@lorem.com"
+  }
+}
