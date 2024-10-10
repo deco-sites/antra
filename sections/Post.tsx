@@ -69,7 +69,7 @@ const DEFAULT_PROPS: BlogPost = {
 
 export default function History({ page }: Props) {
   const { title, authors, image, date, content, extraProps } = page?.post || DEFAULT_PROPS;
-  console.log(extraProps)
+
   return (
     <div className="lg:container text-sm mb-40">
       <div className="space-y-10">
