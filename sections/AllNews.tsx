@@ -11,10 +11,9 @@ export interface Props {
   title: string;
   info: Info;
   allNews?: BlogPost[] | null;
-  posts: BlogPost[] | null;
 }
 
-export default function AllNews({ title, info, posts }: Props) {
+export default function AllNews({ title, info, allNews }: Props) {
   return (
     <div class="lg:container text-sm px-5 p-16 mb-40">
       <div class="space-y-10">
@@ -23,7 +22,7 @@ export default function AllNews({ title, info, posts }: Props) {
             {title}
           </h2>
           <div class="grid grid-cols-1 md:grid-cols-3 gap-8 justify-items-center">
-            {posts?.map((news, index) => (
+            {allNews?.map((news, index) => (
               <div
                 class="relative w-full h-full col-span-1 flex justify-center"
                 key={index}
@@ -32,7 +31,7 @@ export default function AllNews({ title, info, posts }: Props) {
                   {news?.image && (
                     <Image
                       width={380}
-                      height={274}
+                      height={54}
                       class="h-54 object-cover z-10"
                       sizes="(max-width: 640px) 100vw, 30vw"
                       src={news?.image}
@@ -43,12 +42,16 @@ export default function AllNews({ title, info, posts }: Props) {
                   )}
                   <div class="p-1 py-4 space-y-4 text-start w-full">
                     <div class="flex flex-wrap gap-2">
-                      <span class="badge badge-lg text-xs border border-gray-700 bg-transparent">
-                        {news.extraProps?.find(item => {
-                          return item.key === 'tag' && item.value
-                        })
-                        }
-                      </span>
+                      {news.extraProps?.map((item, i) => {
+                        return item.key === "tag" ? (
+                          <div
+                            className="badge badge-lg text-xs border border-gray-500 bg-transparent"
+                            key={i}
+                          >
+                            {item.value}
+                          </div>
+                        ) : null;
+                      })}
                     </div>
                     <h3 class="text-lg font-semibold mt-2">{news.title}</h3>
                   </div>
