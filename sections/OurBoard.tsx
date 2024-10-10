@@ -25,6 +25,7 @@ export default function OurBoard({ title, members }: Props) {
                 <Image
                   className="w-full rounded-2xl"
                   width={380}
+                  height={274}
                   src={member.image}
                   alt={member.image}
                   decoding="async"

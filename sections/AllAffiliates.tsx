@@ -18,6 +18,7 @@ const CardAffiliate = ({ description, image, name }: Affiliate) => {
       <div class="flex justify-start">
       <Image
         width={120}
+        height={50}
         class="max-h-[70px] h-full object-fit z-10"
         src={image}
         alt={image}

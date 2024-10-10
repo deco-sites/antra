@@ -24,6 +24,7 @@ export default function WhoAreWe({ title, links, image, imageDesktop }: Props) {
             <Image
               className="md:hidden w-full rounded-2xl"
               width={380}
+              height={274}
               src={image}
               alt={image}
               decoding="async"
@@ -32,6 +33,7 @@ export default function WhoAreWe({ title, links, image, imageDesktop }: Props) {
             <Image
               className="hidden md:flex w-full max-h-[400px] rounded-2xl"
               width={380}
+              height={274}
               src={imageDesktop}
               alt={imageDesktop}
               decoding="async"

@@ -91,6 +91,7 @@ export default function FeaturedNews({ tags, mainNews, news }: Props) {
               <div class="flex flex-col md:flex-row rounded-2xl w-full">
                 <Image
                   width={300}
+                  height={274}
                   class="w-full object-fit z-10"
                   sizes="(max-width: 640px) 100vw, 35vw"
                   src={item.image}

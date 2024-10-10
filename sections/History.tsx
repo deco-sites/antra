@@ -31,6 +31,7 @@ export default function History({ image1, image2 }: Props) {
             <Image
               className="w-1/2 object-contain rounded-2xl"
               width={380}
+              height={274}
               src={image1}
               alt={image1}
               decoding="async"
@@ -39,6 +40,7 @@ export default function History({ image1, image2 }: Props) {
             <Image
               className="w-1/2 object-contain rounded-2xl"
               width={380}
+              height={274}
               src={image2}
               alt={image2}
               decoding="async"

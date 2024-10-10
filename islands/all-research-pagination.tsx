@@ -45,6 +45,7 @@ export default function AllResearchPagination({ title, research }: Props) {
             <div className="rounded-lg overflow-hidden flex flex-col items-center w-full max-w-[400px]">
               <Image
                 width={380}
+                height={274}
                 className="h-54 object-cover z-10"
                 sizes="(max-width: 640px) 100vw, 30vw"
                 src={research.image}

@@ -21,6 +21,7 @@ export const CardWhatWeDo = ({ card, primary }: Props) => {
             <Image
               class="hidden md:flex rounded-2xl"
               width={380}
+              height={274}
               src={card.imageDesk}
               alt={card.imageDesk}
               decoding="async"
@@ -29,6 +30,7 @@ export const CardWhatWeDo = ({ card, primary }: Props) => {
             <Image
               class="md:hidden w-full rounded-2xl"
               width={327}
+              height={274}
               src={card.image}
               alt={card.image}
               decoding="async"
@@ -49,6 +51,7 @@ export const CardWhatWeDo = ({ card, primary }: Props) => {
             <Image
               class="hidden md:flex rounded-2xl"
               width={240}
+              height={274}
               src={card.imageDesk}
               alt={card.imageDesk}
               decoding="async"
@@ -57,6 +60,7 @@ export const CardWhatWeDo = ({ card, primary }: Props) => {
             <Image
               class="md:hidden w-full rounded-2xl"
               width={327}
+              height={274}
               src={card.image}
               alt={card.image}
               decoding="async"

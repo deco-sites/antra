@@ -26,6 +26,7 @@ export default function News({ title, posts }: Props) {
             <div class="rounded-lg overflow-hidden flex flex-col items-center w-full max-w-[400px]">
               <Image
                 width={380}
+                height={274}
                 class="h-54 object-cover z-10"
                 sizes="(max-width: 640px) 100vw, 30vw"
                 src={post.image}

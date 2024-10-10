@@ -1,0 +1,38 @@
+{
+  "name": "collections/blog/posts/fcfa48ba2807",
+  "__resolveType": "blog/loaders/Blogpost.ts",
+  "post": {
+    "authors": [
+      {
+        "name": "Lorem",
+        "email": "loremipsun@lorem.com"
+      }
+    ],
+    "categories": [
+      {
+        "name": "Notícias",
+        "slug": "news"
+      }
+    ],
+    "extraProps": [
+      {
+        "key": "tag",
+        "value": "Direitos e Políticas"
+      },
+      {
+        "key": "tag",
+        "value": "Notas e Ofícios"
+      },
+      {
+        "key": "tag",
+        "value": "Violência"
+      }
+    ],
+    "title": "A importância da CEDAW e sua relevância para a pauta trans",
+    "excerpt": "A importância da CEDAW e sua relevância para a pauta trans",
+    "image": "https://deco-sites-assets.s3.sa-east-1.amazonaws.com/antra/b0770261-32c8-452b-afc2-846bf23ce1b8/image-post.png",
+    "slug": "post-01",
+    "content": "<p><strong><span style=\"font-size: 16pt\">O que é a CEDAW?</span></strong></p><p style=\"text-align: justify\">A CEDAW (Convenção sobre a Eliminação de Todas as Formas de Discriminação contra as Mulheres) é um tratado internacional aprovado pela maioria dos países membros da ONU em 1979 e entrou em vigor em 1981. Seu objetivo é promover a igualdade de gênero, combatendo a discriminação contra mulheres em todas as suas formas. A CEDAW é um marco na proteção dos direitos humanos, garantindo que mulheres, incluindo mulheres trans, possam viver livres da violência de gênero e da discriminação. <br><br>Ela fornece um quadro legal e normativo que os países devem seguir para promover a igualdade de gênero. O Brasil ratificou a Convenção CEDAW em 1984, mas fez reservas aos artigos que estabelecem os direitos das mulheres à liberdade, à autonomia, quanto à escolha do domicílio e residência e à igualdade de direitos com os homens nos assuntos referentes ao casamento e às relações familiares, por que essas definições não coincidiam com o que estava gravado no Código Civil de 1916, ainda em vigor. <br><br>Essas reservas somente foram retiradas em 1994 e, apenas em 2002, depois da aprovação do Novo Código Civil, a Convenção CEDAW seria ratificada na integralidade pelo Estado Brasileiro.</p><p></p><p style=\"text-align: justify\"><strong><span style=\"font-size: 16pt\">Inclusão da pauta Trans</span></strong><br>A CEDAW foi originalmente concebida para tratar da igualdade entre homens e mulheres e proteger mulheres cisgêneras contra discriminação e violência resultantes dessas desigualdades. Contudo, decisões e recomendações posteriores do seu Comitê de Vigilância ampliaram a abrangência da proteção garantida pela convenção contra a discriminação e violência de gênero para incluir situações decorrentes da identidade de gênero, ou seja as violações contra mulheres trans. <br><br>O comentário Geral No. 28 (2010) do Comitê enfatiza que os Estados devem reconhecer, proibir e adotar políticas e programas para eliminar formas intreseccionais de discriminação, incluindo, explicitamente aquelas baseadas na identidade de gênero. Esse alargamento foi fundamental para garantir que todas as mulheres, independentemente de sua identidade de gênero, sejam protegidas contra a discriminação.<br><img style=\"text-align: center\" src=\"https://deco-sites-assets.s3.sa-east-1.amazonaws.com/antra/4d4ec4e9-bb86-48f7-8ba8-034062454c5d/image-topic.png\"></p><p style=\"text-align: justify\"></p><p style=\"text-align: justify\"><strong><span style=\"font-size: 16pt\">Recomendações para a revisão da CEDAW</span></strong></p><p style=\"text-align: justify\"></p><ul><li><p style=\"text-align: justify\"><strong><span>Defesa firme do Conceito e Perspectiva de Gênero:</span></strong><span>&nbsp;As instituições devem adotar uma perspectiva de gênero que inclua mulheres cis e trans, reconhecendo suas experiências e necessidades distintas.</span></p><p style=\"text-align: justify\"></p></li><li><p style=\"text-align: justify\"><strong>Não Discriminação:</strong>&nbsp;Implementar políticas que proíbam explicitamente a discriminação com base na identidade de gênero, garantindo proteção legal para mulheres trans em todas as áreas da vida pública e privada.</p><p style=\"text-align: justify\"></p></li><li><p style=\"text-align: justify\"><strong>Tratamento Igualitário:</strong>&nbsp;Promover a igualdade de tratamento entre mulheres e meninas cis e trans, garantindo acesso igualitário a serviços de saúde, educação, emprego e proteção contra violência.</p><p style=\"text-align: justify\"></p></li><li><p style=\"text-align: justify\"><strong>Igualdade entre travestis e mulheres trans:</strong>&nbsp;tratar travestis e mulheres trans sem qualquer hierarquia ou diferença que fragilize uma em detrimento da outra.</p><p style=\"text-align: justify\"></p></li><li><p style=\"text-align: justify\"><strong>Mulheres trans são mulheres:</strong>&nbsp;assegurar a igualdade de tratamento entre mulheres cis e trans em todos os direitos garantidos às mulheres, incluindo a proteção contra a violência de gênero e violência doméstica, o acesso a espaços sociais, e o reconhecimento de mulheres trans pelo que são, mulheres.</p><p style=\"text-align: justify\"></p></li></ul><p>Participação inclusiva em fóruns e espaços da CEDAW:&nbsp;a fim de garantir que haja efetiva presença de mulheres trans, inclusive nas comitivas oficiais dos estados.</p>",
+    "date": "2024-10-07"
+  }
+}

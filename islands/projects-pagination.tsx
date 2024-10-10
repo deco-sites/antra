@@ -61,6 +61,7 @@ export default function ProjectsPagination({ projects }: Props) {
             <a href={project.link}>
               <Image
                 width={300}
+                height={274}
                 class="w-full h-full object-cover rounded-2xl md:rounded-r-2xl md:rounded-l-none"
                 sizes="(max-width: 640px) 100vw, 35vw"
                 src={project.image}
