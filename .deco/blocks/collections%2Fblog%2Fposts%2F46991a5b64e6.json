@@ -1,0 +1,15 @@
+{
+  "name": "collections/blog/posts/46991a5b64e6",
+  "__resolveType": "blog/loaders/Blogpost.ts",
+  "post": {
+    "authors": [],
+    "categories": [],
+    "extraProps": [],
+    "title": "teste projeto",
+    "excerpt": "teste projeto",
+    "image": "https://deco-sites-assets.s3.sa-east-1.amazonaws.com/antra/fc1d9c8e-0ed5-4150-b64c-78629b180f66/diretoria2.png",
+    "slug": "project-01",
+    "date": "2024-11-01",
+    "content": "<p>teste</p>"
+  }
+}

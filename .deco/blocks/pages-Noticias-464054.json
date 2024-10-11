@@ -38,23 +38,18 @@
             "image": "https://deco-sites-assets.s3.sa-east-1.amazonaws.com/antra/03937534-2e27-449f-8011-ee42233d1d06/news2.png",
             "tag": "Direitos e Políticas"
           }
-        ]
-      }
-    },
-    {
-      "__resolveType": "website/sections/Rendering/Lazy.tsx",
-      "section": {
-        "__resolveType": "site/sections/AllNews.tsx",
-        "title": "Todas as notícias",
+        ],
         "info": {
-          "title": "Encontre locais de apoio na sua área",
-          "image": "https://deco-sites-assets.s3.sa-east-1.amazonaws.com/antra/2144ad25-3f33-4076-b964-73d0961788e7/image2.png"
+          "image": "https://deco-sites-assets.s3.sa-east-1.amazonaws.com/antra/2144ad25-3f33-4076-b964-73d0961788e7/image2.png",
+          "title": "Encontre locais de apoio na sua área"
         },
         "allNews": {
           "__resolveType": "blog/loaders/BlogpostList.ts",
           "sortBy": "date_desc",
-          "count": 13
-        }
+          "count": 13,
+          "slug": "news"
+        },
+        "title": "Todas as notícias"
       }
     },
     {

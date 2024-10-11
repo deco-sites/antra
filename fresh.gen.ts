@@ -3,8 +3,10 @@
 // This file is automatically updated during development when running `dev.ts`.
 
 import * as $_app from "./routes/_app.tsx";
+import * as $all_news from "./islands/all-news.tsx";
 import * as $all_research_pagination from "./islands/all-research-pagination.tsx";
 import * as $card_what_we_do from "./islands/card-what-we-do.tsx";
+import * as $featured_news from "./islands/featured-news.tsx";
 import * as $header_mobile_site from "./islands/header-mobile-site.tsx";
 import * as $header_site from "./islands/header-site.tsx";
 import * as $projects_pagination from "./islands/projects-pagination.tsx";
@@ -19,8 +21,10 @@ const manifest = {
     "./routes/_app.tsx": $_app,
   },
   islands: {
+    "./islands/all-news.tsx": $all_news,
     "./islands/all-research-pagination.tsx": $all_research_pagination,
     "./islands/card-what-we-do.tsx": $card_what_we_do,
+    "./islands/featured-news.tsx": $featured_news,
     "./islands/header-mobile-site.tsx": $header_mobile_site,
     "./islands/header-site.tsx": $header_site,
     "./islands/projects-pagination.tsx": $projects_pagination,

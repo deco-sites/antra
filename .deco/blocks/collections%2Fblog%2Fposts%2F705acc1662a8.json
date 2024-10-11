@@ -14,12 +14,17 @@
         "slug": "news"
       }
     ],
-    "extraProps": [],
+    "extraProps": [
+      {
+        "key": "tag",
+        "value": "Direitos e Políticas"
+      }
+    ],
     "excerpt": "none",
     "title": "ANTRA em defesa da identidade travesti",
     "image": "https://deco-sites-assets.s3.sa-east-1.amazonaws.com/antra/31a01c5c-2409-4cd1-a1c5-af8817edf72d/news1.png",
     "date": "2024-10-22",
-    "slug": "Direitos e Políticas",
+    "slug": "post-02",
     "content": "<h2>What is Lorem Ipsum?</h2><p style=\"text-align: justify\"><strong>Lorem Ipsum</strong> is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book. It has survived not only five centuries, but also the leap into electronic typesetting, remaining essentially unchanged. It was popularised in the 1960s with the release of Letraset sheets containing Lorem Ipsum passages, and more recently with desktop publishing software like Aldus PageMaker including versions of Lorem Ipsum.</p>"
   }
 }

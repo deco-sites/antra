@@ -1,0 +1,25 @@
+{
+  "name": "collections/blog/posts/bd15ce0d92ef",
+  "__resolveType": "blog/loaders/Blogpost.ts",
+  "post": {
+    "authors": [],
+    "categories": [
+      {
+        "name": "Notícias",
+        "slug": "news"
+      }
+    ],
+    "extraProps": [
+      {
+        "key": "tag",
+        "value": "Direitos e Políticas"
+      }
+    ],
+    "title": "ANTRA lança diagnóstico sobre a retificação de nome e gênero de travestis e demais pessoas trans no brasil.",
+    "excerpt": "ANTRA lança diagnóstico sobre a retificação de nome e gênero de travestis e demais pessoas trans no brasil.",
+    "image": "https://deco-sites-assets.s3.sa-east-1.amazonaws.com/antra/9d4d0444-d172-4591-8b06-f43100187ea7/news4.png",
+    "date": "2024-10-25",
+    "slug": "post-05",
+    "content": "<p><span>ANTRA lança diagnóstico sobre a retificação de nome e gênero de travestis e demais pessoas trans no brasil.</span></p>"
+  }
+}

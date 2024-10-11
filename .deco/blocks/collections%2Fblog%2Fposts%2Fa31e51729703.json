@@ -1,0 +1,30 @@
+{
+  "name": "collections/blog/posts/a31e51729703",
+  "__resolveType": "blog/loaders/Blogpost.ts",
+  "post": {
+    "authors": [
+      {
+        "name": "Lorem",
+        "email": "loremipsun@lorem.com"
+      }
+    ],
+    "categories": [
+      {
+        "name": "Notícias",
+        "slug": "news"
+      }
+    ],
+    "extraProps": [
+      {
+        "key": "tag",
+        "value": "Direitos e Políticas"
+      }
+    ],
+    "date": "2024-10-23",
+    "slug": "post-04",
+    "content": "<p><span>ANTRA lança nota técnica sobre o uso do banheiro por pessoas trans</span></p>",
+    "title": "ANTRA lança nota técnica sobre o uso do banheiro por pessoas trans",
+    "excerpt": "ANTRA lança nota técnica sobre o uso do banheiro por pessoas trans",
+    "image": "https://deco-sites-assets.s3.sa-east-1.amazonaws.com/antra/ea10b3bc-05c8-49dd-9f7f-ee4ae4711d34/news3.png"
+  }
+}

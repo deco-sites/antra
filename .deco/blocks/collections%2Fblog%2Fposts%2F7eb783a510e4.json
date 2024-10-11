@@ -1,0 +1,17 @@
+{
+  "name": "collections/blog/posts/7eb783a510e4",
+  "__resolveType": "blog/loaders/Blogpost.ts",
+  "post": {
+    "authors": [],
+    "categories": [
+      {
+        "name": "Projetos",
+        "slug": "projects"
+      }
+    ],
+    "extraProps": [],
+    "date": "2024-11-01",
+    "slug": "project-01",
+    "content": "<p>teste</p>"
+  }
+}

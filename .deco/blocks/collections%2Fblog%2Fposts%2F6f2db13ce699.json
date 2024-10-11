@@ -1,0 +1,30 @@
+{
+  "name": "collections/blog/posts/6f2db13ce699",
+  "__resolveType": "blog/loaders/Blogpost.ts",
+  "post": {
+    "authors": [
+      {
+        "name": "Lorem",
+        "email": "loremipsun@lorem.com"
+      }
+    ],
+    "categories": [
+      {
+        "name": "Notícias",
+        "slug": "news"
+      }
+    ],
+    "extraProps": [
+      {
+        "key": "tag",
+        "value": "Direitos e Políticas"
+      }
+    ],
+    "title": "Carta da ANTRA sobre as Eleições 2022",
+    "excerpt": "none",
+    "date": "2024-10-02",
+    "slug": "post-08",
+    "content": "<p><span>Carta da ANTRA sobre as Eleições 2022</span></p>",
+    "image": "https://deco-sites-assets.s3.sa-east-1.amazonaws.com/antra/2651537b-4fde-47a6-8302-e020a77f94b4/urna.png"
+  }
+}

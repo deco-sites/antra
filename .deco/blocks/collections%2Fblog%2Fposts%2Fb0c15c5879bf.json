@@ -1,0 +1,30 @@
+{
+  "name": "collections/blog/posts/b0c15c5879bf",
+  "__resolveType": "blog/loaders/Blogpost.ts",
+  "post": {
+    "authors": [
+      {
+        "name": "Lorem",
+        "email": "loremipsun@lorem.com"
+      }
+    ],
+    "categories": [
+      {
+        "name": "Notícias",
+        "slug": "news"
+      }
+    ],
+    "extraProps": [
+      {
+        "key": "tag",
+        "value": "Direitos e Políticas"
+      }
+    ],
+    "title": "Pronunciamento do ministério das mulheres pelo dia internacional da mulher",
+    "image": "https://deco-sites-assets.s3.sa-east-1.amazonaws.com/antra/03937534-2e27-449f-8011-ee42233d1d06/news2.png",
+    "date": "2024-10-14",
+    "slug": "post-03",
+    "content": "<p><span>Pronunciamento do ministério das mulheres pelo dia internacional da mulher</span></p>",
+    "excerpt": "Pronunciamento do ministério das mulheres pelo dia internacional da mulher"
+  }
+}
