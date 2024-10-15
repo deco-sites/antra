@@ -1,0 +1,29 @@
+{
+  "name": "collections/blog/posts/3b8e07bece2c",
+  "__resolveType": "blog/loaders/Blogpost.ts",
+  "post": {
+    "authors": [
+      {
+        "name": "Bruna Benevides",
+        "email": "brunabenevides@gmail.com"
+      }
+    ],
+    "categories": [
+      {
+        "name": "Direitos e Políticas",
+        "slug": "direitos-e-politicas"
+      },
+      {
+        "name": "Notas e Ofícios",
+        "slug": "notas-e-oficios"
+      }
+    ],
+    "extraProps": [],
+    "title": "Nota da ANTRA sobre indicação de personagens para matérias jornalísticas",
+    "excerpt": "A Associação Nacional de Travestis e Transexuais (ANTRA) agradece o interesse em abordar temas relacionados à população trans em suas reportagens e se coloca a disposição para colaborar da melhor forma possível.",
+    "image": "https://deco-sites-assets.s3.sa-east-1.amazonaws.com/antra/7a673f47-5959-4227-ba82-3c6c43c439a1/materias.webp",
+    "slug": "nota-antra-personagens-materias-jornalisticas/",
+    "date": "2024-07-22",
+    "content": "<p><strong>A Associação Nacional de Travestis e Transexuais (ANTRA)</strong> agradece o interesse em abordar temas relacionados à população trans em suas reportagens e se coloca a disposição para colaborar da melhor forma possível. No entanto, informamos que, por questões estratégicas e de responsabilidade, <strong>nossa política institucional impede a realização de indicações de personagens (pessoas físicas) para matérias jornalísticas</strong>.</p><p style=\"text-align: start\">Compreendendo a relevância do jornalismo na luta por direitos humanos e na promoção da diversidade, a ANTRA busca fortalecer o diálogo com a imprensa através de outras formas de colaboração, como:</p><p style=\"text-align: start\"><strong>Sugestão de fontes de informação confiáveis:</strong> pesquisas, relatórios e publicações de instituições renomadas sobre a temática trans.</p><p style=\"text-align: start\"><strong>Participação como representação legítima:</strong> indicação para entrevistas com membros da diretoria e especialistas da ANTRA, emitindo opiniões e pareceres qualificados.</p><p style=\"text-align: start\"><strong>Elaboração e proposta de pautas:</strong> sugestão de temas relevantes e de interesse da comunidade trans, com base em dados e vivências reais.</p><p style=\"text-align: start\"><strong>Análise de matérias já produzidas:</strong> revisão de reportagens para garantir a precisão das informações e o respeito à população trans.</p><p style=\"text-align: start\"><strong>Articulação com outras entidades do movimento LGBTQIA+:</strong> conexão com diversas organizações que podem auxiliar na reportagem.</p><p style=\"text-align: start\">Acreditamos que, por meio de um trabalho conjunto e responsável entre a mídia e as organizações da sociedade civil, podemos contribuir para a produção de reportagens de qualidade, que informem de forma precisa, ética e responsável sobre a realidade da população trans no Brasil.</p><p style=\"text-align: start\">Ressaltamos a importância do jornalismo comprometido com a verdade, a representatividade e a justiça social, combatendo estereótipos e preconceitos que marginalizam e colocam em risco a vida das pessoas trans.</p><p style=\"text-align: start\">A ANTRA reitera seu compromisso com a luta por uma sociedade mais justa e igualitária para todas as pessoas, e se coloca à disposição para colaborar com a imprensa na construção de um jornalismo que promova a diversidade e a inclusão.</p><p style=\"text-align: start\">Atenciosamente,</p><p style=\"text-align: start\"><strong>Associação Nacional de Travestis e Transexuais (ANTRA)</strong></p>"
+  }
+}

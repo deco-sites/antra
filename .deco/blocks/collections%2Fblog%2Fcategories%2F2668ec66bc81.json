@@ -1,0 +1,8 @@
+{
+  "name": "collections/blog/categories/2668ec66bc81",
+  "__resolveType": "blog/loaders/Category.ts",
+  "category": {
+    "name": "Educação",
+    "slug": "educacao"
+  }
+}

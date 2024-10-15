@@ -1,0 +1,8 @@
+{
+  "name": "collections/blog/categories/a261e9154aef",
+  "__resolveType": "blog/loaders/Category.ts",
+  "category": {
+    "name": "Notas e Ofícios",
+    "slug": "notas-e-oficios"
+  }
+}
