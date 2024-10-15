@@ -1,0 +1,8 @@
+{
+  "name": "collections/blog/categories/1d9070954bb3",
+  "__resolveType": "blog/loaders/Category.ts",
+  "category": {
+    "name": "Cultura",
+    "slug": "cultura"
+  }
+}

@@ -1,0 +1,8 @@
+{
+  "name": "collections/blog/categories/3cc7384b6e8d",
+  "__resolveType": "blog/loaders/Category.ts",
+  "category": {
+    "name": "Direitos e Políticas",
+    "slug": "direitos-e-politicas"
+  }
+}

@@ -1,0 +1,8 @@
+{
+  "name": "collections/blog/authors/6843c5a1d2f1",
+  "__resolveType": "blog/loaders/Author.ts",
+  "author": {
+    "name": "Bruna Benevides",
+    "email": "brunabenevides@gmail.com"
+  }
+}

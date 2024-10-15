@@ -1,0 +1,24 @@
+{
+  "name": "collections/blog/posts/377b4d05ae7d",
+  "__resolveType": "blog/loaders/Blogpost.ts",
+  "post": {
+    "authors": [],
+    "categories": [
+      {
+        "name": "Direitos e Políticas",
+        "slug": "direitos-e-politicas"
+      },
+      {
+        "name": "Justiça",
+        "slug": "justiça"
+      }
+    ],
+    "extraProps": [],
+    "title": "Patrícia Lélis perde ação movida contra a ANTRA",
+    "content": "<p>Vitória Judicial da ANTRA!</p><p style=\"text-align: start\">É com grande satisfação que anunciamos a vitória da ANTRA na ação judicial movida por Patrícia Lelis contra nós. O tribunal de justiça de São Paulo reconheceu que ao nos levantarmos contra publicações feitas pela jornalista, nos mantivemos dentro dos limites da liberdade de expressão e não incorremos em injúrias ou difamações.</p><p style=\"text-align: start\">Lélis entrou com uma ação contra a ANTRA e o Twitter Brasil. Alegando que a ANTRA divulgou injúrias contra sua honra e informações falsas através da plataforma do X/Twitter. Ela buscou a remoção das postagens e uma indenização por danos morais. Mas não obteve êxito, embora possa recorrer da decisão.</p><p style=\"text-align: start\">Esta decisão é um marco na luta contra a tentativas de macular a imagem da ANTRA e reafirma a nossa determinação e legitimidade em defender os direitos da comunidade trans.</p><p style=\"text-align: start\"><em>“A sentença é absolutamente correta, porque a ação pediu na prática, com outras palavras, pra calar a ANTRA e apenas por críticas legítimas a falas públicas dela, que notoriamente no mundo devem se submeter a críticas duras e irônicas, sendo irrelevante ela concordar ou não com elas. Quem entra no debate público se submete a críticas, só não pode cometer injúrias e discursos de ódio, que a sentença reconhece que não foram feitas pela ANTRA.” </em>Paulo Iotti, advogado da ANTRA na ação.</p><p style=\"text-align: start\">Isso é mais do que apenas uma resolução legal; é a afirmação de que a ANTRA e a luta trans não serão silenciadas ou intimidadas. Continuaremos firmes, protegendo e promovendo a dignidade e os direitos das pessoas trans.</p><p style=\"text-align: start\"><em>“A sentença proferida afirma que a formulação de críticas incisivas contra pessoas públicas em redes sociais é permitida, desde que relacionadas a assuntos de interesse coletivo e sem abuso ou ofensas pessoais. No caso em questão, a decisão concluiu que as comunicações da ANTRA não continham excessos ou agressões verbais que pudessem fundamentar as alegações de difamação e injúria feitas pela Patrícia Lélis. As publicações contestadas foram consideradas como simples questionamentos frente as opiniões e posicionamentos da própria autora, divulgados publicamente. Não seremos encurraladas ou silenciadas.”</em> Bruna Benevides, Presidenta da ANTRA.</p><p style=\"text-align: start\">Além de jugar a ação improcedente, Patrícia Lélis foi condenada ao pagamento das custas e despesas processuais, bem como de honorários advocatícios aos patronos das rés, os quais fixa-se em 15% sobre o valor da causa atualizado, a ser igualmente dividido entre eles.</p><p style=\"text-align: start\">Agradecemos imensamente ao Dr. Paulo Iotti por sempre estar conosco defendendo os direitos trans contra as injustiças, e especialmente a Lana de Holanda e Alina Durso, que se dispuseram em atuar como testemunhas no caso. Para a decisão, o TJSP dispensou a necessidade de prova testemunhal por reconhecer que já haviam elementos suficientes para julgar a ação improcedente. Essa vitória é nossa!!!!</p><p style=\"text-align: start\">A ANTRA segue inabalável.</p>",
+    "date": "2024-07-27",
+    "slug": "patricia-lelis-perde-acao-antra",
+    "image": "https://deco-sites-assets.s3.sa-east-1.amazonaws.com/antra/2be6a3c8-9b72-42fc-8b0b-a10ea7e141a8/antra.webp",
+    "excerpt": "É com grande satisfação que anunciamos a vitória da ANTRA na ação judicial movida por Patrícia Lelis contra nós. "
+  }
+}
