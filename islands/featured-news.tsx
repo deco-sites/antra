@@ -40,6 +40,7 @@ export default function FeaturedNewsIsland({
   allNews,
 }: Props) {
   const [selectedTags, setSelectedTags] = useState<string[]>([]);
+  const[count, setCount] = useState<number>(0)
   console.log(selectedTags);
   const handleTagClick = (tag: string) => {
     setSelectedTags((prev) =>
@@ -47,13 +48,14 @@ export default function FeaturedNewsIsland({
     );
   };
 
-  const filteredNews = selectedTags.length === 0
-    ? allNews
-    : allNews?.filter((newsItem) =>
-      selectedTags.some((tag) =>
-        newsItem?.extraProps?.some((item) => item.value.includes(tag))
-      )
-    );
+  const filteredNews =
+    selectedTags.length === 0
+      ? allNews
+      : allNews?.filter((newsItem) =>
+          selectedTags.some((tag) =>
+            newsItem?.extraProps?.some((item) => item.value.includes(tag))
+          )
+        );
 
   return (
     <>
@@ -73,6 +75,8 @@ export default function FeaturedNewsIsland({
                 className="absolute right-3 top-1/2 transform -translate-y-1/2"
               />
             </div>
+            <h1>{count}</h1>
+            <button onClick={() => setCount(count+1)}>Button</button>
 
             <button className="md:hidden">
               <Icon id="FilterList" size={22} strokeWidth={2} />
@@ -85,10 +89,10 @@ export default function FeaturedNewsIsland({
                   onClick={() => handleTagClick(item)}
                   class={`badge badge-lg text-xs border border-gray-500 
         ${
-                    selectedTags.includes(item)
-                      ? "bg-gray-700 text-white"
-                      : "bg-white text-gray-700"
-                  }`}
+          selectedTags.includes(item)
+            ? "bg-gray-700 text-white"
+            : "bg-white text-gray-700"
+        }`}
                 >
                   {item}
                 </button>
