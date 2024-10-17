@@ -17,6 +17,10 @@
       {
         "name": "Pesquisas",
         "slug": "pesquisas"
+      },
+      {
+        "name": "Notícias",
+        "slug": "news"
       }
     ],
     "extraProps": [],

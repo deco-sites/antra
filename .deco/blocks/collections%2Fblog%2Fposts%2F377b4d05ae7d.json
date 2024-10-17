@@ -11,6 +11,10 @@
       {
         "name": "Justiça",
         "slug": "justiça"
+      },
+      {
+        "name": "Notícias",
+        "slug": "news"
       }
     ],
     "extraProps": [],

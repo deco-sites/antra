@@ -2,8 +2,6 @@ import { useEffect, useState } from "preact/hooks";
 import type { ImageWidget } from "apps/admin/widgets.ts";
 import Image from "apps/website/components/Image.tsx";
 import { BlogPost } from "apps/blog/types.ts";
-import { useId } from "site/sdk/useId.ts";
-import { useSection } from "@deco/deco/hooks";
 
 export interface Info {
   title: string;
@@ -21,16 +19,10 @@ export interface Props {
 }
 
 export default function AllNewsIsland(
-  { title, info, allNews, pagination: { page = 0, perPage = 13 } = {} }: Props,
+  { title, info, allNews, pagination: { page = 1, perPage = 13 } = {} }: Props,
 ) {
   const from = perPage * page;
   const to = perPage * (page + 1);
-  const postList = useId();
-  const fetchMoreLink = useSection({
-    props: {
-      pagination: { perPage, page: page + 1 },
-    },
-  });
   const [selectedTags, setSelectedTags] = useState<string[]>([]);
 
   useEffect(() => {
@@ -122,21 +114,6 @@ export default function AllNewsIsland(
           </div>
 
           <div class="mt-10 flex justify-center">
-            {allNews && to < allNews.length && (
-              <div class="flex justify-center w-full" id={postList}>
-                <button
-                  hx-get={fetchMoreLink}
-                  hx-swap="outerHTML"
-                  hx-target={`#${postList}`}
-                  class="btn btn-primary"
-                >
-                  <span class="inline [.htmx-request_&]:hidden">
-                    teste
-                  </span>
-                  <span class="loading loading-spinner hidden [.htmx-request_&]:block" />
-                </button>
-              </div>
-            )}
             <button class="px-4 py-2 bg-pink-500 text-white rounded-full hover:bg-pink-600">
               Carregar mais
             </button>

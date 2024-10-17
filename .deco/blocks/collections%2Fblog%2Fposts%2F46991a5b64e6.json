@@ -3,7 +3,12 @@
   "__resolveType": "blog/loaders/Blogpost.ts",
   "post": {
     "authors": [],
-    "categories": [],
+    "categories": [
+      {
+        "name": "Notícias",
+        "slug": "news"
+      }
+    ],
     "extraProps": [],
     "title": "teste projeto",
     "excerpt": "teste projeto",

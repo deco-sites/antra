@@ -15,6 +15,10 @@
       {
         "name": "Educação",
         "slug": "educação"
+      },
+      {
+        "name": "Notícias",
+        "slug": "news"
       }
     ],
     "extraProps": [],

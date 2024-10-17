@@ -16,6 +16,10 @@
       {
         "name": "Notas e Ofícios",
         "slug": "notas-e-oficios"
+      },
+      {
+        "name": "Notícias",
+        "slug": "news"
       }
     ],
     "extraProps": [],
