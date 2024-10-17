@@ -3,8 +3,8 @@ import Image from "apps/website/components/Image.tsx";
 import Icon from "site/components/ui/Icon.tsx";
 
 interface Banner {
-  image: ImageWidget
-  title: string
+  image: ImageWidget;
+  title: string;
 }
 
 export interface Props {
@@ -69,8 +69,8 @@ export default function ResearchBanner({ bannerDesk, bannerMob }: Props) {
     <div class="lg:container text-sm px-5 p-16 mb-12">
       <div class="space-y-10">
         <div class="w-full flex justify-center items-center">
-        <BannerDesktop image={bannerDesk.image} title={bannerDesk.title}/>
-        <BannerMobile  image={bannerMob.image} title={bannerMob.title}/>
+          <BannerDesktop image={bannerDesk.image} title={bannerDesk.title} />
+          <BannerMobile image={bannerMob.image} title={bannerMob.title} />
         </div>
       </div>
     </div>

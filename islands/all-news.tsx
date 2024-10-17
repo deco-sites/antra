@@ -1,33 +1,32 @@
-import { useState, useEffect } from 'preact/hooks';
+import { useEffect, useState } from "preact/hooks";
 import type { ImageWidget } from "apps/admin/widgets.ts";
 import Image from "apps/website/components/Image.tsx";
 import { BlogPost } from "apps/blog/types.ts";
 import { useId } from "site/sdk/useId.ts";
-import { useSection } from "deco/hooks/useSection.ts";
+import { useSection } from "@deco/deco/hooks";
 
 export interface Info {
-     title: string;
-     image: ImageWidget;
-   }
-   
-   export interface Props {
-     title: string;
-     info: Info;
-     allNews?: BlogPost[] | null;
-     pagination?: {
-      page?: number;
-      perPage?: number;
-    };
-   }
+  title: string;
+  image: ImageWidget;
+}
 
-export default function AllNewsIsland({ title, info, allNews, pagination: { page = 0, perPage = 13 } = {}, }: Props) {
+export interface Props {
+  title: string;
+  info: Info;
+  allNews?: BlogPost[] | null;
+  pagination?: {
+    page?: number;
+    perPage?: number;
+  };
+}
+
+export default function AllNewsIsland(
+  { title, info, allNews, pagination: { page = 0, perPage = 13 } = {} }: Props,
+) {
   const from = perPage * page;
   const to = perPage * (page + 1);
-  // It's boring to generate ids. Let's autogen them
   const postList = useId();
-  // Get the HTMX link for this section
   const fetchMoreLink = useSection({
-    // Renders this section with the next page
     props: {
       pagination: { perPage, page: page + 1 },
     },
@@ -41,8 +40,9 @@ export default function AllNewsIsland({ title, info, allNews, pagination: { page
   }, [window.location.search]);
 
   const filteredNews = allNews?.slice(from, to).filter((news) =>
-    selectedTags.length === 0 || news?.extraProps?.some((item) =>
-      item.key === 'tag' && selectedTags.includes(item.value)
+    selectedTags.length === 0 ||
+    news?.extraProps?.some((item) =>
+      item.key === "tag" && selectedTags.includes(item.value)
     )
   );
 
@@ -74,14 +74,16 @@ export default function AllNewsIsland({ title, info, allNews, pagination: { page
                   <div class="p-1 py-4 space-y-4 text-start w-full">
                     <div class="flex flex-wrap gap-2">
                       {news.extraProps?.map((item, i) => {
-                        return item.key === "tag" ? (
-                          <div
-                            className="badge badge-lg text-xs border border-gray-500 bg-transparent"
-                            key={i}
-                          >
-                            {item.value}
-                          </div>
-                        ) : null;
+                        return item.key === "tag"
+                          ? (
+                            <div
+                              className="badge badge-lg text-xs border border-gray-500 bg-transparent"
+                              key={i}
+                            >
+                              {item.value}
+                            </div>
+                          )
+                          : null;
                       })}
                     </div>
                     <h3 class="text-lg font-semibold mt-2">{news.title}</h3>
@@ -90,10 +92,8 @@ export default function AllNewsIsland({ title, info, allNews, pagination: { page
               </div>
             ))}
 
-            <div
-              class="hidden w-full col-span-1 md:row-start-2 md:row-span-2 md:col-start-3 
-              md:flex flex-col items-start justify-start h-full"
-            >
+            <div class="hidden w-full col-span-1 md:row-start-2 md:row-span-2 md:col-start-3 
+              md:flex flex-col items-start justify-start h-full">
               <div class="relative md:h-full overflow-hidden rounded-2xl">
                 <img
                   src={info.image}
@@ -122,21 +122,21 @@ export default function AllNewsIsland({ title, info, allNews, pagination: { page
           </div>
 
           <div class="mt-10 flex justify-center">
-          {allNews && to < allNews.length && (
-          <div class="flex justify-center w-full" id={postList}>
-            <button
-              hx-get={fetchMoreLink}
-              hx-swap="outerHTML"
-              hx-target={`#${postList}`}
-              class="btn btn-primary"
-            >
-              <span class="inline [.htmx-request_&]:hidden">
-                teste
-              </span>
-              <span class="loading loading-spinner hidden [.htmx-request_&]:block" />
-            </button>
-          </div>
-        )}
+            {allNews && to < allNews.length && (
+              <div class="flex justify-center w-full" id={postList}>
+                <button
+                  hx-get={fetchMoreLink}
+                  hx-swap="outerHTML"
+                  hx-target={`#${postList}`}
+                  class="btn btn-primary"
+                >
+                  <span class="inline [.htmx-request_&]:hidden">
+                    teste
+                  </span>
+                  <span class="loading loading-spinner hidden [.htmx-request_&]:block" />
+                </button>
+              </div>
+            )}
             <button class="px-4 py-2 bg-pink-500 text-white rounded-full hover:bg-pink-600">
               Carregar mais
             </button>

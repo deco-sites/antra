@@ -1,22 +1,21 @@
-import { h } from 'preact';
-import { useSignal } from '@preact/signals'; // Importe o useSignal
+import { h } from "preact";
+import { useSignal } from "@preact/signals"; // Importe o useSignal
 import Icon from "site/components/ui/Icon.tsx";
 
-
-interface Props{
-     label: string;
-          url?: string;
-          img?: string;
-          imgLabel?: string;
-          submenu?: {
-          label: string;
-          subLabel?: string;
-          url: string;
-          }[];
+interface Props {
+  label: string;
+  url?: string;
+  img?: string;
+  imgLabel?: string;
+  submenu?: {
+    label: string;
+    subLabel?: string;
+    url: string;
+  }[];
 }
 
 function DropdownMenuItem({ label, submenu }: Props) {
-     const isSubmenuOpen = useSignal(false);
+  const isSubmenuOpen = useSignal(false);
 
   return (
     <li class="relative">

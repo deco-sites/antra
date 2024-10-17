@@ -10,9 +10,9 @@ export interface Card {
 export interface Props {
   title?: string;
   description: string;
-  type: string[]
-  topic: string[]
-  year: string[]
+  type: string[];
+  topic: string[];
+  year: string[];
   cards?: Card[];
 }
 
@@ -23,7 +23,12 @@ const Filter = ({ type, description, topic, year }: Props) => {
         <h2>Tipo de recurso</h2>
         <div class="flex flex-wrap gap-2 w-full">
           {type.map((item, i) => (
-            <div class="badge badge-lg text-xs border border-gray-500 bg-transparent">{item}</div>
+            <div
+              key={i}
+              class="badge badge-lg text-xs border border-gray-500 bg-transparent"
+            >
+              {item}
+            </div>
           ))}
         </div>
       </div>
@@ -31,7 +36,12 @@ const Filter = ({ type, description, topic, year }: Props) => {
         <h2>Assunto</h2>
         <div class="flex flex-wrap gap-2 w-full">
           {topic.map((item, i) => (
-            <div class="badge badge-lg text-xs border border-gray-500 bg-transparent">{item}</div>
+            <div
+              key={i}
+              class="badge badge-lg text-xs border border-gray-500 bg-transparent"
+            >
+              {item}
+            </div>
           ))}
         </div>
       </div>
@@ -39,13 +49,18 @@ const Filter = ({ type, description, topic, year }: Props) => {
         <h2>Ano de publicação</h2>
         <div class="flex flex-wrap gap-2 w-full">
           {year.map((item, i) => (
-            <div class="badge badge-lg text-xs border border-gray-500 bg-transparent">{item}</div>
+            <div
+              key={i}
+              class="badge badge-lg text-xs border border-gray-500 bg-transparent"
+            >
+              {item}
+            </div>
           ))}
         </div>
       </div>
     </div>
-  )
-}
+  );
+};
 
 const Card = ({ image, title, tags }: Card) => {
   return (
@@ -71,7 +86,6 @@ const Card = ({ image, title, tags }: Card) => {
   );
 };
 
-
 const Resource = ({ title, cards, description, type, topic, year }: Props) => {
   return (
     <div class="lg:container text-sm px-5 p-16 mb-40">
@@ -93,7 +107,12 @@ const Resource = ({ title, cards, description, type, topic, year }: Props) => {
                 className="absolute right-3 top-1/2 transform -translate-y-1/2"
               />
             </div>
-            <Filter type={type} description={description} topic={topic} year={year} />
+            <Filter
+              type={type}
+              description={description}
+              topic={topic}
+              year={year}
+            />
           </div>
           <div class="w-full grid grid-cols-1 md:grid-cols-3 gap-8">
             {cards?.map((card, index) => (
@@ -109,6 +128,6 @@ const Resource = ({ title, cards, description, type, topic, year }: Props) => {
       </div>
     </div>
   );
-}
+};
 
 export default Resource;

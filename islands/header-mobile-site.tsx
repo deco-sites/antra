@@ -45,7 +45,12 @@ export const HeaderMobileSite = ({ logo, navigation }: Nav) => {
         <div className="flex flex-col gap-8 min-h-full w-full bg-base-100 text-base-content">
           <div className="flex px-[50px] py-4 items-center justify-between">
             <a href="/">
-              <Image src={logo?.src || ""} width={81} height={58} alt={logo?.alt} />
+              <Image
+                src={logo?.src || ""}
+                width={81}
+                height={58}
+                alt={logo?.alt}
+              />
             </a>
             <label
               htmlFor="mobile-drawer-nav"
@@ -76,23 +81,48 @@ export const HeaderMobileSite = ({ logo, navigation }: Nav) => {
             {navigation?.links.map((link, index) => (
               <li key={`${link.label}-${index}`} className="relative">
                 <label
-                  onClick={() => toggleSubmenu(index)}
+                  onClick={() =>
+                    toggleSubmenu(index)}
                   className="text-base flex cursor-pointer items-center"
                 >
                   {link?.label}
 
-                  {link?.submenu && link?.submenu.length > 0 && openMenuIndex === index ? (
-                    <Icon id="ChevronUp" size={16} strokeWidth={2} className="ml-2" />
-                  ) : link?.submenu && link?.submenu.length > 0 ? (
-                    <Icon id="ChevronDown" size={16} strokeWidth={2} className="ml-2" />
-                  ) : null}
+                  {link?.submenu && link?.submenu.length > 0 &&
+                      openMenuIndex === index
+                    ? (
+                      <Icon
+                        id="ChevronUp"
+                        size={16}
+                        strokeWidth={2}
+                        className="ml-2"
+                      />
+                    )
+                    : link?.submenu && link?.submenu.length > 0
+                    ? (
+                      <Icon
+                        id="ChevronDown"
+                        size={16}
+                        strokeWidth={2}
+                        className="ml-2"
+                      />
+                    )
+                    : null}
                 </label>
 
                 {link.submenu && openMenuIndex === index && (
-                  <ul id={`submenu-${index}`} className="submenu-class flex flex-col ml-4 mb-4 bg-white">
+                  <ul
+                    id={`submenu-${index}`}
+                    className="submenu-class flex flex-col ml-4 mb-4 bg-white"
+                  >
                     {link?.submenu?.map((subItem, subIndex) => (
-                      <li key={subIndex} className="flex flex-col block px-4 cursor-pointer hover:bg-gray-100">
-                        <a href={subItem?.url} className="text-base text-gray-700">
+                      <li
+                        key={subIndex}
+                        className="flex flex-col block px-4 cursor-pointer hover:bg-gray-100"
+                      >
+                        <a
+                          href={subItem?.url}
+                          className="text-base text-gray-700"
+                        >
                           {subItem?.label}
                         </a>
                       </li>
@@ -107,4 +137,3 @@ export const HeaderMobileSite = ({ logo, navigation }: Nav) => {
     </nav>
   );
 };
-

@@ -68,7 +68,8 @@ const DEFAULT_PROPS: BlogPost = {
 };
 
 export default function History({ page }: Props) {
-  const { title, authors, image, date, content, extraProps } = page?.post || DEFAULT_PROPS;
+  const { title, authors, image, date, content, extraProps } = page?.post ||
+    DEFAULT_PROPS;
 
   return (
     <div className="lg:container text-sm mb-40">
@@ -85,18 +86,24 @@ export default function History({ page }: Props) {
             loading="lazy"
           />
           <div class="w-full max-w-[650px] flex flex-col gap-5">
-          <div class="md:flex flex-wrap gap-2 w-full justify-start">
-            {extraProps?.map((item, i) => {
-              return item.key === 'tag' ? (
-                <div className="badge badge-lg text-xs border border-gray-500 bg-transparent" key={i}>
-                  {item.value}
-                </div>
-              ) : null;
-            })}
-          </div>
+            <div class="md:flex flex-wrap gap-2 w-full justify-start">
+              {extraProps?.map((item, i) => {
+                return item.key === "tag"
+                  ? (
+                    <div
+                      className="badge badge-lg text-xs border border-gray-500 bg-transparent"
+                      key={i}
+                    >
+                      {item.value}
+                    </div>
+                  )
+                  : null;
+              })}
+            </div>
             <h1 class="text-3xl font-bold">{title}</h1>
             <div>
-              <span class="underline">{authors[0].name}</span> • <span>{date}</span>
+              <span class="underline">{authors[0].name}</span> •{" "}
+              <span>{date}</span>
             </div>
             <hr />
             <div class="w-full flex justify-between items-center">
@@ -106,7 +113,7 @@ export default function History({ page }: Props) {
                 <Icon id="Twitter" size={24} />
                 <Icon id="Linkedin" size={24} />
                 <Icon id="Facebook" size={24} />
-              </div>              
+              </div>
             </div>
 
             <hr />

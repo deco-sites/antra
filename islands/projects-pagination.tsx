@@ -22,7 +22,7 @@ export default function ProjectsPagination({ projects }: Props) {
 
   const currentProjects = projects.slice(
     (currentPage - 1) * itemsPerPage,
-    currentPage * itemsPerPage
+    currentPage * itemsPerPage,
   );
 
   const handlePrevPage = () => {
@@ -36,7 +36,10 @@ export default function ProjectsPagination({ projects }: Props) {
   return (
     <div class="w-full flex flex-col gap-5 justify-center items-center">
       {currentProjects?.map((project, i) => (
-        <div class="w-full max-w-[1320px] flex flex-col-reverse md:flex-row rounded-2xl md:border border-gray-300">
+        <div
+          key={i}
+          class="w-full max-w-[1320px] flex flex-col-reverse md:flex-row rounded-2xl md:border border-gray-300"
+        >
           <div class="flex flex-col justify-between py-5 md:py-12 md:px-12 w-full md:w-[65%]">
             <div>
               <p class="text-lg text-gray-500 font-normal">{project.date}</p>

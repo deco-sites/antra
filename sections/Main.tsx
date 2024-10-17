@@ -1,4 +1,4 @@
-import { h, FunctionalComponent } from "preact";
+import { FunctionalComponent, h } from "preact";
 
 interface Item {
   image: string;
@@ -45,9 +45,7 @@ const NewsFeed: FunctionalComponent<Props> = ({ items }: Props) => {
     <div class="lg:container h-auto text-sm lg:p-16 py-10 px-5">
       <div class="">
         <div class="grid grid-cols-1 gap-4 md:grid-cols-[70%_30%] lg:grid-cols-[75%_25%]">
-          {items.map((item, index) => (
-            <NewsItem key={index} {...item} />
-          ))}
+          {items.map((item, index) => <NewsItem key={index} {...item} />)}
         </div>
       </div>
     </div>

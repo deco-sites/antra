@@ -14,9 +14,5 @@ export interface Props {
 }
 
 export default function AllNews({ title, info, allNews }: Props) {
-
-
-  return (
-    <AllNewsIsland title={title} info={info} allNews={allNews}/>
-  );
+  return <AllNewsIsland title={title} info={info} allNews={allNews} />;
 }

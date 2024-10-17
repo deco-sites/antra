@@ -20,7 +20,7 @@ export default function AllResearchPagination({ title, research }: Props) {
 
   const currentResearch = research.slice(
     (currentPage - 1) * itemsPerPage,
-    currentPage * itemsPerPage
+    currentPage * itemsPerPage,
   );
 
   const handlePrevPage = () => {

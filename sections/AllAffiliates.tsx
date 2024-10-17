@@ -16,15 +16,15 @@ const CardAffiliate = ({ description, image, name }: Affiliate) => {
   return (
     <div class="w-full max-w-[350px] px-6 py-8 flex flex-col gap-5 rounded-lg shadow-lg border border-gray-200">
       <div class="flex justify-start">
-      <Image
-        width={120}
-        height={50}
-        class="max-h-[70px] h-full object-fit z-10"
-        src={image}
-        alt={image}
-        decoding="async"
-        loading="lazy"
-      />
+        <Image
+          width={120}
+          height={50}
+          class="max-h-[70px] h-full object-fit z-10"
+          src={image}
+          alt={image}
+          decoding="async"
+          loading="lazy"
+        />
       </div>
       <h3 class="text-3xl font-bold">{name}</h3>
       <p class="text-base font-medium">
@@ -53,18 +53,16 @@ export default function AllAffiliates({ affiliate }: Props) {
         <div class="flex justify-center items-center">Filtro afiliados</div>
         <div class="grid grid-cols-1 md:grid-cols-3 lg:grid-cols-4 gap-8 justify-items-center">
           {affiliate.map((item, i) => (
-            <CardAffiliate 
+            <CardAffiliate
               key={`${i}_${item.name}`}
-              description={item.description} 
-              image={item.image} 
-              name={item.name} 
+              description={item.description}
+              image={item.image}
+              name={item.name}
             />
           ))}
         </div>
         <div class="mt-20 flex justify-center space-x-5">
-          <button
-            class="px-4 py-2 bg-pink-500 text-white rounded-full hover:bg-pink-600 disabled:bg-gray-400"
-            // onClick={handlePrevPage}
+          <button class="px-4 py-2 bg-pink-500 text-white rounded-full hover:bg-pink-600 disabled:bg-gray-400" // onClick={handlePrevPage}
             // disabled={currentPage === 1}
           >
             Anterior
@@ -73,9 +71,7 @@ export default function AllAffiliates({ affiliate }: Props) {
             Página de
             {/* Página {currentPage} de {totalPages} */}
           </span>
-          <button
-            class="px-4 py-2 bg-pink-500 text-white rounded-full hover:bg-pink-600 disabled:bg-gray-400"
-            // onClick={handleNextPage}
+          <button class="px-4 py-2 bg-pink-500 text-white rounded-full hover:bg-pink-600 disabled:bg-gray-400" // onClick={handleNextPage}
             // disabled={currentPage === totalPages}
           >
             Próximo

@@ -40,7 +40,12 @@ export default function Projects({ title, subtitle, projects }: Props) {
                   className="absolute right-3 top-1/2 transform -translate-y-1/2"
                 />
               </div>
-              <Icon id="FilterList" class="md:hidden" size={18} strokeWidth={2} />
+              <Icon
+                id="FilterList"
+                class="md:hidden"
+                size={18}
+                strokeWidth={2}
+              />
             </div>
           </div>
           <ProjectsPagination projects={projects} />

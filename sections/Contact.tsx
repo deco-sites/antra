@@ -11,10 +11,12 @@ export interface Props {
   title: string;
   subtitle: string;
   social: Social[];
-  options: string[]
+  options: string[];
 }
 
-export default function Contact({ background, title, subtitle, social, options }: Props) {
+export default function Contact(
+  { background, title, subtitle, social, options }: Props,
+) {
   return (
     <div class="lg:container text-sm md:px-5 md:p-16 mb-40">
       <div class="space-y-10">
@@ -25,12 +27,19 @@ export default function Contact({ background, title, subtitle, social, options }
           <div class="p-5 md:p-12 flex flex-col md:flex-row md:justify-between gap-10 lg:gap-40 md:gap-20 bg-white z-50 rounded-lg">
             <div class="md:flex md:flex-col md:justify-between">
               <div class="flex flex-col gap-5">
-                <h1 class="text-5xl md:text-5xl font-semibold tracking-tighter w-1/2 md:w-full">{title}</h1>
-                <p class="text-base md:text-lg text-gray-500 w-[80%] md:w-full mb-5">{subtitle}</p>
+                <h1 class="text-5xl md:text-5xl font-semibold tracking-tighter w-1/2 md:w-full">
+                  {title}
+                </h1>
+                <p class="text-base md:text-lg text-gray-500 w-[80%] md:w-full mb-5">
+                  {subtitle}
+                </p>
               </div>
               <div class="flex flex-col gap-6">
                 {social.map((item, i) => (
-                  <div class="p-4 flex justify-between items-center border border-gray-300 rounded-2xl">
+                  <div
+                    key={i}
+                    class="p-4 flex justify-between items-center border border-gray-300 rounded-2xl"
+                  >
                     <div class="flex flex-col gap-2">
                       <Icon id={item.name} size={16} strokeWidth={1} />
                       <div class="flex">
@@ -109,10 +118,16 @@ export default function Contact({ background, title, subtitle, social, options }
                     id="mensagem"
                     name="mensagem"
                     placeholder="Escreva aqui..."
-                  ></textarea>
+                  >
+                  </textarea>
                 </div>
 
-                <button class="w-full py-3 text-white bg-pink-500 hover:bg-pink-600 rounded-lg" type="submit">Enviar</button>
+                <button
+                  class="w-full py-3 text-white bg-pink-500 hover:bg-pink-600 rounded-lg"
+                  type="submit"
+                >
+                  Enviar
+                </button>
               </form>
             </div>
           </div>

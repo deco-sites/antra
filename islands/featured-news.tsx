@@ -1,7 +1,7 @@
 import type { ImageWidget } from "apps/admin/widgets.ts";
 import Image from "apps/website/components/Image.tsx";
 import Icon from "site/components/ui/Icon.tsx";
-import { useState, useEffect } from "preact/hooks";
+import { useState } from "preact/hooks";
 import AllNewsIsland from "site/islands/all-news.tsx";
 import { BlogPost } from "apps/blog/types.ts";
 
@@ -40,24 +40,20 @@ export default function FeaturedNewsIsland({
   allNews,
 }: Props) {
   const [selectedTags, setSelectedTags] = useState<string[]>([]);
-
+  console.log(selectedTags);
   const handleTagClick = (tag: string) => {
     setSelectedTags((prev) =>
       prev.includes(tag) ? prev.filter((t) => t !== tag) : [...prev, tag]
     );
   };
 
-  const filteredNews =
-    selectedTags.length === 0
-      ? allNews
-      : allNews?.filter((newsItem) =>
-          selectedTags.some((tag) =>
-            newsItem?.extraProps?.some((item) => item.value.includes(tag))
-          )
-        );
-
-  console.log("Selected Tags:", selectedTags);
-  console.log("Filtered News:", filteredNews);
+  const filteredNews = selectedTags.length === 0
+    ? allNews
+    : allNews?.filter((newsItem) =>
+      selectedTags.some((tag) =>
+        newsItem?.extraProps?.some((item) => item.value.includes(tag))
+      )
+    );
 
   return (
     <>
@@ -89,10 +85,10 @@ export default function FeaturedNewsIsland({
                   onClick={() => handleTagClick(item)}
                   class={`badge badge-lg text-xs border border-gray-500 
         ${
-          selectedTags.includes(item)
-            ? "bg-gray-700 text-white"
-            : "bg-white text-gray-700"
-        }`}
+                    selectedTags.includes(item)
+                      ? "bg-gray-700 text-white"
+                      : "bg-white text-gray-700"
+                  }`}
                 >
                   {item}
                 </button>

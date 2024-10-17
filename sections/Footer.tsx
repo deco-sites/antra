@@ -38,7 +38,8 @@ export interface Props {
 
 export default function Footer({
   background = {
-    src: "https://deco-sites-assets.s3.sa-east-1.amazonaws.com/antra/f6958659-d7fc-463f-9de9-0862b41e4c62/footer.png",
+    src:
+      "https://deco-sites-assets.s3.sa-east-1.amazonaws.com/antra/f6958659-d7fc-463f-9de9-0862b41e4c62/footer.png",
   },
   // links = [
   //       { label: "A ANTRA", href: "/" },
@@ -57,7 +58,8 @@ export default function Footer({
   },
   madeWith = {
     label: "Made with",
-    src: "https://ozksgdmyrqcxcwhnbepg.supabase.co/storage/v1/object/public/assets/1527/cc202be0-af57-4b32-b9c9-d1d7dc97bf85",
+    src:
+      "https://ozksgdmyrqcxcwhnbepg.supabase.co/storage/v1/object/public/assets/1527/cc202be0-af57-4b32-b9c9-d1d7dc97bf85",
     href: "https://deco.cx",
   },
   copyright = "© 2024, ANTRA. Todos os direitos reservados.",

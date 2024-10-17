@@ -6,10 +6,10 @@ import Slider from "site/components/ui/Slider.tsx";
 import SliderJS from "apps/utils/components/SliderJS.tsx";
 import { ImageWidget } from "apps/admin/widgets.ts";
 interface SlideProps {
-     image: ImageWidget;
-     title: string;
-     tag: string[];
-   }
+  image: ImageWidget;
+  title: string;
+  tag: string[];
+}
 interface Props {
   products: SlideProps[];
   itemListName?: string;
@@ -29,7 +29,10 @@ function PrimersSlider({ products }: Props) {
         }}
       >
         <div class="col-start-1 col-span-3 row-start-1 row-span-1">
-          <Slider rootId={id} class="carousel carousel-center sm:carousel-end gap-5 sm:gap-10 w-full">
+          <Slider
+            rootId={id}
+            class="carousel carousel-center sm:carousel-end gap-5 sm:gap-10 w-full"
+          >
             {products?.map((product, index) => (
               <Slider.Item
                 index={index}

@@ -9,14 +9,14 @@ export interface Research {
 
 export interface Props {
   title: string;
-  AllResearch: Research[]
+  AllResearch: Research[];
 }
 
 export default function AllResearch({ title, AllResearch }: Props) {
   return (
     <div class="lg:container text-sm px-5 p-16 mb-40">
       <div class="space-y-10">
-        <AllResearchPagination title={title} research={AllResearch}/>
+        <AllResearchPagination title={title} research={AllResearch} />
       </div>
     </div>
   );

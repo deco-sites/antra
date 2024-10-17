@@ -32,7 +32,8 @@ export interface Nav {
 export const HeaderSite = ({ logo, navigation }: Nav) => {
   return (
     <nav className="drawer drawer-end border-b border-gray-300">
-      <div className="absolute top-0 left-0 w-full h-2.5 bg-gradient-to-r from-[#3AB4F6] via-[#FCA5B3] to-[#3AB4F6]"></div>
+      <div className="absolute top-0 left-0 w-full h-2.5 bg-gradient-to-r from-[#3AB4F6] via-[#FCA5B3] to-[#3AB4F6]">
+      </div>
 
       <div className="px-[50px] py-4 flex items-center justify-between">
         <a href="/">
@@ -84,10 +85,15 @@ export const HeaderSite = ({ logo, navigation }: Nav) => {
                           key={subIndex}
                           className="flex flex-col block px-4 py-2 cursor-pointer hover:bg-gray-100"
                         >
-                          <a href={subItem?.url} className="text-base text-gray-700">
+                          <a
+                            href={subItem?.url}
+                            className="text-base text-gray-700"
+                          >
                             {subItem?.label}
                           </a>
-                          <span className="text-xs text-gray-500">{subItem.subLabel}</span>
+                          <span className="text-xs text-gray-500">
+                            {subItem.subLabel}
+                          </span>
                         </li>
                       ))}
                     </ul>
@@ -118,4 +124,3 @@ export const HeaderSite = ({ logo, navigation }: Nav) => {
     </nav>
   );
 };
-
