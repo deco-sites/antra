@@ -46,7 +46,7 @@ export default function AllNewsIsland(
             {title}
           </h2>
           <div class="grid grid-cols-1 md:grid-cols-3 gap-8 justify-items-center">
-            {filteredNews?.map((news, index) => (
+            {allNews?.map((news, index) => (
               <div
                 class="relative w-full h-full col-span-1 flex justify-center"
                 key={index}

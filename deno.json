@@ -27,7 +27,7 @@
     "@zaubrik/djwt": "jsr:@zaubrik/djwt@^3.0.2",
     "fast-json-patch": "npm:fast-json-patch@^3.1.1",
     "partytown/": "https://deno.land/x/partytown@0.4.8/",
-    "preact": "npm:preact@10.23.1",
+    "preact": "https://esm.sh/preact@10.22.0",
     "preact-render-to-string": "npm:preact-render-to-string@6.4.2",
     "simple-git": "npm:simple-git@^3.25.0",
     "std/": "https://deno.land/std@0.190.0/",
@@ -40,7 +40,8 @@
     "https://esm.sh/*preact-render-to-string@6.3.1": "npm:preact-render-to-string@6.4.2",
     "@deco/deco": "jsr:@deco/deco@1.106.2",
     "@deco/dev": "jsr:@deco/dev@1.106.2",
-    "@deco/deno-ast-wasm": "jsr:@deco/deno-ast-wasm@^0.5.4"
+    "@deco/deno-ast-wasm": "jsr:@deco/deno-ast-wasm@^0.5.4",
+    "preact/": "https://esm.sh/preact@10.22.0/"
   },
   "tasks": {
     "start": "deno run -A --unstable-http --env https://deco.cx/run -- deno task dev",
@@ -59,9 +60,7 @@
     "dev": "deno run -A --env --unstable-kv --unstable-hmr dev.ts",
     "reload": "deno cache -r https://deco.cx/run"
   },
-  "githooks": {
-    "pre-commit": "check"
-  },
+  "githooks": { "pre-commit": "check" },
   "exclude": [
     "node_modules",
     "static/",
@@ -70,14 +69,7 @@
     "**/_fresh/*",
     ".deco/**"
   ],
-  "lint": {
-    "rules": {
-      "tags": [
-        "fresh",
-        "recommended"
-      ]
-    }
-  },
+  "lint": { "rules": { "tags": ["fresh", "recommended"] } },
   "nodeModulesDir": false,
   "compilerOptions": {
     "jsx": "react-jsx",

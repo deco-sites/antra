@@ -29,6 +29,10 @@ export interface Props {
   title: string;
   info: Info;
   allNews?: BlogPost[] | null;
+  pagination?: {
+    page?: number;
+    perPage?: number;
+  };
 }
 
 export default function FeaturedNewsIsland({
@@ -38,10 +42,10 @@ export default function FeaturedNewsIsland({
   title,
   info,
   allNews,
+  pagination
 }: Props) {
   const [selectedTags, setSelectedTags] = useState<string[]>([]);
-  const[count, setCount] = useState<number>(0)
-  console.log(selectedTags);
+console.log(pagination)
   const handleTagClick = (tag: string) => {
     setSelectedTags((prev) =>
       prev.includes(tag) ? prev.filter((t) => t !== tag) : [...prev, tag]
@@ -75,8 +79,6 @@ export default function FeaturedNewsIsland({
                 className="absolute right-3 top-1/2 transform -translate-y-1/2"
               />
             </div>
-            <h1>{count}</h1>
-            <button onClick={() => setCount(count+1)}>Button</button>
 
             <button className="md:hidden">
               <Icon id="FilterList" size={22} strokeWidth={2} />
