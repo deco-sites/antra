@@ -27,7 +27,7 @@
     "@zaubrik/djwt": "jsr:@zaubrik/djwt@^3.0.2",
     "fast-json-patch": "npm:fast-json-patch@^3.1.1",
     "partytown/": "https://deno.land/x/partytown@0.4.8/",
-    "preact": "https://esm.sh/preact@10.22.0",
+    "preact": "npm:preact@10.23.1",
     "preact-render-to-string": "npm:preact-render-to-string@6.4.2",
     "simple-git": "npm:simple-git@^3.25.0",
     "std/": "https://deno.land/std@0.190.0/",
@@ -40,8 +40,7 @@
     "https://esm.sh/*preact-render-to-string@6.3.1": "npm:preact-render-to-string@6.4.2",
     "@deco/deco": "jsr:@deco/deco@1.106.2",
     "@deco/dev": "jsr:@deco/dev@1.106.2",
-    "@deco/deno-ast-wasm": "jsr:@deco/deno-ast-wasm@^0.5.4",
-    "preact/": "https://esm.sh/preact@10.22.0/"
+    "@deco/deno-ast-wasm": "jsr:@deco/deno-ast-wasm@^0.5.4"
   },
   "tasks": {
     "start": "deno run -A --unstable-http --env https://deco.cx/run -- deno task dev",
@@ -51,8 +50,8 @@
     "release": "deno eval 'import \"deco/scripts/release.ts\"'",
     "update": "deno run -Ar https://deco.cx/update",
     "check": "deno fmt && deno lint && deno check dev.ts main.ts",
-    "install": "deno eval 'import \"deco/scripts/apps/install.ts\"'",
-    "uninstall": "deno eval 'import \"deco/scripts/apps/uninstall.ts\"'",
+    "install": "deno eval 'import \"@deco/deco/scripts/apps/install.ts\"'",
+    "uninstall": "deno eval 'import \"@deco/deco/scripts/apps/uninstall.ts\"'",
     "bundle": "deno run -A jsr:@deco/deco/scripts/bundle site",
     "cache_clean": "rm deno.lock; deno cache -r main.ts",
     "build": "deno run -A dev.ts build",
@@ -60,7 +59,9 @@
     "dev": "deno run -A --env --unstable-kv --unstable-hmr dev.ts",
     "reload": "deno cache -r https://deco.cx/run"
   },
-  "githooks": { "pre-commit": "check" },
+  "githooks": {
+    "pre-commit": "check"
+  },
   "exclude": [
     "node_modules",
     "static/",
@@ -69,7 +70,14 @@
     "**/_fresh/*",
     ".deco/**"
   ],
-  "lint": { "rules": { "tags": ["fresh", "recommended"] } },
+  "lint": {
+    "rules": {
+      "tags": [
+        "fresh",
+        "recommended"
+      ]
+    }
+  },
   "nodeModulesDir": false,
   "compilerOptions": {
     "jsx": "react-jsx",

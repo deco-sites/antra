@@ -38,14 +38,13 @@
         "image": "https://deco-sites-assets.s3.sa-east-1.amazonaws.com/antra/2144ad25-3f33-4076-b964-73d0961788e7/image2.png",
         "title": "Encontre locais de apoio na sua área"
       },
+      "title": "Todas as notícias",
       "allNews": {
         "__resolveType": "blog/loaders/BlogpostList.ts",
         "sortBy": "date_desc",
         "slug": "news",
-        "count": 5,
-        "page": 1
-      },
-      "title": "Todas as notícias"
+        "count": 1
+      }
     },
     {
       "__resolveType": "Footer"

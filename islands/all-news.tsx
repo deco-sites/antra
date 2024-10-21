@@ -1,7 +1,8 @@
-import { useEffect, useState } from "preact/hooks";
+import { useEffect, useId, useState } from "preact/hooks";
 import type { ImageWidget } from "apps/admin/widgets.ts";
 import Image from "apps/website/components/Image.tsx";
-import { BlogPost } from "apps/blog/types.ts";
+import { BlogPost, BlogPostListingPage } from "apps/blog/types.ts";
+import { useSection } from "@deco/deco/hooks";
 
 export interface Info {
   title: string;
@@ -11,7 +12,7 @@ export interface Info {
 export interface Props {
   title: string;
   info: Info;
-  allNews?: BlogPost[] | null;
+  allNews?: BlogPostListingPage;
   pagination?: {
     page?: number;
     perPage?: number;
@@ -23,6 +24,13 @@ export default function AllNewsIsland(
 ) {
   const from = perPage * page;
   const to = perPage * (page + 1);
+  const postList = useId();
+  const fetchMoreLink = useSection({
+    props: {
+      pagination: { perPage, page: page + 1 },
+    },
+  });
+  console.log(allNews)
   const [selectedTags, setSelectedTags] = useState<string[]>([]);
 
   useEffect(() => {
@@ -31,12 +39,12 @@ export default function AllNewsIsland(
     setSelectedTags(tagsFromUrl as string[]);
   }, [window.location.search]);
 
-  const filteredNews = allNews?.slice(from, to).filter((news) =>
-    selectedTags.length === 0 ||
-    news?.extraProps?.some((item) =>
-      item.key === "tag" && selectedTags.includes(item.value)
-    )
-  );
+  // const filteredNews = allNews?.slice(from, to).filter((news) =>
+  //   selectedTags.length === 0 ||
+  //   news?.extraProps?.some((item) =>
+  //     item.key === "tag" && selectedTags.includes(item.value)
+  //   )
+  // );
 
   return (
     <div class="lg:container text-sm px-5 p-16 mb-40">
@@ -46,7 +54,7 @@ export default function AllNewsIsland(
             {title}
           </h2>
           <div class="grid grid-cols-1 md:grid-cols-3 gap-8 justify-items-center">
-            {allNews?.map((news, index) => (
+            {/* {allNews?.map((news, index) => (
               <div
                 class="relative w-full h-full col-span-1 flex justify-center"
                 key={index}
@@ -82,7 +90,7 @@ export default function AllNewsIsland(
                   </div>
                 </div>
               </div>
-            ))}
+            ))} */}
 
             <div class="hidden w-full col-span-1 md:row-start-2 md:row-span-2 md:col-start-3 
               md:flex flex-col items-start justify-start h-full">
@@ -114,6 +122,22 @@ export default function AllNewsIsland(
           </div>
 
           <div class="mt-10 flex justify-center">
+          {/* {allNews && to < allNews.length && (
+          <div class="flex justify-center w-full" id={postList}>
+            <button
+              hx-get={fetchMoreLink}
+              hx-swap="outerHTML"
+              hx-target={`#${postList}`}
+              aria-label="Texto"
+              class="btn btn-primary"
+            >
+              <span class="inline [.htmx-request_&]:hidden">
+                Texto
+              </span>
+              <span class="loading loading-spinner hidden [.htmx-request_&]:block" />
+            </button>
+          </div>
+        )} */}
             <button class="px-4 py-2 bg-pink-500 text-white rounded-full hover:bg-pink-600">
               Carregar mais
             </button>
