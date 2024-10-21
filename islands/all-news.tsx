@@ -12,7 +12,7 @@ export interface Info {
 export interface Props {
   title: string;
   info: Info;
-  allNews?: BlogPostListingPage;
+  allNews?:  BlogPost[] | null;
   pagination?: {
     page?: number;
     perPage?: number;
@@ -30,7 +30,6 @@ export default function AllNewsIsland(
       pagination: { perPage, page: page + 1 },
     },
   });
-  console.log(allNews)
   const [selectedTags, setSelectedTags] = useState<string[]>([]);
 
   useEffect(() => {

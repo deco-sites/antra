@@ -3,7 +3,12 @@
   "__resolveType": "blog/loaders/Blogpost.ts",
   "post": {
     "authors": [],
-    "categories": [],
+    "categories": [
+      {
+        "name": "Notícias",
+        "slug": "news"
+      }
+    ],
     "extraProps": [],
     "title": "Nota da ANTRA sobre a Importância da CEDAW e sua Relevância para a Pauta Trans",
     "excerpt": "Nota da ANTRA sobre a Importância da CEDAW e sua Relevância para a Pauta Trans",

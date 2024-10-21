@@ -41,9 +41,12 @@
       "title": "Todas as notícias",
       "allNews": {
         "__resolveType": "blog/loaders/BlogpostList.ts",
-        "sortBy": "date_desc",
         "slug": "news",
-        "count": 1
+        "sortBy": "date_desc"
+      },
+      "pagination": {
+        "page": 1,
+        "perPage": 5
       }
     },
     {

@@ -26,10 +26,14 @@ export interface Props {
   title: string;
   info: Info;
   allNews?: BlogPost[] | null;
+  pagination?: {
+    page?: number;
+    perPage?: number;
+  };
 }
 
 export default function FeaturedNews(
-  { tags, mainNews, news, title, info, allNews }: Props,
+  { tags, mainNews, news, title, info, allNews, pagination }: Props,
 ) {
   return (
     <>
@@ -40,6 +44,7 @@ export default function FeaturedNews(
         title={title}
         info={info}
         allNews={allNews}
+        pagination={pagination}
       />
     </>
   );

@@ -5,14 +5,6 @@
     "authors": [],
     "categories": [
       {
-        "name": "Direitos e Políticas",
-        "slug": "direitos-e-politicas"
-      },
-      {
-        "name": "Justiça",
-        "slug": "justiça"
-      },
-      {
         "name": "Notícias",
         "slug": "news"
       }
