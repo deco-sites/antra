@@ -28,7 +28,7 @@ export interface Props {
   news: News[];
   title: string;
   info: Info;
-  allNews: BlogPost[];
+  allNews: BlogPost[] | null
 }
 
 export default function FeaturedNewsIsland({
@@ -41,6 +41,10 @@ export default function FeaturedNewsIsland({
 }: Props) {
   const [selectedTags, setSelectedTags] = useState<string[]>([]);
 
+  const allNewsFiltered = allNews?.filter((news) =>
+    news.categories?.some((category) => category.slug === "news")
+  );
+  
   const handleTagClick = (tag: string) => {
     setSelectedTags((prev) =>
       prev.includes(tag) ? prev.filter((t) => t !== tag) : [...prev, tag]
@@ -49,8 +53,8 @@ export default function FeaturedNewsIsland({
 
   const filteredNews =
     selectedTags.length === 0
-      ? allNews
-      : allNews?.filter((newsItem) =>
+      ? allNewsFiltered
+      : allNewsFiltered?.filter((newsItem) =>
           selectedTags.some((tag) =>
             newsItem?.extraProps?.some((item) => item.value.includes(tag))
           )
@@ -151,7 +155,7 @@ export default function FeaturedNewsIsland({
           </div>
         </div>
       </div>
-      <AllNewsIsland title={title} info={info} allNews={filteredNews} />
+      <AllNewsIsland title={title} info={info} allNews={filteredNews || []} />
     </>
   );
 }

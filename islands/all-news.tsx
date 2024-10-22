@@ -1,8 +1,8 @@
 import type { ImageWidget } from "apps/admin/widgets.ts";
 import Image from "apps/website/components/Image.tsx";
-import { BlogPost } from "apps/blog/types.ts";
 import { usePagination } from "site/components/ui/Pagination.tsx";
 import Icon from "site/components/ui/Icon.tsx";
+import { BlogPost } from "apps/blog/types.ts";
 
 export interface Info {
   title: string;
@@ -17,7 +17,7 @@ export interface ExtraProps {
 export interface Props {
   title: string;
   info: Info;
-  allNews: BlogPost[];
+  allNews: BlogPost[] | null
 }
 
 export default function AllNewsIsland({ title, info, allNews }: Props) {
@@ -29,7 +29,7 @@ export default function AllNewsIsland({ title, info, allNews }: Props) {
     handlePrevPage,
     handleNextPage,
     goToPage,
-  } = usePagination(allNews, itemsPerPage);
+  } = usePagination(allNews ? allNews : [], itemsPerPage);
 
   return (
     <div class="lg:container text-sm px-5 p-16 mb-40">
@@ -40,6 +40,7 @@ export default function AllNewsIsland({ title, info, allNews }: Props) {
           </h2>
           <div class="grid grid-cols-1 md:grid-cols-3 gap-8 justify-items-center">
             {currentItems?.map((news: BlogPost, index) => (
+              <a href={`post/${news.slug}`}>
               <div
                 class="relative w-full h-full col-span-1 flex justify-center"
                 key={index}
@@ -73,6 +74,7 @@ export default function AllNewsIsland({ title, info, allNews }: Props) {
                   </div>
                 </div>
               </div>
+              </a>
             ))}
 
             <div

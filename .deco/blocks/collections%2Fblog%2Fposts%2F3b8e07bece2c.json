@@ -10,19 +10,20 @@
     ],
     "categories": [
       {
-        "name": "Direitos e Políticas",
-        "slug": "direitos-e-politicas"
-      },
-      {
-        "name": "Notas e Ofícios",
-        "slug": "notas-e-oficios"
-      },
-      {
         "name": "Notícias",
         "slug": "news"
       }
     ],
-    "extraProps": [],
+    "extraProps": [
+      {
+        "key": "tag",
+        "value": "Direitos e Políticas"
+      },
+      {
+        "key": "tag",
+        "value": "Notas e Ofícios"
+      }
+    ],
     "title": "Nota da ANTRA sobre indicação de personagens para matérias jornalísticas",
     "excerpt": "A Associação Nacional de Travestis e Transexuais (ANTRA) agradece o interesse em abordar temas relacionados à população trans em suas reportagens e se coloca a disposição para colaborar da melhor forma possível.",
     "image": "https://deco-sites-assets.s3.sa-east-1.amazonaws.com/antra/7a673f47-5959-4227-ba82-3c6c43c439a1/materias.webp",

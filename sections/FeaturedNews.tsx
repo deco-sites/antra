@@ -25,7 +25,7 @@ export interface Props {
   news: News[];
   title: string;
   info: Info;
-  allNews: BlogPost[]
+  allNews: BlogPost[] | null
 }
 
 export default function FeaturedNews(
