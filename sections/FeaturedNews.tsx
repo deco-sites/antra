@@ -25,15 +25,11 @@ export interface Props {
   news: News[];
   title: string;
   info: Info;
-  allNews: BlogPost[] | null;
-  pagination?: {
-    page?: number;
-    perPage?: number;
-  };
+  allNews: BlogPost[]
 }
 
 export default function FeaturedNews(
-  { tags, mainNews, news, title, info, allNews, pagination }: Props,
+  { tags, mainNews, news, title, info, allNews }: Props,
 ) {
   return (
     <>
@@ -44,7 +40,6 @@ export default function FeaturedNews(
         title={title}
         info={info}
         allNews={allNews}
-        pagination={pagination}
       />
     </>
   );

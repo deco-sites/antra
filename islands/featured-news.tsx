@@ -28,11 +28,7 @@ export interface Props {
   news: News[];
   title: string;
   info: Info;
-  allNews:  BlogPost[] | null;
-  pagination?: {
-    page?: number;
-    perPage?: number;
-  };
+  allNews: BlogPost[];
 }
 
 export default function FeaturedNewsIsland({
@@ -42,7 +38,6 @@ export default function FeaturedNewsIsland({
   title,
   info,
   allNews,
-  pagination
 }: Props) {
   const [selectedTags, setSelectedTags] = useState<string[]>([]);
 
@@ -121,10 +116,10 @@ export default function FeaturedNewsIsland({
               </div>
               <a
                 href="/news"
-                class="absolute bottom-5 right-2 p-6 text-white w-4 h-4 flex items-center justify-center 
-              text-white rounded-full bg-pink-500 hover:bg-pink-600"
+                class="absolute bottom-5 right-2 p-4 text-white flex items-center justify-center 
+                    rounded-full bg-pink-500 hover:bg-pink-600"
               >
-                Icon
+                <Icon id="ArrowNorthEast" size={16} strokeWidth={1} />
               </a>
             </div>
 
@@ -156,7 +151,7 @@ export default function FeaturedNewsIsland({
           </div>
         </div>
       </div>
-      <AllNewsIsland title={title} info={info} allNews={filteredNews} pagination={pagination} />
+      <AllNewsIsland title={title} info={info} allNews={filteredNews} />
     </>
   );
 }

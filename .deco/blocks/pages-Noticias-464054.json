@@ -41,40 +41,13 @@
       "title": "Todas as notícias",
       "allNews": {
         "__resolveType": "blog/loaders/BlogpostList.ts",
-        "slug": "news",
-        "sortBy": "date_desc"
+        "count": 99,
+        "page": 1
       },
-      "pagination": {
-        "perPage": 10
-      }
+      "pagination": {}
     },
     {
       "__resolveType": "Footer"
-    },
-    {
-      "__resolveType": "website/sections/Rendering/Lazy.tsx",
-      "section": {
-        "__resolveType": "site/sections/BlogPosts.tsx",
-        "posts": {
-          "__resolveType": "blog/loaders/BlogpostList.ts",
-          "sortBy": "date_desc",
-          "count": 5,
-          "page": 1
-        }
-      }
-    },
-    {
-      "__resolveType": "website/sections/Rendering/Lazy.tsx",
-      "section": {
-        "__resolveType": "site/sections/BlogPosts.tsx",
-        "posts": {
-          "__resolveType": "Preview blog/loaders/BlogpostList.ts"
-        },
-        "cta": {
-          "text": "teste"
-        },
-        "pagination": {}
-      }
     }
   ],
   "__resolveType": "website/pages/Page.tsx",

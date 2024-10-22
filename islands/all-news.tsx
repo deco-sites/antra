@@ -1,49 +1,35 @@
-import { useEffect, useId, useState } from "preact/hooks";
 import type { ImageWidget } from "apps/admin/widgets.ts";
 import Image from "apps/website/components/Image.tsx";
-import { BlogPost, BlogPostListingPage } from "apps/blog/types.ts";
-import { useSection } from "@deco/deco/hooks";
+import { BlogPost } from "apps/blog/types.ts";
+import { usePagination } from "site/components/ui/Pagination.tsx";
+import Icon from "site/components/ui/Icon.tsx";
 
 export interface Info {
   title: string;
   image: ImageWidget;
 }
 
+export interface ExtraProps {
+  key: string;
+  value: string;
+}
+
 export interface Props {
   title: string;
   info: Info;
-  allNews?:  BlogPost[] | null;
-  pagination?: {
-    page?: number;
-    perPage?: number;
-  };
+  allNews: BlogPost[];
 }
 
-export default function AllNewsIsland(
-  { title, info, allNews, pagination }: Props,
-) {
-  // const from = pagination?.perPage * pagination?.page;
-  // const to = perPage * (page + 1);
-  // const postList = useId();
-  // const fetchMoreLink = useSection({
-  //   props: {
-  //     pagination: { perPage, page: page + 1 },
-  //   },
-  // });
-  const [selectedTags, setSelectedTags] = useState<string[]>([]);
-
-  useEffect(() => {
-    const query = new URLSearchParams(window.location.search);
-    const tagsFromUrl = query.get("tags") ? query.get("tags")?.split(",") : [];
-    setSelectedTags(tagsFromUrl as string[]);
-  }, [window.location.search]);
-
-  // const filteredNews = allNews?.slice(from, to).filter((news) =>
-  //   selectedTags.length === 0 ||
-  //   news?.extraProps?.some((item) =>
-  //     item.key === "tag" && selectedTags.includes(item.value)
-  //   )
-  // );
+export default function AllNewsIsland({ title, info, allNews }: Props) {
+  const itemsPerPage = 13;
+  const {
+    currentItems,
+    currentPage,
+    totalPages,
+    handlePrevPage,
+    handleNextPage,
+    goToPage,
+  } = usePagination(allNews, itemsPerPage);
 
   return (
     <div class="lg:container text-sm px-5 p-16 mb-40">
@@ -53,7 +39,7 @@ export default function AllNewsIsland(
             {title}
           </h2>
           <div class="grid grid-cols-1 md:grid-cols-3 gap-8 justify-items-center">
-            {allNews?.map((news, index) => (
+            {currentItems?.map((news: BlogPost, index) => (
               <div
                 class="relative w-full h-full col-span-1 flex justify-center"
                 key={index}
@@ -73,16 +59,14 @@ export default function AllNewsIsland(
                   <div class="p-1 py-4 space-y-4 text-start w-full">
                     <div class="flex flex-wrap gap-2">
                       {news.extraProps?.map((item, i) => {
-                        return item.key === "tag"
-                          ? (
-                            <div
-                              className="badge badge-lg text-xs border border-gray-500 bg-transparent"
-                              key={i}
-                            >
-                              {item.value}
-                            </div>
-                          )
-                          : null;
+                        return item.key === "tag" ? (
+                          <div
+                            className="badge badge-lg text-xs border border-gray-500 bg-transparent"
+                            key={i}
+                          >
+                            {item.value}
+                          </div>
+                        ) : null;
                       })}
                     </div>
                     <h3 class="text-lg font-semibold mt-2">{news.title}</h3>
@@ -91,8 +75,10 @@ export default function AllNewsIsland(
               </div>
             ))}
 
-            <div class="hidden w-full col-span-1 md:row-start-2 md:row-span-2 md:col-start-3 
-              md:flex flex-col items-start justify-start h-full">
+            <div
+              class="hidden w-full col-span-1 md:row-start-2 md:row-span-2 md:col-start-3 
+              md:flex flex-col items-start justify-start h-full"
+            >
               <div class="relative md:h-full overflow-hidden rounded-2xl">
                 <img
                   src={info.image}
@@ -110,35 +96,47 @@ export default function AllNewsIsland(
                   </p>
                 </div>
                 <a
-                  href={"/news"}
-                  class="absolute bottom-5 right-2 p-6 text-white w-4 h-4 flex items-center justify-center 
-                  text-white rounded-full bg-pink-500 hover:bg-pink-600"
+                  href="/news"
+                  class="absolute bottom-5 right-2 p-4 text-white flex items-center justify-center 
+                    rounded-full bg-pink-500 hover:bg-pink-600"
                 >
-                  Icon
+                  <Icon id="ArrowNorthEast" size={16} strokeWidth={1} />
                 </a>
               </div>
             </div>
           </div>
+          <div></div>
 
-          <div class="mt-10 flex justify-center">
-          {/* {allNews && to < allNews.length && (
-          <div class="flex justify-center w-full" id={postList}>
+          <div className="mt-10 flex justify-center items-center space-x-4">
             <button
-              hx-get={fetchMoreLink}
-              hx-swap="outerHTML"
-              hx-target={`#${postList}`}
-              aria-label="Texto"
-              class="btn btn-primary"
+              className="w-10 h-10 flex items-center justify-center bg-gray-200 text-gray-700 rounded-full disabled:opacity-50"
+              onClick={handlePrevPage}
+              disabled={currentPage === 1}
             >
-              <span class="inline [.htmx-request_&]:hidden">
-                Texto
-              </span>
-              <span class="loading loading-spinner hidden [.htmx-request_&]:block" />
+              <Icon id="ArrowRight" size={24} strokeWidth={1} />
             </button>
-          </div>
-        )} */}
-            <button class="px-4 py-2 bg-pink-500 text-white rounded-full hover:bg-pink-600">
-              Carregar mais
+
+            <div className="flex space-x-2 items-center">
+              {Array.from({ length: totalPages }, (_, index) => (
+                <button
+                  key={index}
+                  className={`w-10 h-10 flex items-center justify-center rounded-full ${
+                    currentPage === index + 1
+                      ? "bg-pink-500 text-white"
+                      : "bg-transparent text-gray-700"
+                  }`}
+                  onClick={() => goToPage(index + 1)}
+                >
+                  {index + 1}
+                </button>
+              ))}
+            </div>
+            <button
+              className="w-10 h-10 flex items-center justify-center bg-gray-200 text-gray-700 rounded-full disabled:opacity-50"
+              onClick={handleNextPage}
+              disabled={currentPage === totalPages}
+            >
+              <Icon id="ArrowLeft" size={24} strokeWidth={1} />
             </button>
           </div>
         </section>
