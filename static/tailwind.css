@@ -1429,6 +1429,18 @@ html {
     0 0 0 2px var(--tglbg) inset,
     var(--togglehandleborder);
 }
+.badge-primary {
+  --tw-border-opacity: 1;
+  border-color: var(--fallback-p,oklch(var(--p)/var(--tw-border-opacity)));
+  --tw-bg-opacity: 1;
+  background-color: var(--fallback-p,oklch(var(--p)/var(--tw-bg-opacity)));
+  --tw-text-opacity: 1;
+  color: var(--fallback-pc,oklch(var(--pc)/var(--tw-text-opacity)));
+}
+.badge-outline.badge-primary {
+  --tw-text-opacity: 1;
+  color: var(--fallback-p,oklch(var(--p)/var(--tw-text-opacity)));
+}
 .btm-nav > *:where(.\!active) {
   border-top-width: 2px !important;
   --tw-bg-opacity: 1 !important;
@@ -2532,6 +2544,10 @@ html {
 .float-right {
   float: right;
 }
+.mx-2 {
+  margin-left: 0.5rem;
+  margin-right: 0.5rem;
+}
 .mx-4 {
   margin-left: 1rem;
   margin-right: 1rem;
@@ -3243,6 +3259,10 @@ html {
 .border-gray-700 {
   --tw-border-opacity: 1;
   border-color: rgb(55 65 81 / var(--tw-border-opacity));
+}
+.border-secondary {
+  --tw-border-opacity: 1;
+  border-color: var(--fallback-s,oklch(var(--s)/var(--tw-border-opacity)));
 }
 .border-transparent {
   border-color: transparent;
@@ -4214,6 +4234,11 @@ html {
 }
 @media (min-width: 1024px) {
 
+  .lg\:mx-auto {
+    margin-left: auto;
+    margin-right: auto;
+  }
+
   .lg\:flex {
     display: flex;
   }
@@ -4295,6 +4320,11 @@ html {
   .lg\:px-16 {
     padding-left: 4rem;
     padding-right: 4rem;
+  }
+
+  .lg\:py-14 {
+    padding-top: 3.5rem;
+    padding-bottom: 3.5rem;
   }
 
   .lg\:py-20 {

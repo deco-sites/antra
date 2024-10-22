@@ -20,16 +20,16 @@ export interface Props {
 }
 
 export default function AllNewsIsland(
-  { title, info, allNews, pagination: { page = 1, perPage = 13 } = {} }: Props,
+  { title, info, allNews, pagination }: Props,
 ) {
-  const from = perPage * page;
-  const to = perPage * (page + 1);
-  const postList = useId();
-  const fetchMoreLink = useSection({
-    props: {
-      pagination: { perPage, page: page + 1 },
-    },
-  });
+  // const from = pagination?.perPage * pagination?.page;
+  // const to = perPage * (page + 1);
+  // const postList = useId();
+  // const fetchMoreLink = useSection({
+  //   props: {
+  //     pagination: { perPage, page: page + 1 },
+  //   },
+  // });
   const [selectedTags, setSelectedTags] = useState<string[]>([]);
 
   useEffect(() => {
@@ -53,7 +53,7 @@ export default function AllNewsIsland(
             {title}
           </h2>
           <div class="grid grid-cols-1 md:grid-cols-3 gap-8 justify-items-center">
-            {/* {allNews?.map((news, index) => (
+            {allNews?.map((news, index) => (
               <div
                 class="relative w-full h-full col-span-1 flex justify-center"
                 key={index}
@@ -89,7 +89,7 @@ export default function AllNewsIsland(
                   </div>
                 </div>
               </div>
-            ))} */}
+            ))}
 
             <div class="hidden w-full col-span-1 md:row-start-2 md:row-span-2 md:col-start-3 
               md:flex flex-col items-start justify-start h-full">

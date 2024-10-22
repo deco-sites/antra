@@ -1,0 +1,5 @@
+{
+  "__resolveType": "blog/loaders/BlogpostList.ts",
+  "sortBy": "date_desc",
+  "slug": "news"
+}

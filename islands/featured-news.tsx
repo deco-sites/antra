@@ -3,7 +3,7 @@ import Image from "apps/website/components/Image.tsx";
 import Icon from "site/components/ui/Icon.tsx";
 import { useState } from "preact/hooks";
 import AllNewsIsland from "site/islands/all-news.tsx";
-import { BlogPost, BlogPostListingPage } from "apps/blog/types.ts";
+import { BlogPost } from "apps/blog/types.ts";
 
 export interface MainNews {
   title: string;
@@ -29,7 +29,7 @@ export interface Props {
   title: string;
   info: Info;
   allNews:  BlogPost[] | null;
-  pagination: {
+  pagination?: {
     page?: number;
     perPage?: number;
   };
@@ -42,10 +42,10 @@ export default function FeaturedNewsIsland({
   title,
   info,
   allNews,
-  pagination: { page = 1, perPage = 13 } = {}
+  pagination
 }: Props) {
   const [selectedTags, setSelectedTags] = useState<string[]>([]);
-  
+
   const handleTagClick = (tag: string) => {
     setSelectedTags((prev) =>
       prev.includes(tag) ? prev.filter((t) => t !== tag) : [...prev, tag]
@@ -156,7 +156,7 @@ export default function FeaturedNewsIsland({
           </div>
         </div>
       </div>
-      <AllNewsIsland title={title} info={info} allNews={filteredNews} />
+      <AllNewsIsland title={title} info={info} allNews={filteredNews} pagination={pagination} />
     </>
   );
 }

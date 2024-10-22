@@ -25,7 +25,7 @@ export interface Props {
   news: News[];
   title: string;
   info: Info;
-  allNews?: BlogPost[] | null;
+  allNews: BlogPost[] | null;
   pagination?: {
     page?: number;
     perPage?: number;

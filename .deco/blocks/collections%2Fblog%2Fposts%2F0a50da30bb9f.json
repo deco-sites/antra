@@ -2,24 +2,11 @@
   "name": "collections/blog/posts/0a50da30bb9f",
   "__resolveType": "blog/loaders/Blogpost.ts",
   "post": {
-    "authors": [],
-    "categories": [
-      {
-        "name": "Notícias",
-        "slug": "news"
-      }
-    ],
-    "extraProps": [
-      {
-        "key": "tag",
-        "value": "Direitos e Políticas"
-      }
-    ],
-    "title": "ANTRA entrega carta sobre população trans negra à representante da CIDH",
-    "excerpt": "none",
-    "image": "https://deco-sites-assets.s3.sa-east-1.amazonaws.com/antra/9a38e0be-001a-4d9d-a7f6-fde7d6f8d47f/news5.png",
-    "slug": "post-06",
-    "content": "<p>ANTRA entrega carta sobre população trans negra à representante da CIDH</p>",
-    "date": "2024-10-20"
+    "__resolveType": "blog/loaders/Blogpost.ts",
+    "post": {
+      "authors": [],
+      "categories": [],
+      "extraProps": []
+    }
   }
 }
