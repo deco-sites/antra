@@ -103,10 +103,14 @@ export default function FeaturedNewsIsland({
 
           <div class="flex flex-col md:flex-row gap-5">
             <div class="relative w-full md:w-2/3 overflow-hidden rounded-2xl">
-              <img
-                src={mainNews?.image}
-                alt={mainNews?.title}
+              <Image
+                width={300}
+                height={274}
                 class="h-full w-full object-cover brightness-75"
+                sizes="(max-width: 640px) 100vw, 35vw"
+                src={mainNews?.image || ''}
+                alt={mainNews?.image}
+                decoding="async"
               />
               <div class="absolute top-0 left-0 p-4 w-[65%]">
                 <h2 class="text-3xl md:text-xl lg:text-5xl font-medium text-white">
