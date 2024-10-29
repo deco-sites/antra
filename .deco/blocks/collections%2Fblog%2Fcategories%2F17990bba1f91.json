@@ -1,8 +1,0 @@
-{
-  "name": "collections/blog/categories/17990bba1f91",
-  "__resolveType": "blog/loaders/Category.ts",
-  "category": {
-    "name": "Saúde",
-    "slug": "saude"
-  }
-}

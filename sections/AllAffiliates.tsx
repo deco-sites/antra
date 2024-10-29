@@ -50,7 +50,51 @@ export default function AllAffiliates({ affiliate }: Props) {
   return (
     <div class="lg:container text-sm px-5 p-16 mb-40">
       <div class="space-y-10">
-        <div class="flex justify-center items-center">Filtro afiliados</div>
+        <div class="flex justify-center items-center gap-5">
+          <div>
+            <label class="block text-sm font-medium text-gray-700 mb-1">Região</label>
+            <select 
+              class="w-full min-w-[240px] px-3 py-2 border border-gray-300 rounded-md focus:outline-none focus:ring-2 focus:ring-blue-500" 
+              name="regiao" 
+              id="regiao"
+            >
+              <option value="">Todas</option>
+            </select>
+          </div>
+
+          <div>
+            <label class="block text-sm font-medium text-gray-700 mb-1">UF</label>
+            <select 
+              class="w-full min-w-[240px] px-3 py-2 border border-gray-300 rounded-md focus:outline-none focus:ring-2 focus:ring-blue-500" 
+              name="uf" 
+              id="uf"
+            >
+              <option value="">Todas</option>
+            </select>
+          </div>
+
+          <div>
+          <label class="block text-sm font-medium text-gray-700 mb-1">Temática</label>
+            <select 
+              class="w-full min-w-[240px] px-3 py-2 border border-gray-300 rounded-md focus:outline-none focus:ring-2 focus:ring-blue-500" 
+              name="tematica" 
+              id="tematica"
+            >
+              <option value="">Todas</option>
+            </select>
+          </div>
+
+          <div>
+            <label class="block text-sm font-medium text-gray-700 mb-1">Público-Alvo</label>
+            <select 
+              class="w-full min-w-[240px] px-3 py-2 border border-gray-300 rounded-md focus:outline-none focus:ring-2 focus:ring-blue-500" 
+              name="publicoAlvo" 
+              id="publicoAlvo"
+            >
+              <option value="">Todas</option>
+            </select>
+          </div>
+        </div>
         <div class="grid grid-cols-1 md:grid-cols-3 lg:grid-cols-4 gap-8 justify-items-center">
           {affiliate.map((item, i) => (
             <CardAffiliate

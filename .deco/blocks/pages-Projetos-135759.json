@@ -11,41 +11,13 @@
       }
     },
     {
-      "__resolveType": "website/sections/Rendering/Lazy.tsx",
-      "section": {
-        "__resolveType": "site/sections/Projects.tsx",
-        "title": "Próximos projetos",
-        "subtitle": "Dedicamos a cada militante e movimento de base que se soma a essa luta.",
-        "projects": [
-          {
-            "title": "Travestilizando I",
-            "description": "Mais 8h de ações ao vivo e online, com discussões sobre a necessidade de Travestilizar as relações sociais, pessoais, culturais, acadêmicas, políticas, e a forma de construir e desconstruir o futuro de toda a sociedade.",
-            "link": "/projects",
-            "image": "https://deco-sites-assets.s3.sa-east-1.amazonaws.com/antra/caa726d8-100f-49f2-9954-2e9bd15af51b/projeto1.png",
-            "date": "15 de Maio"
-          },
-          {
-            "title": "Travestilizando II",
-            "description": "Serão mais 8h de ações ao vivo e online, com discussões sobre a necessidade de Travestilizar as relações sociais, pessoais, culturais, acadêmicas, políticas, e a forma de construir e desconstruir o futuro de toda a sociedade.",
-            "date": "26 de Junho",
-            "image": "https://deco-sites-assets.s3.sa-east-1.amazonaws.com/antra/abaa4e2a-27a1-4a2d-a02b-69a656957ed4/projeto2.png",
-            "link": "/projects"
-          },
-          {
-            "title": "Transmasculinezando",
-            "date": "05 de Junho",
-            "image": "https://deco-sites-assets.s3.sa-east-1.amazonaws.com/antra/cd613385-8fd8-4fb3-a720-3772962828e1/projeto3.png",
-            "description": "8h de ações ao vivo e online, com discussões sobre a necessidade de TRANSMASCULINIZAR o ativismo, as relações sociais, pessoais, culturais, acadêmicas, políticas, e a forma de (des)construir a sociedade a partir do olhar de Homens Trans e TransMasculines.",
-            "link": "/projects"
-          },
-          {
-            "title": "Transmasculinezando",
-            "date": "05 de Junho",
-            "image": "https://deco-sites-assets.s3.sa-east-1.amazonaws.com/antra/cd613385-8fd8-4fb3-a720-3772962828e1/projeto3.png",
-            "description": "8h de ações ao vivo e online, com discussões sobre a necessidade de TRANSMASCULINIZAR o ativismo, as relações sociais, pessoais, culturais, acadêmicas, políticas, e a forma de (des)construir a sociedade a partir do olhar de Homens Trans e TransMasculines.",
-            "link": "/projects"
-          }
-        ]
+      "__resolveType": "site/sections/Projects.tsx",
+      "title": "Próximos projetos",
+      "subtitle": "Dedicamos a cada militante e movimento de base que se soma a essa luta.",
+      "projects": {
+        "__resolveType": "blog/loaders/BlogpostList.ts",
+        "sortBy": "date_desc",
+        "count": 999
       }
     },
     {

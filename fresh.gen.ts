@@ -9,6 +9,7 @@ import * as $card_what_we_do from "./islands/card-what-we-do.tsx";
 import * as $featured_news from "./islands/featured-news.tsx";
 import * as $header_mobile_site from "./islands/header-mobile-site.tsx";
 import * as $header_site from "./islands/header-site.tsx";
+import * as $projects_island from "./islands/projects-island.tsx";
 import * as $projects_pagination from "./islands/projects-pagination.tsx";
 import * as $slider_island from "./islands/slider-island.tsx";
 import * as $text1_history from "./islands/text1-history.tsx";
@@ -27,6 +28,7 @@ const manifest = {
     "./islands/featured-news.tsx": $featured_news,
     "./islands/header-mobile-site.tsx": $header_mobile_site,
     "./islands/header-site.tsx": $header_site,
+    "./islands/projects-island.tsx": $projects_island,
     "./islands/projects-pagination.tsx": $projects_pagination,
     "./islands/slider-island.tsx": $slider_island,
     "./islands/text1-history.tsx": $text1_history,

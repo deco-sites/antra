@@ -2560,6 +2560,9 @@ html {
   margin-top: 0.25rem;
   margin-bottom: 0.25rem;
 }
+.mb-1 {
+  margin-bottom: 0.25rem;
+}
 .mb-10 {
   margin-bottom: 2.5rem;
 }
@@ -2836,6 +2839,9 @@ html {
 }
 .min-w-\[157px\] {
   min-width: 157px;
+}
+.min-w-\[240px\] {
+  min-width: 240px;
 }
 .min-w-\[400px\] {
   min-width: 400px;
@@ -3408,6 +3414,10 @@ html {
 .px-2 {
   padding-left: 0.5rem;
   padding-right: 0.5rem;
+}
+.px-3 {
+  padding-left: 0.75rem;
+  padding-right: 0.75rem;
 }
 .px-4 {
   padding-left: 1rem;
@@ -4016,10 +4026,6 @@ html {
 
   .md\:mb-40 {
     margin-bottom: 10rem;
-  }
-
-  .md\:mt-20 {
-    margin-top: 5rem;
   }
 
   .md\:block {

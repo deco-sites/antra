@@ -78,7 +78,7 @@ export default function History({ page }: Props) {
           <Image
             width={380}
             height={274}
-            class="object-cover w-full max-h-[456px] md:mt-20 rounded-2xl"
+            class="object-cover w-full max-h-[456px] mt-20 rounded-2xl"
             sizes="(max-width: 640px) 100vw, 20vw"
             src={image || ""}
             alt={image}
