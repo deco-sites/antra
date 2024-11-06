@@ -28,5 +28,12 @@ export default {
         },
       },
     },
+    screens: {
+      'sm': '640px',  // Telas pequenas (mobile)
+      'md': '768px',  // Telas médias (tablets)
+      'lg': '1024px', // Telas grandes (desktop)
+      'xl': '1280px', // Telas extra grandes (laptops grandes / telas HD)
+      '2xl': '1536px', // Telas muito grandes (ex: telas 4K)
+    },
   },
 };
