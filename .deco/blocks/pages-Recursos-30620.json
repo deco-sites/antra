@@ -175,57 +175,11 @@
           "2023",
           "2024"
         ],
-        "cards": [
-          {
-            "tags": [
-              "Manuais"
-            ],
-            "title": "Alteração nome e gênero",
-            "image": "https://deco-sites-assets.s3.sa-east-1.amazonaws.com/antra/e655536f-f393-4db1-9ee5-9dc4d9c8afcc/card1.png"
-          },
-          {
-            "tags": [
-              "Cartilhas"
-            ],
-            "title": "Cartilha homens trans",
-            "image": "https://deco-sites-assets.s3.sa-east-1.amazonaws.com/antra/b11e16b9-240d-45ed-abb5-c6e3f73ff8cb/card2.png"
-          },
-          {
-            "tags": [
-              "Nota Técnica"
-            ],
-            "title": "Nota técnica - Crianças Trans",
-            "image": "https://deco-sites-assets.s3.sa-east-1.amazonaws.com/antra/c7fa80d2-cf3c-4fc4-a19c-de7fe0879cc1/card6.png"
-          },
-          {
-            "tags": [
-              "Cartilhas"
-            ],
-            "title": "Uso banheiro por pessoas trans",
-            "image": "https://deco-sites-assets.s3.sa-east-1.amazonaws.com/antra/981503e2-9815-4cb0-b825-ccb67384964b/card3.png"
-          },
-          {
-            "tags": [
-              "Cartilhas"
-            ],
-            "title": "Alistamento pessoas trans",
-            "image": "https://deco-sites-assets.s3.sa-east-1.amazonaws.com/antra/d8857ae8-21f9-44b1-bb2f-556bd1a851c8/card5.png"
-          },
-          {
-            "tags": [
-              "Cartilhas"
-            ],
-            "image": "https://deco-sites-assets.s3.sa-east-1.amazonaws.com/antra/ae083df1-3a52-4f4d-a3a3-94b0f0f3033c/image.png",
-            "title": "Protocolo policial para enfrentamento da LGBTfobia"
-          },
-          {
-            "tags": [
-              "Cartilhas"
-            ],
-            "title": "Não existe cadeia humanizada",
-            "image": "https://deco-sites-assets.s3.sa-east-1.amazonaws.com/antra/85df59c7-34f4-473d-9701-b5405b33a948/card4.png"
-          }
-        ]
+        "cards": {
+          "__resolveType": "blog/loaders/BlogpostList.ts",
+          "sortBy": "date_desc",
+          "count": 999
+        }
       }
     },
     {
