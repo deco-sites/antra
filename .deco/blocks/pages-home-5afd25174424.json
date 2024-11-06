@@ -36,50 +36,16 @@
       "section": {
         "__resolveType": "site/sections/News.tsx",
         "title": "Últimas notícias",
-        "posts": [
-          {
-            "tags": [
-              "Notas e Ofícios"
-            ],
-            "title": "ANTRA em defesa da identidade travesti",
-            "image": "https://deco-sites-assets.s3.sa-east-1.amazonaws.com/antra/31a01c5c-2409-4cd1-a1c5-af8817edf72d/news1.png"
-          },
-          {
-            "tags": [
-              "Direitos e Políticas"
-            ],
-            "title": "Pronunciamento do ministério das mulheres pelo dia internacional da mulher",
-            "image": "https://deco-sites-assets.s3.sa-east-1.amazonaws.com/antra/03937534-2e27-449f-8011-ee42233d1d06/news2.png"
-          },
-          {
-            "tags": [
-              "Notas e Ofícios"
-            ],
-            "title": "ANTRA lança nota técnica sobre o uso do banheiro por pessoas trans",
-            "image": "https://deco-sites-assets.s3.sa-east-1.amazonaws.com/antra/ea10b3bc-05c8-49dd-9f7f-ee4ae4711d34/news3.png"
-          },
-          {
-            "tags": [
-              "Direitos e Políticas"
-            ],
-            "title": "ANTRA lança diagnóstico sobre a retificação de nome e gênero de travestis e demais pessoas trans no brasil.",
-            "image": "https://deco-sites-assets.s3.sa-east-1.amazonaws.com/antra/9d4d0444-d172-4591-8b06-f43100187ea7/news4.png"
-          },
-          {
-            "tags": [
-              "Direitos e Políticas"
-            ],
-            "title": "ANTRA entrega carta sobre população trans negra à representante da CIDH",
-            "image": "https://deco-sites-assets.s3.sa-east-1.amazonaws.com/antra/9a38e0be-001a-4d9d-a7f6-fde7d6f8d47f/news5.png"
-          },
-          {
-            "tags": [
-              "Direitos e Políticas"
-            ],
-            "title": "Instituições LGBTI nacionais repudiam omissão do Brasil em assinatura do plano de ação LGBTI+ no Mercosul",
-            "image": "https://deco-sites-assets.s3.sa-east-1.amazonaws.com/antra/fd7b5b1b-482b-4f2b-b60d-32dc1a74335b/news6.png"
-          }
-        ]
+        "posts": {
+          "__resolveType": "blog/loaders/BlogpostList.ts",
+          "sortBy": "date_desc",
+          "count": 999
+        },
+        "news": {
+          "__resolveType": "blog/loaders/BlogpostList.ts",
+          "sortBy": "date_desc",
+          "count": 99
+        }
       }
     },
     {
@@ -111,42 +77,11 @@
       "__resolveType": "website/sections/Rendering/Lazy.tsx",
       "section": {
         "__resolveType": "site/sections/PrimersSlider.tsx",
-        "slides": [
-          {
-            "title": "teste1",
-            "image": "https://deco-sites-assets.s3.sa-east-1.amazonaws.com/antra/e655536f-f393-4db1-9ee5-9dc4d9c8afcc/card1.png",
-            "tag": []
-          },
-          {
-            "tag": [],
-            "image": "https://deco-sites-assets.s3.sa-east-1.amazonaws.com/antra/b11e16b9-240d-45ed-abb5-c6e3f73ff8cb/card2.png",
-            "title": "teste2"
-          },
-          {
-            "tag": [
-              "Cartilhas"
-            ],
-            "image": "https://deco-sites-assets.s3.sa-east-1.amazonaws.com/antra/981503e2-9815-4cb0-b825-ccb67384964b/card3.png",
-            "title": "teste3"
-          },
-          {
-            "tag": [],
-            "image": "https://deco-sites-assets.s3.sa-east-1.amazonaws.com/antra/85df59c7-34f4-473d-9701-b5405b33a948/card4.png",
-            "title": "teste4"
-          },
-          {
-            "tag": [],
-            "image": "https://deco-sites-assets.s3.sa-east-1.amazonaws.com/antra/d8857ae8-21f9-44b1-bb2f-556bd1a851c8/card5.png",
-            "title": "teste5"
-          },
-          {
-            "tag": [
-              "Cartilhas"
-            ],
-            "image": "https://deco-sites-assets.s3.sa-east-1.amazonaws.com/antra/c7fa80d2-cf3c-4fc4-a19c-de7fe0879cc1/card6.png",
-            "title": "teste6"
-          }
-        ]
+        "slides": {
+          "__resolveType": "blog/loaders/BlogpostList.ts",
+          "sortBy": "date_desc",
+          "count": 99
+        }
       }
     },
     {
