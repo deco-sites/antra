@@ -2852,6 +2852,9 @@ html {
 .min-w-\[4px\] {
   min-width: 4px;
 }
+.min-w-\[850\] {
+  min-width: 850;
+}
 .max-w-3xl {
   max-width: 48rem;
 }
