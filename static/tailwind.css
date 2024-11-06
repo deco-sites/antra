@@ -2665,9 +2665,6 @@ html {
 .h-2\.5 {
   height: 0.625rem;
 }
-.h-4 {
-  height: 1rem;
-}
 .h-72 {
   height: 18rem;
 }
@@ -2757,9 +2754,6 @@ html {
 }
 .w-28 {
   width: 7rem;
-}
-.w-4 {
-  width: 1rem;
 }
 .w-44 {
   width: 11rem;
@@ -2982,6 +2976,9 @@ html {
 }
 .transform {
   transform: translate(var(--tw-translate-x), var(--tw-translate-y)) rotate(var(--tw-rotate)) skewX(var(--tw-skew-x)) skewY(var(--tw-skew-y)) scaleX(var(--tw-scale-x)) scaleY(var(--tw-scale-y));
+}
+.cursor-grab {
+  cursor: grab;
 }
 .cursor-pointer {
   cursor: pointer;
@@ -4245,6 +4242,10 @@ html {
     margin-right: auto;
   }
 
+  .lg\:block {
+    display: block;
+  }
+
   .lg\:flex {
     display: flex;
   }
@@ -4341,10 +4342,6 @@ html {
   .lg\:py-24 {
     padding-top: 6rem;
     padding-bottom: 6rem;
-  }
-
-  .lg\:pl-\[16rem\] {
-    padding-left: 16rem;
   }
 
   .lg\:text-4xl {

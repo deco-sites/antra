@@ -1,4 +1,5 @@
 import { FunctionalComponent, h } from "preact";
+import Icon from "site/components/ui/Icon.tsx";
 
 interface Item {
   image: string;
@@ -31,10 +32,10 @@ const NewsItem = ({ image, title, description, link }: Item) => {
       </div>
       <a
         href={link}
-        class="absolute bottom-5 right-2 p-6 text-white w-4 h-4 flex items-center justify-center 
-      text-white rounded-full bg-pink-500 hover:bg-pink-600"
+        class="absolute bottom-5 right-2 p-4 text-white flex items-center justify-center 
+          rounded-full bg-pink-500 hover:bg-pink-600"
       >
-        Icon
+        <Icon id="ArrowNorthEast" size={16} strokeWidth={1} />
       </a>
     </div>
   );
