@@ -1,0 +1,20 @@
+{
+  "name": "collections/blog/posts/6473e5aeb93b",
+  "__resolveType": "blog/loaders/Blogpost.ts",
+  "post": {
+    "authors": [],
+    "categories": [
+      {
+        "slug": "affiliation",
+        "name": "Afiliação"
+      }
+    ],
+    "extraProps": [],
+    "title": "CMDLGBT",
+    "excerpt": "none",
+    "image": "https://deco-sites-assets.s3.sa-east-1.amazonaws.com/antra/3e505b55-2ee0-48f3-afd5-c37541c473b7/logo8.png",
+    "date": "2024-11-07",
+    "slug": "cmdlgbt",
+    "content": "<p><strong><span style=\"color: oklch(0.31 0 0); font-size: 16px\">Promover ações que garantam a cidadania e os direitos humanos de lésbicas, gays, bissexuais, travestis e transexuais (LGBT).</span></strong></p>"
+  }
+}

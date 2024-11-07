@@ -1,0 +1,29 @@
+{
+  "name": "collections/blog/posts/a56087586297",
+  "__resolveType": "blog/loaders/Blogpost.ts",
+  "post": {
+    "authors": [],
+    "categories": [
+      {
+        "name": "Cartilha",
+        "slug": "guides"
+      }
+    ],
+    "extraProps": [
+      {
+        "key": "tag",
+        "value": "Nota Técnica"
+      },
+      {
+        "key": "topic",
+        "value": "Crianças Trans"
+      }
+    ],
+    "slug": "crianca-trans",
+    "date": "2024-11-07",
+    "title": "Nota técnica - Crianças Trans",
+    "excerpt": "none",
+    "content": "<p>none</p>",
+    "image": "https://deco-sites-assets.s3.sa-east-1.amazonaws.com/antra/c7fa80d2-cf3c-4fc4-a19c-de7fe0879cc1/card6.png"
+  }
+}

@@ -1,0 +1,29 @@
+{
+  "name": "collections/blog/posts/82038fd48c2e",
+  "__resolveType": "blog/loaders/Blogpost.ts",
+  "post": {
+    "authors": [],
+    "categories": [
+      {
+        "name": "Cartilha",
+        "slug": "guides"
+      }
+    ],
+    "extraProps": [
+      {
+        "key": "tag",
+        "value": "Cartilhas"
+      },
+      {
+        "key": "topic",
+        "value": "Segurança Pública"
+      }
+    ],
+    "image": "https://deco-sites-assets.s3.sa-east-1.amazonaws.com/antra/ae083df1-3a52-4f4d-a3a3-94b0f0f3033c/image.png",
+    "title": "Protocolo Policial para enfrentamento da LGBTfobia",
+    "excerpt": "none",
+    "date": "2024-11-07",
+    "slug": "protocolo-policial",
+    "content": "<p>none</p>"
+  }
+}

@@ -94,12 +94,12 @@ const Filter = ({ type, topic, year, onFilterChange, selectedFilters }: FilterPr
 const Card = ({ image, tag, title }: Card) => {
   return (
     <div
-      class="relative w-full min-w-[260px] sm:w-[48%] md:w-[30%] lg:w-[24%] aspect-[320/450] bg-cover bg-center rounded-lg shadow-lg 
+      class="relative w-full min-w-[230px] sm:w-[48%] md:w-[30%] lg:w-[24%] aspect-[320/450] bg-cover bg-center rounded-lg shadow-lg 
            overflow-hidden transition-transform transform scale-100 hover:scale-105 hover:z-10"
       style={{ backgroundImage: `url(${image})` }}
     >
       <div class="absolute inset-0 bg-black bg-opacity-30 flex flex-col justify-between p-4 rounded-lg">
-        <h3 class="text-2xl sm:text-3xl lg:text-4xl font-normal text-white">
+        <h3 class="text-xl lg:text-2xl font-normal text-white">
           {title}
         </h3>
         <div class="flex flex-wrap gap-2">
