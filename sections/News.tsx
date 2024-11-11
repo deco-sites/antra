@@ -11,7 +11,7 @@ export default function News({ title, news }: Props) {
     ?.filter((news) =>
       news.categories?.some((category) => category.slug === "news")
     )
-    .slice(0, 6);
+    .slice(1, 6);
 
   return (
     <div class="lg:container text-sm px-5 lg:p-16">
@@ -22,34 +22,39 @@ export default function News({ title, news }: Props) {
           </div>
         </div>
         <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8 justify-items-center">
-          {newsFiltered?.map((news) => (
+          {newsFiltered?.map((news, index) => (
             <a href={`post/${news.slug}`}>
-              <div class="rounded-lg overflow-hidden flex flex-col items-center w-full max-w-[400px]">
-                <Image
-                  width={380}
-                  height={274}
-                  class="h-54 object-cover z-10"
-                  sizes="(max-width: 640px) 100vw, 30vw"
-                  src={news.image || ""}
-                  alt={news.image}
-                  decoding="async"
-                  loading="lazy"
-                />
-                <div class="p-1 py-4 space-y-4 text-start">
-                  <div class="flex flex-wrap justify-start gap-2">
-                    {news.extraProps?.map((item, i) => {
-                      return item.key === "tag" ? (
-                        <div
-                          className="badge badge-lg text-xs border border-gray-500 bg-transparent"
-                          key={i}
-                        >
-                          {item.value}
-                        </div>
-                      ) : null;
-                    })}
-                  </div>
-                  <div class="space-y-2">
-                    <h3 class="text-2xl font-semibold">{news.title}</h3>
+              <div
+                class="relative w-full h-full col-span-1 flex justify-center"
+                key={index}
+              >
+                <div class="overflow-hidden flex flex-col items-center w-full max-w-[400px]">
+                  <Image
+                    width={408}
+                    height={232}
+                    class="h-[232px] object-cover z-10 rounded-lg"
+                    src={news.image || ""}
+                    alt={news.image}
+                    decoding="async"
+                    loading="lazy"
+                  />
+                  <div class="p-1 py-4 space-y-4 text-start w-full">
+                    <div class="flex flex-wrap justify-start gap-2">
+                      {news.extraProps?.map((item, i) => {
+                        return item.key === "tag" ? (
+                          <div
+                            className="badge badge-lg text-xs text-custom-gray border border-custom-gray 
+                            bg-transparent hover:bg-custom-gray hover:text-white hover:border-white"
+                            key={i}
+                          >
+                            {item.value}
+                          </div>
+                        ) : null;
+                      })}
+                    </div>
+                    <div class="space-y-2">
+                      <h3 class="text-2xl font-semibold">{news.title}</h3>
+                    </div>
                   </div>
                 </div>
               </div>

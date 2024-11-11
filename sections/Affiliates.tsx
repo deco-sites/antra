@@ -33,21 +33,13 @@ export default function Affiliates({
             href={button.href}
           >
             {button.text}
-            <Icon id="ArrowRight" size={14} strokeWidth={1} />
+            <Icon id="ArrowNorthEast" size={14} strokeWidth={1} />
           </button>
         </div>
         <div class="grid grid-cols-2 md:grid-cols-5 gap-6 md:gap-10 items-center justify-center">
           {logos?.map((logo) => (
-            <div class="rounded-lg overflow-hidden flex justify-center md:justify-start">
-              <Image
-                width={88}
-                height={88}
-                class="object-fit z-10 h-full"
-                src={logo}
-                alt={logo}
-                decoding="async"
-                loading="lazy"
-              />
+            <div>
+              <img src={logo} alt={logo} decoding="async" loading="lazy" />
             </div>
           ))}
         </div>

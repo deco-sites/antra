@@ -1,3 +1,4 @@
+import { BlogPost } from "apps/blog/types.ts";
 import { FunctionalComponent, h } from "preact";
 import Icon from "site/components/ui/Icon.tsx";
 
@@ -10,9 +11,10 @@ interface Item {
 
 interface Props {
   items: Item[];
+  main: BlogPost[] | null;
 }
 
-const NewsItem = ({ image, title, description, link }: Item) => {
+const NewsItem = ({ image, title, description, link }: any) => {
   return (
     <div class="relative h-[450px] md:h-[700px] w-full overflow-hidden rounded-2xl">
       <img
@@ -31,7 +33,7 @@ const NewsItem = ({ image, title, description, link }: Item) => {
         </p>
       </div>
       <a
-        href={link}
+        href={`post/${link}`}
         class="absolute bottom-5 right-2 p-4 text-white flex items-center justify-center 
           rounded-full bg-pink-500 hover:bg-pink-600"
       >
@@ -41,12 +43,21 @@ const NewsItem = ({ image, title, description, link }: Item) => {
   );
 };
 
-const NewsFeed: FunctionalComponent<Props> = ({ items }: Props) => {
+const NewsFeed: FunctionalComponent<Props> = ({ items, main }: Props) => {
+  const newsFiltered = main?.filter((main) =>
+    main.categories?.some((category) => category.slug === "news")
+  );
   return (
     <div class="lg:container h-auto text-sm lg:p-16 py-10 px-5">
       <div class="">
         <div class="grid grid-cols-1 gap-4 md:grid-cols-[70%_30%] lg:grid-cols-[75%_25%]">
-          {items.map((item, index) => <NewsItem key={index} {...item} />)}
+          <NewsItem
+            image={newsFiltered && newsFiltered[0]?.image}
+            title={newsFiltered && newsFiltered[0]?.title}
+            description={newsFiltered && newsFiltered[0]?.excerpt}
+            link={newsFiltered && newsFiltered[0]?.slug}
+          />
+          <NewsItem {...items[1]} />
         </div>
       </div>
     </div>

@@ -1,4 +1,5 @@
 import daisyui from "daisyui";
+import { colors } from "$fresh/src/server/deps.ts";
 
 export default {
   fontWeight: {
@@ -27,13 +28,16 @@ export default {
           "100%": { transform: "translateX(-50%)" },
         },
       },
+      colors: {
+        "custom-gray": "#303030",
+      },
     },
     screens: {
-      'sm': '640px',  // Telas pequenas (mobile)
-      'md': '768px',  // Telas médias (tablets)
-      'lg': '1024px', // Telas grandes (desktop)
-      'xl': '1280px', // Telas extra grandes (laptops grandes / telas HD)
-      '2xl': '1536px', // Telas muito grandes (ex: telas 4K)
+      sm: "640px", // Telas pequenas (mobile)
+      md: "768px", // Telas médias (tablets)
+      lg: "1024px", // Telas grandes (desktop)
+      xl: "1280px", // Telas extra grandes (laptops grandes / telas HD)
+      "2xl": "1536px", // Telas muito grandes (ex: telas 4K)
     },
   },
 };
