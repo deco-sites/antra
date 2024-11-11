@@ -1,8 +1,0 @@
-{
-  "name": "collections/blog/categories/95c7c3812642",
-  "__resolveType": "blog/loaders/Category.ts",
-  "category": {
-    "name": "Pesquisas",
-    "slug": "pesquisas"
-  }
-}

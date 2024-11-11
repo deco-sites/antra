@@ -3,59 +3,50 @@
   "path": "/affiliation",
   "sections": [
     {
-      "__resolveType": "website/sections/Rendering/Lazy.tsx",
-      "section": {
-        "__resolveType": "Header-Antra"
-      }
+      "__resolveType": "Header-Antra"
     },
     {
-      "__resolveType": "website/sections/Rendering/Lazy.tsx",
-      "section": {
-        "__resolveType": "site/sections/HowToJoin.tsx"
-      }
+      "__resolveType": "site/sections/HowToJoin.tsx"
     },
     {
-      "__resolveType": "website/sections/Rendering/Lazy.tsx",
-      "section": {
-        "__resolveType": "site/sections/AllAffiliates.tsx",
-        "affiliate": [
-          {
-            "name": "ABGLT",
-            "description": "Promover ações que garantam a cidadania e os direitos humanos de lésbicas, gays, bissexuais, travestis e transexuais (LGBT),",
-            "image": "https://deco-sites-assets.s3.sa-east-1.amazonaws.com/antra/3a181ede-d82e-44c0-9940-91ce89e76ead/abglt.png"
-          },
-          {
-            "name": "amotrans",
-            "description": "Promover ações que garantam a cidadania e os direitos humanos de lésbicas, gays, bissexuais, travestis e transexuais (LGBT),",
-            "image": "https://deco-sites-assets.s3.sa-east-1.amazonaws.com/antra/66d13c69-5f19-4262-ba58-a85d6f46aa65/logo2.png"
-          },
-          {
-            "name": "ATTO",
-            "description": "Promover ações que garantam a cidadania e os direitos humanos de lésbicas, gays, bissexuais, travestis e transexuais (LGBT),",
-            "image": "https://deco-sites-assets.s3.sa-east-1.amazonaws.com/antra/6249c15b-f82c-4706-8dd6-f14f12d7e7e3/logo3.png"
-          },
-          {
-            "name": "TODXS",
-            "description": "Promover ações que garantam a cidadania e os direitos humanos de lésbicas, gays, bissexuais, travestis e transexuais (LGBT),",
-            "image": "https://deco-sites-assets.s3.sa-east-1.amazonaws.com/antra/6f30152b-62d4-4d38-99a7-e072bfeb7338/logo9.png"
-          },
-          {
-            "name": "CMDLGBT",
-            "description": "Promover ações que garantam a cidadania e os direitos humanos de lésbicas, gays, bissexuais, travestis e transexuais (LGBT),",
-            "image": "https://deco-sites-assets.s3.sa-east-1.amazonaws.com/antra/3e505b55-2ee0-48f3-afd5-c37541c473b7/logo8.png"
-          },
-          {
-            "name": "AMOSERTRANS",
-            "description": "Promover ações que garantam a cidadania e os direitos humanos de lésbicas, gays, bissexuais, travestis e transexuais (LGBT),",
-            "image": "https://deco-sites-assets.s3.sa-east-1.amazonaws.com/antra/ac976326-631d-423c-bc94-e606ab4469f3/logo7.png"
-          },
-          {
-            "name": "CELGBT",
-            "description": "Promover ações que garantam a cidadania e os direitos humanos de lésbicas, gays, bissexuais, travestis e transexuais (LGBT),",
-            "image": "https://deco-sites-assets.s3.sa-east-1.amazonaws.com/antra/d05291c1-3b5c-4fb9-ac90-ecd2d41973e1/logo6.png"
-          }
-        ]
-      }
+      "__resolveType": "site/sections/AllAffiliates.tsx",
+      "affiliate": [
+        {
+          "name": "ABGLT",
+          "description": "Promover ações que garantam a cidadania e os direitos humanos de lésbicas, gays, bissexuais, travestis e transexuais (LGBT),",
+          "image": "https://deco-sites-assets.s3.sa-east-1.amazonaws.com/antra/3a181ede-d82e-44c0-9940-91ce89e76ead/abglt.png"
+        },
+        {
+          "name": "amotrans",
+          "description": "Promover ações que garantam a cidadania e os direitos humanos de lésbicas, gays, bissexuais, travestis e transexuais (LGBT),",
+          "image": "https://deco-sites-assets.s3.sa-east-1.amazonaws.com/antra/66d13c69-5f19-4262-ba58-a85d6f46aa65/logo2.png"
+        },
+        {
+          "name": "ATTO",
+          "description": "Promover ações que garantam a cidadania e os direitos humanos de lésbicas, gays, bissexuais, travestis e transexuais (LGBT),",
+          "image": "https://deco-sites-assets.s3.sa-east-1.amazonaws.com/antra/6249c15b-f82c-4706-8dd6-f14f12d7e7e3/logo3.png"
+        },
+        {
+          "name": "TODXS",
+          "description": "Promover ações que garantam a cidadania e os direitos humanos de lésbicas, gays, bissexuais, travestis e transexuais (LGBT),",
+          "image": "https://deco-sites-assets.s3.sa-east-1.amazonaws.com/antra/6f30152b-62d4-4d38-99a7-e072bfeb7338/logo9.png"
+        },
+        {
+          "name": "CMDLGBT",
+          "description": "Promover ações que garantam a cidadania e os direitos humanos de lésbicas, gays, bissexuais, travestis e transexuais (LGBT),",
+          "image": "https://deco-sites-assets.s3.sa-east-1.amazonaws.com/antra/3e505b55-2ee0-48f3-afd5-c37541c473b7/logo8.png"
+        },
+        {
+          "name": "AMOSERTRANS",
+          "description": "Promover ações que garantam a cidadania e os direitos humanos de lésbicas, gays, bissexuais, travestis e transexuais (LGBT),",
+          "image": "https://deco-sites-assets.s3.sa-east-1.amazonaws.com/antra/ac976326-631d-423c-bc94-e606ab4469f3/logo7.png"
+        },
+        {
+          "name": "CELGBT",
+          "description": "Promover ações que garantam a cidadania e os direitos humanos de lésbicas, gays, bissexuais, travestis e transexuais (LGBT),",
+          "image": "https://deco-sites-assets.s3.sa-east-1.amazonaws.com/antra/d05291c1-3b5c-4fb9-ac90-ecd2d41973e1/logo6.png"
+        }
+      ]
     },
     {
       "__resolveType": "Footer"

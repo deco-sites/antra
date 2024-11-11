@@ -1,0 +1,29 @@
+{
+  "name": "collections/blog/posts/835e3a004b2a",
+  "__resolveType": "blog/loaders/Blogpost.ts",
+  "post": {
+    "authors": [],
+    "categories": [
+      {
+        "name": "Cartilha",
+        "slug": "guides"
+      }
+    ],
+    "extraProps": [
+      {
+        "key": "tag",
+        "value": "Cartilhas"
+      },
+      {
+        "key": "topic",
+        "value": "Alistamento militar"
+      }
+    ],
+    "date": "2024-11-07",
+    "slug": "alistamento-trans",
+    "content": "<p>none</p>",
+    "image": "https://deco-sites-assets.s3.sa-east-1.amazonaws.com/antra/d8857ae8-21f9-44b1-bb2f-556bd1a851c8/card5.png",
+    "excerpt": "none",
+    "title": "Alistamento pessoas trans"
+  }
+}

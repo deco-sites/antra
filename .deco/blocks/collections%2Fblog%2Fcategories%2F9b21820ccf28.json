@@ -1,8 +1,0 @@
-{
-  "name": "collections/blog/categories/9b21820ccf28",
-  "__resolveType": "blog/loaders/Category.ts",
-  "category": {
-    "name": "Justiça",
-    "slug": "justiça"
-  }
-}

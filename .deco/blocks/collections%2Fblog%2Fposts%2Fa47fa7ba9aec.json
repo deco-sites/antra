@@ -1,0 +1,29 @@
+{
+  "name": "collections/blog/posts/a47fa7ba9aec",
+  "__resolveType": "blog/loaders/Blogpost.ts",
+  "post": {
+    "authors": [],
+    "categories": [
+      {
+        "name": "Cartilha",
+        "slug": "guides"
+      }
+    ],
+    "extraProps": [
+      {
+        "key": "tag",
+        "value": "Cartilhas"
+      },
+      {
+        "key": "topic",
+        "value": "Diversidade"
+      }
+    ],
+    "date": "2024-11-07",
+    "slug": "uso-banheiro",
+    "content": "<p>none</p>",
+    "title": "Uso do banheiro por pessoas trans",
+    "excerpt": "none",
+    "image": "https://deco-sites-assets.s3.sa-east-1.amazonaws.com/antra/981503e2-9815-4cb0-b825-ccb67384964b/card3.png"
+  }
+}

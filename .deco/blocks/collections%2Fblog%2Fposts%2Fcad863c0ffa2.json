@@ -1,0 +1,20 @@
+{
+  "name": "collections/blog/posts/cad863c0ffa2",
+  "__resolveType": "blog/loaders/Blogpost.ts",
+  "post": {
+    "authors": [],
+    "categories": [
+      {
+        "slug": "affiliation",
+        "name": "Afiliação"
+      }
+    ],
+    "extraProps": [],
+    "title": "TODXS",
+    "excerpt": "none",
+    "image": "https://deco-sites-assets.s3.sa-east-1.amazonaws.com/antra/6f30152b-62d4-4d38-99a7-e072bfeb7338/logo9.png",
+    "date": "2024-11-07",
+    "slug": "todxs",
+    "content": "<p><strong><span style=\"color: oklch(0.31 0 0); font-size: 16px\">Promover ações que garantam a cidadania e os direitos humanos de lésbicas, gays, bissexuais, travestis e transexuais (LGBT).</span></strong></p>"
+  }
+}

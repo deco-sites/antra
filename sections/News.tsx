@@ -1,18 +1,18 @@
-import type { ImageWidget } from "apps/admin/widgets.ts";
 import Image from "apps/website/components/Image.tsx";
-
-export interface News {
-  title: string;
-  image: ImageWidget;
-  tags: string[];
-}
+import { BlogPost } from "apps/blog/types.ts";
 
 export interface Props {
   title?: string;
-  posts?: News[];
+  news: BlogPost[] | null;
 }
 
-export default function News({ title, posts }: Props) {
+export default function News({ title, news }: Props) {
+  const newsFiltered = news
+    ?.filter((news) =>
+      news.categories?.some((category) => category.slug === "news")
+    )
+    .slice(0, 6);
+
   return (
     <div class="lg:container text-sm px-5 lg:p-16">
       <div class="space-y-10">
@@ -22,31 +22,38 @@ export default function News({ title, posts }: Props) {
           </div>
         </div>
         <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8 justify-items-center">
-          {posts?.map((post) => (
-            <div class="rounded-lg overflow-hidden flex flex-col items-center w-full max-w-[400px]">
-              <Image
-                width={380}
-                height={274}
-                class="h-54 object-cover z-10"
-                sizes="(max-width: 640px) 100vw, 30vw"
-                src={post.image}
-                alt={post.image}
-                decoding="async"
-                loading="lazy"
-              />
-              <div class="p-1 py-4 space-y-4 text-start">
-                <div class="flex flex-wrap justify-start gap-2">
-                  {post.tags?.map((tag) => (
-                    <div class="badge badge-lg text-xs border border-gray-700">
-                      {tag}
-                    </div>
-                  ))}
-                </div>
-                <div class="space-y-2">
-                  <h3 class="text-2xl font-semibold">{post.title}</h3>
+          {newsFiltered?.map((news) => (
+            <a href={`post/${news.slug}`}>
+              <div class="rounded-lg overflow-hidden flex flex-col items-center w-full max-w-[400px]">
+                <Image
+                  width={380}
+                  height={274}
+                  class="h-54 object-cover z-10"
+                  sizes="(max-width: 640px) 100vw, 30vw"
+                  src={news.image || ""}
+                  alt={news.image}
+                  decoding="async"
+                  loading="lazy"
+                />
+                <div class="p-1 py-4 space-y-4 text-start">
+                  <div class="flex flex-wrap justify-start gap-2">
+                    {news.extraProps?.map((item, i) => {
+                      return item.key === "tag" ? (
+                        <div
+                          className="badge badge-lg text-xs border border-gray-500 bg-transparent"
+                          key={i}
+                        >
+                          {item.value}
+                        </div>
+                      ) : null;
+                    })}
+                  </div>
+                  <div class="space-y-2">
+                    <h3 class="text-2xl font-semibold">{news.title}</h3>
+                  </div>
                 </div>
               </div>
-            </div>
+            </a>
           ))}
         </div>
       </div>

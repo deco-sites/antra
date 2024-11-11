@@ -1,0 +1,8 @@
+{
+  "name": "collections/blog/categories/33b827e7cd2b",
+  "__resolveType": "blog/loaders/Category.ts",
+  "category": {
+    "slug": "affiliation",
+    "name": "Afiliação"
+  }
+}

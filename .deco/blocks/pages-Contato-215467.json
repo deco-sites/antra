@@ -11,44 +11,41 @@
       }
     },
     {
-      "__resolveType": "website/sections/Rendering/Lazy.tsx",
-      "section": {
-        "__resolveType": "site/sections/Contact.tsx",
-        "title": "Fale conosco",
-        "subtitle": "Para entrar em contato envie uma mensagem usando o formulário, ou nos chame pelas nossas redes sociais:",
-        "social": [
-          {
-            "name": "E-mail",
-            "endereço": "presidencia.antra@gmail.com",
-            "link": "/contact",
-            "endereco": "presidencia.antra@gmail.com"
-          },
-          {
-            "endereço": "@antra.oficial",
-            "name": "Instagram",
-            "link": "/contact",
-            "endereco": "@antra.oficial"
-          },
-          {
-            "endereço": "@antrabrasil",
-            "name": "Twitter",
-            "link": "/contact",
-            "endereco": "@antrabrasil"
-          },
-          {
-            "endereço": "/antrabrasil",
-            "name": "Facebook",
-            "link": "/contact",
-            "endereco": "/antrabrasil"
-          }
-        ],
-        "background": "https://deco-sites-assets.s3.sa-east-1.amazonaws.com/antra/2f1ccbdc-d8a7-4c80-9ca4-42b2836d11af/background-about.png",
-        "options": [
-          "Doação",
-          "Doação",
-          "Doação"
-        ]
-      }
+      "__resolveType": "site/sections/Contact.tsx",
+      "title": "Fale conosco",
+      "subtitle": "Para entrar em contato envie uma mensagem usando o formulário, ou nos chame pelas nossas redes sociais:",
+      "social": [
+        {
+          "name": "E-mail",
+          "endereço": "presidencia.antra@gmail.com",
+          "link": "/contact",
+          "endereco": "presidencia.antra@gmail.com"
+        },
+        {
+          "endereço": "@antra.oficial",
+          "name": "Instagram",
+          "link": "/contact",
+          "endereco": "@antra.oficial"
+        },
+        {
+          "endereço": "@antrabrasil",
+          "name": "Twitter",
+          "link": "/contact",
+          "endereco": "@antrabrasil"
+        },
+        {
+          "endereço": "/antrabrasil",
+          "name": "Facebook",
+          "link": "/contact",
+          "endereco": "/antrabrasil"
+        }
+      ],
+      "background": "https://deco-sites-assets.s3.sa-east-1.amazonaws.com/antra/2f1ccbdc-d8a7-4c80-9ca4-42b2836d11af/background-about.png",
+      "options": [
+        "Doação",
+        "Doação",
+        "Doação"
+      ]
     },
     {
       "__resolveType": "Footer"

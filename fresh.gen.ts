@@ -3,13 +3,17 @@
 // This file is automatically updated during development when running `dev.ts`.
 
 import * as $_app from "./routes/_app.tsx";
+import * as $all_affiliates_island from "./islands/all-affiliates-island.tsx";
 import * as $all_news from "./islands/all-news.tsx";
 import * as $all_research_pagination from "./islands/all-research-pagination.tsx";
 import * as $card_what_we_do from "./islands/card-what-we-do.tsx";
 import * as $featured_news from "./islands/featured-news.tsx";
 import * as $header_mobile_site from "./islands/header-mobile-site.tsx";
 import * as $header_site from "./islands/header-site.tsx";
+import * as $projects_island from "./islands/projects-island.tsx";
 import * as $projects_pagination from "./islands/projects-pagination.tsx";
+import * as $resource_islands from "./islands/resource-islands.tsx";
+import * as $slider_island_mobile from "./islands/slider-island-mobile.tsx";
 import * as $slider_island from "./islands/slider-island.tsx";
 import * as $text1_history from "./islands/text1-history.tsx";
 import * as $text2_history from "./islands/text2-history.tsx";
@@ -21,13 +25,17 @@ const manifest = {
     "./routes/_app.tsx": $_app,
   },
   islands: {
+    "./islands/all-affiliates-island.tsx": $all_affiliates_island,
     "./islands/all-news.tsx": $all_news,
     "./islands/all-research-pagination.tsx": $all_research_pagination,
     "./islands/card-what-we-do.tsx": $card_what_we_do,
     "./islands/featured-news.tsx": $featured_news,
     "./islands/header-mobile-site.tsx": $header_mobile_site,
     "./islands/header-site.tsx": $header_site,
+    "./islands/projects-island.tsx": $projects_island,
     "./islands/projects-pagination.tsx": $projects_pagination,
+    "./islands/resource-islands.tsx": $resource_islands,
+    "./islands/slider-island-mobile.tsx": $slider_island_mobile,
     "./islands/slider-island.tsx": $slider_island,
     "./islands/text1-history.tsx": $text1_history,
     "./islands/text2-history.tsx": $text2_history,

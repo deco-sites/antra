@@ -1,0 +1,25 @@
+{
+  "name": "collections/blog/posts/d5efc724016d",
+  "__resolveType": "blog/loaders/Blogpost.ts",
+  "post": {
+    "authors": [],
+    "categories": [
+      {
+        "name": "Projetos",
+        "slug": "projects"
+      }
+    ],
+    "extraProps": [
+      {
+        "key": "link",
+        "value": "https://projeto.travestilizando.com"
+      }
+    ],
+    "title": "Travestilizando I",
+    "excerpt": "none",
+    "image": "https://deco-sites-assets.s3.sa-east-1.amazonaws.com/antra/caa726d8-100f-49f2-9954-2e9bd15af51b/projeto1.png",
+    "content": "<p><span style=\"color: rgb(107, 114, 128); font-size: 18px\">Mais 8h de ações ao vivo e online, com discussões sobre a necessidade de Travestilizar as relações sociais, pessoais, culturais, acadêmicas, políticas, e a forma de construir e desconstruir o futuro de toda a sociedade.</span></p>",
+    "slug": "project-01",
+    "date": "2024-05-15"
+  }
+}

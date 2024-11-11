@@ -1,0 +1,33 @@
+{
+  "name": "collections/blog/posts/9458604c0560",
+  "__resolveType": "blog/loaders/Blogpost.ts",
+  "post": {
+    "authors": [],
+    "categories": [
+      {
+        "name": "Cartilha",
+        "slug": "guides"
+      }
+    ],
+    "extraProps": [
+      {
+        "key": "tag",
+        "value": "Cartilhas"
+      },
+      {
+        "key": "topic",
+        "value": "Diversidade"
+      }
+    ],
+    "title": "Cartilha homens trans",
+    "date": "2024-11-06",
+    "slug": "guides-2",
+    "content": "<p>none</p>",
+    "seo": {
+      "image": "https://deco-sites-assets.s3.sa-east-1.amazonaws.com/antra/b11e16b9-240d-45ed-abb5-c6e3f73ff8cb/card2.png"
+    },
+    "image": "https://deco-sites-assets.s3.sa-east-1.amazonaws.com/antra/b11e16b9-240d-45ed-abb5-c6e3f73ff8cb/card2.png",
+    "excerpt": "none",
+    "alt": "Cartilha homens trans"
+  }
+}

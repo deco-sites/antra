@@ -1,0 +1,30 @@
+{
+  "name": "collections/blog/posts/3a7343a45b1d",
+  "__resolveType": "blog/loaders/Blogpost.ts",
+  "post": {
+    "authors": [],
+    "categories": [
+      {
+        "name": "Cartilha",
+        "slug": "guides"
+      }
+    ],
+    "extraProps": [
+      {
+        "key": "tag",
+        "value": "Cartilhas"
+      },
+      {
+        "key": "topic",
+        "value": "Alteração de Nome e Gênero"
+      }
+    ],
+    "title": "Alteração nome e gênero",
+    "excerpt": "none",
+    "image": "https://deco-sites-assets.s3.sa-east-1.amazonaws.com/antra/e655536f-f393-4db1-9ee5-9dc4d9c8afcc/card1.png",
+    "alt": "Alteração nome e gênero",
+    "date": "2024-11-06",
+    "slug": "guides-1",
+    "content": "<p>none</p>"
+  }
+}
