@@ -1,0 +1,20 @@
+{
+  "name": "collections/blog/posts/6617a507df68",
+  "__resolveType": "blog/loaders/Blogpost.ts",
+  "post": {
+    "authors": [],
+    "categories": [
+      {
+        "slug": "affiliation",
+        "name": "Afiliação"
+      }
+    ],
+    "extraProps": [],
+    "date": "2024-11-07",
+    "title": "CELGBT",
+    "excerpt": "none",
+    "slug": "celgbt",
+    "content": "<p><strong><span style=\"color: oklch(0.31 0 0); font-size: 16px\">Promover ações que garantam a cidadania e os direitos humanos de lésbicas, gays, bissexuais, travestis e transexuais (LGBT).</span></strong></p>",
+    "image": "https://deco-sites-assets.s3.sa-east-1.amazonaws.com/antra/d05291c1-3b5c-4fb9-ac90-ecd2d41973e1/logo6.png"
+  }
+}
