@@ -83,15 +83,12 @@
       }
     },
     {
-      "__resolveType": "website/sections/Rendering/Lazy.tsx",
-      "section": {
-        "__resolveType": "site/sections/Slider.tsx",
-        "slides": [
-          {
-            "title": "Alteração nome e gênero"
-          }
-        ]
-      }
+      "__resolveType": "site/sections/Slider.tsx",
+      "slides": [
+        {
+          "title": "Alteração nome e gênero"
+        }
+      ]
     },
     {
       "__resolveType": "website/sections/Rendering/Lazy.tsx",
