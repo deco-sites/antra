@@ -26,7 +26,8 @@ function Card({ image, title, tag }: SlideProps) {
           {tag?.map((item, i) => {
             return item.key === "tag" ? (
               <div
-                className="badge badge-lg text-xs border border-white text-white bg-transparent"
+                className="badge badge-lg text-xs border border-white text-white bg-transparent
+                hover:bg-custom-gray hover:text-white hover:border-white"
                 key={i}
               >
                 {item.value}
@@ -40,10 +41,9 @@ function Card({ image, title, tag }: SlideProps) {
 }
 
 function PrimersSlider({ slides }: SliderProps) {
-  const guidesFiltered = slides
-  ?.filter((slide) =>
+  const guidesFiltered = slides?.filter((slide) =>
     slide.categories?.some((category) => category.slug === "guides")
-  )
+  );
   return (
     <div class="lg:container lg:p-16 w-full text-sm py-10 lg:py-24 overflow-visible">
       <div class="space-y-8 lg:w-1/2 mb-8 px-5">
@@ -58,7 +58,11 @@ function PrimersSlider({ slides }: SliderProps) {
           <div class="flex gap-6 pl-10 pb-8 pt-12 overflow-visible">
             {guidesFiltered?.map((slide, index) => (
               <div class="w-[320px] mx-4 overflow-visible" key={index}>
-                <Card image={slide.image || ''} title={slide.title} tag={slide.extraProps} />
+                <Card
+                  image={slide.image || ""}
+                  title={slide.title}
+                  tag={slide.extraProps}
+                />
               </div>
             ))}
           </div>
@@ -71,7 +75,11 @@ function PrimersSlider({ slides }: SliderProps) {
           <div class="flex gap-6 pl-10 pb-8 pt-12 overflow-visible">
             {guidesFiltered?.map((slide, index) => (
               <div class="w-[320px] mx-4 overflow-visible" key={index}>
-                <Card image={slide.image || ''} title={slide.title} tag={slide.extraProps} />
+                <Card
+                  image={slide.image || ""}
+                  title={slide.title}
+                  tag={slide.extraProps}
+                />
               </div>
             ))}
           </div>

@@ -19,6 +19,7 @@ export interface Nav {
       url?: string;
       img?: string;
       imgLabel?: string;
+      download?: string;
       submenu?: {
         label: string;
         subLabel?: string;
@@ -30,10 +31,15 @@ export interface Nav {
 }
 
 export const HeaderSite = ({ logo, navigation }: Nav) => {
+  const openNewWindow = (link: string) => {
+    if (!link) return console.error("Vazio");
+
+    globalThis.open(link[0], "_blank");
+  };
+
   return (
     <nav className="drawer drawer-end border-b border-gray-300">
-      <div className="absolute top-0 left-0 w-full h-2.5 bg-gradient-to-r from-[#3AB4F6] via-[#FCA5B3] to-[#3AB4F6]">
-      </div>
+      <div className="absolute top-0 left-0 w-full h-2.5 bg-gradient-to-r from-[#3AB4F6] via-[#FCA5B3] to-[#3AB4F6]"></div>
 
       <div className="px-[50px] py-4 flex items-center justify-between">
         <a href="/">
@@ -57,7 +63,10 @@ export const HeaderSite = ({ logo, navigation }: Nav) => {
                 </a>
 
                 {link?.submenu && link?.submenu.length > 0 && (
-                  <div className="min-w-60 max-w-lg absolute hidden group-hover:flex gap-4 bg-white shadow-lg p-2 z-50 rounded-[8px] shadow-2xl bg-gray-200 border">
+                  <div
+                    className="min-w-60 max-w-lg absolute hidden group-hover:flex gap-4 bg-white shadow-lg p-2 z-50 
+                  rounded-[8px] shadow-2xl bg-gray-200 border"
+                  >
                     {link?.img && (
                       <div className="w-[20rem] h-auto flex justify-center">
                         <img
@@ -70,9 +79,14 @@ export const HeaderSite = ({ logo, navigation }: Nav) => {
                             {link.imgLabel || link.label}
                           </span>
                           {link.label === "Cartilha e Manuais" && (
-                            <button className="flex items-center gap-[10px] bg-white w-full rounded-[8px] p-1">
-                              Baixar recurso
-                              <Icon id="FilterList" size={12} strokeWidth={2} />
+                            <button
+                              onClick={() =>
+                                openNewWindow(link?.download || "")
+                              }
+                              class="flex bg-white rounded-lg p-2 gap-2 justify-center items-center mt-2"
+                            >
+                              <p class="text-xs">Baixar recurso</p>
+                              <Icon id="Download" size={16} strokeWidth={1} />
                             </button>
                           )}
                         </div>

@@ -2746,6 +2746,9 @@ html {
 .min-h-\[157px\] {
   min-height: 157px;
 }
+.min-h-\[279px\] {
+  min-height: 279px;
+}
 .min-h-\[350px\] {
   min-height: 350px;
 }
@@ -2754,6 +2757,9 @@ html {
 }
 .min-h-\[42px\] {
   min-height: 42px;
+}
+.min-h-\[582px\] {
+  min-height: 582px;
 }
 .min-h-full {
   min-height: 100%;
@@ -3084,9 +3090,6 @@ html {
 }
 .gap-8 {
   gap: 2rem;
-}
-.gap-\[10px\] {
-  gap: 10px;
 }
 .gap-\[16px\] {
   gap: 16px;
@@ -3507,6 +3510,9 @@ html {
 .py-8 {
   padding-top: 2rem;
   padding-bottom: 2rem;
+}
+.pb-10 {
+  padding-bottom: 2.5rem;
 }
 .pb-4 {
   padding-bottom: 1rem;
@@ -4081,8 +4087,8 @@ html {
     height: 100%;
   }
 
-  .md\:w-2\/3 {
-    width: 66.666667%;
+  .md\:w-1\/2 {
+    width: 50%;
   }
 
   .md\:w-\[30\%\] {

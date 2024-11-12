@@ -46,8 +46,7 @@ const IMAGE_STYLES = "[&_img]:rounded-2xl [&_img]:w-full [&_img]:my-12";
 const BLOCKQUOTE_STYLES =
   "[&>blockquote]:my-6 [&>blockquote]:border-l-2 [&>blockquote]:border-black [&>blockquote]:text-xl [&>blockquote]:italic [&>blockquote]:pl-6";
 
-const CONTENT_STYLES =
-  `max-w-3xl mx-auto ${PARAGRAPH_STYLES} ${HEADING_STYLES} ${CODE_BLOCK_STYLES} ${IMAGE_STYLES} ${BLOCKQUOTE_STYLES}`;
+const CONTENT_STYLES = `max-w-3xl mx-auto ${PARAGRAPH_STYLES} ${HEADING_STYLES} ${CODE_BLOCK_STYLES} ${IMAGE_STYLES} ${BLOCKQUOTE_STYLES}`;
 
 const DEFAULT_PROPS: BlogPost = {
   title: "Blog title heading will go here",
@@ -68,8 +67,8 @@ const DEFAULT_PROPS: BlogPost = {
 };
 
 export default function History({ page }: Props) {
-  const { title, authors, image, date, content, extraProps } = page?.post ||
-    DEFAULT_PROPS;
+  const { title, authors, image, date, content, extraProps } =
+    page?.post || DEFAULT_PROPS;
 
   return (
     <div className="lg:container text-sm mb-40">
@@ -88,16 +87,15 @@ export default function History({ page }: Props) {
           <div class="w-full max-w-[650px] flex flex-col gap-5">
             <div class="md:flex flex-wrap gap-2 w-full justify-start">
               {extraProps?.map((item, i) => {
-                return item.key === "tag"
-                  ? (
-                    <div
-                      className="badge badge-lg text-xs border border-gray-500 bg-transparent"
-                      key={i}
-                    >
-                      {item.value}
-                    </div>
-                  )
-                  : null;
+                return item.key === "tag" ? (
+                  <div
+                    className="badge badge-lg text-xs border border-gray-500 bg-transparent
+                      hover:bg-custom-gray hover:text-white hover:border-white"
+                    key={i}
+                  >
+                    {item.value}
+                  </div>
+                ) : null;
               })}
             </div>
             <h1 class="text-3xl font-bold">{title}</h1>

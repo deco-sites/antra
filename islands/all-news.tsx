@@ -32,9 +32,9 @@ export default function AllNewsIsland({ title, info, allNews }: Props) {
   } = usePagination(allNews ? allNews : [], itemsPerPage);
 
   return (
-    <div class="lg:container text-sm px-5 p-16 mb-40">
+    <div class="lg:container text-sm px-5 px-16 pb-10 mb-40">
       <div class="space-y-10">
-        <section class="w-full px-4 py-10">
+        <section class="w-full px-4">
           <h2 class="text-2xl md:text-4xl font-bold leading-snug mb-8">
             {title}
           </h2>
@@ -62,7 +62,8 @@ export default function AllNewsIsland({ title, info, allNews }: Props) {
                         {news.extraProps?.map((item, i) => {
                           return item.key === "tag" ? (
                             <div
-                              className="badge badge-lg text-xs border border-gray-500 bg-transparent"
+                              className="badge badge-lg text-xs border border-gray-500 bg-transparent 
+                              hover:bg-custom-gray hover:text-white hover:border-white"
                               key={i}
                             >
                               {item.value}

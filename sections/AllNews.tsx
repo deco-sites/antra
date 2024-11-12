@@ -10,7 +10,7 @@ export interface Info {
 export interface Props {
   title: string;
   info: Info;
-  allNews?: BlogPost[] | null;
+  allNews: BlogPost[] | null;
 }
 
 export default function AllNews({ title, info, allNews }: Props) {

@@ -123,7 +123,8 @@ const Card = ({ image, tag, title, link }: Card) => {
             {tag?.map((item, i) => {
               return item.key === "tag" ? (
                 <div
-                  class="badge badge-lg text-xs border border-white text-white bg-transparent"
+                  class="badge badge-lg text-xs border border-white text-white bg-transparent 
+                  hover:bg-custom-gray hover:text-white hover:border-white"
                   key={i}
                 >
                   {item.value}
