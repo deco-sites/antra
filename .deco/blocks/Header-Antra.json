@@ -45,7 +45,8 @@
         ],
         "img": "https://deco-sites-assets.s3.sa-east-1.amazonaws.com/antra/00a539b6-ff26-46dc-85c6-fbafd2afb347/cartilhas-img.png",
         "imgLabel": "Alteração nome e gênero",
-        "url": "/resource"
+        "url": "/resource",
+        "download": "https://google.com"
       },
       {
         "label": "Notícias",

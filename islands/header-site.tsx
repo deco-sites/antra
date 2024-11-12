@@ -34,7 +34,7 @@ export const HeaderSite = ({ logo, navigation }: Nav) => {
   const openNewWindow = (link: string) => {
     if (!link) return console.error("Vazio");
 
-    globalThis.open(link[0], "_blank");
+    globalThis.open(link, "_blank");
   };
 
   return (
