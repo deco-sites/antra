@@ -8,6 +8,7 @@ export interface Card {
   title: string;
   image: ImageWidget;
   tag: ExtraProps[] | undefined;
+  link: string[] | undefined;
 }
 
 interface FilterProps {
@@ -33,65 +34,82 @@ export interface Props {
   cards?: BlogPost[] | null;
 }
 
-const Filter = ({ type, topic, year, onFilterChange, selectedFilters }: FilterProps) => {
-     return (
-       <div class="flex flex-col gap-5">
-         <div class="flex flex-col gap-2">
-           <h2>Tipo de recurso</h2>
-           <div class="flex flex-wrap gap-2 w-full">
-             {type.map((item) => (
-               <button
-                 key={item}
-                 onClick={() => onFilterChange("type", item)}
-                 class={`badge badge-lg text-xs border ${
-                   selectedFilters.type.includes(item) ? "bg-gray-700 text-white" : "bg-transparent border-gray-500"
-                 }`}
-               >
-                 {item}
-               </button>
-             ))}
-           </div>
-         </div>
-   
-         <div class="flex flex-col gap-2">
-           <h2>Assunto</h2>
-           <div class="flex flex-wrap gap-2 w-full">
-             {topic.map((item) => (
-               <button
-               key={item}
-                 onClick={() => onFilterChange("topic", item)}
-                 class={`badge badge-lg text-xs border ${
-                   selectedFilters.topic.includes(item) ? "bg-gray-700 text-white" : "bg-transparent border-gray-500"
-                 }`}
-               >
-                 {item}
-               </button>
-             ))}
-           </div>
-         </div>
-   
-         <div class="flex flex-col gap-2">
-           <h2>Ano de publicação</h2>
-           <div class="flex flex-wrap gap-2 w-full">
-             {year.map((item) => (
-               <button
-               key={item}
-                 onClick={() => onFilterChange("year", item)}
-                 class={`badge badge-lg text-xs border ${
-                   selectedFilters.year.includes(item) ? "bg-gray-700 text-white" : "bg-transparent border-gray-500"
-                 }`}
-               >
-                 {item}
-               </button>
-             ))}
-           </div>
-         </div>
-       </div>
-     );
-   };
-   
+const Filter = ({
+  type,
+  topic,
+  year,
+  onFilterChange,
+  selectedFilters,
+}: FilterProps) => {
+  return (
+    <div class="flex flex-col gap-5">
+      <div class="flex flex-col gap-2">
+        <h2>Tipo de recurso</h2>
+        <div class="flex flex-wrap gap-2 w-full">
+          {type.map((item) => (
+            <button
+              key={item}
+              onClick={() => onFilterChange("type", item)}
+              class={`badge badge-lg text-xs border ${
+                selectedFilters.type.includes(item)
+                  ? "bg-gray-700 text-white"
+                  : "bg-transparent border-gray-500"
+              }`}
+            >
+              {item}
+            </button>
+          ))}
+        </div>
+      </div>
 
-const Card = ({ image, tag, title }: Card) => {
+      <div class="flex flex-col gap-2">
+        <h2>Assunto</h2>
+        <div class="flex flex-wrap gap-2 w-full">
+          {topic.map((item) => (
+            <button
+              key={item}
+              onClick={() => onFilterChange("topic", item)}
+              class={`badge badge-lg text-xs border ${
+                selectedFilters.topic.includes(item)
+                  ? "bg-gray-700 text-white"
+                  : "bg-transparent border-gray-500"
+              }`}
+            >
+              {item}
+            </button>
+          ))}
+        </div>
+      </div>
+
+      <div class="flex flex-col gap-2">
+        <h2>Ano de publicação</h2>
+        <div class="flex flex-wrap gap-2 w-full">
+          {year.map((item) => (
+            <button
+              key={item}
+              onClick={() => onFilterChange("year", item)}
+              class={`badge badge-lg text-xs border ${
+                selectedFilters.year.includes(item)
+                  ? "bg-gray-700 text-white"
+                  : "bg-transparent border-gray-500"
+              }`}
+            >
+              {item}
+            </button>
+          ))}
+        </div>
+      </div>
+    </div>
+  );
+};
+
+const Card = ({ image, tag, title, link }: Card) => {
+  const openNewWindow = (link: string[] | undefined) => {
+    if (!link) return console.error("Vazio");
+
+    globalThis.open(link[0], "_blank");
+  };
+
   return (
     <div
       class="relative w-full min-w-[230px] sm:w-[48%] md:w-[30%] lg:w-[24%] aspect-[320/450] bg-cover bg-center rounded-lg shadow-lg 
@@ -99,20 +117,27 @@ const Card = ({ image, tag, title }: Card) => {
       style={{ backgroundImage: `url(${image})` }}
     >
       <div class="absolute inset-0 bg-black bg-opacity-30 flex flex-col justify-between p-4 rounded-lg">
-        <h3 class="text-xl lg:text-2xl font-normal text-white">
-          {title}
-        </h3>
-        <div class="flex flex-wrap gap-2">
-          {tag?.map((item, i) => {
-            return item.key === "tag" ? (
-              <div
-                class="badge badge-lg text-xs border border-white text-white bg-transparent"
-                key={i}
-              >
-                {item.value}
-              </div>
-            ) : null;
-          })}
+        <h3 class="text-xl lg:text-2xl font-normal text-white">{title}</h3>
+        <div>
+          <div class="flex flex-wrap gap-2">
+            {tag?.map((item, i) => {
+              return item.key === "tag" ? (
+                <div
+                  class="badge badge-lg text-xs border border-white text-white bg-transparent"
+                  key={i}
+                >
+                  {item.value}
+                </div>
+              ) : null;
+            })}
+          </div>
+          <button
+            onClick={() => openNewWindow(link)}
+            class="flex bg-white rounded-lg p-2 gap-2 justify-center items-center mt-2"
+          >
+            <p>Baixar recurso</p>
+            <Icon id="Download" size={16} strokeWidth={1} />
+          </button>
         </div>
       </div>
     </div>
@@ -127,17 +152,17 @@ const ResourceIsland = ({
   topic,
   year,
 }: Props) => {
-     const cardsFiltered = cards?.filter((cards) =>
-          cards.categories?.some((category) => category.slug === "guides")
-        );
-     const [filteredCardsSearch, setFilteredCardsSearch] = useState(cardsFiltered);
+  const cardsFiltered = cards?.filter((cards) =>
+    cards.categories?.some((category) => category.slug === "guides")
+  );
+  const [filteredCardsSearch, setFilteredCardsSearch] = useState(cardsFiltered);
 
   const filterCards = (term: string) => {
-     const filtered = cardsFiltered?.filter((card) =>
-       card.title.toLowerCase().includes(term.toLowerCase())
-     );
-     setFilteredCardsSearch(filtered);
-   };
+    const filtered = cardsFiltered?.filter((card) =>
+      card.title.toLowerCase().includes(term.toLowerCase())
+    );
+    setFilteredCardsSearch(filtered);
+  };
 
   const [filters, setFilters] = useState<Filters>({
     type: [],
@@ -196,6 +221,12 @@ const ResourceIsland = ({
     return matchesType && matchesTopic && matchesYear;
   });
 
+  const extractLinkToDownload = filteredCardsSearch
+    ?.map(
+      (card) => card?.extraProps?.find((item) => item.key === "link")?.value
+    )
+    .filter((value) => value !== undefined);
+  console.log(extractLinkToDownload);
   const itemsPerPage = 9;
   const {
     currentItems,
@@ -205,7 +236,7 @@ const ResourceIsland = ({
     handleNextPage,
     goToPage,
   } = usePagination(filteredCards ? filteredCards : [], itemsPerPage);
-  
+
   return (
     <div class="lg:container text-sm py-12 px-8 mb-40">
       <div class="space-y-10">
@@ -246,6 +277,7 @@ const ResourceIsland = ({
                       image={card.image || ""}
                       title={card.title}
                       tag={card.extraProps}
+                      link={extractLinkToDownload && extractLinkToDownload}
                     />
                   ))}
                 </div>

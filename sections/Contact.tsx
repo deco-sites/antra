@@ -14,9 +14,13 @@ export interface Props {
   options: string[];
 }
 
-export default function Contact(
-  { background, title, subtitle, social, options }: Props,
-) {
+export default function Contact({
+  background,
+  title,
+  subtitle,
+  social,
+  options,
+}: Props) {
   return (
     <div class="lg:container text-sm md:px-5 md:p-16 mb-40">
       <div class="space-y-10">
@@ -70,7 +74,9 @@ export default function Contact(
                   </div>
 
                   <div class="w-full flex flex-col gap-2">
-                    <label class="font-medium" for="sobrenome">Sobrenome</label>
+                    <label class="font-medium" for="sobrenome">
+                      Sobrenome
+                    </label>
                     <input
                       class="px-4 py-3 border border-gray-300 rounded-lg"
                       type="text"
@@ -88,12 +94,11 @@ export default function Contact(
                     id="ajuda"
                     name="ajuda"
                   >
-                    <option value="" disabled selected>Selecione</option>
+                    <option value="" disabled selected>
+                      Selecione
+                    </option>
                     {options.map((item, i) => (
-                      <option
-                        key={`${i}+${item}`}
-                        value={item}
-                      >
+                      <option key={`${i}+${item}`} value={item}>
                         {item}
                       </option>
                     ))}
@@ -118,12 +123,11 @@ export default function Contact(
                     id="mensagem"
                     name="mensagem"
                     placeholder="Escreva aqui..."
-                  >
-                  </textarea>
+                  ></textarea>
                 </div>
 
                 <button
-                  class="w-full py-3 text-white bg-pink-500 hover:bg-pink-600 rounded-lg"
+                  class="w-full py-3 text-white bg-pink-500 hover:bg-pink-600 rounded-lg transition duration-300"
                   type="submit"
                 >
                   Enviar

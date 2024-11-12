@@ -29,11 +29,11 @@ export default function Affiliates({
           <h2 class="text-4xl font-black leading-snug">{title}</h2>
           <span class="text-lg font-medium leading-snug">{description}</span>
           <button
-            class="w-[12rem] p-2 flex gap-2 items-center justify-center text-white rounded-md bg-pink-500 hover:bg-pink-600"
+            class="w-[12rem] p-2 flex gap-2 items-center justify-center text-white rounded-md bg-pink-500 hover:bg-pink-600 transition duration-300"
             href={button.href}
           >
             {button.text}
-            <Icon id="ArrowNorthEast" size={14} strokeWidth={1} />
+            <Icon id="ArrowNorthEast" size={12} strokeWidth={1} />
           </button>
         </div>
         <div class="grid grid-cols-2 md:grid-cols-5 gap-6 md:gap-10 items-center justify-center">

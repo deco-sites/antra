@@ -28,7 +28,7 @@ export interface Props {
   news: News[];
   title: string;
   info: Info;
-  allNews: BlogPost[] | null
+  allNews: BlogPost[] | null;
 }
 
 export default function FeaturedNewsIsland({
@@ -44,7 +44,7 @@ export default function FeaturedNewsIsland({
   const allNewsFiltered = allNews?.filter((news) =>
     news.categories?.some((category) => category.slug === "news")
   );
-  
+
   const handleTagClick = (tag: string) => {
     setSelectedTags((prev) =>
       prev.includes(tag) ? prev.filter((t) => t !== tag) : [...prev, tag]
@@ -108,7 +108,7 @@ export default function FeaturedNewsIsland({
                 height={274}
                 class="h-full w-full object-cover brightness-75"
                 sizes="(max-width: 640px) 100vw, 35vw"
-                src={mainNews?.image || ''}
+                src={mainNews?.image || ""}
                 alt={mainNews?.image}
                 decoding="async"
               />
@@ -125,7 +125,7 @@ export default function FeaturedNewsIsland({
               <a
                 href="/news"
                 class="absolute bottom-5 right-2 p-4 text-white flex items-center justify-center 
-                    rounded-full bg-pink-500 hover:bg-pink-600"
+                    rounded-full bg-pink-500 hover:bg-pink-600 transition duration-300"
               >
                 <Icon id="ArrowNorthEast" size={16} strokeWidth={1} />
               </a>

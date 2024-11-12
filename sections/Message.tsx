@@ -51,7 +51,7 @@ export default function Message({
             </div>
           </div>
 
-          <button class="mt-8 w-48 bg-pink-600 hover:bg-pink-700 text-white font-semibold py-3 rounded-lg transition duration-300">
+          <button class="mt-8 w-48 bg-pink-500 hover:bg-pink-600 text-white font-semibold py-3 rounded-lg transition duration-300">
             Conhecer a ANTRA
           </button>
         </div>

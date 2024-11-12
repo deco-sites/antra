@@ -11,7 +11,7 @@ export default function News({ title, news }: Props) {
     ?.filter((news) =>
       news.categories?.some((category) => category.slug === "news")
     )
-    .slice(1, 6);
+    .slice(1, 7);
 
   return (
     <div class="lg:container text-sm px-5 lg:p-16">

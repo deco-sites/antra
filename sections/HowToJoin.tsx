@@ -18,7 +18,7 @@ export default function HowToJoin() {
                 <p class="text-3xl font-semibold">Leia nosso Estatuto Social</p>
                 <a
                   href="/affiliates"
-                  class="p-3 text-white rounded-full bg-pink-500 hover:bg-pink-600"
+                  class="p-3 text-white rounded-full bg-pink-500 hover:bg-pink-600 transition duration-300"
                 >
                   <Icon id="ArrowNorthEast" size={16} strokeWidth={1} />
                 </a>
@@ -32,7 +32,7 @@ export default function HowToJoin() {
                 <p class="text-3xl font-semibold">Preencha nosso formulário</p>
                 <a
                   href="/affiliates"
-                  class="p-3 text-white rounded-full bg-pink-500 hover:bg-pink-600"
+                  class="p-3 text-white rounded-full bg-pink-500 hover:bg-pink-600 transition duration-300"
                 >
                   <Icon id="ArrowNorthEast" size={16} strokeWidth={1} />
                 </a>

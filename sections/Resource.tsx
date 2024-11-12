@@ -12,7 +12,7 @@ export interface Props {
 
 const Resource = ({ title, cards, description, type, topic, year }: Props) => {
   return (
-    <ResourceIsland 
+    <ResourceIsland
       title={title}
       cards={cards}
       description={description}

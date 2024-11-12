@@ -17,6 +17,10 @@
       {
         "key": "topic",
         "value": "Segurança Pública"
+      },
+      {
+        "key": "link",
+        "value": "https://google.com"
       }
     ],
     "image": "https://deco-sites-assets.s3.sa-east-1.amazonaws.com/antra/ae083df1-3a52-4f4d-a3a3-94b0f0f3033c/image.png",

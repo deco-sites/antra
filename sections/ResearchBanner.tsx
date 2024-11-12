@@ -30,7 +30,7 @@ function BannerMobile({ image, title }: Banner) {
       </div>
       <a
         href="/news"
-        class="absolute bottom-5 right-5 p-3 text-white rounded-full bg-pink-500 hover:bg-pink-600"
+        class="absolute bottom-5 right-5 p-3 text-white rounded-full bg-pink-500 hover:bg-pink-600 transition duration-300"
       >
         <Icon id="ArrowNorthEast" size={16} strokeWidth={1} />
       </a>
@@ -56,7 +56,7 @@ function BannerDesktop({ image, title }: Banner) {
       </div>
       <a
         href="/news"
-        class="absolute bottom-8 right-5 p-3 text-white rounded-full bg-pink-500 hover:bg-pink-600"
+        class="absolute bottom-8 right-5 p-3 text-white rounded-full bg-pink-500 hover:bg-pink-600 transition duration-300"
       >
         <Icon id="ArrowNorthEast" size={16} strokeWidth={1} />
       </a>

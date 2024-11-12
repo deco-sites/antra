@@ -30,6 +30,8 @@ export default {
       },
       colors: {
         "custom-gray": "#303030",
+        "pink-500": "#F45777",
+        "pink-600": "#9E133F",
       },
     },
     screens: {

@@ -100,7 +100,7 @@ export default function AllNewsIsland({ title, info, allNews }: Props) {
                 <a
                   href="/news"
                   class="absolute bottom-5 right-2 p-4 text-white flex items-center justify-center 
-                    rounded-full bg-pink-500 hover:bg-pink-600"
+                    rounded-full bg-pink-500 hover:bg-pink-600 transition duration-300"
                 >
                   <Icon id="ArrowNorthEast" size={16} strokeWidth={1} />
                 </a>
