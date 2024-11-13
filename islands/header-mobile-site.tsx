@@ -81,32 +81,28 @@ export const HeaderMobileSite = ({ logo, navigation }: Nav) => {
             {navigation?.links.map((link, index) => (
               <li key={`${link.label}-${index}`} className="relative">
                 <label
-                  onClick={() =>
-                    toggleSubmenu(index)}
+                  onClick={() => toggleSubmenu(index)}
                   className="text-base flex cursor-pointer items-center"
                 >
                   {link?.label}
 
-                  {link?.submenu && link?.submenu.length > 0 &&
-                      openMenuIndex === index
-                    ? (
-                      <Icon
-                        id="ChevronUp"
-                        size={16}
-                        strokeWidth={2}
-                        className="ml-2"
-                      />
-                    )
-                    : link?.submenu && link?.submenu.length > 0
-                    ? (
-                      <Icon
-                        id="ChevronDown"
-                        size={16}
-                        strokeWidth={2}
-                        className="ml-2"
-                      />
-                    )
-                    : null}
+                  {link?.submenu &&
+                  link?.submenu.length > 0 &&
+                  openMenuIndex === index ? (
+                    <Icon
+                      id="ChevronUp"
+                      size={16}
+                      strokeWidth={2}
+                      className="ml-2"
+                    />
+                  ) : link?.submenu && link?.submenu.length > 0 ? (
+                    <Icon
+                      id="ChevronDown"
+                      size={16}
+                      strokeWidth={2}
+                      className="ml-2"
+                    />
+                  ) : null}
                 </label>
 
                 {link.submenu && openMenuIndex === index && (

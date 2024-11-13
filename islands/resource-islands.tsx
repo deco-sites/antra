@@ -42,7 +42,7 @@ const Filter = ({
   selectedFilters,
 }: FilterProps) => {
   return (
-    <div class="flex flex-col gap-5">
+    <div class="hidden md:flex flex-col gap-5">
       <div class="flex flex-col gap-2">
         <h2>Tipo de recurso</h2>
         <div class="flex flex-wrap gap-2 w-full">
@@ -103,6 +103,116 @@ const Filter = ({
   );
 };
 
+const FilterMobile = ({
+  setFilterMobile,
+  type,
+  topic,
+  year,
+  onSavedFilter,
+  selectedFilters,
+}: any) => {
+  const [filters, setFilters] = useState({
+    type: [...selectedFilters.type],
+    topic: [...selectedFilters.topic],
+    year: [...selectedFilters.year],
+  });
+
+  const toggleFilter = (
+    filterType: "type" | "topic" | "year",
+    value: string
+  ) => {
+    setFilters((prevFilters) => {
+      const currentValues = prevFilters[filterType];
+      const newValues = currentValues.includes(value)
+        ? currentValues.filter((v) => v !== value)
+        : [...currentValues, value];
+      return { ...prevFilters, [filterType]: newValues };
+    });
+  };
+
+  const handleSavedAndClosed = () => {
+    onSavedFilter(filters);
+    setFilterMobile(false);
+  };
+
+  return (
+    <div className="fixed top-0 left-0 w-full h-full bg-white flex flex-col gap-5 overflow-y-auto z-50 px-8 py-10 md:hidden">
+      <div className="flex py-4 items-center justify-between">
+        <h2 className="text-xl font-semibold">Filtros</h2>
+        <button onClick={() => setFilterMobile(false)}>
+          <Icon id="XMark" size={24} strokeWidth={2} />
+        </button>
+      </div>
+
+      <div className="flex flex-col gap-5">
+        <h2 className="text-2xl font-semibold">Tipo de recurso</h2>
+        <div className="flex flex-wrap gap-2 w-full">
+          {type.map((item: string) => (
+            <button
+              key={item}
+              onClick={() => toggleFilter("type", item)}
+              className={`rounded-md badge badge-lg text-base border ${
+                filters.type.includes(item)
+                  ? "bg-gray-700 text-white"
+                  : "bg-transparent border-gray-500"
+              }`}
+            >
+              {item}
+            </button>
+          ))}
+        </div>
+      </div>
+
+      <div className="flex flex-col gap-5">
+        <h2 className="text-2xl font-semibold">Assunto</h2>
+        <div className="flex flex-wrap gap-2 w-full">
+          {topic.map((item: string) => (
+            <button
+              key={item}
+              onClick={() => toggleFilter("topic", item)}
+              className={`rounded-md badge badge-lg text-base border ${
+                filters.topic.includes(item)
+                  ? "bg-gray-700 text-white"
+                  : "bg-transparent border-gray-500"
+              }`}
+            >
+              {item}
+            </button>
+          ))}
+        </div>
+      </div>
+
+      <div className="flex flex-col gap-5 mb-8">
+        <h2 className="text-2xl font-semibold">Ano de publicação</h2>
+        <div className="flex flex-wrap gap-2 w-full">
+          {year.map((item: string) => (
+            <button
+              key={item}
+              onClick={() => toggleFilter("year", item)}
+              className={`rounded-md badge badge-lg text-base border ${
+                filters.year.includes(item)
+                  ? "bg-gray-700 text-white"
+                  : "bg-transparent border-gray-500"
+              }`}
+            >
+              {item}
+            </button>
+          ))}
+        </div>
+      </div>
+
+      <div>
+        <button
+          onClick={() => handleSavedAndClosed()}
+          className="p-2 bg-pink-500 text-base text-white rounded-md"
+        >
+          Salvar
+        </button>
+      </div>
+    </div>
+  );
+};
+
 const Card = ({ image, tag, title, link }: Card) => {
   const openNewWindow = (link: string[] | undefined) => {
     if (!link) return console.error("Vazio");
@@ -112,13 +222,13 @@ const Card = ({ image, tag, title, link }: Card) => {
 
   return (
     <div
-      class="relative w-full min-w-[230px] sm:w-[48%] md:w-[30%] lg:w-[24%] aspect-[320/450] bg-cover bg-center rounded-lg shadow-lg 
+      class="relative w-full min-w-[300px] md:min-w-[230px] sm:w-[48%] md:w-[30%] lg:w-[24%] aspect-[320/450] bg-cover bg-center rounded-lg shadow-lg 
            overflow-hidden transition-transform transform scale-100 hover:scale-105 hover:z-10"
       style={{ backgroundImage: `url(${image})` }}
     >
       <div class="absolute inset-0 bg-black bg-opacity-30 flex flex-col justify-between p-4 rounded-lg">
         <h3 class="text-xl lg:text-2xl font-normal text-white">{title}</h3>
-        <div>
+        <div class="flex md:flex-col justify-between items-center md:items-start">
           <div class="flex flex-wrap gap-2">
             {tag?.map((item, i) => {
               return item.key === "tag" ? (
@@ -157,6 +267,7 @@ const ResourceIsland = ({
     cards.categories?.some((category) => category.slug === "guides")
   );
   const [filteredCardsSearch, setFilteredCardsSearch] = useState(cardsFiltered);
+  const [filterMobile, setFilterMobile] = useState(false);
 
   const filterCards = (term: string) => {
     const filtered = cardsFiltered?.filter((card) =>
@@ -198,6 +309,10 @@ const ResourceIsland = ({
     });
   };
 
+  const onSavedFilter = (filters: Filters) => {
+    setFilters(filters);
+  };
+
   const filteredCards = filteredCardsSearch?.filter((card) => {
     const matchesType = filters.type.length
       ? filters.type.some((filterType) =>
@@ -216,7 +331,7 @@ const ResourceIsland = ({
       : true;
 
     const matchesYear = filters.year.length
-      ? filters.year.includes(card.date.slice(0, 4)) // Extrai o ano de "date"
+      ? filters.year.includes(card.date.slice(0, 4))
       : true;
 
     return matchesType && matchesTopic && matchesYear;
@@ -227,7 +342,7 @@ const ResourceIsland = ({
       (card) => card?.extraProps?.find((item) => item.key === "link")?.value
     )
     .filter((value) => value !== undefined);
-  console.log(extractLinkToDownload);
+
   const itemsPerPage = 9;
   const {
     currentItems,
@@ -240,32 +355,54 @@ const ResourceIsland = ({
 
   return (
     <div class="lg:container text-sm py-12 px-8 mb-40">
+      {filterMobile && (
+        <FilterMobile
+          setFilterMobile={setFilterMobile}
+          type={type}
+          topic={topic}
+          year={year}
+          onSavedFilter={onSavedFilter}
+          selectedFilters={filters}
+          filterCards={filterCards}
+        />
+      )}
       <div class="space-y-10">
         <div class="flex flex-col justify-center items-center md:items-start md:flex-row gap-24">
           <div class="flex flex-col md:w-[60%] max-w-[440px] gap-5">
             <h1 class="text-5xl">{title}</h1>
             <p class="text-lg font-normal text-gray-400">{description}</p>
-            <div className="relative">
-              <input
-                type="text"
-                placeholder="Pesquise aqui..."
-                className="w-full h-[40px] px-4 py-2 rounded-full border border-gray-300 pr-10"
-                onChange={(e: any) => filterCards(e.target.value)}
-              />
-              <Icon
-                id="Search"
-                size={18}
-                strokeWidth={2}
-                className="absolute right-3 top-1/2 transform -translate-y-1/2"
+
+            <div class="flex gap-5 w-full items-center">
+              <div className="relative w-full max-w-[457px]">
+                <input
+                  type="text"
+                  placeholder="Pesquise aqui..."
+                  className="w-full h-[40px] px-4 py-2 rounded-full border border-gray-300 pr-10"
+                  onChange={(e: any) => filterCards(e.target.value)}
+                />
+                <Icon
+                  id="Search"
+                  size={18}
+                  strokeWidth={2}
+                  className="absolute right-3 top-1/2 transform -translate-y-1/2"
+                />
+              </div>
+
+              <button
+                className="md:hidden"
+                onClick={() => setFilterMobile(true)}
+              >
+                <Icon id="FilterList" size={22} strokeWidth={2} />
+              </button>
+
+              <Filter
+                type={type}
+                topic={topic}
+                year={year}
+                onFilterChange={handleFilterChange}
+                selectedFilters={filters}
               />
             </div>
-            <Filter
-              type={type}
-              topic={topic}
-              year={year}
-              onFilterChange={handleFilterChange}
-              selectedFilters={filters}
-            />
           </div>
 
           <div class="w-full min-w-[850] flex flex-col items-center justify-center">

@@ -8,10 +8,10 @@ export interface Props {
   projects: BlogPost[] | null;
 }
 
-export default function ProjectsIsland ({ title, subtitle, projects }: Props)  {
-     const allProjectsFiltered = projects?.filter((news) =>
-          news.categories?.some((category) => category.slug === "projects")
-        );
+export default function ProjectsIsland({ title, subtitle, projects }: Props) {
+  const allProjectsFiltered = projects?.filter((news) =>
+    news.categories?.some((category) => category.slug === "projects")
+  );
   return (
     <div class="lg:container text-sm px-5 p-16">
       <div class="space-y-10">

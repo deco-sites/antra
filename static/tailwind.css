@@ -2920,11 +2920,11 @@ html {
 .min-w-\[157px\] {
   min-width: 157px;
 }
-.min-w-\[230px\] {
-  min-width: 230px;
-}
 .min-w-\[240px\] {
   min-width: 240px;
+}
+.min-w-\[300px\] {
+  min-width: 300px;
 }
 .min-w-\[400px\] {
   min-width: 400px;
@@ -3232,6 +3232,9 @@ html {
 }
 .overflow-x-auto {
   overflow-x: auto;
+}
+.overflow-y-auto {
+  overflow-y: auto;
 }
 .overflow-x-hidden {
   overflow-x: hidden;
@@ -4193,6 +4196,10 @@ html {
 
   .md\:w-full {
     width: 100%;
+  }
+
+  .md\:min-w-\[230px\] {
+    min-width: 230px;
   }
 
   .md\:max-w-\[1354px\] {
