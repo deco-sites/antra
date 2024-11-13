@@ -95,19 +95,17 @@ export const HeaderSite = ({ logo, navigation }: Nav) => {
 
                     <ul className="flex flex-col w-full gap-2">
                       {link.submenu.map((subItem, subIndex) => (
-                        <li
-                          key={subIndex}
-                          className="flex flex-col block px-4 py-2 cursor-pointer hover:bg-gray-100"
-                        >
+                        <li key={subIndex} className="">
                           <a
                             href={subItem?.url}
-                            className="text-base text-gray-700"
+                            className="flex flex-col block px-4 py-2 cursor-pointer hover:bg-gray-100 text-base text-gray-700"
                           >
                             {subItem?.label}
+
+                            <span className="text-xs text-gray-500">
+                              {subItem.subLabel}
+                            </span>
                           </a>
-                          <span className="text-xs text-gray-500">
-                            {subItem.subLabel}
-                          </span>
                         </li>
                       ))}
                     </ul>

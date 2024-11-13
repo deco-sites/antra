@@ -33,11 +33,11 @@ interface TagFilterProps {
 
 export function MainNewsCard({ mainNews }: MainNewsCardProps) {
   return (
-    <div class="relative w-full md:w-1/2 overflow-hidden rounded-2xl">
+    <div class="relative w-full md:w-2/3 overflow-hidden rounded-2xl">
       <Image
         width={667}
-        height={582}
-        class="h-full w-full min-h-[582px] object-cover brightness-75"
+        height={400}
+        class="w-full min-h-[582px] object-cover brightness-75"
         sizes="(max-width: 640px) 100vw, 45vw"
         src={mainNews?.image || ""}
         alt={mainNews?.image}
@@ -73,7 +73,7 @@ export function SecondaryNewsCard({ news }: SecondaryNewsCardProps) {
       <Image
         width={358}
         height={279}
-        class="w-full h-full min-h-[279px] object-cover z-10"
+        class="h-full min-h-[279px] object-cover z-10 rounded-2xl"
         sizes="(max-width: 640px) 100vw, 35vw"
         src={news?.image || ""}
         alt={news.image}
@@ -185,7 +185,7 @@ export default function FeaturedNewsIsland({
           {selectedTags.length > 0 ? (
             <></>
           ) : (
-            <div class="flex flex-col md:flex-row gap-5 justify-center">
+            <div class="flex flex-col md:flex-row gap-5 justify-center min-h-[582px]">
               <MainNewsCard mainNews={mainNewsData} />
 
               <div class="hidden md:flex flex-col gap-5 min-h-[582px] h-full">
