@@ -372,7 +372,7 @@ const ResourceIsland = ({
             <h1 class="text-5xl">{title}</h1>
             <p class="text-lg font-normal text-gray-400">{description}</p>
 
-            <div class="flex gap-5 w-full items-center">
+            <div class="flex md:flex-col gap-5 w-full items-center">
               <div className="relative w-full max-w-[457px]">
                 <input
                   type="text"

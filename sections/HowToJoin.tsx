@@ -17,7 +17,7 @@ export default function HowToJoin() {
               <div class="flex justify-between items-center">
                 <p class="text-3xl font-semibold">Leia nosso Estatuto Social</p>
                 <a
-                  href="/affiliates"
+                  href="/affiliation"
                   class="p-3 text-white rounded-full bg-pink-500 hover:bg-pink-600 transition duration-300"
                 >
                   <Icon id="ArrowNorthEast" size={16} strokeWidth={1} />
@@ -31,7 +31,7 @@ export default function HowToJoin() {
               <div class="flex justify-between items-center">
                 <p class="text-3xl font-semibold">Preencha nosso formulário</p>
                 <a
-                  href="/affiliates"
+                  href="/affiliation"
                   class="p-3 text-white rounded-full bg-pink-500 hover:bg-pink-600 transition duration-300"
                 >
                   <Icon id="ArrowNorthEast" size={16} strokeWidth={1} />
