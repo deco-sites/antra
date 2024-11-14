@@ -5,12 +5,12 @@ import Icon from "site/components/ui/Icon.tsx";
 import { usePagination } from "site/components/ui/Pagination.tsx";
 
 export interface Props {
-  affiliate: BlogPost[] | null;
+  affiliate: BlogPost[] | undefined;
 }
 
 const CardAffiliate = (props: any) => {
   return (
-    <a href="/affiliation">
+    <a href="/affiliation" class="w-full max-w-[350px]">
       <div class="w-full max-w-[350px] px-6 py-8 flex flex-col gap-5 rounded-lg shadow-lg border border-gray-200">
         <div class="flex justify-start">
           <Image
@@ -23,7 +23,6 @@ const CardAffiliate = (props: any) => {
             loading="lazy"
           />
         </div>
-        <h3 class="text-3xl font-bold">{props.name}</h3>
         <p class="text-base font-medium">{props.description}</p>
         <div class="flex justify-end">
           <a href="/affiliation" class="p-3 text-pink-500 hover:text-pink-700">
@@ -49,7 +48,7 @@ export default function AllAffiliatesIsland({ affiliate }: Props) {
   return (
     <div class="lg:container text-sm px-5 p-16 mb-40">
       <div class="space-y-10">
-        <div class="flex justify-center items-center gap-5">
+        <div class="flex flex-col md:flex-row justify-center items-center gap-5">
           <div>
             <label class="block text-sm font-medium text-gray-700 mb-1">
               Região
@@ -106,7 +105,7 @@ export default function AllAffiliatesIsland({ affiliate }: Props) {
           {currentItems?.map((item, i) => (
             <CardAffiliate
               key={`${i}_${item.title}`}
-              description={item.description}
+              description={item.excerpt}
               image={item.image}
               name={item.title}
             />

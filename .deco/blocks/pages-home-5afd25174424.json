@@ -40,16 +40,11 @@
       "__resolveType": "website/sections/Rendering/Lazy.tsx",
       "section": {
         "__resolveType": "site/sections/News.tsx",
-        "title": "Últimas notícias",
-        "posts": {
-          "__resolveType": "blog/loaders/BlogpostList.ts",
-          "sortBy": "date_desc",
-          "count": 999
-        },
+        "title": "Ultimas notícias",
         "news": {
           "__resolveType": "blog/loaders/BlogpostList.ts",
-          "sortBy": "date_desc",
-          "count": 99
+          "count": 99,
+          "sortBy": "date_desc"
         }
       }
     },
