@@ -3,6 +3,7 @@
 // This file is automatically updated during development when running `dev.ts`.
 
 import * as $_app from "./routes/_app.tsx";
+import * as $affiliates_island from "./islands/affiliates-island.tsx";
 import * as $all_affiliates_island from "./islands/all-affiliates-island.tsx";
 import * as $all_news from "./islands/all-news.tsx";
 import * as $all_research_pagination from "./islands/all-research-pagination.tsx";
@@ -11,6 +12,8 @@ import * as $featured_news from "./islands/featured-news.tsx";
 import * as $footer_island from "./islands/footer-island.tsx";
 import * as $header_mobile_site from "./islands/header-mobile-site.tsx";
 import * as $header_site from "./islands/header-site.tsx";
+import * as $history_island from "./islands/history-island.tsx";
+import * as $our_board_island from "./islands/our-board-island.tsx";
 import * as $projects_island from "./islands/projects-island.tsx";
 import * as $projects_pagination from "./islands/projects-pagination.tsx";
 import * as $resource_islands from "./islands/resource-islands.tsx";
@@ -26,6 +29,7 @@ const manifest = {
     "./routes/_app.tsx": $_app,
   },
   islands: {
+    "./islands/affiliates-island.tsx": $affiliates_island,
     "./islands/all-affiliates-island.tsx": $all_affiliates_island,
     "./islands/all-news.tsx": $all_news,
     "./islands/all-research-pagination.tsx": $all_research_pagination,
@@ -34,6 +38,8 @@ const manifest = {
     "./islands/footer-island.tsx": $footer_island,
     "./islands/header-mobile-site.tsx": $header_mobile_site,
     "./islands/header-site.tsx": $header_site,
+    "./islands/history-island.tsx": $history_island,
+    "./islands/our-board-island.tsx": $our_board_island,
     "./islands/projects-island.tsx": $projects_island,
     "./islands/projects-pagination.tsx": $projects_pagination,
     "./islands/resource-islands.tsx": $resource_islands,

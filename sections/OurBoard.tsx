@@ -1,6 +1,5 @@
 import type { ImageWidget } from "apps/admin/widgets.ts";
-import Image from "apps/website/components/Image.tsx";
-import Icon from "site/components/ui/Icon.tsx";
+import OurBoardIsland from "site/islands/our-board-island.tsx";
 
 interface Member {
   name: string;
@@ -14,33 +13,5 @@ export interface Props {
 }
 
 export default function OurBoard({ title, members }: Props) {
-  return (
-    <div className="lg:container text-sm mb-10">
-      <div className="space-y-10 px-6 md:px-24 py-8 md:py-24">
-        <div class="w-full flex flex-col gap-8">
-          <h1 class="text-4xl md:text-5xl font-semibold">{title}</h1>
-          <div className="flex flex-col md:flex-row gap-8">
-            {members.map((member, index) => (
-              <div class="flex flex-col gap-6">
-                <Image
-                  className="w-full rounded-2xl"
-                  width={380}
-                  height={274}
-                  src={member.image}
-                  alt={member.image}
-                  decoding="async"
-                  loading="lazy"
-                />
-                <div class="md:px-6">
-                  <p class="text-xl font-semibold">{member.name}</p>
-                  <p class="text-lg">{member.role}</p>
-                </div>
-                <p class="md:px-6">{member.description}</p>
-              </div>
-            ))}
-          </div>
-        </div>
-      </div>
-    </div>
-  );
+  return <OurBoardIsland title={title} members={members} />;
 }
