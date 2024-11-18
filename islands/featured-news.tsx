@@ -28,7 +28,9 @@ interface SecondaryNewsCardProps {
 interface TagFilterProps {
   tags: string[];
   selectedTags: string[];
-  onTagClick: (tag: string) => void;
+  onTagClick: (tag: any) => void;
+  setTagFilterMobile?: any;
+  onSavedFilter?: any;
 }
 
 export function MainNewsCard({ mainNews }: MainNewsCardProps) {
@@ -122,6 +124,67 @@ export function TagFilter({ tags, selectedTags, onTagClick }: TagFilterProps) {
   );
 }
 
+const TagFilterMobile = ({
+  tags,
+  selectedTags = [],
+  onTagClick,
+  setTagFilterMobile,
+}: TagFilterProps) => {
+  const [filters, setFilters] = useState<string[]>([...selectedTags]); // Inicializa com os tags selecionados
+
+  const toggleFilter = (value: string) => {
+    setFilters(
+      (prevFilters) =>
+        prevFilters.includes(value)
+          ? prevFilters.filter((v) => v !== value) // Remove tag
+          : [...prevFilters, value] // Adiciona tag
+    );
+  };
+
+  const handleSavedAndClosed = () => {
+    onTagClick(filters); // Envia os filtros selecionados
+    setTagFilterMobile(false); // Fecha o modal
+  };
+
+  return (
+    <div className="fixed top-0 left-0 w-full h-full bg-white flex flex-col gap-5 overflow-y-auto z-50 px-8 py-10 md:hidden">
+      <div className="flex py-4 items-center justify-between">
+        <h2 className="text-xl font-semibold">Filtros</h2>
+        <button onClick={() => setTagFilterMobile(false)}>
+          <Icon id="XMark" size={24} strokeWidth={2} />
+        </button>
+      </div>
+
+      <div className="flex flex-col gap-5">
+        <h2 className="text-2xl font-semibold">Tipo de recurso</h2>
+        <div className="flex flex-wrap gap-2 w-full">
+          {tags.map((item) => (
+            <button
+              key={item}
+              onClick={() => toggleFilter(item)}
+              className={`rounded-md badge badge-lg text-base border ${
+                filters.includes(item)
+                  ? "bg-gray-700 text-white"
+                  : "bg-transparent border-gray-500"
+              }`}
+            >
+              {item}
+            </button>
+          ))}
+        </div>
+      </div>
+      <div>
+        <button
+          onClick={handleSavedAndClosed}
+          className="p-2 bg-pink-500 text-base text-white rounded-md"
+        >
+          Salvar
+        </button>
+      </div>
+    </div>
+  );
+};
+
 export default function FeaturedNewsIsland({
   tags,
   title,
@@ -129,6 +192,7 @@ export default function FeaturedNewsIsland({
   allNews,
 }: Props) {
   const [selectedTags, setSelectedTags] = useState<string[]>([]);
+  const [tagFilterMobile, setTagFilterMobile] = useState(false);
 
   const allNewsFiltered = allNews?.filter((news) =>
     news.categories?.some((category) => category.slug === "news")
@@ -153,11 +217,23 @@ export default function FeaturedNewsIsland({
     );
   };
 
+  const onSavedFilter = (filters: string[]) => {
+    setSelectedTags(filters);
+  };
+
   return (
     <>
+      {tagFilterMobile && (
+        <TagFilterMobile
+          tags={tags}
+          selectedTags={selectedTags}
+          onTagClick={onSavedFilter}
+          setTagFilterMobile={setTagFilterMobile}
+        />
+      )}
       <div class="lg:container text-sm px-5 p-16">
         <div class="space-y-10">
-          <div class="flex gap-5 w-full items-center">
+          <div class="flex gap-5 w-full items-center justify-between">
             <div className="relative w-full max-w-[457px]">
               <input
                 type="text"
@@ -172,7 +248,10 @@ export default function FeaturedNewsIsland({
               />
             </div>
 
-            <button className="md:hidden">
+            <button
+              className="md:hidden"
+              onClick={() => setTagFilterMobile(true)}
+            >
               <Icon id="FilterList" size={22} strokeWidth={2} />
             </button>
 

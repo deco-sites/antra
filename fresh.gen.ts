@@ -22,6 +22,8 @@ import * as $slider_island from "./islands/slider-island.tsx";
 import * as $text1_history from "./islands/text1-history.tsx";
 import * as $text2_history from "./islands/text2-history.tsx";
 import * as $text3_history from "./islands/text3-history.tsx";
+import * as $what_we_do_island from "./islands/what-we-do-island.tsx";
+import * as $who_are_we_island from "./islands/who-are-we-island.tsx";
 import { type Manifest } from "$fresh/server.ts";
 
 const manifest = {
@@ -48,6 +50,8 @@ const manifest = {
     "./islands/text1-history.tsx": $text1_history,
     "./islands/text2-history.tsx": $text2_history,
     "./islands/text3-history.tsx": $text3_history,
+    "./islands/what-we-do-island.tsx": $what_we_do_island,
+    "./islands/who-are-we-island.tsx": $who_are_we_island,
   },
   baseUrl: import.meta.url,
 } satisfies Manifest;

@@ -1,4 +1,4 @@
-import { useEffect, useRef } from "preact/hooks";
+import { useEffect, useRef, useState } from "preact/hooks";
 import Image from "apps/website/components/Image.tsx";
 import { ImageWidget } from "apps/admin/widgets.ts";
 import { Text1 } from "site/islands/text1-history.tsx";
@@ -10,15 +10,26 @@ interface Props {
 }
 export default function HistoryIsland({ image1, image2 }: Props) {
   const boardRef = useRef<HTMLDivElement>(null);
-  const params = new URLSearchParams(window.location.search);
+  const [query, setQuery] = useState(window.location.search);
+
   useEffect(() => {
+    const params = new URLSearchParams(window.location.search);
     if (params.get("section") === "historia" && boardRef.current) {
       boardRef.current.scrollIntoView({ behavior: "smooth" });
     }
-  }, [params]);
+  }, [query]);
+
+  useEffect(() => {
+    const handleUrlChange = () => setQuery(window.location.search);
+
+    window.addEventListener("popstate", handleUrlChange);
+    return () => {
+      window.removeEventListener("popstate", handleUrlChange);
+    };
+  }, []);
 
   return (
-    <div className="lg:container text-sm mb-40">
+    <div ref={boardRef} className="lg:container text-sm mb-40">
       <div className="space-y-10">
         <div class="px-6 flex flex-col items-center gap-8">
           <div class="w-full max-w-[850px] flex flex-col">

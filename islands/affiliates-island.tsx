@@ -32,7 +32,7 @@ export default function AffiliatesIsland({
   }, []);
 
   return (
-    <div class="lg:container lg:p-16 text-sm py-8 lg:py-20 px-5">
+    <div ref={boardRef} class="lg:container lg:p-16 text-sm py-8 px-5">
       <div class="space-y-10">
         <div class="flex w-full md:w-[350px] flex-col gap-4 justify-center">
           <h2 class="text-4xl font-black leading-snug">{title}</h2>
