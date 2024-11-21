@@ -50,11 +50,13 @@ const Filter = ({
             <button
               key={item}
               onClick={() => onFilterChange("type", item)}
-              class={`badge badge-lg text-xs border ${
-                selectedFilters.type.includes(item)
-                  ? "bg-gray-700 text-white"
-                  : "bg-transparent border-gray-500"
-              }`}
+              class={`badge badge-lg text-xs border border-gray-500 
+                hover:bg-custom-gray hover:text-white hover:border-white 
+                ${
+                  selectedFilters.type.includes(item)
+                    ? "bg-gray-700 text-white"
+                    : "bg-white text-gray-700"
+                }`}
             >
               {item}
             </button>
@@ -69,11 +71,13 @@ const Filter = ({
             <button
               key={item}
               onClick={() => onFilterChange("topic", item)}
-              class={`badge badge-lg text-xs border ${
-                selectedFilters.topic.includes(item)
-                  ? "bg-gray-700 text-white"
-                  : "bg-transparent border-gray-500"
-              }`}
+              class={`badge badge-lg text-xs border border-gray-500 
+                hover:bg-custom-gray hover:text-white hover:border-white 
+                ${
+                  selectedFilters.type.includes(item)
+                    ? "bg-gray-700 text-white"
+                    : "bg-white text-gray-700"
+                }`}
             >
               {item}
             </button>
@@ -88,11 +92,13 @@ const Filter = ({
             <button
               key={item}
               onClick={() => onFilterChange("year", item)}
-              class={`badge badge-lg text-xs border ${
-                selectedFilters.year.includes(item)
-                  ? "bg-gray-700 text-white"
-                  : "bg-transparent border-gray-500"
-              }`}
+              class={`badge badge-lg text-xs border border-gray-500 
+                hover:bg-custom-gray hover:text-white hover:border-white 
+                ${
+                  selectedFilters.type.includes(item)
+                    ? "bg-gray-700 text-white"
+                    : "bg-white text-gray-700"
+                }`}
             >
               {item}
             </button>
@@ -234,7 +240,7 @@ const Card = ({ image, tag, title, link }: Card) => {
               return item.key === "tag" ? (
                 <div
                   class="badge badge-lg text-xs border border-white text-white bg-transparent 
-                  hover:bg-custom-gray hover:text-white hover:border-white"
+                  hover:bg-white hover:text-custom-gray hover:border-white"
                   key={i}
                 >
                   {item.value}

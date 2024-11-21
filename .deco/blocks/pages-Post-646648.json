@@ -18,6 +18,11 @@
           "__resolveType": "website/functions/requestToParam.ts",
           "param": "slug"
         }
+      },
+      "relatedPosts": {
+        "__resolveType": "blog/loaders/BlogpostList.ts",
+        "sortBy": "date_desc",
+        "count": 999
       }
     },
     {

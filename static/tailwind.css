@@ -3643,6 +3643,9 @@ html {
 .pb-10 {
   padding-bottom: 2.5rem;
 }
+.pb-32 {
+  padding-bottom: 8rem;
+}
 .pb-4 {
   padding-bottom: 1rem;
 }
@@ -4081,6 +4084,14 @@ html {
 .hover\:bg-pink-600:hover {
   --tw-bg-opacity: 1;
   background-color: rgb(158 19 63 / var(--tw-bg-opacity));
+}
+.hover\:bg-white:hover {
+  --tw-bg-opacity: 1;
+  background-color: rgb(255 255 255 / var(--tw-bg-opacity));
+}
+.hover\:text-custom-gray:hover {
+  --tw-text-opacity: 1;
+  color: rgb(48 48 48 / var(--tw-text-opacity));
 }
 .hover\:text-gray-200:hover {
   --tw-text-opacity: 1;
