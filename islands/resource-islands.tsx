@@ -74,7 +74,7 @@ const Filter = ({
               class={`badge badge-lg text-xs border border-gray-500 
                 hover:bg-custom-gray hover:text-white hover:border-white 
                 ${
-                  selectedFilters.type.includes(item)
+                  selectedFilters.topic.includes(item)
                     ? "bg-gray-700 text-white"
                     : "bg-white text-gray-700"
                 }`}
@@ -95,7 +95,7 @@ const Filter = ({
               class={`badge badge-lg text-xs border border-gray-500 
                 hover:bg-custom-gray hover:text-white hover:border-white 
                 ${
-                  selectedFilters.type.includes(item)
+                  selectedFilters.year.includes(item)
                     ? "bg-gray-700 text-white"
                     : "bg-white text-gray-700"
                 }`}
