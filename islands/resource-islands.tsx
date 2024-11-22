@@ -220,7 +220,8 @@ const FilterMobile = ({
 };
 
 const Card = ({ image, tag, title, link }: Card) => {
-  const extractLinkToDownload = link.find((item) => item.key === "link")?.value || '';
+  const extractLinkToDownload =
+    link.find((item) => item.key === "link")?.value || "";
 
   const openNewWindow = (link: string | undefined) => {
     if (!link) return console.error("Vazio");
@@ -262,7 +263,6 @@ const Card = ({ image, tag, title, link }: Card) => {
     </div>
   );
 };
-
 
 const ResourceIsland = ({
   title,
@@ -355,7 +355,7 @@ const ResourceIsland = ({
     handleNextPage,
     goToPage,
   } = usePagination(filteredCards ? filteredCards : [], itemsPerPage);
-console.log(currentItems)
+  console.log(currentItems);
   return (
     <div class="lg:container text-sm py-12 px-8 mb-40">
       {filterMobile && (
