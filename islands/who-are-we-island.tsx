@@ -22,14 +22,14 @@ export default function WhoAreWeIsland({
     if (params.get("section") === "quem-somos" && boardRef.current) {
       boardRef.current.scrollIntoView({ behavior: "smooth" });
     }
-  }, [window.location.search]);
+  }, []);
 
   const handleSetClick = (link: string) => {
-    const redirects: Record<string, string> = {
-      "O que fazemos": "oque-fazemos",
-      Diretoria: "diretoria",
-      Afiliadas: "afiliadas",
-      História: "historia",
+    const redirects: Record<string, string[]> = {
+      "O que fazemos": ["oque-fazemos", "WhoAreWe"],
+      Diretoria: ["diretoria", "OurBoard"],
+      Afiliadas: ["afiliadas", "Affiliates"],
+      História: ["historia", "History"],
     };
 
     const redirect = redirects[link];
@@ -40,9 +40,19 @@ export default function WhoAreWeIsland({
     }
 
     const params = new URLSearchParams(window.location.search);
-    params.set("section", redirect);
+    params.set("section", redirect[0]);
     const newUrl = `${window.location.pathname}?${params.toString()}`;
     window.history.pushState({}, "", newUrl);
+    const allElements = document.querySelectorAll(`[data-manifest-key]`);
+
+    const sectionElement = Array.from(allElements).find((el) => {
+      const key = el.getAttribute('data-manifest-key') || '';
+      return key.includes(redirect[1]);
+    });
+
+    if (sectionElement) {
+      sectionElement.scrollIntoView({ behavior: "smooth" });
+    }
   };
 
   return (

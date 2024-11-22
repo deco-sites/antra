@@ -8,7 +8,7 @@ export interface Card {
   title: string;
   image: ImageWidget;
   tag: ExtraProps[] | undefined;
-  link: string[] | undefined;
+  link: ExtraProps[];
 }
 
 interface FilterProps {
@@ -220,10 +220,12 @@ const FilterMobile = ({
 };
 
 const Card = ({ image, tag, title, link }: Card) => {
-  const openNewWindow = (link: string[] | undefined) => {
+  const extractLinkToDownload = link.find((item) => item.key === "link")?.value || '';
+
+  const openNewWindow = (link: string | undefined) => {
     if (!link) return console.error("Vazio");
 
-    globalThis.open(link[0], "_blank");
+    globalThis.open(link, "_blank");
   };
 
   return (
@@ -249,7 +251,7 @@ const Card = ({ image, tag, title, link }: Card) => {
             })}
           </div>
           <button
-            onClick={() => openNewWindow(link)}
+            onClick={() => openNewWindow(extractLinkToDownload)}
             class="flex bg-white rounded-lg p-2 gap-2 justify-center items-center mt-2"
           >
             <p>Baixar recurso</p>
@@ -260,6 +262,7 @@ const Card = ({ image, tag, title, link }: Card) => {
     </div>
   );
 };
+
 
 const ResourceIsland = ({
   title,
@@ -343,12 +346,6 @@ const ResourceIsland = ({
     return matchesType && matchesTopic && matchesYear;
   });
 
-  const extractLinkToDownload = filteredCardsSearch
-    ?.map(
-      (card) => card?.extraProps?.find((item) => item.key === "link")?.value
-    )
-    .filter((value) => value !== undefined);
-
   const itemsPerPage = 9;
   const {
     currentItems,
@@ -358,7 +355,7 @@ const ResourceIsland = ({
     handleNextPage,
     goToPage,
   } = usePagination(filteredCards ? filteredCards : [], itemsPerPage);
-
+console.log(currentItems)
   return (
     <div class="lg:container text-sm py-12 px-8 mb-40">
       {filterMobile && (
@@ -421,7 +418,7 @@ const ResourceIsland = ({
                       image={card.image || ""}
                       title={card.title}
                       tag={card.extraProps}
-                      link={extractLinkToDownload && extractLinkToDownload}
+                      link={card.extraProps}
                     />
                   ))}
                 </div>

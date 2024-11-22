@@ -33,7 +33,8 @@ export interface Nav {
 export const HeaderMobileSite = ({ logo, navigation }: Nav) => {
   const [openMenuIndex, setOpenMenuIndex] = useState(null);
 
-  const toggleSubmenu = (index: any) => {
+  const toggleSubmenu = (link: any, index: any) => {
+    console.log(link);
     setOpenMenuIndex(openMenuIndex === index ? null : index);
   };
 
@@ -80,30 +81,38 @@ export const HeaderMobileSite = ({ logo, navigation }: Nav) => {
           <ul className="menu px-[30px]">
             {navigation?.links.map((link, index) => (
               <li key={`${link.label}-${index}`} className="relative">
-                <label
-                  onClick={() => toggleSubmenu(index)}
-                  className="text-base flex cursor-pointer items-center"
-                >
-                  {link?.label}
+                {link?.submenu && link?.submenu.length > 0 ? (
+                  <label
+                    onClick={() => toggleSubmenu(link, index)}
+                    className="text-base flex cursor-pointer items-center"
+                  >
+                    {link?.label}
 
-                  {link?.submenu &&
-                  link?.submenu.length > 0 &&
-                  openMenuIndex === index ? (
-                    <Icon
-                      id="ChevronUp"
-                      size={16}
-                      strokeWidth={2}
-                      className="ml-2"
-                    />
-                  ) : link?.submenu && link?.submenu.length > 0 ? (
-                    <Icon
-                      id="ChevronDown"
-                      size={16}
-                      strokeWidth={2}
-                      className="ml-2"
-                    />
-                  ) : null}
-                </label>
+                    {link?.submenu &&
+                    link?.submenu.length > 0 &&
+                    openMenuIndex === index ? (
+                      <Icon
+                        id="ChevronUp"
+                        size={16}
+                        strokeWidth={2}
+                        className="ml-2"
+                      />
+                    ) : link?.submenu && link?.submenu.length > 0 ? (
+                      <Icon
+                        id="ChevronDown"
+                        size={16}
+                        strokeWidth={2}
+                        className="ml-2"
+                      />
+                    ) : null}
+                  </label>
+                ) : (
+                  <label className="text-base flex cursor-pointer items-center">
+                    <a href={link?.url} className="text-base text-gray-700">
+                      {link?.label}
+                    </a>
+                  </label>
+                )}
 
                 {link.submenu && openMenuIndex === index && (
                   <ul

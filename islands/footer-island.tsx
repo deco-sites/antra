@@ -85,7 +85,7 @@ export default function FooterIsland({
       const email = emailInput.value;
 
       const url =
-        "https://script.google.com/macros/s/AKfycbwZSfvnZ8K8U_LJ0jXlbPhmKds5l71psgacm_N9YeAyvSAhocOuH6mc378iPYSl3c9K/exec";
+        "https://script.google.com/macros/s/AKfycbwqnjxHoQGTmb0LHr4NUeLFPfxabVfuubEbpRqQpog6qmLxPNQZ5oqVr--UaRPowrof/exec";
 
       try {
         const response = await fetch(url, {

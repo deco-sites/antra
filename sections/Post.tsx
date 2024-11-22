@@ -77,7 +77,6 @@ const RelatedPosts = ({ relatedPosts, extraProps }: any) => {
   );
 
   const relatedPostsFilter = filteredPosts?.slice(0, 3) || [];
-  console.log("tagLa: ", relatedPostsFilter);
 
   return (
     <div class="pb-32">
