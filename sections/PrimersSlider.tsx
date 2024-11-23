@@ -26,8 +26,8 @@ function Card({ image, title, tag }: SlideProps) {
           {tag?.map((item, i) => {
             return item.key === "tag" ? (
               <div
-                className="badge badge-lg text-xs border border-white text-white bg-transparent
-                hover:bg-custom-gray hover:text-white hover:border-white"
+                className="badge badge-lg text-xs border border-white text-white bg-transparent 
+                  hover:bg-white hover:text-custom-gray hover:border-white"
                 key={i}
               >
                 {item.value}
