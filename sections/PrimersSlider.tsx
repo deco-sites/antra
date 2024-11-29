@@ -10,6 +10,7 @@ interface SlideProps {
 }
 
 interface SliderProps {
+  title: string;
   slides: BlogPost[] | null;
 }
 
@@ -40,7 +41,7 @@ function Card({ image, title, tag }: SlideProps) {
   );
 }
 
-function PrimersSlider({ slides }: SliderProps) {
+function PrimersSlider({ slides, title }: SliderProps) {
   const guidesFiltered = slides?.filter((slide) =>
     slide.categories?.some((category) => category.slug === "guides")
   );
@@ -48,7 +49,7 @@ function PrimersSlider({ slides }: SliderProps) {
     <div class="lg:container lg:p-16 w-full text-sm py-10 lg:py-24 overflow-visible">
       <div class="space-y-8 lg:w-1/2 mb-8 px-5">
         <h2 class="text-4xl font-bold leading-snug text-gray-800">
-          Cartilhas e manuais
+          {title}
         </h2>
       </div>
 

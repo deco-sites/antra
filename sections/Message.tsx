@@ -9,6 +9,7 @@ export interface Props {
   position: string;
   icon: ImageWidget;
   image?: ImageWidget;
+  titlebutton: string
 }
 
 export default function Message({
@@ -18,6 +19,7 @@ export default function Message({
   position,
   image,
   icon,
+  titlebutton
 }: Props) {
   return (
     <div class="lg:max-h-[880px] bg-[#0459C5] flex flex-col md:flex-row justify-between items-center relative">
@@ -52,7 +54,7 @@ export default function Message({
           </div>
 
           <button class="mt-8 w-48 bg-pink-500 hover:bg-pink-600 text-white font-semibold py-3 rounded-lg transition duration-300">
-            Conhecer a ANTRA
+            {titlebutton}
           </button>
         </div>
       </div>

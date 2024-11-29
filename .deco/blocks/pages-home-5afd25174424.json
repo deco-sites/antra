@@ -1,130 +1,275 @@
 {
   "name": "Home",
   "path": "/",
-  "sections": [
-    {
-      "__resolveType": "website/sections/Rendering/Lazy.tsx",
-      "section": {
-        "__resolveType": "Header-Antra"
-      }
-    },
-    {
-      "__resolveType": "website/sections/Rendering/Lazy.tsx",
-      "section": {
-        "__resolveType": "site/sections/Main.tsx",
-        "title": "Como acessar o SUS para questões de transição?",
-        "image": "https://deco-sites-assets.s3.sa-east-1.amazonaws.com/antra/3d85921d-54d1-47db-8500-34b8e34c996a/image1.png",
-        "description": "Constante somos procuradas sobre dúvidas em relação para acesso ao processo transexualizador do SUS e sobre quais procedimentos temos garantido o direito, além do funcionamento e fluxo de atendimento.",
-        "link": "/",
-        "items": [
+  "sections": {
+    "__resolveType": "website/flags/multivariate.ts",
+    "variants": [
+      {
+        "value": [
           {
-            "image": "https://deco-sites-assets.s3.sa-east-1.amazonaws.com/antra/3d85921d-54d1-47db-8500-34b8e34c996a/image1.png",
-            "title": "Como acessar o SUS para questões de transição?",
-            "description": "Constante somos procuradas sobre dúvidas em relação para acesso ao processo transexualizador do SUS e sobre quais procedimentos temos garantido o direito, além do funcionamento e fluxo de atendimento.",
-            "link": "/"
+            "__resolveType": "website/sections/Rendering/Lazy.tsx",
+            "section": {
+              "__resolveType": "Header-Antra"
+            }
           },
           {
-            "title": "Encontre locais de apoio na sua área",
-            "link": "/",
-            "image": "https://deco-sites-assets.s3.sa-east-1.amazonaws.com/antra/2144ad25-3f33-4076-b964-73d0961788e7/image2.png"
+            "__resolveType": "website/sections/Rendering/Lazy.tsx",
+            "section": {
+              "__resolveType": "site/sections/Main.tsx",
+              "title": "Como acessar o SUS para questões de transição?",
+              "image": "https://deco-sites-assets.s3.sa-east-1.amazonaws.com/antra/3d85921d-54d1-47db-8500-34b8e34c996a/image1.png",
+              "description": "Constante somos procuradas sobre dúvidas em relação para acesso ao processo transexualizador do SUS e sobre quais procedimentos temos garantido o direito, além do funcionamento e fluxo de atendimento.",
+              "link": "/",
+              "items": [
+                {
+                  "image": "https://deco-sites-assets.s3.sa-east-1.amazonaws.com/antra/3d85921d-54d1-47db-8500-34b8e34c996a/image1.png",
+                  "title": "Como acessar o SUS para questões de transição?",
+                  "description": "Constante somos procuradas sobre dúvidas em relação para acesso ao processo transexualizador do SUS e sobre quais procedimentos temos garantido o direito, além do funcionamento e fluxo de atendimento.",
+                  "link": "/"
+                },
+                {
+                  "title": "Encontre locais de apoio na sua área",
+                  "link": "/",
+                  "image": "https://deco-sites-assets.s3.sa-east-1.amazonaws.com/antra/2144ad25-3f33-4076-b964-73d0961788e7/image2.png"
+                }
+              ],
+              "main": {
+                "__resolveType": "blog/loaders/BlogpostList.ts",
+                "sortBy": "date_desc",
+                "count": 99
+              }
+            }
+          },
+          {
+            "__resolveType": "website/sections/Rendering/Lazy.tsx",
+            "section": {
+              "__resolveType": "site/sections/News.tsx",
+              "title": "Latest news",
+              "news": {
+                "__resolveType": "blog/loaders/BlogpostList.ts",
+                "count": 99,
+                "sortBy": "date_desc"
+              }
+            }
+          },
+          {
+            "__resolveType": "website/sections/Rendering/Lazy.tsx",
+            "section": {
+              "__resolveType": "site/sections/Affiliates.tsx",
+              "title": "Our affiliates",
+              "description": "We dedicate it to each activist and grassroots movement that joins this fight.",
+              "button": {
+                "href": "/",
+                "text": "Get to know them all",
+                "alt": "Get to know them all"
+              },
+              "logos": [
+                "https://deco-sites-assets.s3.sa-east-1.amazonaws.com/antra/d05dfedc-9dd2-41d0-aa92-27b4afa3a5df/logo1.png",
+                "https://deco-sites-assets.s3.sa-east-1.amazonaws.com/antra/66d13c69-5f19-4262-ba58-a85d6f46aa65/logo2.png",
+                "https://deco-sites-assets.s3.sa-east-1.amazonaws.com/antra/6249c15b-f82c-4706-8dd6-f14f12d7e7e3/logo3.png",
+                "https://deco-sites-assets.s3.sa-east-1.amazonaws.com/antra/5b231f27-409f-49c3-a674-fa982bfb75ef/logo4.png",
+                "https://deco-sites-assets.s3.sa-east-1.amazonaws.com/antra/72dfc297-cf41-4589-a585-26e11477e438/logo5.png",
+                "https://deco-sites-assets.s3.sa-east-1.amazonaws.com/antra/d05291c1-3b5c-4fb9-ac90-ecd2d41973e1/logo6.png",
+                "https://deco-sites-assets.s3.sa-east-1.amazonaws.com/antra/ac976326-631d-423c-bc94-e606ab4469f3/logo7.png",
+                "https://deco-sites-assets.s3.sa-east-1.amazonaws.com/antra/3e505b55-2ee0-48f3-afd5-c37541c473b7/logo8.png",
+                "https://deco-sites-assets.s3.sa-east-1.amazonaws.com/antra/6f30152b-62d4-4d38-99a7-e072bfeb7338/logo9.png",
+                "https://deco-sites-assets.s3.sa-east-1.amazonaws.com/antra/bd8d36c6-05e4-4114-9c15-3ab389da6caa/logo10.png"
+              ]
+            }
+          },
+          {
+            "__resolveType": "website/sections/Rendering/Lazy.tsx",
+            "section": {
+              "__resolveType": "site/sections/PrimersSlider.tsx",
+              "slides": {
+                "__resolveType": "blog/loaders/BlogpostList.ts",
+                "sortBy": "date_desc",
+                "count": 99
+              },
+              "title": "Booklets and manuals"
+            }
+          },
+          {
+            "__resolveType": "website/sections/Rendering/Lazy.tsx",
+            "section": {
+              "__resolveType": "site/sections/Message.tsx",
+              "message": "“A ANTRA é a maior e mais importante instituição de luta pelos direitos trans.  Um coletivo de pessoas trans politicamente mobilizadas para lutar por um futuro melhor.”",
+              "name": "Bruna Benevides",
+              "position": "President of ANTRA",
+              "image": "https://deco-sites-assets.s3.sa-east-1.amazonaws.com/antra/be260c5c-6a49-4b4b-b333-b1a32da902e9/image.png",
+              "paragrafo1": "\"ANTRA is the largest and most important institution fighting for trans rights.",
+              "paragrafo2": "A collective of politically mobilized trans people fighting for a better future.\"",
+              "icon": "https://deco-sites-assets.s3.sa-east-1.amazonaws.com/antra/db5d7a53-6f4d-439e-a3b5-284a27fbc3d6/icon.png",
+              "titlebutton": "Getting to know ANTRA"
+            }
+          },
+          {
+            "__resolveType": "website/sections/Rendering/Lazy.tsx",
+            "section": {
+              "__resolveType": "site/sections/Act.tsx",
+              "title": "Where we operate",
+              "cards": [
+                {
+                  "title": "Advocacy",
+                  "description": "Representation and advocacy actions with state bodies for monitoring and control, as well as political influence at all levels, including the international sphere.",
+                  "icon": "https://deco-sites-assets.s3.sa-east-1.amazonaws.com/antra/e2d5d0b4-71a7-49b1-83e0-cf875dcabd49/icon1.svg"
+                },
+                {
+                  "title": "Conducting Research",
+                  "description": "We map and report the murders of trans people in Brazil, demanding effective solutions for these crimes. We conduct research and collect data of interest to the trans and travesti population.",
+                  "icon": "https://deco-sites-assets.s3.sa-east-1.amazonaws.com/antra/a2ea3a84-a850-4d02-9a8b-dcde694832c6/icon2.svg"
+                },
+                {
+                  "title": "Projects",
+                  "description": "Development of projects for public calls of institutional interest that include actions with a direct impact on the trans population.",
+                  "icon": "https://deco-sites-assets.s3.sa-east-1.amazonaws.com/antra/c4352deb-d5fb-4c41-b1bb-db40833d90bf/icon3.svg"
+                }
+              ]
+            }
+          },
+          {
+            "__resolveType": "Footer"
           }
         ],
-        "main": {
-          "__resolveType": "blog/loaders/BlogpostList.ts",
-          "sortBy": "date_desc",
-          "count": 99
+        "rule": {
+          "__resolveType": "website/matchers/cookie.ts",
+          "name": "language",
+          "value": "en-US"
         }
-      }
-    },
-    {
-      "__resolveType": "website/sections/Rendering/Lazy.tsx",
-      "section": {
-        "__resolveType": "site/sections/News.tsx",
-        "title": "Ultimas notícias",
-        "news": {
-          "__resolveType": "blog/loaders/BlogpostList.ts",
-          "count": 99,
-          "sortBy": "date_desc"
-        }
-      }
-    },
-    {
-      "__resolveType": "website/sections/Rendering/Lazy.tsx",
-      "section": {
-        "__resolveType": "site/sections/Affiliates.tsx",
-        "title": "Nossas afiliadas",
-        "description": "Dedicamos a cada militante e movimento de base que se soma a essa luta.",
-        "button": {
-          "href": "/",
-          "text": "Conhecer todas",
-          "alt": "Conhecer todas"
-        },
-        "logos": [
-          "https://deco-sites-assets.s3.sa-east-1.amazonaws.com/antra/d05dfedc-9dd2-41d0-aa92-27b4afa3a5df/logo1.png",
-          "https://deco-sites-assets.s3.sa-east-1.amazonaws.com/antra/66d13c69-5f19-4262-ba58-a85d6f46aa65/logo2.png",
-          "https://deco-sites-assets.s3.sa-east-1.amazonaws.com/antra/6249c15b-f82c-4706-8dd6-f14f12d7e7e3/logo3.png",
-          "https://deco-sites-assets.s3.sa-east-1.amazonaws.com/antra/5b231f27-409f-49c3-a674-fa982bfb75ef/logo4.png",
-          "https://deco-sites-assets.s3.sa-east-1.amazonaws.com/antra/72dfc297-cf41-4589-a585-26e11477e438/logo5.png",
-          "https://deco-sites-assets.s3.sa-east-1.amazonaws.com/antra/d05291c1-3b5c-4fb9-ac90-ecd2d41973e1/logo6.png",
-          "https://deco-sites-assets.s3.sa-east-1.amazonaws.com/antra/ac976326-631d-423c-bc94-e606ab4469f3/logo7.png",
-          "https://deco-sites-assets.s3.sa-east-1.amazonaws.com/antra/3e505b55-2ee0-48f3-afd5-c37541c473b7/logo8.png",
-          "https://deco-sites-assets.s3.sa-east-1.amazonaws.com/antra/6f30152b-62d4-4d38-99a7-e072bfeb7338/logo9.png",
-          "https://deco-sites-assets.s3.sa-east-1.amazonaws.com/antra/bd8d36c6-05e4-4114-9c15-3ab389da6caa/logo10.png"
-        ]
-      }
-    },
-    {
-      "__resolveType": "website/sections/Rendering/Lazy.tsx",
-      "section": {
-        "__resolveType": "site/sections/PrimersSlider.tsx",
-        "slides": {
-          "__resolveType": "blog/loaders/BlogpostList.ts",
-          "sortBy": "date_desc",
-          "count": 99
-        }
-      }
-    },
-    {
-      "__resolveType": "website/sections/Rendering/Lazy.tsx",
-      "section": {
-        "__resolveType": "site/sections/Message.tsx",
-        "message": "“A ANTRA é a maior e mais importante instituição de luta pelos direitos trans.  Um coletivo de pessoas trans politicamente mobilizadas para lutar por um futuro melhor.”",
-        "name": "Bruna Benevides",
-        "position": "Presidenta da ANTRA",
-        "image": "https://deco-sites-assets.s3.sa-east-1.amazonaws.com/antra/be260c5c-6a49-4b4b-b333-b1a32da902e9/image.png",
-        "paragrafo1": "“A ANTRA é a maior e mais importante instituição de luta pelos direitos trans.",
-        "paragrafo2": "Um coletivo de pessoas trans politicamente mobilizadas para lutar por um futuro melhor.”",
-        "icon": "https://deco-sites-assets.s3.sa-east-1.amazonaws.com/antra/db5d7a53-6f4d-439e-a3b5-284a27fbc3d6/icon.png"
-      }
-    },
-    {
-      "__resolveType": "website/sections/Rendering/Lazy.tsx",
-      "section": {
-        "__resolveType": "site/sections/Act.tsx",
-        "title": "Onde atuamos",
-        "cards": [
+      },
+      {
+        "value": [
           {
-            "title": "Advocacy",
-            "description": "Representação e ações de advocacy junto a órgãos estatais de monitoramento e controle, além da incidência política em todos os níveis, incluindo o âmbito internacional.",
-            "icon": "https://deco-sites-assets.s3.sa-east-1.amazonaws.com/antra/e2d5d0b4-71a7-49b1-83e0-cf875dcabd49/icon1.svg"
+            "__resolveType": "website/sections/Rendering/Lazy.tsx",
+            "section": {
+              "__resolveType": "Header-Antra"
+            }
           },
           {
-            "title": "Condução de Pesquisas",
-            "description": "Mapeamos e denunciamos os assassinatos de pessoas Trans no Brasil, cobrando soluções efetivas para esses crimes. Fazemos condução de pesquisas e levantamento de dados de interesse da população trans e travesti.",
-            "icon": "https://deco-sites-assets.s3.sa-east-1.amazonaws.com/antra/a2ea3a84-a850-4d02-9a8b-dcde694832c6/icon2.svg"
+            "__resolveType": "website/sections/Rendering/Lazy.tsx",
+            "section": {
+              "__resolveType": "site/sections/Main.tsx",
+              "title": "Como acessar o SUS para questões de transição?",
+              "image": "https://deco-sites-assets.s3.sa-east-1.amazonaws.com/antra/3d85921d-54d1-47db-8500-34b8e34c996a/image1.png",
+              "description": "Constante somos procuradas sobre dúvidas em relação para acesso ao processo transexualizador do SUS e sobre quais procedimentos temos garantido o direito, além do funcionamento e fluxo de atendimento.",
+              "link": "/",
+              "items": [
+                {
+                  "image": "https://deco-sites-assets.s3.sa-east-1.amazonaws.com/antra/3d85921d-54d1-47db-8500-34b8e34c996a/image1.png",
+                  "title": "Como acessar o SUS para questões de transição?",
+                  "description": "Constante somos procuradas sobre dúvidas em relação para acesso ao processo transexualizador do SUS e sobre quais procedimentos temos garantido o direito, além do funcionamento e fluxo de atendimento.",
+                  "link": "/"
+                },
+                {
+                  "title": "Encontre locais de apoio na sua área",
+                  "link": "/",
+                  "image": "https://deco-sites-assets.s3.sa-east-1.amazonaws.com/antra/2144ad25-3f33-4076-b964-73d0961788e7/image2.png"
+                }
+              ],
+              "main": {
+                "__resolveType": "blog/loaders/BlogpostList.ts",
+                "sortBy": "date_desc",
+                "count": 99
+              }
+            }
           },
           {
-            "title": "Projetos",
-            "description": "Desenvolvimento de projetos para editais de interesse institucional que contemplem ações de impacto direto para a população trans",
-            "icon": "https://deco-sites-assets.s3.sa-east-1.amazonaws.com/antra/c4352deb-d5fb-4c41-b1bb-db40833d90bf/icon3.svg"
+            "__resolveType": "website/sections/Rendering/Lazy.tsx",
+            "section": {
+              "__resolveType": "site/sections/News.tsx",
+              "title": "Ultimas notícias",
+              "news": {
+                "__resolveType": "blog/loaders/BlogpostList.ts",
+                "count": 99,
+                "sortBy": "date_desc"
+              }
+            }
+          },
+          {
+            "__resolveType": "website/sections/Rendering/Lazy.tsx",
+            "section": {
+              "__resolveType": "site/sections/Affiliates.tsx",
+              "title": "Nossas afiliadas",
+              "description": "Dedicamos a cada militante e movimento de base que se soma a essa luta.",
+              "button": {
+                "href": "/",
+                "text": "Conhecer todas",
+                "alt": "Conhecer todas"
+              },
+              "logos": [
+                "https://deco-sites-assets.s3.sa-east-1.amazonaws.com/antra/d05dfedc-9dd2-41d0-aa92-27b4afa3a5df/logo1.png",
+                "https://deco-sites-assets.s3.sa-east-1.amazonaws.com/antra/66d13c69-5f19-4262-ba58-a85d6f46aa65/logo2.png",
+                "https://deco-sites-assets.s3.sa-east-1.amazonaws.com/antra/6249c15b-f82c-4706-8dd6-f14f12d7e7e3/logo3.png",
+                "https://deco-sites-assets.s3.sa-east-1.amazonaws.com/antra/5b231f27-409f-49c3-a674-fa982bfb75ef/logo4.png",
+                "https://deco-sites-assets.s3.sa-east-1.amazonaws.com/antra/72dfc297-cf41-4589-a585-26e11477e438/logo5.png",
+                "https://deco-sites-assets.s3.sa-east-1.amazonaws.com/antra/d05291c1-3b5c-4fb9-ac90-ecd2d41973e1/logo6.png",
+                "https://deco-sites-assets.s3.sa-east-1.amazonaws.com/antra/ac976326-631d-423c-bc94-e606ab4469f3/logo7.png",
+                "https://deco-sites-assets.s3.sa-east-1.amazonaws.com/antra/3e505b55-2ee0-48f3-afd5-c37541c473b7/logo8.png",
+                "https://deco-sites-assets.s3.sa-east-1.amazonaws.com/antra/6f30152b-62d4-4d38-99a7-e072bfeb7338/logo9.png",
+                "https://deco-sites-assets.s3.sa-east-1.amazonaws.com/antra/bd8d36c6-05e4-4114-9c15-3ab389da6caa/logo10.png"
+              ]
+            }
+          },
+          {
+            "__resolveType": "website/sections/Rendering/Lazy.tsx",
+            "section": {
+              "__resolveType": "site/sections/PrimersSlider.tsx",
+              "slides": {
+                "__resolveType": "blog/loaders/BlogpostList.ts",
+                "sortBy": "date_desc",
+                "count": 99
+              },
+              "title": "Cartilhas e manuais"
+            }
+          },
+          {
+            "__resolveType": "website/sections/Rendering/Lazy.tsx",
+            "section": {
+              "__resolveType": "site/sections/Message.tsx",
+              "message": "“A ANTRA é a maior e mais importante instituição de luta pelos direitos trans.  Um coletivo de pessoas trans politicamente mobilizadas para lutar por um futuro melhor.”",
+              "name": "Bruna Benevides",
+              "position": "Presidenta da ANTRA",
+              "image": "https://deco-sites-assets.s3.sa-east-1.amazonaws.com/antra/be260c5c-6a49-4b4b-b333-b1a32da902e9/image.png",
+              "paragrafo1": "“A ANTRA é a maior e mais importante instituição de luta pelos direitos trans.",
+              "paragrafo2": "Um coletivo de pessoas trans politicamente mobilizadas para lutar por um futuro melhor.”",
+              "icon": "https://deco-sites-assets.s3.sa-east-1.amazonaws.com/antra/db5d7a53-6f4d-439e-a3b5-284a27fbc3d6/icon.png",
+              "titlebutton": "Conhecer a ANTRA"
+            }
+          },
+          {
+            "__resolveType": "website/sections/Rendering/Lazy.tsx",
+            "section": {
+              "__resolveType": "site/sections/Act.tsx",
+              "title": "Onde atuamos",
+              "cards": [
+                {
+                  "title": "Advocacy",
+                  "description": "Representação e ações de advocacy junto a órgãos estatais de monitoramento e controle, além da incidência política em todos os níveis, incluindo o âmbito internacional.",
+                  "icon": "https://deco-sites-assets.s3.sa-east-1.amazonaws.com/antra/e2d5d0b4-71a7-49b1-83e0-cf875dcabd49/icon1.svg"
+                },
+                {
+                  "title": "Condução de Pesquisas",
+                  "description": "Mapeamos e denunciamos os assassinatos de pessoas Trans no Brasil, cobrando soluções efetivas para esses crimes. Fazemos condução de pesquisas e levantamento de dados de interesse da população trans e travesti.",
+                  "icon": "https://deco-sites-assets.s3.sa-east-1.amazonaws.com/antra/a2ea3a84-a850-4d02-9a8b-dcde694832c6/icon2.svg"
+                },
+                {
+                  "title": "Projetos",
+                  "description": "Desenvolvimento de projetos para editais de interesse institucional que contemplem ações de impacto direto para a população trans",
+                  "icon": "https://deco-sites-assets.s3.sa-east-1.amazonaws.com/antra/c4352deb-d5fb-4c41-b1bb-db40833d90bf/icon3.svg"
+                }
+              ]
+            }
+          },
+          {
+            "__resolveType": "Footer"
           }
-        ]
+        ],
+        "rule": {
+          "__resolveType": "website/matchers/always.ts"
+        }
       }
-    },
-    {
-      "__resolveType": "Footer"
-    }
-  ],
+    ]
+  },
   "__resolveType": "website/pages/Page.tsx",
   "seo": {
     "__resolveType": "website/sections/Seo/SeoV2.tsx"

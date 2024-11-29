@@ -39,49 +39,61 @@ export default function AllNewsIsland({ title, info, allNews }: Props) {
             {title}
           </h2>
           <div class="grid grid-cols-1 md:grid-cols-3 gap-8 justify-items-center">
-            {currentItems?.map((news: BlogPost, index) => (
-              <a href={`post/${news.slug}`}>
-                <div
-                  class="relative w-full h-full col-span-1 flex justify-center"
-                  key={index}
-                >
-                  <div class="overflow-hidden flex flex-col items-center w-full max-w-[400px]">
-                    {news?.image && (
-                      <Image
-                        width={408}
-                        height={232}
-                        class="h-[232px] object-cover z-10 rounded-lg"
-                        src={news?.image}
-                        alt={news?.image}
-                        decoding="async"
-                        loading="lazy"
-                      />
-                    )}
-                    <div class="p-1 py-4 space-y-4 text-start w-full">
-                      <div class="flex flex-wrap gap-2">
-                        {news.extraProps?.map((item, i) => {
-                          return item.key === "tag" ? (
-                            <div
-                              className="badge badge-lg text-xs border border-gray-500 bg-transparent 
-                              hover:bg-custom-gray hover:text-white hover:border-white"
-                              key={i}
-                            >
-                              {item.value}
-                            </div>
-                          ) : null;
-                        })}
+            {currentItems && currentItems.length > 0
+              ? (
+                currentItems?.map((news: BlogPost, index) => (
+                  <a href={`post/${news.slug}`}>
+                    <div
+                      class="relative w-full h-full col-span-1 flex justify-center"
+                      key={index}
+                    >
+                      <div class="overflow-hidden flex flex-col items-center w-full max-w-[400px]">
+                        {news?.image && (
+                          <Image
+                            width={408}
+                            height={232}
+                            class="h-[232px] object-cover z-10 rounded-lg"
+                            src={news?.image}
+                            alt={news?.image}
+                            decoding="async"
+                            loading="lazy"
+                          />
+                        )}
+                        <div class="p-1 py-4 space-y-4 text-start w-full">
+                          <div class="flex flex-wrap gap-2">
+                            {news.extraProps?.map((item, i) => {
+                              return item.key === "tag"
+                                ? (
+                                  <div
+                                    className="badge badge-lg text-xs border border-gray-500 bg-transparent 
+                                    hover:bg-custom-gray hover:text-white hover:border-white"
+                                    key={i}
+                                  >
+                                    {item.value}
+                                  </div>
+                                )
+                                : null;
+                            })}
+                          </div>
+                          <h3 class="text-lg font-semibold mt-2">
+                            {news.title}
+                          </h3>
+                        </div>
                       </div>
-                      <h3 class="text-lg font-semibold mt-2">{news.title}</h3>
                     </div>
-                  </div>
+                  </a>
+                ))
+              )
+              : (
+                <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-y-8 gap-x-8">
+                  <p class="text-center text-gray-500">
+                    Nenhum registro encontrado
+                  </p>
                 </div>
-              </a>
-            ))}
+              )}
 
-            <div
-              class="hidden w-full col-span-1 md:row-start-2 md:row-span-2 md:col-start-3 
-              md:flex flex-col items-start justify-start h-full"
-            >
+            <div class="hidden w-full col-span-1 md:row-start-2 md:row-span-2 md:col-start-3 
+              md:flex flex-col items-start justify-start h-full">
               <div class="relative md:h-full overflow-hidden rounded-2xl">
                 <img
                   src={info.image}
