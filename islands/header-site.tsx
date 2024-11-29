@@ -1,5 +1,7 @@
 import Image from "apps/website/components/Image.tsx";
 import Icon from "../components/ui/Icon.tsx";
+import { useState, useEffect } from "preact/hooks";
+import { getCookies, setCookie } from "std/http/cookie.ts";
 
 export interface CTA {
   src?: string;
@@ -37,6 +39,32 @@ export const HeaderSite = ({ logo, navigation }: Nav) => {
     globalThis.open(link, "_blank");
   };
 
+  const [isDropdownOpen, setIsDropdownOpen] = useState(false);
+  const [language, setLanguageState] = useState<string | null>(() => {
+    if (typeof document !== "undefined") {
+      const headers = new Headers();
+      const cookies = getCookies(headers);
+      return cookies.language || null;
+    }
+    return null;
+  });
+
+  const handleSetLanguage = (lang: string) => {
+    const headers = new Headers();
+    setCookie(headers, {
+      name: "language",
+      value: lang,
+      maxAge: 365 * 24 * 60 * 60, // 1 ano em segundos
+    });
+
+    // Adiciona o cookie ao documento
+    document.cookie = headers.get("Set-Cookie") || "";
+
+    // Atualiza o estado local
+    setLanguageState(lang);
+    setIsDropdownOpen(false); // Fecha o dropdown
+    console.log(`Language set to ${lang}`);
+  };
   return (
     <nav className="drawer drawer-end border-b border-gray-300">
       <div className="absolute top-0 left-0 w-full h-2.5 bg-gradient-to-r from-[#3AB4F6] via-[#FCA5B3] to-[#3AB4F6]"></div>
@@ -120,14 +148,52 @@ export const HeaderSite = ({ logo, navigation }: Nav) => {
           <ul className="flex gap-5 items-center">
             {navigation?.buttons?.map((item, index) => (
               <li key={`${item.alt}-${index}`}>
-                <a href={item?.href}>
-                  <Image
-                    src={item.src || ""}
-                    width={18}
-                    height={18}
-                    alt={item?.alt}
-                  />
-                </a>
+                {item.alt === "Internationalization" ? (
+                  <>
+                    <button
+                      onClick={() => setIsDropdownOpen(!isDropdownOpen)}
+                      className="flex items-center gap-2"
+                    >
+                      <Image
+                        src={item.src || ""}
+                        width={18}
+                        height={18}
+                        alt={item?.alt}
+                      />
+                    </button>
+                    {isDropdownOpen && (
+                      <div className="absolute top-full mt-2 w-32 bg-white shadow-lg rounded-md z-100">
+                        <ul>
+                          <li>
+                            <button
+                              onClick={() => handleSetLanguage("en-US")}
+                              className="w-full px-4 py-2 text-left hover:bg-gray-100"
+                            >
+                              En
+                            </button>
+                          </li>
+                          <li>
+                            <button
+                              onClick={() => handleSetLanguage("pt-BR")}
+                              className="w-full px-4 py-2 text-left hover:bg-gray-100"
+                            >
+                              Pt
+                            </button>
+                          </li>
+                        </ul>
+                      </div>
+                    )}
+                  </>
+                ) : (
+                  <a href={item?.href}>
+                    <Image
+                      src={item.src || ""}
+                      width={18}
+                      height={18}
+                      alt={item?.alt}
+                    />
+                  </a>
+                )}
               </li>
             ))}
           </ul>

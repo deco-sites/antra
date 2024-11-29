@@ -16,27 +16,38 @@ export interface Social {
 }
 
 export interface Props {
-  logo?: {
-    src?: ImageWidget;
-    alt?: string;
-  };
   background?: {
     src?: ImageWidget;
   };
+  title: string;
   links?: {
     label: string;
     href: string;
   }[];
   subscribe?: Subscribe;
-  madeWith?: {
-    label?: string;
-    src?: ImageWidget;
-    href?: string;
-  };
   copyright?: string;
   social?: Social[];
+  privacyPolicy:string
 }
 
-export default function Footer({}: Props) {
-  return <FooterIsland />;
+export default function Footer({
+  background,
+  subscribe,
+  copyright,
+  social,
+  links,
+  title,
+  privacyPolicy
+}: Props) {
+  return (
+    <FooterIsland
+      background={background}
+      subscribe={subscribe}
+      copyright={copyright}
+      title={title}
+      social={social}
+      links={links}
+      privacyPolicy={privacyPolicy}
+    />
+  );
 }
