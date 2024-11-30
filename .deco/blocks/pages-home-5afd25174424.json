@@ -9,7 +9,7 @@
           {
             "__resolveType": "website/sections/Rendering/Lazy.tsx",
             "section": {
-              "__resolveType": "Header-Antra"
+              "__resolveType": "Header-Antra-en"
             }
           },
           {
@@ -128,7 +128,7 @@
             }
           },
           {
-            "__resolveType": "Footer"
+            "__resolveType": "Footer-en"
           }
         ],
         "rule": {

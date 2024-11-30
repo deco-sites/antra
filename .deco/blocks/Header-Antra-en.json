@@ -3,68 +3,68 @@
   "navigation": {
     "links": [
       {
-        "label": "A Antra",
+        "label": "Antra",
         "submenu": [
           {
-            "label": "Quem somos",
+            "label": "Who we are",
             "url": "/about?section=quem-somos"
           },
           {
-            "label": "O que fazemos",
+            "label": "What we do",
             "url": "/about?section=oque-fazemos"
           },
           {
-            "label": "Nossa história",
+            "label": "Our history",
             "url": "/about?section=historia"
           },
           {
-            "label": "Estatuto social",
+            "label": "Bylaws",
             "url": "/about?section=afiliadas"
           }
         ],
         "url": "/about"
       },
       {
-        "label": "Cartilha e Manuais",
+        "label": "Guides and Manuals",
         "submenu": [
           {
-            "label": "Notas técnicas",
+            "label": "Technical Notes",
             "subLabel": "Menu description.",
             "url": "/resource?type=Notas+Técnicas"
           },
           {
-            "label": "Manuais",
+            "label": "Manuals",
             "subLabel": "Menu description.",
             "url": "/resource?type=Manuais"
           },
           {
             "subLabel": "Menu description.",
-            "label": "Cartilhas",
+            "label": "Guides",
             "url": "/resource?type=Cartilhas"
           }
         ],
         "img": "https://deco-sites-assets.s3.sa-east-1.amazonaws.com/antra/00a539b6-ff26-46dc-85c6-fbafd2afb347/cartilhas-img.png",
-        "imgLabel": "Alteração nome e gênero",
+        "imgLabel": "Name and Gender Change",
         "url": "/resource",
         "download": "https://google.com"
       },
       {
-        "label": "Notícias",
+        "label": "News",
         "url": "/news",
         "submenu": []
       },
       {
-        "label": "Afiliação",
+        "label": "Affiliation",
         "submenu": [],
         "url": "/affiliation"
       },
       {
-        "label": "Projetos",
+        "label": "Projects",
         "url": "/projects",
         "submenu": []
       },
       {
-        "label": "Contato",
+        "label": "Contact",
         "url": "/contact",
         "submenu": []
       }

@@ -2,31 +2,30 @@
   "__resolveType": "site/sections/Footer.tsx",
   "links": [
     {
-      "label": "A ANTRA",
+      "label": "ANTRA",
       "href": "/"
     },
     {
-      "label": "Recursos",
+      "label": "Resource",
       "href": "/resource"
     },
     {
-      "label": "Notícias",
+      "label": "News",
       "href": "/news"
     },
     {
-      "label": "Filiação",
+      "label": "Affiliation",
       "href": "/affiliation"
     },
     {
-      "label": "Projetos",
+      "label": "Projects",
       "href": "/project"
     },
     {
-      "label": "Contato",
+      "label": "Contact",
       "href": "/contact"
     }
   ],
-  "bottomLinks": [],
   "social": [
     {
       "network": "Facebook",
@@ -45,8 +44,9 @@
       "href": "/"
     }
   ],
+  "bottomLinks": [],
   "subscribe": {
-    "title": "Cadastre seu e-mail para receber nossas notícias",
+    "title": "Register your email to receive our news",
     "description": "none",
     "instructions": "<p>none</p>"
   },
@@ -54,7 +54,7 @@
   "background": {
     "src": "https://deco-sites-assets.s3.sa-east-1.amazonaws.com/antra/f6958659-d7fc-463f-9de9-0862b41e4c62/footer.png"
   },
-  "copyright": "© 2024, ANTRA. Todos os direitos reservados.",
-  "title": "Resistir para Existir, Existir para Reagir",
-  "privacyPolicy": "Política de Privacidade"
+  "copyright": "© 2024, ANTRA. All rights reserved.",
+  "title": "Resist to Exist, Exist to React",
+  "privacyPolicy": "Privacy Policy"
 }
