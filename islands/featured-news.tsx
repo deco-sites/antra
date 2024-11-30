@@ -11,7 +11,10 @@ export interface Info {
 }
 
 export interface Props {
-  tags: string[];
+  tags: {
+    key: string
+    value: string
+  }[];
   title: string;
   info: Info;
   allNews: BlogPost[] | null;
@@ -26,7 +29,10 @@ interface SecondaryNewsCardProps {
 }
 
 interface TagFilterProps {
-  tags: string[];
+  tags: {
+    key: string
+    value: string
+  }[];
   selectedTags: string[];
   onTagClick: (tag: any) => void;
   setTagFilterMobile?: any;
@@ -108,16 +114,16 @@ export function TagFilter({ tags, selectedTags, onTagClick }: TagFilterProps) {
       {tags.map((item, i) => (
         <button
           key={i}
-          onClick={() => onTagClick(item)}
+          onClick={() => onTagClick(item.key)}
           class={`badge badge-lg text-xs border border-gray-500 
           hover:bg-custom-gray hover:text-white hover:border-white 
           ${
-            selectedTags.includes(item)
+            selectedTags.includes(item.key)
               ? "bg-gray-700 text-white"
               : "bg-white text-gray-700"
           }`}
         >
-          {item}
+          {item.value}
         </button>
       ))}
     </div>
@@ -161,14 +167,14 @@ const TagFilterMobile = ({
           {tags.map((item) => (
             <button
               key={item}
-              onClick={() => toggleFilter(item)}
+              onClick={() => toggleFilter(item.key)}
               className={`rounded-md badge badge-lg text-base border ${
-                filters.includes(item)
+                filters.includes(item.key)
                   ? "bg-gray-700 text-white"
                   : "bg-transparent border-gray-500"
               }`}
             >
-              {item}
+              {item.value}
             </button>
           ))}
         </div>

@@ -3,32 +3,78 @@
   "seo": {
     "__resolveType": "website/sections/Seo/SeoV2.tsx"
   },
-  "sections": [
-    {
-      "__resolveType": "website/sections/Rendering/Lazy.tsx",
-      "section": {
-        "__resolveType": "Header-Antra"
-      }
-    },
-    {
-      "__resolveType": "site/sections/Post.tsx",
-      "page": {
-        "__resolveType": "blog/loaders/BlogPostPage.ts",
-        "slug": {
-          "__resolveType": "website/functions/requestToParam.ts",
-          "param": "slug"
+  "sections": {
+    "__resolveType": "website/flags/multivariate.ts",
+    "variants": [
+      {
+        "value": [
+          {
+            "__resolveType": "website/sections/Rendering/Lazy.tsx",
+            "section": {
+              "__resolveType": "Header-Antra-en"
+            }
+          },
+          {
+            "__resolveType": "site/sections/Post.tsx",
+            "page": {
+              "__resolveType": "blog/loaders/BlogPostPage.ts",
+              "slug": {
+                "__resolveType": "website/functions/requestToParam.ts",
+                "param": "slug"
+              }
+            },
+            "relatedPosts": {
+              "__resolveType": "blog/loaders/BlogpostList.ts",
+              "sortBy": "date_desc",
+              "count": 999
+            }
+          },
+          {
+            "__resolveType": "website/sections/Rendering/Lazy.tsx",
+            "section": {
+              "__resolveType": "Footer-en"
+            }
+          }
+        ],
+        "rule": {
+          "__resolveType": "website/matchers/cookie.ts",
+          "name": "language",
+          "value": "en-US"
         }
       },
-      "relatedPosts": {
-        "__resolveType": "blog/loaders/BlogpostList.ts",
-        "sortBy": "date_desc",
-        "count": 999
+      {
+        "value": [
+          {
+            "__resolveType": "website/sections/Rendering/Lazy.tsx",
+            "section": {
+              "__resolveType": "Header-Antra"
+            }
+          },
+          {
+            "__resolveType": "site/sections/Post.tsx",
+            "page": {
+              "__resolveType": "blog/loaders/BlogPostPage.ts",
+              "slug": {
+                "__resolveType": "website/functions/requestToParam.ts",
+                "param": "slug"
+              }
+            },
+            "relatedPosts": {
+              "__resolveType": "blog/loaders/BlogpostList.ts",
+              "sortBy": "date_desc",
+              "count": 999
+            }
+          },
+          {
+            "__resolveType": "Footer"
+          }
+        ],
+        "rule": {
+          "__resolveType": "website/matchers/always.ts"
+        }
       }
-    },
-    {
-      "__resolveType": "Footer"
-    }
-  ],
+    ]
+  },
   "name": "Post",
   "path": "/post/:slug"
 }

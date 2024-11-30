@@ -1,25 +1,128 @@
 {
   "name": "Afiliacao",
   "path": "/affiliation",
-  "sections": [
-    {
-      "__resolveType": "Header-Antra"
-    },
-    {
-      "__resolveType": "site/sections/HowToJoin.tsx"
-    },
-    {
-      "__resolveType": "site/sections/AllAffiliates.tsx",
-      "affiliate": {
-        "__resolveType": "blog/loaders/BlogpostList.ts",
-        "sortBy": "date_desc",
-        "count": 999
+  "sections": {
+    "__resolveType": "website/flags/multivariate.ts",
+    "variants": [
+      {
+        "value": [
+          {
+            "__resolveType": "website/sections/Rendering/Lazy.tsx",
+            "section": {
+              "__resolveType": "Header-Antra-en"
+            }
+          },
+          {
+            "__resolveType": "site/sections/HowToJoin.tsx",
+            "title": "How to become a member of ANTRA",
+            "box1": "Read our Bylaws",
+            "box2": "Fill out our form"
+          },
+          {
+            "__resolveType": "site/sections/AllAffiliates.tsx",
+            "affiliate": {
+              "__resolveType": "blog/loaders/BlogpostList.ts",
+              "sortBy": "date_desc",
+              "count": 999
+            },
+            "all": "All",
+            "region": {
+              "0": "R",
+              "1": "e",
+              "2": "g",
+              "3": "i",
+              "4": "o",
+              "5": "n",
+              "title": "Region",
+              "options": [
+                "All"
+              ]
+            },
+            "state": {
+              "title": "State",
+              "options": [
+                "All"
+              ]
+            },
+            "theme": {
+              "title": "Theme",
+              "options": [
+                "All"
+              ]
+            },
+            "targetAudience": {
+              "title": "Target Audience",
+              "options": [
+                "All"
+              ]
+            }
+          },
+          {
+            "__resolveType": "website/sections/Rendering/Lazy.tsx",
+            "section": {
+              "__resolveType": "Footer-en"
+            }
+          }
+        ],
+        "rule": {
+          "__resolveType": "website/matchers/cookie.ts",
+          "name": "language",
+          "value": "en-US"
+        }
+      },
+      {
+        "value": [
+          {
+            "__resolveType": "Header-Antra"
+          },
+          {
+            "__resolveType": "site/sections/HowToJoin.tsx",
+            "title": "Como se filiar a ANTRA",
+            "box1": "Leia nosso Estatuto Social",
+            "box2": "Preencha nosso formulário"
+          },
+          {
+            "__resolveType": "site/sections/AllAffiliates.tsx",
+            "affiliate": {
+              "__resolveType": "blog/loaders/BlogpostList.ts",
+              "sortBy": "date_desc",
+              "count": 999
+            },
+            "region": {
+              "title": "Região",
+              "options": [
+                "Todas"
+              ]
+            },
+            "state": {
+              "title": "UF",
+              "options": [
+                "Todos"
+              ]
+            },
+            "theme": {
+              "options": [
+                "Todos"
+              ],
+              "title": "Temática"
+            },
+            "targetAudience": {
+              "title": "Público-Alvo",
+              "options": [
+                "Todos"
+              ]
+            }
+          },
+          {
+            "__resolveType": "Footer"
+          }
+        ],
+        "rule": {
+          "__resolveType": "website/matchers/always.ts"
+        }
       }
-    },
-    {
-      "__resolveType": "Footer"
-    }
-  ],
+    ]
+  },
   "__resolveType": "website/pages/Page.tsx",
   "seo": {
     "__resolveType": "website/sections/Seo/SeoV2.tsx"

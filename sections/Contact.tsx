@@ -1,5 +1,5 @@
 import type { ImageWidget } from "apps/admin/widgets.ts";
-import Icon from "site/components/ui/Icon.tsx";
+import Icon, { AvailableIcons } from "site/components/ui/Icon.tsx";
 
 interface Social {
   name: string;
@@ -11,7 +11,14 @@ export interface Props {
   title: string;
   subtitle: string;
   social: Social[];
-  options: string[];
+  form:{
+    name: string
+    lastName: string
+    canHelp: string
+    canHelpOptions: string[]
+    mesage: string
+    button: string
+  }
 }
 
 export default function Contact({
@@ -19,7 +26,7 @@ export default function Contact({
   title,
   subtitle,
   social,
-  options,
+  form
 }: Props) {
   return (
     <div class="lg:container text-sm md:px-5 md:p-16 mb-40">
@@ -45,7 +52,7 @@ export default function Contact({
                     class="p-4 flex justify-between items-center border border-gray-300 rounded-2xl"
                   >
                     <div class="flex flex-col gap-2">
-                      <Icon id={item.name} size={16} strokeWidth={1} />
+                      <Icon id={item.name as AvailableIcons} size={16} strokeWidth={1} />
                       <div class="flex">
                         <p>{item.name}:</p>
                         <p>{item.endereco}</p>
@@ -63,7 +70,7 @@ export default function Contact({
               <form class="p-6 flex flex-col gap-5 border border-gray-300 rounded-lg">
                 <div class="w-full flex flex-col md:flex-row md:gap-2">
                   <div class="w-full flex flex-col gap-2">
-                    <label for="nome">Nome</label>
+                    <label for="nome">{form.name}</label>
                     <input
                       class="px-4 py-3 border border-gray-300 rounded-lg"
                       type="text"
@@ -75,7 +82,7 @@ export default function Contact({
 
                   <div class="w-full flex flex-col gap-2">
                     <label class="font-medium" for="sobrenome">
-                      Sobrenome
+                    {form.lastName}
                     </label>
                     <input
                       class="px-4 py-3 border border-gray-300 rounded-lg"
@@ -88,7 +95,7 @@ export default function Contact({
                 </div>
 
                 <div class="flex flex-col gap-2">
-                  <label for="ajuda">Em que podemos ajudar</label>
+                  <label for="ajuda">{form.canHelp}</label>
                   <select
                     class="px-4 py-3 border border-gray-300 rounded-lg"
                     id="ajuda"
@@ -97,7 +104,7 @@ export default function Contact({
                     <option value="" disabled selected>
                       Selecione
                     </option>
-                    {options.map((item, i) => (
+                    {form.canHelpOptions.map((item, i) => (
                       <option key={`${i}+${item}`} value={item}>
                         {item}
                       </option>
@@ -117,7 +124,7 @@ export default function Contact({
                 </div>
 
                 <div class="flex flex-col gap-2">
-                  <label for="mensagem">Mensagem</label>
+                  <label for="mensagem">{form.mesage}</label>
                   <textarea
                     class="min-h-[110px] px-4 py-3 border border-gray-300 rounded-lg"
                     id="mensagem"
@@ -130,7 +137,7 @@ export default function Contact({
                   class="w-full py-3 text-white bg-pink-500 hover:bg-pink-600 rounded-lg transition duration-300"
                   type="submit"
                 >
-                  Enviar
+                  {form.button}
                 </button>
               </form>
             </div>

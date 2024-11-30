@@ -3,27 +3,68 @@
   "seo": {
     "__resolveType": "website/sections/Seo/SeoV2.tsx"
   },
-  "sections": [
-    {
-      "__resolveType": "website/sections/Rendering/Lazy.tsx",
-      "section": {
-        "__resolveType": "Header-Antra"
+  "sections": {
+    "__resolveType": "website/flags/multivariate.ts",
+    "variants": [
+      {
+        "value": [
+          {
+            "__resolveType": "website/sections/Rendering/Lazy.tsx",
+            "section": {
+              "__resolveType": "Header-Antra-en"
+            }
+          },
+          {
+            "__resolveType": "site/sections/Projects.tsx",
+            "title": "Upcoming projects",
+            "subtitle": "We dedicate this to every activist and grassroots movement that joins this struggle.",
+            "projects": {
+              "__resolveType": "blog/loaders/BlogpostList.ts",
+              "sortBy": "date_desc",
+              "count": 999
+            }
+          },
+          {
+            "__resolveType": "website/sections/Rendering/Lazy.tsx",
+            "section": {
+              "__resolveType": "Footer-en"
+            }
+          }
+        ],
+        "rule": {
+          "__resolveType": "website/matchers/cookie.ts",
+          "name": "language",
+          "value": "en-US"
+        }
+      },
+      {
+        "value": [
+          {
+            "__resolveType": "website/sections/Rendering/Lazy.tsx",
+            "section": {
+              "__resolveType": "Header-Antra"
+            }
+          },
+          {
+            "__resolveType": "site/sections/Projects.tsx",
+            "title": "Próximos projetos",
+            "subtitle": "Dedicamos a cada militante e movimento de base que se soma a essa luta.",
+            "projects": {
+              "__resolveType": "blog/loaders/BlogpostList.ts",
+              "sortBy": "date_desc",
+              "count": 999
+            }
+          },
+          {
+            "__resolveType": "Footer"
+          }
+        ],
+        "rule": {
+          "__resolveType": "website/matchers/always.ts"
+        }
       }
-    },
-    {
-      "__resolveType": "site/sections/Projects.tsx",
-      "title": "Próximos projetos",
-      "subtitle": "Dedicamos a cada militante e movimento de base que se soma a essa luta.",
-      "projects": {
-        "__resolveType": "blog/loaders/BlogpostList.ts",
-        "sortBy": "date_desc",
-        "count": 999
-      }
-    },
-    {
-      "__resolveType": "Footer"
-    }
-  ],
+    ]
+  },
   "name": "Projetos",
   "path": "/projects"
 }

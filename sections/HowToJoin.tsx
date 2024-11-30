@@ -1,12 +1,18 @@
 import Icon from "site/components/ui/Icon.tsx";
 
-export default function HowToJoin() {
+interface Props {
+  title: string
+  box1: string
+  box2: string
+}
+
+export default function HowToJoin({ title, box1, box2 }: Props) {
   return (
     <div class="lg:container text-sm md:px-5 md:p-16">
       <div class="space-y-10 flex justify-center">
         <div class="w-full md:max-w-[1354px] flex flex-col gap-12 py-24 px-16 justify-center items-start md:rounded-lg bg-blue-700">
           <h2 class="text-5xl font-semibold text-white">
-            Como se filiar a ANTRA
+            {title}
           </h2>
           <div class="flex flex-col md:flex-row gap-5 w-full">
             <div class="w-full p-12 flex flex-col gap-6 bg-white rounded-xl">
@@ -15,7 +21,7 @@ export default function HowToJoin() {
               </span>
 
               <div class="flex justify-between items-center">
-                <p class="text-3xl font-semibold">Leia nosso Estatuto Social</p>
+                <p class="text-3xl font-semibold">{box1}</p>
                 <a
                   href="/affiliation"
                   class="p-3 text-white rounded-full bg-pink-500 hover:bg-pink-600 transition duration-300"
@@ -29,7 +35,7 @@ export default function HowToJoin() {
                 02
               </span>
               <div class="flex justify-between items-center">
-                <p class="text-3xl font-semibold">Preencha nosso formulário</p>
+                <p class="text-3xl font-semibold">{box2}</p>
                 <a
                   href="/affiliation"
                   class="p-3 text-white rounded-full bg-pink-500 hover:bg-pink-600 transition duration-300"

@@ -1,55 +1,335 @@
 {
   "name": "Noticias",
   "path": "/news",
-  "sections": [
-    {
-      "__resolveType": "Header-Antra"
-    },
-    {
-      "__resolveType": "site/sections/FeaturedNews.tsx",
-      "tags": [
-        "Cultura",
-        "Eventos",
-        "Educação",
-        "Direitos e Políticas",
-        "Notas e Ofícios",
-        "Pesquisas",
-        "Saúde",
-        "Violência"
-      ],
-      "mainNews": {
-        "title": "A importância da CEDAW e sua relevância para a pauta trans",
-        "image": "https://deco-sites-assets.s3.sa-east-1.amazonaws.com/antra/51b8421d-5399-4d5c-830d-e4fbd5b0c0ff/main-news.png",
-        "description": "CEDAW: tratado da ONU contra discriminação de mulheres, promovendo igualdade de gênero."
-      },
-      "news": [
-        {
-          "title": "ANTRA em defesa da identidade travesti",
-          "image": "https://deco-sites-assets.s3.sa-east-1.amazonaws.com/antra/31a01c5c-2409-4cd1-a1c5-af8817edf72d/news1.png",
-          "tag": "Direitos e Políticas"
-        },
-        {
-          "title": "Pronunciamento do ministério das mulheres pelo dia internacional da mulher",
-          "image": "https://deco-sites-assets.s3.sa-east-1.amazonaws.com/antra/03937534-2e27-449f-8011-ee42233d1d06/news2.png",
-          "tag": "Direitos e Políticas"
+  "sections": {
+    "__resolveType": "website/flags/multivariate.ts",
+    "variants": [
+      {
+        "value": [
+          {
+            "__resolveType": "website/sections/Rendering/Lazy.tsx",
+            "section": {
+              "__resolveType": "Header-Antra-en"
+            }
+          },
+          {
+            "__resolveType": "site/sections/FeaturedNews.tsx",
+            "tags": [
+              {
+                "0": "C",
+                "1": "u",
+                "2": "l",
+                "3": "t",
+                "4": "u",
+                "5": "r",
+                "6": "a",
+                "value": "Culture",
+                "key": "culture"
+              },
+              {
+                "0": "E",
+                "1": "v",
+                "2": "e",
+                "3": "n",
+                "4": "t",
+                "5": "o",
+                "6": "s",
+                "key": "events",
+                "value": "Events"
+              },
+              {
+                "0": "E",
+                "1": "d",
+                "2": "u",
+                "3": "c",
+                "4": "a",
+                "5": "ç",
+                "6": "ã",
+                "7": "o",
+                "key": "education",
+                "value": "Education"
+              },
+              {
+                "0": "D",
+                "1": "i",
+                "2": "r",
+                "3": "e",
+                "4": "i",
+                "5": "t",
+                "6": "o",
+                "7": "s",
+                "8": " ",
+                "9": "e",
+                "10": " ",
+                "11": "P",
+                "12": "o",
+                "13": "l",
+                "14": "í",
+                "15": "t",
+                "16": "i",
+                "17": "c",
+                "18": "a",
+                "19": "s",
+                "key": "rights-policies",
+                "value": "Rights and Policies"
+              },
+              {
+                "0": "N",
+                "1": "o",
+                "2": "t",
+                "3": "a",
+                "4": "s",
+                "5": " ",
+                "6": "e",
+                "7": " ",
+                "8": "O",
+                "9": "f",
+                "10": "í",
+                "11": "c",
+                "12": "i",
+                "13": "o",
+                "14": "s",
+                "key": "notes-official",
+                "value": "Notes and Official Statements"
+              },
+              {
+                "0": "P",
+                "1": "e",
+                "2": "s",
+                "3": "q",
+                "4": "u",
+                "5": "i",
+                "6": "s",
+                "7": "a",
+                "8": "s",
+                "key": "research",
+                "value": "Research"
+              },
+              {
+                "0": "S",
+                "1": "a",
+                "2": "ú",
+                "3": "d",
+                "4": "e",
+                "key": "health",
+                "value": "Health"
+              },
+              {
+                "0": "V",
+                "1": "i",
+                "2": "o",
+                "3": "l",
+                "4": "ê",
+                "5": "n",
+                "6": "c",
+                "7": "i",
+                "8": "a",
+                "key": "violence",
+                "value": "Violence"
+              }
+            ],
+            "mainNews": {
+              "title": "A importância da CEDAW e sua relevância para a pauta trans",
+              "image": "https://deco-sites-assets.s3.sa-east-1.amazonaws.com/antra/51b8421d-5399-4d5c-830d-e4fbd5b0c0ff/main-news.png",
+              "description": "CEDAW: tratado da ONU contra discriminação de mulheres, promovendo igualdade de gênero."
+            },
+            "news": [
+              {
+                "title": "ANTRA em defesa da identidade travesti",
+                "image": "https://deco-sites-assets.s3.sa-east-1.amazonaws.com/antra/31a01c5c-2409-4cd1-a1c5-af8817edf72d/news1.png",
+                "tag": "Direitos e Políticas"
+              },
+              {
+                "title": "Pronunciamento do ministério das mulheres pelo dia internacional da mulher",
+                "image": "https://deco-sites-assets.s3.sa-east-1.amazonaws.com/antra/03937534-2e27-449f-8011-ee42233d1d06/news2.png",
+                "tag": "Direitos e Políticas"
+              }
+            ],
+            "info": {
+              "image": "https://deco-sites-assets.s3.sa-east-1.amazonaws.com/antra/2144ad25-3f33-4076-b964-73d0961788e7/image2.png",
+              "title": "Find support locations in your area"
+            },
+            "title": "All news",
+            "allNews": {
+              "__resolveType": "blog/loaders/BlogpostList.ts",
+              "count": 999,
+              "sortBy": "date_desc"
+            },
+            "pagination": {}
+          },
+          {
+            "__resolveType": "website/sections/Rendering/Lazy.tsx",
+            "section": {
+              "__resolveType": "Footer-en"
+            }
+          }
+        ],
+        "rule": {
+          "__resolveType": "website/matchers/cookie.ts",
+          "name": "language",
+          "value": "en-US"
         }
-      ],
-      "info": {
-        "image": "https://deco-sites-assets.s3.sa-east-1.amazonaws.com/antra/2144ad25-3f33-4076-b964-73d0961788e7/image2.png",
-        "title": "Encontre locais de apoio na sua área"
       },
-      "title": "Todas as notícias",
-      "allNews": {
-        "__resolveType": "blog/loaders/BlogpostList.ts",
-        "count": 999,
-        "sortBy": "date_desc"
-      },
-      "pagination": {}
-    },
-    {
-      "__resolveType": "Footer"
-    }
-  ],
+      {
+        "value": [
+          {
+            "__resolveType": "Header-Antra"
+          },
+          {
+            "__resolveType": "site/sections/FeaturedNews.tsx",
+            "tags": [
+              {
+                "0": "C",
+                "1": "u",
+                "2": "l",
+                "3": "t",
+                "4": "u",
+                "5": "r",
+                "6": "a",
+                "key": "culture",
+                "value": "Cultura"
+              },
+              {
+                "0": "E",
+                "1": "v",
+                "2": "e",
+                "3": "n",
+                "4": "t",
+                "5": "o",
+                "6": "s",
+                "key": "events",
+                "value": "Eventos"
+              },
+              {
+                "0": "E",
+                "1": "d",
+                "2": "u",
+                "3": "c",
+                "4": "a",
+                "5": "ç",
+                "6": "ã",
+                "7": "o",
+                "key": "rights-policies",
+                "value": "Direitos e Políticas"
+              },
+              {
+                "0": "D",
+                "1": "i",
+                "2": "r",
+                "3": "e",
+                "4": "i",
+                "5": "t",
+                "6": "o",
+                "7": "s",
+                "8": " ",
+                "9": "e",
+                "10": " ",
+                "11": "P",
+                "12": "o",
+                "13": "l",
+                "14": "í",
+                "15": "t",
+                "16": "i",
+                "17": "c",
+                "18": "a",
+                "19": "s",
+                "key": "notes-official",
+                "value": "Notas e Ofícios"
+              },
+              {
+                "0": "N",
+                "1": "o",
+                "2": "t",
+                "3": "a",
+                "4": "s",
+                "5": " ",
+                "6": "e",
+                "7": " ",
+                "8": "O",
+                "9": "f",
+                "10": "í",
+                "11": "c",
+                "12": "i",
+                "13": "o",
+                "14": "s",
+                "key": "research",
+                "value": "Pesquisas"
+              },
+              {
+                "0": "P",
+                "1": "e",
+                "2": "s",
+                "3": "q",
+                "4": "u",
+                "5": "i",
+                "6": "s",
+                "7": "a",
+                "8": "s",
+                "key": "education",
+                "value": "Educação"
+              },
+              {
+                "0": "S",
+                "1": "a",
+                "2": "ú",
+                "3": "d",
+                "4": "e",
+                "key": "health",
+                "value": "Saúde"
+              },
+              {
+                "0": "V",
+                "1": "i",
+                "2": "o",
+                "3": "l",
+                "4": "ê",
+                "5": "n",
+                "6": "c",
+                "7": "i",
+                "8": "a",
+                "key": "violence",
+                "value": "Violência"
+              }
+            ],
+            "mainNews": {
+              "title": "A importância da CEDAW e sua relevância para a pauta trans",
+              "image": "https://deco-sites-assets.s3.sa-east-1.amazonaws.com/antra/51b8421d-5399-4d5c-830d-e4fbd5b0c0ff/main-news.png",
+              "description": "CEDAW: tratado da ONU contra discriminação de mulheres, promovendo igualdade de gênero."
+            },
+            "news": [
+              {
+                "title": "ANTRA em defesa da identidade travesti",
+                "image": "https://deco-sites-assets.s3.sa-east-1.amazonaws.com/antra/31a01c5c-2409-4cd1-a1c5-af8817edf72d/news1.png",
+                "tag": "Direitos e Políticas"
+              },
+              {
+                "title": "Pronunciamento do ministério das mulheres pelo dia internacional da mulher",
+                "image": "https://deco-sites-assets.s3.sa-east-1.amazonaws.com/antra/03937534-2e27-449f-8011-ee42233d1d06/news2.png",
+                "tag": "Direitos e Políticas"
+              }
+            ],
+            "info": {
+              "image": "https://deco-sites-assets.s3.sa-east-1.amazonaws.com/antra/2144ad25-3f33-4076-b964-73d0961788e7/image2.png",
+              "title": "Encontre locais de apoio na sua área"
+            },
+            "title": "Todas as notícias",
+            "allNews": {
+              "__resolveType": "blog/loaders/BlogpostList.ts",
+              "count": 999,
+              "sortBy": "date_desc"
+            },
+            "pagination": {}
+          },
+          {
+            "__resolveType": "Footer"
+          }
+        ],
+        "rule": {
+          "__resolveType": "website/matchers/always.ts"
+        }
+      }
+    ]
+  },
   "__resolveType": "website/pages/Page.tsx",
   "seo": {
     "__resolveType": "website/sections/Seo/SeoV2.tsx"

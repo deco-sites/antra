@@ -12,8 +12,17 @@ export interface Card {
 }
 
 interface FilterProps {
-  type: string[];
-  topic: string[];
+  typeTitle: string
+  topicTitle: string
+  yearTitle: string
+  type: {
+    key: string
+    value:string
+  }[];
+  topic: {
+    key: string
+    value: string
+  }[];
   year: string[];
   onFilterChange: (filterType: keyof Filters, value: string) => void;
   selectedFilters: Filters;
@@ -28,8 +37,17 @@ interface Filters {
 export interface Props {
   title?: string;
   description: string;
-  type: string[];
-  topic: string[];
+  typeTitle: string
+  type: {
+    key: string
+    value:string
+  }[];
+  topicTitle: string
+  topic: {
+    key: string
+    value: string
+  }[];
+  yearTitle: string
   year: string[];
   cards?: BlogPost[] | null;
 }
@@ -40,25 +58,26 @@ const Filter = ({
   year,
   onFilterChange,
   selectedFilters,
+  typeTitle
 }: FilterProps) => {
   return (
     <div class="hidden md:flex flex-col gap-5">
       <div class="flex flex-col gap-2">
-        <h2>Tipo de recurso</h2>
+        <h2>{typeTitle}Tipo de recurso</h2>
         <div class="flex flex-wrap gap-2 w-full">
           {type.map((item) => (
             <button
               key={item}
-              onClick={() => onFilterChange("type", item)}
+              onClick={() => onFilterChange("type", item.key)}
               class={`badge badge-lg text-xs border border-gray-500 
                 hover:bg-custom-gray hover:text-white hover:border-white 
                 ${
-                  selectedFilters.type.includes(item)
+                  selectedFilters.type.includes(item.key)
                     ? "bg-gray-700 text-white"
                     : "bg-white text-gray-700"
                 }`}
             >
-              {item}
+              {item.value}
             </button>
           ))}
         </div>
@@ -70,16 +89,16 @@ const Filter = ({
           {topic.map((item) => (
             <button
               key={item}
-              onClick={() => onFilterChange("topic", item)}
+              onClick={() => onFilterChange("topic", item.key)}
               class={`badge badge-lg text-xs border border-gray-500 
                 hover:bg-custom-gray hover:text-white hover:border-white 
                 ${
-                  selectedFilters.topic.includes(item)
+                  selectedFilters.topic.includes(item.key)
                     ? "bg-gray-700 text-white"
                     : "bg-white text-gray-700"
                 }`}
             >
-              {item}
+              {item.value}
             </button>
           ))}
         </div>
@@ -271,6 +290,9 @@ const ResourceIsland = ({
   type,
   topic,
   year,
+  typeTitle,
+  topicTitle,
+  yearTitle
 }: Props) => {
   const cardsFiltered = cards?.filter((cards) =>
     cards.categories?.some((category) => category.slug === "guides")
@@ -399,6 +421,9 @@ const ResourceIsland = ({
               </button>
 
               <Filter
+                typeTitle={typeTitle}
+                topicTitle={topicTitle}
+                yearTitle={yearTitle}
                 type={type}
                 topic={topic}
                 year={year}

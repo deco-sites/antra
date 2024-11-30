@@ -8,7 +8,10 @@ export interface Info {
 }
 
 export interface Props {
-  tags: string[];
+  tags: {
+    key: string
+    value: string
+  }[];
   title: string;
   info: Info;
   allNews: BlogPost[] | null;

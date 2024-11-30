@@ -6,6 +6,22 @@ import { usePagination } from "site/components/ui/Pagination.tsx";
 
 export interface Props {
   affiliate: BlogPost[] | undefined;
+  region: {
+    title: string
+    options: string[]
+  }
+  state: {
+    title: string
+    options: string[]
+  }
+  theme: {
+    title: string
+    options: string[]
+  }
+  targetAudience: {
+    title: string
+    options: string[]
+  }
 }
 
 const CardAffiliate = (props: any) => {
@@ -34,7 +50,7 @@ const CardAffiliate = (props: any) => {
   );
 };
 
-export default function AllAffiliatesIsland({ affiliate }: Props) {
+export default function AllAffiliatesIsland({ affiliate, region, state, theme, targetAudience }: Props) {
   const itemsPerPage = 13;
   const {
     currentItems,
@@ -51,53 +67,62 @@ export default function AllAffiliatesIsland({ affiliate }: Props) {
         <div class="flex flex-col md:flex-row justify-center items-center gap-5">
           <div>
             <label class="block text-sm font-medium text-gray-700 mb-1">
-              Região
+              {region.title}
             </label>
             <select
               class="w-full min-w-[240px] px-3 py-2 border border-gray-300 rounded-md focus:outline-none focus:ring-2 focus:ring-blue-500"
               name="regiao"
               id="regiao"
             >
-              <option value="">Todas</option>
+              {region?.options?.map((item): any => (
+                <option value={item}>{item}</option>
+              ))}
+              
             </select>
           </div>
 
           <div>
             <label class="block text-sm font-medium text-gray-700 mb-1">
-              UF
+              {state.title}
             </label>
             <select
               class="w-full min-w-[240px] px-3 py-2 border border-gray-300 rounded-md focus:outline-none focus:ring-2 focus:ring-blue-500"
               name="uf"
               id="uf"
             >
-              <option value="">Todas</option>
+              {state?.options?.map((item): any => (
+                <option value={item}>{item}</option>
+              ))}
             </select>
           </div>
 
           <div>
             <label class="block text-sm font-medium text-gray-700 mb-1">
-              Temática
+              {theme.title}
             </label>
             <select
               class="w-full min-w-[240px] px-3 py-2 border border-gray-300 rounded-md focus:outline-none focus:ring-2 focus:ring-blue-500"
               name="tematica"
               id="tematica"
             >
-              <option value="">Todas</option>
+              {theme?.options?.map((item): any => (
+                <option value={item}>{item}</option>
+              ))}
             </select>
           </div>
 
           <div>
             <label class="block text-sm font-medium text-gray-700 mb-1">
-              Público-Alvo
+              {targetAudience.title}
             </label>
             <select
               class="w-full min-w-[240px] px-3 py-2 border border-gray-300 rounded-md focus:outline-none focus:ring-2 focus:ring-blue-500"
               name="publicoAlvo"
               id="publicoAlvo"
             >
-              <option value="">Todas</option>
+              {targetAudience?.options?.map((item): any => (
+                <option value={item}>{item}</option>
+              ))}
             </select>
           </div>
         </div>

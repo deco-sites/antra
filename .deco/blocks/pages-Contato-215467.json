@@ -3,54 +3,146 @@
   "seo": {
     "__resolveType": "website/sections/Seo/SeoV2.tsx"
   },
-  "sections": [
-    {
-      "__resolveType": "website/sections/Rendering/Lazy.tsx",
-      "section": {
-        "__resolveType": "Header-Antra"
-      }
-    },
-    {
-      "__resolveType": "site/sections/Contact.tsx",
-      "title": "Fale conosco",
-      "subtitle": "Para entrar em contato envie uma mensagem usando o formulário, ou nos chame pelas nossas redes sociais:",
-      "social": [
-        {
-          "name": "E-mail",
-          "endereço": "presidencia.antra@gmail.com",
-          "link": "/contact",
-          "endereco": "presidencia.antra@gmail.com"
-        },
-        {
-          "endereço": "@antra.oficial",
-          "name": "Instagram",
-          "link": "/contact",
-          "endereco": "@antra.oficial"
-        },
-        {
-          "endereço": "@antrabrasil",
-          "name": "Twitter",
-          "link": "/contact",
-          "endereco": "@antrabrasil"
-        },
-        {
-          "endereço": "/antrabrasil",
-          "name": "Facebook",
-          "link": "/contact",
-          "endereco": "/antrabrasil"
+  "sections": {
+    "__resolveType": "website/flags/multivariate.ts",
+    "variants": [
+      {
+        "value": [
+          {
+            "__resolveType": "website/sections/Rendering/Lazy.tsx",
+            "section": {
+              "__resolveType": "Header-Antra-en"
+            }
+          },
+          {
+            "__resolveType": "site/sections/Contact.tsx",
+            "title": "Contact us",
+            "subtitle": "Para entrar em contato envie uma mensagem usando o formulário, ou nos chame pelas nossas redes sociais:",
+            "social": [
+              {
+                "name": "E-mail",
+                "endereço": "presidencia.antra@gmail.com",
+                "link": "/contact",
+                "endereco": "presidencia.antra@gmail.com"
+              },
+              {
+                "endereço": "@antra.oficial",
+                "name": "Instagram",
+                "link": "/contact",
+                "endereco": "@antra.oficial"
+              },
+              {
+                "endereço": "@antrabrasil",
+                "name": "Twitter",
+                "link": "/contact",
+                "endereco": "@antrabrasil"
+              },
+              {
+                "endereço": "/antrabrasil",
+                "name": "Facebook",
+                "link": "/contact",
+                "endereco": "/antrabrasil"
+              }
+            ],
+            "background": "https://deco-sites-assets.s3.sa-east-1.amazonaws.com/antra/2f1ccbdc-d8a7-4c80-9ca4-42b2836d11af/background-about.png",
+            "options": [
+              "Doação",
+              "Doação",
+              "Doação"
+            ],
+            "form": {
+              "name": "Name",
+              "lastName": "Last Name",
+              "canHelp": "How can we help",
+              "mesage": "Message",
+              "button": "Submit",
+              "canHelpOptions": [
+                "Donation",
+                "Donation",
+                "Donation"
+              ]
+            }
+          },
+          {
+            "__resolveType": "website/sections/Rendering/Lazy.tsx",
+            "section": {
+              "__resolveType": "Footer-en"
+            }
+          }
+        ],
+        "rule": {
+          "__resolveType": "website/matchers/cookie.ts",
+          "name": "language",
+          "value": "en-US"
         }
-      ],
-      "background": "https://deco-sites-assets.s3.sa-east-1.amazonaws.com/antra/2f1ccbdc-d8a7-4c80-9ca4-42b2836d11af/background-about.png",
-      "options": [
-        "Doação",
-        "Doação",
-        "Doação"
-      ]
-    },
-    {
-      "__resolveType": "Footer"
-    }
-  ],
+      },
+      {
+        "value": [
+          {
+            "__resolveType": "website/sections/Rendering/Lazy.tsx",
+            "section": {
+              "__resolveType": "Header-Antra"
+            }
+          },
+          {
+            "__resolveType": "site/sections/Contact.tsx",
+            "title": "Fale conosco",
+            "subtitle": "Para entrar em contato envie uma mensagem usando o formulário, ou nos chame pelas nossas redes sociais:",
+            "social": [
+              {
+                "name": "E-mail",
+                "endereço": "presidencia.antra@gmail.com",
+                "link": "/contact",
+                "endereco": "presidencia.antra@gmail.com"
+              },
+              {
+                "endereço": "@antra.oficial",
+                "name": "Instagram",
+                "link": "/contact",
+                "endereco": "@antra.oficial"
+              },
+              {
+                "endereço": "@antrabrasil",
+                "name": "Twitter",
+                "link": "/contact",
+                "endereco": "@antrabrasil"
+              },
+              {
+                "endereço": "/antrabrasil",
+                "name": "Facebook",
+                "link": "/contact",
+                "endereco": "/antrabrasil"
+              }
+            ],
+            "background": "https://deco-sites-assets.s3.sa-east-1.amazonaws.com/antra/2f1ccbdc-d8a7-4c80-9ca4-42b2836d11af/background-about.png",
+            "options": [
+              "Doação",
+              "Doação",
+              "Doação"
+            ],
+            "form": {
+              "name": "Nome",
+              "lastName": "Sobrenome",
+              "canHelp": "Em que podemos ajudar",
+              "mesage": "Mensagem",
+              "button": "Enviar",
+              "canHelpOptions": [
+                "Doação",
+                "Doação",
+                "Doação"
+              ]
+            }
+          },
+          {
+            "__resolveType": "Footer"
+          }
+        ],
+        "rule": {
+          "__resolveType": "website/matchers/always.ts"
+        }
+      }
+    ]
+  },
   "name": "Contato",
   "path": "/contact"
 }
