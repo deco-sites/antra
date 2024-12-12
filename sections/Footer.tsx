@@ -1,6 +1,4 @@
-import Image from "apps/website/components/Image.tsx";
 import type { ImageWidget } from "apps/admin/widgets.ts";
-import Icon from "site/components/ui/Icon.tsx";
 import FooterIsland from "site/islands/footer-island.tsx";
 
 export interface Subscribe {
@@ -19,7 +17,7 @@ export interface Props {
   background?: {
     src?: ImageWidget;
   };
-  title: string;
+  title?: string;
   links?: {
     label: string;
     href: string;

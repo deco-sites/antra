@@ -20,7 +20,7 @@ export interface Props {
   background?: {
     src?: ImageWidget;
   };
-  title:string;
+  title?:string;
   links?: {
     label: string;
     href: string;

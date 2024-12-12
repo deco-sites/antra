@@ -39,7 +39,6 @@ export const HeaderSite = ({ logo, navigation }: Nav) => {
     globalThis.open(link, "_blank");
   };
 
-  const [isDropdownOpen, setIsDropdownOpen] = useState(false);
   const [language, setLanguageState] = useState<string | null>(() => {
     if (typeof document !== "undefined") {
       const headers = new Headers();
@@ -57,13 +56,12 @@ export const HeaderSite = ({ logo, navigation }: Nav) => {
       maxAge: 365 * 24 * 60 * 60, // 1 ano em segundos
     });
 
-    // Adiciona o cookie ao documento
     document.cookie = headers.get("Set-Cookie") || "";
 
-    // Atualiza o estado local
     setLanguageState(lang);
-    setIsDropdownOpen(false); // Fecha o dropdown
     console.log(`Language set to ${lang}`);
+    
+    window.location.reload();
   };
   return (
     <nav className="drawer drawer-end border-b border-gray-300">
@@ -144,16 +142,13 @@ export const HeaderSite = ({ logo, navigation }: Nav) => {
           </ul>
         </div>
 
-        <div className="hidden lg:flex items-center">
+        <div className="hidden lg:flex items-center group relative">
           <ul className="flex gap-5 items-center">
             {navigation?.buttons?.map((item, index) => (
               <li key={`${item.alt}-${index}`}>
                 {item.alt === "Internationalization" ? (
                   <>
-                    <button
-                      onClick={() => setIsDropdownOpen(!isDropdownOpen)}
-                      className="flex items-center gap-2"
-                    >
+                    <button className="flex items-center gap-2">
                       <Image
                         src={item.src || ""}
                         width={18}
@@ -161,28 +156,27 @@ export const HeaderSite = ({ logo, navigation }: Nav) => {
                         alt={item?.alt}
                       />
                     </button>
-                    {isDropdownOpen && (
-                      <div className="absolute top-full mt-2 w-32 bg-white shadow-lg rounded-md z-100">
-                        <ul>
-                          <li>
-                            <button
-                              onClick={() => handleSetLanguage("en-US")}
-                              className="w-full px-4 py-2 text-left hover:bg-gray-100"
-                            >
-                              En
-                            </button>
-                          </li>
-                          <li>
-                            <button
-                              onClick={() => handleSetLanguage("pt-BR")}
-                              className="w-full px-4 py-2 text-left hover:bg-gray-100"
-                            >
-                              Pt
-                            </button>
-                          </li>
-                        </ul>
-                      </div>
-                    )}
+                    <div>
+                      <ul className="w-[8rem] max-w-lg -left-[50%] absolute hidden group-hover:flex flex-col gap-4 bg-white shadow-lg p-2 z-50 
+                      rounded-[8px] shadow-2xl bg-gray-200 border">
+                        <li>
+                          <button
+                            onClick={() => handleSetLanguage("en-US")}
+                            className="w-full px-4 py-2 text-left hover:bg-gray-100 focus:outline-none focus:ring-2 focus:ring-blue-500"
+                          >
+                            English
+                          </button>
+                        </li>
+                        <li>
+                          <button
+                            onClick={() => handleSetLanguage("pt-BR")}
+                            className="w-full px-4 py-2 text-left hover:bg-gray-100 focus:outline-none focus:ring-2 focus:ring-blue-500"
+                          >
+                            Português
+                          </button>
+                        </li>
+                      </ul>
+                    </div>
                   </>
                 ) : (
                   <a href={item?.href}>
